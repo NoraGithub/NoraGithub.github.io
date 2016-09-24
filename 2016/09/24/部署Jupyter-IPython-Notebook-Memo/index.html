@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>部署Jupyter/IPython Notebook Memo | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="需求：
+基于 web 的 itervactive debug
+公网访问的 Web Python解析脚本
+支持更强大、可视化和可交互的文档
+
+Brief of 解决方案
+部署IPyhon/Jupyter Notebook到服务器
+购买域名并绑定到服务器
+和Markdown/Rmarkdown结合（未完成）
+
+
+IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="部署Jupyter/IPython Notebook Memo">
+<meta property="og:url" content="http://yoursite.com/2016/09/24/部署Jupyter-IPython-Notebook-Memo/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="需求：
+基于 web 的 itervactive debug
+公网访问的 Web Python解析脚本
+支持更强大、可视化和可交互的文档
+
+Brief of 解决方案
+部署IPyhon/Jupyter Notebook到服务器
+购买域名并绑定到服务器
+和Markdown/Rmarkdown结合（未完成）
+
+
+IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-7dfe26d822e0a207.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-e8e04b9a5dfb0f0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-a6705a8eea965001.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-09-24T12:56:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="部署Jupyter/IPython Notebook Memo">
+<meta name="twitter:description" content="需求：
+基于 web 的 itervactive debug
+公网访问的 Web Python解析脚本
+支持更强大、可视化和可交互的文档
+
+Brief of 解决方案
+部署IPyhon/Jupyter Notebook到服务器
+购买域名并绑定到服务器
+和Markdown/Rmarkdown结合（未完成）
+
+
+IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/544981-7dfe26d822e0a207.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-部署Jupyter-IPython-Notebook-Memo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/24/部署Jupyter-IPython-Notebook-Memo/" class="article-date">
+  <time datetime="2016-09-24T12:55:44.000Z" itemprop="datePublished">2016-09-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      部署Jupyter/IPython Notebook Memo
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="需求："><a href="#需求：" class="headerlink" title="需求："></a>需求：</h1><ol>
+<li>基于 web 的 itervactive debug</li>
+<li>公网访问的 Web Python解析脚本</li>
+<li>支持更强大、可视化和可交互的文档</li>
+</ol>
+<h1 id="Brief-of-解决方案"><a href="#Brief-of-解决方案" class="headerlink" title="Brief of 解决方案"></a>Brief of 解决方案</h1><ol>
+<li>部署IPyhon/Jupyter Notebook到服务器</li>
+<li>购买域名并绑定到服务器</li>
+<li>和Markdown/Rmarkdown结合（未完成）</li>
+</ol>
+<hr>
+<h1 id="IPython-和-Jupyter"><a href="#IPython-和-Jupyter" class="headerlink" title="IPython 和 Jupyter"></a>IPython 和 Jupyter</h1><p><code>IPython</code> 通常指的是一个 Python REPL(交互式解释器) shell。提供了远比 Python shell 强大的 shell 环境。<code>IPython</code> 是 Iteractive Python shell 的缩写。 Notebook 是一个基于 IPython 的 web 应用。 </p>
+<p>截止 IPython 3.0 ，IPython 变得越来越臃肿，因此， IPython 4.x 后，IPython被分离成为了IPython kernel’s Jupyter（IPython shell combined with jupyter kernel） 和Jupyter subprojects ，Notebook 是 Jupyter 的一个 subproject 。官方将此称为<code>The Big Split™</code>。<a href="#id1">#1</a></p>
+<p>IPython 把与语言无关（language-agnostic）的 components 和 Python 解释器剥离，独立为<code>Jupyter</code>发行。因此，Jupyter 可以和 Python 之外的解析器结合，提供新的、强大的服务。比如 Ruby REPL 环境 IRuby 和 Julia REPL 环境 IJulia。</p>
+<p>因此，Jupyter 和  IPyhon 指代同一个项目， Jupyter 特指  Ipython4 后的， 非python kernel框架。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/544981-7dfe26d822e0a207.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IPython 和 Jupyter"></p>
+<h2 id="Jupyter的架构"><a href="#Jupyter的架构" class="headerlink" title="Jupyter的架构"></a>Jupyter的架构</h2><p><img src="http://upload-images.jianshu.io/upload_images/544981-e8e04b9a5dfb0f0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="A Visual Overview of Projects"></p>
+<hr>
+<h1 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h1><h2 id="服务器-amp-操作系统"><a href="#服务器-amp-操作系统" class="headerlink" title="服务器&amp;操作系统"></a>服务器&amp;操作系统</h2><p><a href="http://bandwagonhost.com" target="_blank" rel="external">bandwagonhost</a>的VPS</p>
+<p>配置：</p>
+<blockquote>
+<p>1CPU<br>256 MB Memory<br>10 GB Disk(SSD)<br>Ubuntu 16.04 x86_64<br>500GB Transfer/Bandwidth</p>
+</blockquote>
+<h2 id="accepting-langlc"><a href="#accepting-langlc" class="headerlink" title="accepting langlc"></a>accepting langlc</h2><p>.</p>
+<h2 id="安装gnome"><a href="#安装gnome" class="headerlink" title="安装gnome"></a>安装gnome</h2><p>可视化（gui）</p>
+<h3 id="升级apt-get"><a href="#升级apt-get" class="headerlink" title="升级apt-get"></a>升级apt-get</h3><p>sudo apt-get update &amp;&amp; sudo apt-get upgrade</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>sudo apt-get install gnome-shell</p>
+<h1 id="Jupyter-IPython"><a href="#Jupyter-IPython" class="headerlink" title="Jupyter / IPython"></a>Jupyter / IPython</h1><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>本文通过安装Canopy的发行版本实现Jupyter / IPython安装，Canopy是一个科学计算的python发行版本。包括了需要的依赖package，包括IPython、Jupyter、Tornado（web服务器）以及其他科学计算库，例如Numpy、Scipy、Matplotlib等。</p>
+<p>因为在服务器端，这里有两种方案可用于获取Canopy安装文件。</p>
+<p>最简单直接方案，直接服务器下载并安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Canopy -&gt;&gt; Server : wget</div><div class="line">Server -&gt;&gt; Server : install</div></pre></td></tr></table></figure></p>
+<p>由于服务器端wget命令出现是否支持SSL协议等一系列问题，实际采用的方案是：先下载到本地再上传到服务器安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Canopy -&gt;&gt; Client : download</div><div class="line">Client -&gt;&gt; Server : scp</div><div class="line">Server -&gt;&gt; Server : install</div></pre></td></tr></table></figure>
+<h3 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h3><p>Canopy下载<a href="https://store.enthought.com/downloads/#default" target="_blank" rel="external">地址</a>，选择合适版本即可。</p>
+<h3 id="SSH-协议上传到服务器"><a href="#SSH-协议上传到服务器" class="headerlink" title="SSH 协议上传到服务器"></a>SSH 协议上传到服务器</h3><p>先在服务器mkdir目录。</p>
+<blockquote>
+<p>\$ mkdir path/to/save/server/canopy  #/temp/canopy</p>
+</blockquote>
+<p>再把本地文件通过 SSH 协议上传到服务器</p>
+<blockquote>
+<p>\$  scp -P &lt;%服务端SSH端口&gt; path/to/save/local/canopy/&lt;canopy-to-insall&gt;.sh &lt;%服务端user_name&gt;@&lt;%服务器IP&gt;:path/to/save/server/canopy #/temp/canopy/ </p>
+</blockquote>
+<h3 id="安装Canopy"><a href="#安装Canopy" class="headerlink" title="安装Canopy"></a>安装Canopy</h3><p>执行安装</p>
+<blockquote>
+<p>\$ bash path/to/save/server/canopy/&lt;canopy-to-insall&gt;.sh # canopy-1.7.4-rh5-64.sh </p>
+</blockquote>
+<h3 id="安装过程中遇到的其他问题"><a href="#安装过程中遇到的其他问题" class="headerlink" title="安装过程中遇到的其他问题"></a>安装过程中遇到的其他问题</h3><blockquote>
+<p>desktop-file-install:command not found<br>update-desktop-database command not found<br><a href="https://www.google.com.hk/search?ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=desktop-file-install%3A+command+not+found&amp;gws_rd=ssl" target="_blank" rel="external">not found</a></p>
+</blockquote>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><blockquote>
+<p>\$ sudo apt-get install desktop-file-utils</p>
+</blockquote>
+<h2 id="启动-Notebook"><a href="#启动-Notebook" class="headerlink" title="启动 Notebook"></a>启动 Notebook</h2><h3 id="IPython-4以前"><a href="#IPython-4以前" class="headerlink" title="IPython 4以前"></a>IPython 4以前</h3><blockquote>
+<p>In [1]: ipython profile create nbserver# 创建一个新的notebook profile，命名为 nbserver</p>
+</blockquote>
+<p>配置文件路径<code>~/.ipython/profile_nbserver/ipython_notebook_config.py</code></p>
+<h3 id="Jupyter"><a href="#Jupyter" class="headerlink" title="Jupyter"></a>Jupyter</h3><blockquote>
+<p>\$ mkdir &lt;profile_dir&gt; # 为profile创建目录<br>\$ vi to/your/profile/dir/path/ipython_notebook_config.py</p>
+</blockquote>
+<h2 id="Option"><a href="#Option" class="headerlink" title="Option"></a>Option</h2><h3 id="设置登录密码。"><a href="#设置登录密码。" class="headerlink" title="设置登录密码。"></a>设置登录密码。</h3><blockquote>
+<p>In [2]: from IPython.lib import passwd<br>In [3]: passwd()<br>…<br>Out[2]: ‘shall:&lt;your-hash-passwd&gt;’</p>
+</blockquote>
+<p>输入两次密码后（后面用来登录的密码），就会输出一个哈希密钥。</p>
+<p>然后编辑ipython配置</p>
+<blockquote>
+<p>$ vi ~/.ipython/profile_nbserver/ipython_notebook_config.py</p>
+</blockquote>
+<p>i（insert）进入编辑：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">c = get_config()</div><div class="line"></div><div class="line"># Kernel config</div><div class="line">c.IPKernelApp.pylab = &apos;inline&apos;  # if you want plotting support always</div><div class="line"></div><div class="line"># Notebook config</div><div class="line">c.NotebookApp.certfile = u&apos;/root/mycert.pem&apos;</div><div class="line">c.NotebookApp.ip = &apos;*&apos;</div><div class="line">c.NotebookApp.open_browser = False</div><div class="line">c.NotebookApp.password = u&apos;sha1:47d1d7fde8c2:be3a6ce7b9397b21f556c5b0394f050307062ec7&apos;</div><div class="line"># It&apos;s a good idea to put it on a known, fixed port</div><div class="line">c.NotebookApp.port = 9999</div><div class="line">...</div></pre></td></tr></table></figure>
+<p>除了c = get_config() 这一行，其他都要加进去</p>
+<p>然后 run：<br><code>ipython notebook --profile=nbserver --certfile=mycert.pem</code><br>然后访问你的IP，记得要https：<code>https://&lt;your-ip&gt;:9999</code></p>
+<h3 id="SSL协议访问（Self-signed-Certificate）"><a href="#SSL协议访问（Self-signed-Certificate）" class="headerlink" title="SSL协议访问（Self-signed Certificate）"></a>SSL协议访问（Self-signed Certificate）</h3><h1 id="profile-找不到配置-问题"><a href="#profile-找不到配置-问题" class="headerlink" title="profile 找不到配置 问题"></a>profile 找不到配置 问题</h1><p>根本原因：IPython4后，Jupyter不支持profile。配置文件只在<code>~/.jupyter/jupyter_notebook_config.py</code><br>建议解决方案：<br>migrate前：<br>config依然摆在profile文件夹下<br><a href="http://jupyter.readthedocs.io/en/latest/migrating.html#id8" target="_blank" rel="external">Since Jupyter does not have profiles, how do I customize it?</a><br>jupyter notebook –config=path/to/your/config/ipython_notebook_config.py<br><a href="http://stackoverflow.com/questions/31962862/ipython-ipython-notebook-config-py-missing" target="_blank" rel="external">IPython - ipython_notebook_config.py missing</a><br><a href="http://stackoverflow.com/questions/32071672/where-should-i-place-my-settings-and-profiles-for-use-with-ipython-jupyter-4-0" target="_blank" rel="external">Where should I place my settings and profiles for use with IPython/Jupyter 4.0?</a><br><a href="http://stackoverflow.com/questions/32320836/how-do-i-get-ipython-profile-behavior-from-jupyter-4-x" target="_blank" rel="external">How do I get IPython profile behavior from Jupyter 4.x?</a></p>
+<p>下一步：<br>部署到域名进行访问<a href="https://busihacker.com:9999" target="_blank" rel="external">busihacker.com</a><br>认证ssl/tls证书<br><code>https://&lt;your-url&gt;:9999</code></p>
+<p>现在我们需要一个pem文件。</p>
+<blockquote>
+<p>\$ openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem</p>
+</blockquote>
+<p>最后在当前路径生成一个 mycert.pem 文件。</p>
+<p><a href="http://mindonmind.github.io/2013/02/08/ipython-notebook-interactive-computing-new-era/#fn4" target="_blank" rel="external">IPython Notebook: 交互计算新时代</a><br>校正：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">c = get_config()</div><div class="line"></div><div class="line">c.IPKernerlApp.pylab = &apos;inline&apos;</div><div class="line">c.NotebookApp.ip = &apos;*&apos;</div><div class="line">c.NotebookApp.open_browser = False</div><div class="line">c.NotebookApp.password = u&apos;sha1:xxxx your hashed password&apos;</div><div class="line">c.NotebookApp.port = 9999 #可设为其他端口</div><div class="line">#c.Notebook.App.port = 9999 #可设为其他端口</div></pre></td></tr></table></figure></p>
+<h2 id="IPython-notebook-和-Jupyter-notebook关系与迁移（migrate）"><a href="#IPython-notebook-和-Jupyter-notebook关系与迁移（migrate）" class="headerlink" title="IPython notebook 和 Jupyter notebook关系与迁移（migrate）"></a>IPython notebook 和 Jupyter notebook关系与迁移（migrate）</h2><p>默认目录<br>~/.ipython<br>~/.jupyter<br><a href="https://github.com/ipython/ipython/issues/8818" target="_blank" rel="external">jupyter配置ipython notebook not creating/ignoring settings in ‘ipython_notebook_config.py’ #8818</a><br>–&gt;<a href="http://jupyter-notebook.readthedocs.io/en/latest/public_server.html" target="_blank" rel="external">jupyter配置</a><br>–&gt;<a href="http://arstechnica.com/security/2009/12/how-to-get-set-with-a-secure-sertificate-for-free/" target="_blank" rel="external">支持ssl</a><br>–&gt;<a href="https://letsencrypt.org/" target="_blank" rel="external">支持ssl</a></p>
+<p><a href="http://blog.jupyter.org/2015/04/15/the-big-split/" target="_blank" rel="external">The Big Split™</a>：如果你是IPython 4.X，那么还需要安装jupyter。IPython4以后将IPython和Notebook分离成为了IPython和Juoyter两个项目，官方将IPython4称之为Big Split。</p>
+<h2 id="profile"><a href="#profile" class="headerlink" title="profile"></a>profile</h2><p>Jupiter没有profile，Ipython才有，</p>
+<blockquote>
+<p>ipython profile create [profilename]</p>
+</blockquote>
+<p><a href="https://ipython.org/ipython-doc/3/config/intro.html#profiles" target="_blank" rel="external">Porfiles</a><br><a href="http://jupyter.readthedocs.io/en/latest/migrating.html#id8" target="_blank" rel="external">Since Jupyter does not have profiles, how do I customize it?</a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://upload-images.jianshu.io/upload_images/544981-a6705a8eea965001.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="How do I decide which packages I need?"></h2><p>IPython 运行结果可以单独保存，格式为 .ipynb 。<code>nbviewer</code>是 （Jupyter） notebook viewer 的缩写，用于渲染 .ipynb 文件，并支持 HTML 和 PDF 输出。（现 GitHub 已提供 IPython notebook 的在线预览）</p>
+<p><a href="http://jupyter.readthedocs.io/en/latest/migrating.html" target="_blank" rel="external">This document describes what has changed, and how you may need to modify your code or configuration when migrating from IPython version 3 to Jupiter</a></p>
+<hr>
+<h2 id="防火墙转发"><a href="#防火墙转发" class="headerlink" title="防火墙转发"></a>防火墙转发</h2><p>Firewall Setup<a href="http://ipython.org/ipython-doc/stable/notebook/public_server.html#firewall-setup" target="_blank" rel="external"></a><br>To function correctly, the firewall on the computer running the ipython server must be configured to allow connections from client machines on thec.NotebookApp.port<br> port to allow connections to the web interface. The firewall must also allow connections from 127.0.0.1 (localhost) on ports from 49152 to 65535. These ports are used by the server to communicate with the notebook kernels. The kernel communication ports are chosen randomly by ZeroMQ, and may require multiple connections per kernel, so a large range of ports must be accessible.</p>
+<h2 id="webapp-setting-is-depadfsadf-tornado-setting"><a href="#webapp-setting-is-depadfsadf-tornado-setting" class="headerlink" title="webapp_setting is depadfsadf tornado_setting"></a>webapp_setting is depadfsadf tornado_setting</h2><p>Running with a different URL prefix<a href="http://ipython.org/ipython-doc/stable/notebook/public_server.html#running-with-a-different-url-prefix" target="_blank" rel="external"></a><br>The notebook dashboard (the landing page with an overview of the notebooks in your working directory) typically lives at the URL<a href="http://localhost:8888/" target="_blank" rel="external">http://localhost:8888/</a><br>. If you prefer that it lives, together with the rest of the notebook, under a sub-directory, e.g.<a href="http://localhost:8888/ipython/" target="_blank" rel="external">http://localhost:8888/ipython/</a><br>, you can do so with configuration options like the following (see above for instructions about modifyingipython_notebook_config.py<br>):<br>c.NotebookApp.base_url = ‘/ipython/‘c.NotebookApp.webapp_settings = {‘static_url_prefix’:’/ipython/static/‘}</p>
+<h2 id="bookstore"><a href="#bookstore" class="headerlink" title="bookstore"></a>bookstore</h2><p>Using a different notebook store<a href="http://ipython.org/ipython-doc/stable/notebook/public_server.html#using-a-different-notebook-store" target="_blank" rel="external"></a><br>By default, the notebook server stores the notebook documents that it saves as files in the working directory of the notebook server, also known as the notebook_dir<br>. This logic is implemented in the FileNotebookManager<br> class. However, the server can be configured to use a different notebook manager class, which can store the notebooks in a different format.<br>The <a href="https://github.com/rgbkrk/bookstore" target="_blank" rel="external">bookstore</a> package currently allows users to store notebooks on Rackspace CloudFiles or OpenStack Swift based object stores.<br>Writing a notebook manager is as simple as extending the base class NotebookManager<br>. The <a href="https://github.com/khinsen/simple_notebook_manager" target="_blank" rel="external">simple_notebook_manager</a> provides a great example of an in memory notebook manager, created solely for the purpose of illustrating the notebook manager API.</p>
+<p><a href="http://jupyter.readthedocs.io/en/latest/projects/content-projects.html" target="_blank" rel="external">How do I decide which packages I need?</a></p>
+<h1 id="远程服务"><a href="#远程服务" class="headerlink" title="远程服务"></a>远程服务</h1><hr>
+<p>debug<br>terminal<br>import pudb,pu:db</p>
+<hr>
+<p><a href="http://askubuntu.com/questions/35512/what-is-the-difference-between-ssh-y-trusted-x11-forwarding-and-ssh-x-u" target="_blank" rel="external">difference between <code>ssh -X</code> &amp;<code>ssh-Y</code></a></p>
+<p><a href="http://stackoverflow.com/questions/13425820/difference-between-ssh-x-and-ssh-y" target="_blank" rel="external">.</a><br><a href="https://www.quora.com/What-is-the-difference-between-ssh-X-and-ssh-Y" target="_blank" rel="external">2</a><br><a href="http://unix.stackexchange.com/questions/138417/ssh-forwardx11-vs-forwardx11trusted-beyond-my-grasp" target="_blank" rel="external">3</a><br><a href="https://www.google.com.hk/search?ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=SSH+%22-Y%22&amp;gws_rd=ssl" target="_blank" rel="external">google-‘ssh -Y’</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/09/24/部署Jupyter-IPython-Notebook-Memo/" data-id="cith7j3qz00029fopqso4lhwu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/30/test-diagram/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">test diagram</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/09/24/部署Jupyter-IPython-Notebook-Memo/">部署Jupyter/IPython Notebook Memo</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/30/test-diagram/">test diagram</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/30/项目介绍/">项目介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/02/Resume/">Resume</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/22/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
