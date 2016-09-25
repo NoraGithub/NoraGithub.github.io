@@ -40,7 +40,7 @@ IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-cf639bfbabfce7ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-e3161f7f19f080e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-d82d9ca02a61676b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-09-25T06:20:52.000Z">
+<meta property="og:updated_time" content="2016-09-25T12:24:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="部署Jupyter/IPython Notebook Memo">
 <meta name="twitter:description" content="需求：
@@ -152,11 +152,17 @@ IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
 <blockquote>
 <p>1CPU<br>256 MB Memory<br>10 GB Disk(SSD)<br>Ubuntu 16.04 x86_64<br>500GB Transfer/Bandwidth</p>
 </blockquote>
-<h2 id="accepting-langlc"><a href="#accepting-langlc" class="headerlink" title="accepting langlc"></a>accepting langlc</h2><p>.</p>
-<h2 id="安装gnome"><a href="#安装gnome" class="headerlink" title="安装gnome"></a>安装gnome</h2><p>Jupyter Notebook 对可视化（gui）有要求。<br>Ubuntu 16.04 x86_64 默认支持gnome。</p>
+<h2 id="SSH服务端配置（被动访问-host）"><a href="#SSH服务端配置（被动访问-host）" class="headerlink" title="SSH服务端配置（被动访问-host）"></a>SSH服务端配置（被动访问-host）</h2><ul>
+<li>配置地址：<code>/etc/ssh/sshd_config</code> </li>
+<li>bandwagonhost 为了服务器安全，会随机分配SSH端口（非默认22）</li>
+<li>由于服务端和客户端变量（eg.LANG）冲突，需要注释掉locale变量 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># AcceptEnv LANG LC_*</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><a href="http://stackoverflow.com/questions/2499794/how-can-i-fix-a-locale-warning-from-perl" target="_blank" rel="external">#reference</a></p>
 <h3 id="升级apt-get"><a href="#升级apt-get" class="headerlink" title="升级apt-get"></a>升级apt-get</h3><blockquote>
 <p>\$ sudo apt-get update &amp;&amp; sudo apt-get upgrade</p>
 </blockquote>
+<h2 id="安装gnome"><a href="#安装gnome" class="headerlink" title="安装gnome"></a>安装gnome</h2><p>Jupyter Notebook 对可视化（gui）有要求。<br>Ubuntu 16.04 x86_64 默认支持gnome。</p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><blockquote>
 <p>\$ sudo apt-get install gnome-shell</p>
 </blockquote>
@@ -166,7 +172,7 @@ IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
 <li>最简单直接方案，服务器下载并安装：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Canopy -&gt;&gt; Server : wget</div><div class="line">Server -&gt;&gt; Server : install</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>由于服务器端wget命令出现是否支持SSL协议等一系列问题，实际采用的方案是：</p>
+<p>由于服务器端wget命令出现是否支持SSL协议、403 forbidden、超时 等一系列问题，实际采用的方案是：</p>
 <ul>
 <li>先下载到本地再上传到服务器安装：</li>
 </ul>
@@ -180,12 +186,16 @@ IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
 <blockquote>
 <p>\$  scp -P &lt;%服务端SSH端口&gt; path/to/save/local/canopy/&lt;canopy-to-insall&gt;.sh &lt;%服务端user-name&gt;@&lt;%服务器IP&gt;:path/to/save/server/canopy </p>
 </blockquote>
+<p><a href="http://www.cnblogs.com/jiangyao/archive/2011/01/26/1945570.html" target="_blank" rel="external">利用ssh传输文件</a></p>
 <h3 id="安装Canopy"><a href="#安装Canopy" class="headerlink" title="安装Canopy"></a>安装Canopy</h3><p>执行安装</p>
 <blockquote>
 <p>\$ bash path/to/save/server/canopy/&lt;canopy-to-insall&gt;.sh </p>
 </blockquote>
 <h3 id="Option"><a href="#Option" class="headerlink" title="Option"></a>Option</h3><h4 id="安装过程遇到的其他问题"><a href="#安装过程遇到的其他问题" class="headerlink" title="安装过程遇到的其他问题"></a>安装过程遇到的其他问题</h4><blockquote>
 <p>desktop-file-install:command not found<br>update-desktop-database command not found</p>
+</blockquote>
+<p>解决</p>
+<blockquote>
 <p>\$ sudo apt-get install desktop-file-utils</p>
 </blockquote>
 <p><a href="https://www.google.com.hk/search?ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=desktop-file-install%3A+command+not+found&amp;gws_rd=ssl" target="_blank" rel="external">not found</a></p>
