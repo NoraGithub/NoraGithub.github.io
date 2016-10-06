@@ -3,14 +3,51 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>【转】翻墙路由器的原理与实现 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="[toc]
+
+转自：http://drops.wooyun.org/papers/10177
+
+0×00 开篇GFW具有重大的社会意义。无论是正面的社会意义，还是负面的意义。无论你是讨厌，还是憎恨。它都在那里。在可以预见的将来，墙还会继续存在。我们要学会如何与其共存。我是一个死搞技术的，就是打算搞技术到死的那种人。当我读到西厢计划的博客上的这么一段话时，我被深深的触动了。不是为了什么政治目的，不是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【转】翻墙路由器的原理与实现">
+<meta property="og:url" content="http://yoursite.com/2016/10/06/【转】翻墙路由器的原理与实现/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[toc]
+
+转自：http://drops.wooyun.org/papers/10177
+
+0×00 开篇GFW具有重大的社会意义。无论是正面的社会意义，还是负面的意义。无论你是讨厌，还是憎恨。它都在那里。在可以预见的将来，墙还会继续存在。我们要学会如何与其共存。我是一个死搞技术的，就是打算搞技术到死的那种人。当我读到西厢计划的博客上的这么一段话时，我被深深的触动了。不是为了什么政治目的，不是">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702570978132.jpg">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571023031.jpg">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571086274.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571172873.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571174079.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571116045.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571118944.jpg">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571192283.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571240415.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571271670.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571253840.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571298497.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571226679.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571362513.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571364142.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571343558.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571384358.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571360138.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571486027.png">
+<meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571412746.png">
+<meta property="og:updated_time" content="2016-10-06T16:36:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="【转】翻墙路由器的原理与实现">
+<meta name="twitter:description" content="[toc]
+
+转自：http://drops.wooyun.org/papers/10177
+
+0×00 开篇GFW具有重大的社会意义。无论是正面的社会意义，还是负面的意义。无论你是讨厌，还是憎恨。它都在那里。在可以预见的将来，墙还会继续存在。我们要学会如何与其共存。我是一个死搞技术的，就是打算搞技术到死的那种人。当我读到西厢计划的博客上的这么一段话时，我被深深的触动了。不是为了什么政治目的，不是">
+<meta name="twitter:image" content="http://static.wooyun.org//drops/20151117/2015111702570978132.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,73 +96,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Markdown Web  编辑器产品调研" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/07/Markdown Web  编辑器产品调研/" class="article-date">
-  <time datetime="2016-10-06T16:30:27.000Z" itemprop="datePublished">2016-10-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>方案：</p>
-<p>参考hexo<br>stackedit<br>git</p>
-<p>what “github update” do</p>
-<p>windows 下奇怪路径导致不能git pull</p>
-<p>#Advanced<br>git module<a href="https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97" target="_blank" rel="external">git工具－子模块</a></p>
-<h1 id="个性化方案"><a href="#个性化方案" class="headerlink" title="个性化方案"></a>个性化方案</h1><p>##<a href="http://couchdb.apache.org/" target="_blank" rel="external">couchdb</a><br><a href="https://zh.wikipedia.org/wiki/CouchDB" target="_blank" rel="external">apache couchdb-wikipedia</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=couchdb+github+commit&amp;oq=couchdb+github+commit&amp;gs_l=serp.3...5756.6895.0.7150.7.7.0.0.0.0.159.671.3j3.6.0....0...1c.1.64.serp..1.4.456...0i30k1j0i8i30k1j0i5i30k1j30i10k1.G7oZjLggN_Y" target="_blank" rel="external">couched github commit</a><br><a href="http://wiki.apache.org/couchdb/Installing_on_OSX" target="_blank" rel="external">Installing on OSX</a><br><a href="https://github.com/apache/couchdb/blob/master/INSTALL.Unix.md" target="_blank" rel="external">Apache CouchDB INSTALL.Unix</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/07/Markdown Web  编辑器产品调研/" data-id="citykhyhf0000ocop5adwqvl1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-diff怎么读" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/07/diff怎么读/" class="article-date">
-  <time datetime="2016-10-06T16:30:27.000Z" itemprop="datePublished">2016-10-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h1><p><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=diff+%E5%8E%9F%E7%90%86+&amp;oq=diff+%E5%8E%9F%E7%90%86+&amp;gs_l=serp.3..0i30k1j0i5i30k1l2.68361.68361.0.68637.1.1.0.0.0.0.83.83.1.1.0....0...1c.1.64.serp..0.1.82.DtZbCTJhHNs" target="_blank" rel="external">（谷歌）diff 原理</a><br><a href="https://segmentfault.com/q/1010000000367833" target="_blank" rel="external">Diff 算法的原理是什么, 怎样学习和理解?</a><br><a href="http://www.voidcn.com/blog/dog250/article/p-5859714.html" target="_blank" rel="external">diff程序的算法</a><br><a href="http://www.ruanyifeng.com/blog/2012/08/how_to_read_diff.html" target="_blank" rel="external">读懂diff（阮一峰）</a><br><a href="https://lists.gnu.org/archive/html/emacs-devel/2010-01/msg01182.html" target="_blank" rel="external">Interpreting git diff -cc[was:merge conflict]</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=git+diff+--cc+%E6%80%8E%E4%B9%88%E8%AF%BB&amp;oq=git+diff+--cc+%E6%80%8E%E4%B9%88%E8%AF%BB&amp;gs_l=serp.3...8438.11111.0.11377.11.9.2.0.0.0.227.772.3j2j1.6.0....0...1c.1.64.serp..3.0.0.bCGBg-Hw7IU" target="_blank" rel="external">git diff –cc 怎么读</a></p>
-<p>#git push –force 的使用场景<br>git checkout -b dev<br>git add -all<br>git checkout master</p>
-<p><strong>initialization后，从未<code>git commit</code> ，checkout后git branch –list 也看不到自己的分支。</strong><a href="blog.jobbole.com/87700/">如何在git里撤销几乎任何操作</a></p>
-<p>#文件的命名不要带有<code>/</code><br><a href="https://www.google.com.hk/search?q=invalid+path+git+pull&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">windows下不接受这种命名</a><br>导致git pull 后git rm，永远无法和remote repository保持一致。<br>这个时候可能一定会遇到push force问题。（由于是没用的文件，我直接舍弃了该文件。）</p>
-<p>##git push –force 的使用场景<br>push错误后，<br><a href="https://segmentfault.com/q/1010000002898735" target="_blank" rel="external">git 怎样删除远程仓库的某次错误提交？</a><br><a href="https://www.google.com.hk/search?q=push%E5%90%8E%E6%92%A4%E9%94%80&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">push后撤销</a></p>
-<p>## </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/07/diff怎么读/" data-id="citykhyi00003ocopo8y8ljw0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-【转】翻墙路由器的原理与实现" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-【转】翻墙路由器的原理与实现" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/10/06/【转】翻墙路由器的原理与实现/" class="article-date">
   <time datetime="2016-10-06T15:05:42.000Z" itemprop="datePublished">2016-10-06</time>
@@ -138,8 +109,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/06/【转】翻墙路由器的原理与实现/">【转】翻墙路由器的原理与实现</a>
+    <h1 class="article-title" itemprop="name">
+      【转】翻墙路由器的原理与实现
     </h1>
   
 
@@ -442,441 +413,29 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-个人Markdown-Web-编辑器产品设计-部署" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/" class="article-date">
-  <time datetime="2016-10-01T12:07:53.000Z" itemprop="datePublished">2016-10-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2016/10/07/diff怎么读/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/">个人Markdown Web  编辑器产品设计&amp;部署</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+          (no title)
         
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/" data-id="citykhyig0006ocop39mdd7dt" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">个人Markdown Web  编辑器产品设计&amp;部署</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
-
-  
-    <article id="post-一万字讲清楚怎么上Google" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/09/29/一万字讲清楚怎么上Google/" class="article-date">
-  <time datetime="2016-09-29T07:47:08.000Z" itemprop="datePublished">2016-09-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/29/一万字讲清楚怎么上Google/">一万字讲清楚怎么上Google</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/29/一万字讲清楚怎么上Google/" data-id="citykhyi70005ocopwqoqwzt6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-【译】安装Canopy" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/09/29/【译】安装Canopy/" class="article-date">
-  <time datetime="2016-09-29T07:44:31.000Z" itemprop="datePublished">2016-09-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/29/【译】安装Canopy/">【译】安装Canopy</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/29/【译】安装Canopy/" data-id="citykhyi30004ocopcywjnhvf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/09/29/hello-world/" class="article-date">
-  <time datetime="2016-09-29T01:52:43.000Z" itemprop="datePublished">2016-09-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/29/hello-world/" data-id="citykhyhu0002ocopne9lk841" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-README" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/09/29/README/" class="article-date">
-  <time datetime="2016-09-29T01:10:45.000Z" itemprop="datePublished">2016-09-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Personal markdown article used to synchronize between stackedit and hexo. This file is used to initialize github, as recommended.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/29/README/" data-id="citykhyhr0001ocopwx3pcs4v" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-部署Jupyter-IPython-Notebook-Memo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/09/24/部署Jupyter-IPython-Notebook-Memo/" class="article-date">
-  <time datetime="2016-09-24T12:55:44.000Z" itemprop="datePublished">2016-09-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/24/部署Jupyter-IPython-Notebook-Memo/">部署Jupyter/IPython Notebook Memo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="需求："><a href="#需求：" class="headerlink" title="需求："></a>需求：</h1><ol>
-<li>基于 web 的 itervactive debug</li>
-<li>公网访问的 Web Python解析脚本</li>
-<li>支持更强大、可视化和可交互的文档</li>
-</ol>
-<h1 id="Brief-of-解决方案"><a href="#Brief-of-解决方案" class="headerlink" title="Brief of 解决方案"></a>Brief of 解决方案</h1><ol>
-<li>部署IPyhon/Jupyter Notebook到服务器</li>
-<li>购买域名并绑定到服务器</li>
-<li>和Markdown/Rmarkdown结合（未完成）</li>
-</ol>
-<hr>
-<h1 id="IPython-和-Jupyter"><a href="#IPython-和-Jupyter" class="headerlink" title="IPython 和 Jupyter"></a>IPython 和 Jupyter</h1><p><code>IPython</code> 通常指的是一个 Python REPL(交互式解释器) shell。提供了远比 Python shell 强大的 shell 环境。<code>IPython</code> 是 Iteractive Python shell 的缩写。 Notebook 是一个基于 IPython 的 web 应用。 </p>
-<p>截止 IPython 3.0 ，IPython 变得越来越臃肿，因此， IPython 4.x 后，IPython被分离成为了IPython kernel’s Jupyter（IPython shell combined with jupyter kernel） 和Jupyter subprojects ，Notebook 是 Jupyter 的一个 subproject 。官方将此称为<code>The Big Split™</code>。<a href="http://blog.jupyter.org/2015/04/15/the-big-split/" target="_blank" rel="external">#reference-The Big Split™</a></p>
-<p>IPython 把与语言无关（language-agnostic）的 components 和 Python 解释器剥离，独立为<code>Jupyter</code>发行。因此，Jupyter 可以和 Python 之外的解析器结合，提供新的、强大的服务。比如 Ruby REPL 环境 IRuby 和 Julia REPL 环境 IJulia。</p>
-<p>因此，Jupyter 和  IPyhon 指代同一个项目， Jupyter 特指  Ipython4 后的， 非python kernel框架。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/544981-7dfe26d822e0a207.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="IPython 和 Jupyter"></p>
-<h2 id="Jupyter的架构"><a href="#Jupyter的架构" class="headerlink" title="Jupyter的架构"></a>Jupyter的架构</h2><p><img src="http://upload-images.jianshu.io/upload_images/544981-e8e04b9a5dfb0f0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="A Visual Overview of Projects"><br><a href="http://jupyter.readthedocs.io/en/latest/architecture/visual_overview.html" target="_blank" rel="external">#reference-A Visual Overview of Projects</a></p>
-<h2 id="怎么选择Jupyter下的子项目"><a href="#怎么选择Jupyter下的子项目" class="headerlink" title="怎么选择Jupyter下的子项目"></a>怎么选择Jupyter下的子项目</h2><p><img src="http://upload-images.jianshu.io/upload_images/544981-a6705a8eea965001.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="How do I decide which packages I need?"></p>
-<p><a href="http://jupyter.readthedocs.io/en/latest/projects/content-projects.html" target="_blank" rel="external">#reference-How do I decide which packages I need?</a></p>
-<h3 id="nbviewer"><a href="#nbviewer" class="headerlink" title="nbviewer"></a>nbviewer</h3><p>IPython 运行结果可以单独保存，格式为 .ipynb 。<code>nbviewer</code>是 Jupyter notebook viewer 的缩写，用于渲染 .ipynb 文件，并支持 HTML 和 PDF 输出。现 GitHub 已提供 Notebook 的在线预览。</p>
-<hr>
-<h1 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h1><h2 id="服务器-amp-操作系统"><a href="#服务器-amp-操作系统" class="headerlink" title="服务器&amp;操作系统"></a>服务器&amp;操作系统</h2><p><a href="http://bandwagonhost.com" target="_blank" rel="external">bandwagonhost</a>的VPS</p>
-<p>配置：</p>
-<blockquote>
-<p>1CPU<br>256 MB Memory<br>10 GB Disk(SSD)<br>Ubuntu 16.04 x86_64<br>500GB Transfer/Bandwidth</p>
-</blockquote>
-<h1 id="Jupyter-IPython"><a href="#Jupyter-IPython" class="headerlink" title="Jupyter / IPython"></a>Jupyter / IPython</h1><h2 id="安装Notebook"><a href="#安装Notebook" class="headerlink" title="安装Notebook"></a>安装Notebook</h2><p>本文通过安装Canopy的发行版本实现Jupyter / IPython安装。<br>Canopy是一个科学计算的python发行版本。包括了需要的依赖package，包括IPython、Jupyter、Tornado（web服务器）以及其他科学计算库，例如Numpy、Scipy、Matplotlib等。</p>
-<p>因为在服务器端，这里有两种方案可用于下载并安装Canopy。</p>
-<ul>
-<li>最简单直接方案，服务器下载并安装：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Canopy -&gt;&gt; Server : wget</div><div class="line">Server -&gt;&gt; Server : install</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>由于服务器端wget命令出现是否支持SSL协议、403 forbidden、超时 等一系列问题，实际采用的方案是：</p>
-<ul>
-<li>先下载到本地再上传到服务器安装：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Canopy -&gt;&gt; Client : download</div><div class="line">Client -&gt;&gt; Server : scp</div><div class="line">Server -&gt;&gt; Server : install</div></pre></td></tr></table></figure>
-<h3 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h3><p>Canopy下载<a href="https://store.enthought.com/downloads/#default" target="_blank" rel="external">地址</a>，选择合适版本即可。</p>
-<h3 id="SSH-协议上传到服务器"><a href="#SSH-协议上传到服务器" class="headerlink" title="SSH 协议上传到服务器"></a>SSH 协议上传到服务器</h3><p>先在服务器mkdir目录。</p>
-<blockquote>
-<p>\$ mkdir path/to/save/server/canopy  </p>
-</blockquote>
-<p>再把本地文件通过 SSH 协议上传到服务器</p>
-<blockquote>
-<p>\$  scp -P &lt;%服务端SSH端口&gt; path/to/save/local/canopy/&lt;canopy-to-insall&gt;.sh &lt;%服务端user-name&gt;@&lt;%服务器IP&gt;:path/to/save/server/canopy </p>
-</blockquote>
-<p><a href="http://www.cnblogs.com/jiangyao/archive/2011/01/26/1945570.html" target="_blank" rel="external">#reference-利用ssh传输文件</a></p>
-<h3 id="安装Canopy"><a href="#安装Canopy" class="headerlink" title="安装Canopy"></a>安装Canopy</h3><p><strong>建议安装前先执行<a href="#可能遇到的问题">可能遇到的问题</a>脚本,以防万一。</strong></p>
-<p>执行安装</p>
-<blockquote>
-<p>\$ bash path/to/save/server/canopy/&lt;canopy-to-insall&gt;.sh </p>
-</blockquote>
-<h3 id="初始化-amp-激活Canopy"><a href="#初始化-amp-激活Canopy" class="headerlink" title="初始化&amp;激活Canopy"></a>初始化&amp;激活Canopy</h3><p>安装完后，得到以下信息</p>
-<blockquote>
-<p>You can run the Canopy graphical environment by running the script:<br>/root/Canopy/canopy<br>or by selecting ‘Canopy’ in your Applications menu.<br>On your first run, your Canopy User Python environment will be initialized, and you will have the opportunity to make Canopy be your default Python at the command line. Details at support.enthought.com/forums</p>
-<p>Thank you for installing Canopy!</p>
-</blockquote>
-<p>由于我不需要graphical environment，因此我们执行<code>~/Canopy/canopy_cli --no-gui-setup setup ~/canopy</code>配置EPD-like environment即可<br><a href="#id">reference-【译】安装Canopy</a><br><a href="http://docs.enthought.com/canopy/quick-start/install_linux.html" target="_blank" rel="external">reference-Install Linux</a></p>
-<h3 id="Option"><a href="#Option" class="headerlink" title="Option"></a>Option</h3><h4 id="防火墙转发"><a href="#防火墙转发" class="headerlink" title="防火墙转发"></a>防火墙转发</h4><p>由于Ubuntu默认未启动防火墙，需要的可以看一下这里：</p>
-<blockquote>
-<p>To function correctly, the firewall on the computer running the ipython server must be configured to allow connections from client machines on the <code>c.NotebookApp.port</code> port to allow connections to the web interface. The firewall must also allow connections from 127.0.0.1 (localhost) on ports from 49152 to 65535. These ports are used by the server to communicate with the notebook kernels. The kernel communication ports are chosen randomly by ZeroMQ, and may require multiple connections per kernel, so a large range of ports must be accessible.</p>
-</blockquote>
-<p><a href="http://ipython.org/ipython-doc/stable/notebook/public_server.html#firewall-setup" target="_blank" rel="external">#reference-Firewall Setup</a></p>
-<h4 id="存放文件目录"><a href="#存放文件目录" class="headerlink" title="存放文件目录"></a>存放文件目录</h4><p>哪个目录启动（执行<code>jupyter notebook --config=path/to/your/profile_root/profile_&lt;%profile_name&gt;/ipython_notebook_config.py</code>的目录），进入后web后就显示哪个目录里面的文件，也会在该目录存放所有文件。可以自行设置更改，我<code>mkdir</code>了一个<code>server_doc_to_save</code>文件夹使用。</p>
-<h4 id="后台运行"><a href="#后台运行" class="headerlink" title="后台运行"></a>后台运行</h4><p>至此，有一个问题是，客户端logout之后，服务器的进程会killed，需要保证服务器在logout之后依然运行。当然需要保留想办法保留这个进程的日志。</p>
-<blockquote>
-<p>\$ nohup &lt;语句&gt; &amp;</p>
-</blockquote>
-<p>原程序的的标准输出被自动改向到当前目录下的nohup.out文件，起到了log的作用。<br><a href="http://www.cnblogs.com/allenblogs/archive/2011/05/19/2051136.html" target="_blank" rel="external">#reference-linux的nohup命令的用法</a></p>
-<h4 id="Bookstore"><a href="#Bookstore" class="headerlink" title="Bookstore"></a>Bookstore</h4><blockquote>
-<p>By default, the notebook server stores the notebook documents that it saves as files in the working directory of the notebook server, also known as the <code>notebook_dir</code>. This logic is implemented in the FileNotebookManager<br> class. However, the server can be configured to use a different notebook manager class, which can store the notebooks in a different format.<br>The <a href="https://github.com/rgbkrk/bookstore" target="_blank" rel="external">bookstore</a> package currently allows users to store notebooks on Rackspace CloudFiles or OpenStack Swift based object stores.<br>Writing a notebook manager is as simple as extending the base class NotebookManager.The <a href="https://github.com/khinsen/simple_notebook_manager" target="_blank" rel="external">simple_notebook_manager</a> provides a great example of an in memory notebook manager, created solely for the purpose of illustrating the notebook manager API.</p>
-</blockquote>
-<p><a href="http://ipython.org/ipython-doc/stable/notebook/public_server.html#using-a-different-notebook-store" target="_blank" rel="external">#reference-Using a different notebook store</a></p>
-<h2 id="启动-Notebook"><a href="#启动-Notebook" class="headerlink" title="启动 Notebook"></a>启动 Notebook</h2><p><a href="http://jupyter-notebook.readthedocs.io/en/latest/public_server.html" target="_blank" rel="external">#reference-Jupyter Notebook 配置</a></p>
-<h3 id="profile"><a href="#profile" class="headerlink" title="profile"></a>profile</h3><h4 id="IPython-4以前"><a href="#IPython-4以前" class="headerlink" title="IPython 4以前"></a>IPython 4以前</h4><p>通过新建 profile ，每个profile可以有独立的配置</p>
-<blockquote>
-<p>\$ ipython profile create &lt;profile-name&gt;# 创建一个新的notebook profile，命名为 &lt;profile-name&gt;</p>
-</blockquote>
-<p>配置文件路径<code>~/.ipython/profile_&lt;profile-name&gt;/ipython_notebook_config.py</code></p>
-<h4 id="Jupyter"><a href="#Jupyter" class="headerlink" title="Jupyter"></a>Jupyter</h4><p>Jupyter 没有 profile 概念了，只有默认配置，在<code>~/.jupyter/jupyter_notebook_config.py</code>。但个人认为 profile 概念非常好的，独立于默认配置，耦合性低。所以会自己按照IPython的处理方式模拟出profile。</p>
-<blockquote>
-<p>\$ mkdir path/to/your/profile_root/profile_&lt;%profile_name&gt; # 为profile创建目录<br>\$ cp -i ~/.jupyter/jupyter_notebook_config.py path/to/your/profile_root/profile_&lt;%profile_name&gt; # 复制默认配置 到 profile 中作为初始配置<br>\$ mv jupyter_notebook_config.py ipython_notebook_config.py# 重命名为ipython_notebook_config.py，方便自己记忆，这是模拟的ipython</p>
-</blockquote>
-<p>至此，基于web，支持HTTP协议的Jupyter Notebook 服务完成部署了。执行<code>jupyter notebook --config=path/to/your/profile_root/profile_&lt;%profile_name&gt;/ipython_notebook_config.py</code>，然后访问你的IP：<code>http://&lt;your-ip&gt;:8888</code>即可。</p>
-<p><strong>PS：</strong><br><code>jupyter notebook --config=path/to/your/profile_root/profile_&lt;%profile_name&gt;/ipython_notebook_config.py</code>和直接运行 <code>jupyter notebook --port=9999 --ip=&#39;*&#39;</code> 效果完全一样。</p>
-<p><a href="https://ipython.org/ipython-doc/3/config/intro.html#profiles" target="_blank" rel="external">#reference-Porfiles</a><br><a href="http://jupyter.readthedocs.io/en/latest/migrating.html#id8" target="_blank" rel="external">#reference-Since Jupyter does not have profiles, how do I customize it?</a><br><a href="http://stackoverflow.com/questions/31962862/ipython-ipython-notebook-config-py-missing" target="_blank" rel="external">#reference-IPython - ipython_notebook_config.py missing</a><br><a href="http://stackoverflow.com/questions/32071672/where-should-i-place-my-settings-and-profiles-for-use-with-ipython-jupyter-4-0" target="_blank" rel="external">#reference-Where should I place my settings and profiles for use with IPython/Jupyter 4.0?</a><br><a href="http://stackoverflow.com/questions/32320836/how-do-i-get-ipython-profile-behavior-from-jupyter-4-x" target="_blank" rel="external">#reference-How do I get IPython profile behavior from Jupyter 4.x?</a><br><a href="https://github.com/ipython/ipython/issues/8818" target="_blank" rel="external">#reference-jupyter配置ipython notebook not creating/ignoring settings in ‘ipython_notebook_config.py’ #8818</a></p>
-<h2 id="Option-1"><a href="#Option-1" class="headerlink" title="Option"></a>Option</h2><h3 id="设置登录密码"><a href="#设置登录密码" class="headerlink" title="设置登录密码"></a>设置登录密码</h3><blockquote>
-<p>In [1]: from IPython.lib import passwd<br>In [2]: passwd()<br>Enter password:<br>Verify password:<br>Out[2]: ‘sha1:&lt;your-hash-passwd&gt;’</p>
-</blockquote>
-<p>输入两次密码后（用来登录Jupyter的密码），就会输出一个哈希密钥。profile应该知道这个密钥，因此编辑profile配置：</p>
-<blockquote>
-<p>$ vi path/to/your/profile_root/profile_&lt;%profile_name&gt;/ipython_notebook_config.py</p>
-</blockquote>
-<p>i（insert）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">c.NotebookApp.password = u&apos;sha1:&lt;your-hash-passwd&gt;&apos;</div></pre></td></tr></table></figure>
-<p>执行<code>jupyter notebook --config=path/to/your/profile_root/profile_&lt;%profile_name&gt;/ipython_notebook_config.py</code>，然后输入密码访问：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/544981-afc57132a6f87c12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="密码登录.png"></p>
-<h3 id="修改默认访问端口"><a href="#修改默认访问端口" class="headerlink" title="修改默认访问端口"></a>修改默认访问端口</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># It&apos;s a good idea to put it on a known, fixed port</div><div class="line">c.NotebookApp.port = 9999 # 默认端口8888</div></pre></td></tr></table></figure>
-<h3 id="SSL协议访问"><a href="#SSL协议访问" class="headerlink" title="SSL协议访问"></a>SSL协议访问</h3><p>SSL协议访问需要证书，一般需要通过第三方颁发/认证。为求方便，这里自己为自己颁发/认证，这个证书为一个pem文件。</p>
-<blockquote>
-<p>\$ openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem</p>
-</blockquote>
-<p>执行后，在当前路径生成一个 mycert.pem 文件。</p>
-<p>修改profile 的配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 证书地址，获取第三方认证证书后，修改即可</div><div class="line">c.NotebookApp.certfile = u&apos;/root/mycert.pem&apos;</div></pre></td></tr></table></figure></p>
-<p>执行<code>ipython notebook --profile=nbserver</code>然后访问你的IP，记得要加https：<code>https://&lt;your-ip&gt;:9999</code></p>
-<p><a href="#e">reference-SSL的原理，充当裁判的角色</a><br>这里的使用的是自签名证书（Self-Signed Certificate），由于未经过第三方认证。以下现象都是正常的，使用经过认证的证书即可。<br><img src="http://upload-images.jianshu.io/upload_images/544981-cf639bfbabfce7ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="HTTPS 警告"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/544981-e3161f7f19f080e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Not Private"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/544981-d82d9ca02a61676b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Security Overview"></p>
-<p><a href="http://jupyter-notebook.readthedocs.io/en/latest/public_server.html" target="_blank" rel="external">#reference-Jupyter Notebook 配置</a><br><a href="http://arstechnica.com/security/2009/12/how-to-get-set-with-a-secure-sertificate-for-free/" target="_blank" rel="external">#reference-支持三方认证的SSL</a><br><a href="https://letsencrypt.org/" target="_blank" rel="external">#reference-三方机构Let’s Encrypt</a><br><a href="https://www.startssl.com" target="_blank" rel="external">#reference-三方机构StartSSL</a></p>
-<h3 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"># 谨慎出现中文</div><div class="line"># c = get_config() # 这一行并非必须有</div><div class="line"></div><div class="line"># Kernel config</div><div class="line">c.IPKernelApp.pylab = &apos;inline&apos;  # if you want plotting support always</div><div class="line"></div><div class="line"># Notebook config</div><div class="line">c.NotebookApp.certfile = u&apos;/root/mycert.pem&apos;</div><div class="line">c.NotebookApp.password = u&apos;sha1:&lt;your-hash-passwd&gt;&apos;</div><div class="line"># It&apos;s a good idea to put it on a known, fixed port</div><div class="line">c.NotebookApp.port = 9999 # 默认端口8888</div><div class="line"></div><div class="line">c.NotebookApp.ip = &apos;*&apos; # 接受访问的ip</div><div class="line">c.NotebookApp.open_browser = False # 启动后默认打开浏览器</div><div class="line"></div><div class="line">...</div></pre></td></tr></table></figure>
-<p><a href="http://jupyter-notebook.readthedocs.io/en/latest/config.html" target="_blank" rel="external">#reference-Config file and command line options</a><br><a href="http://mindonmind.github.io/2013/02/08/ipython-notebook-interactive-computing-new-era/#fn4" target="_blank" rel="external">#reference-IPython Notebook: 交互计算新时代</a><br>校正：<br>这篇reference，有一个错误，以下用#标记了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">c.IPKernerlApp.pylab = &apos;inline&apos;</div><div class="line">c.NotebookApp.ip = &apos;*&apos;</div><div class="line">c.NotebookApp.open_browser = False</div><div class="line">c.NotebookApp.password = u&apos;sha1:xxxx your hashed password&apos;</div><div class="line">c.NotebookApp.port = 9999 #可设为其他端口</div><div class="line">#c.Notebook.App.port = 9999 #可设为其他端口</div></pre></td></tr></table></figure></p>
-<h1 id="IPython-到-Jupyter-的兼容-迁移（migrate）"><a href="#IPython-到-Jupyter-的兼容-迁移（migrate）" class="headerlink" title="IPython 到 Jupyter 的兼容/迁移（migrate）"></a>IPython 到 Jupyter 的兼容/迁移（migrate）</h1><p>通过执行<code>jupyter migrate</code>自动迁移配置<br>|解析语言|默认目录|<br>|:–:|:–:|<br>|IPython|~/.ipython|<br>|Jupyter|~/.jupyter|</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">IPython location</th>
-<th style="text-align:center">Jupyter location</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">~/.ipython/profile_default/static/custom</td>
-<td style="text-align:center">~/.jupyter/custom</td>
-</tr>
-<tr>
-<td style="text-align:center">~/.ipython/profile_default/ipython_notebook_config.py</td>
-<td style="text-align:center">~/.jupyter/jupyter_notebook_config.py</td>
-</tr>
-<tr>
-<td style="text-align:center">~/.ipython/profile_default/ipython_nbconvert_config.py</td>
-<td style="text-align:center">~/.jupyter/jupyter_nbconvert_config.py</td>
-</tr>
-<tr>
-<td style="text-align:center">~/.ipython/profile_default/ipython_qtconsole_config.py</td>
-<td style="text-align:center">~/.jupyter/jupyter_qtconsole_config.py</td>
-</tr>
-<tr>
-<td style="text-align:center">~/.ipython/profile_default/ipython_console_config.py</td>
-<td style="text-align:center">~/.jupyter/jupyter_console_config.py</td>
-</tr>
-</tbody>
-</table>
-<p>这片reference阐述了从IPython 到 Jupyter的配置改变及如何兼容<br><a href="http://jupyter.readthedocs.io/en/latest/migrating.html" target="_blank" rel="external">Migrating from IPython Notebook</a></p>
-<h1 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h1><h2 id="升级apt-get"><a href="#升级apt-get" class="headerlink" title="升级apt-get"></a>升级apt-get</h2><p>更新资源并升级：</p>
-<blockquote>
-<p>\$ sudo apt-get update &amp;&amp; sudo apt-get upgrade</p>
-</blockquote>
-<h2 id="包依赖1"><a href="#包依赖1" class="headerlink" title="包依赖1"></a>包依赖1</h2><blockquote>
-<p>desktop-file-install:command not found<br>update-desktop-database command not found</p>
-</blockquote>
-<p>解决</p>
-<blockquote>
-<p>\$ sudo apt-get install desktop-file-utils</p>
-</blockquote>
-<p><a href="https://www.google.com.hk/search?ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=desktop-file-install%3A+command+not+found&amp;gws_rd=ssl" target="_blank" rel="external">#reference-desktop-file-install:command not found</a></p>
-<h2 id="包依赖2"><a href="#包依赖2" class="headerlink" title="包依赖2"></a>包依赖2</h2><blockquote>
-<p>update-mime-database: command not found</p>
-</blockquote>
-<h2 id="系统语言1"><a href="#系统语言1" class="headerlink" title="系统语言1"></a>系统语言1</h2><p>SSH连接上服务器，会传递部分变量，由于服务端和客户端变量（eg.LANG）冲突，可以选择注释掉locale setting（SSH服务端配置地址：<code>/etc/ssh/sshd_config</code>）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"># AcceptEnv LANG LC_*</div></pre></td></tr></table></figure></p>
-<p><a href="http://stackoverflow.com/questions/2499794/how-can-i-fix-a-locale-warning-from-perl" target="_blank" rel="external">#reference-How can I fix a locale warning from perl</a></p>
-<h2 id="系统语言2"><a href="#系统语言2" class="headerlink" title="系统语言2"></a>系统语言2</h2><p>安装过程中，Ubuntu系统语言不支持en_US.UTF-8，需要支持:</p>
-<blockquote>
-<p>\$ sudo locale-gen en_US.UTF-8</p>
-</blockquote>
-<p><a href="http://wiki.ubuntu.org.cn/%E4%BF%AE%E6%94%B9locale" target="_blank" rel="external">#reference-将Ubuntu系统语言环境改为英文的en_US.UTF-8</a></p>
-<h2 id="设置-timezone"><a href="#设置-timezone" class="headerlink" title="设置 timezone"></a>设置 timezone</h2><blockquote>
-<p>\$ dpkg-reconfigure tzdata</p>
-</blockquote>
-<h2 id="could-not-connect-to-X-server"><a href="#could-not-connect-to-X-server" class="headerlink" title="could not connect to X server"></a>could not connect to X server</h2><p>当运行<code>/root/Canopy/canopy</code>企图使用graphical environment的时候，会显示<code>could not connect to X server</code>问题，可能是GUI或者权限问题</p>
-<p><a href="#.">#reference-Ubuntu服务端GUI配置</a></p>
-<hr>
-<h1 id="End"><a href="#End" class="headerlink" title="End"></a>End</h1><p>如不特殊声明，本文大部分脚本在服务端执行。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/24/部署Jupyter-IPython-Notebook-Memo/" data-id="citykhyij0008ocopgsw4f7ln" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-test-diagram" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/30/test-diagram/" class="article-date">
-  <time datetime="2016-07-30T12:09:37.000Z" itemprop="datePublished">2016-07-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/30/test-diagram/">test diagram</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">st=&gt;start: Start|past:&gt;http://www.google.com[blank]</div><div class="line">e=&gt;end: End:&gt;http://www.google.com</div><div class="line">op1=&gt;operation: My Operation|past</div><div class="line">op2=&gt;operation: Stuff|current</div><div class="line">sub1=&gt;subroutine: My Subroutine|invalid</div><div class="line">cond=&gt;condition: Yes </div><div class="line">or No?|approved:&gt;http://www.baidu.com</div><div class="line">c2=&gt;condition: Good idea|rejected</div><div class="line">io=&gt;inputoutput: catch something...|request</div><div class="line"></div><div class="line">st-&gt;op1(right)-&gt;cond</div><div class="line">cond(yes, right)-&gt;c2</div><div class="line">cond(no)-&gt;sub1(left)-&gt;op1</div><div class="line">c2(yes)-&gt;io-&gt;e</div><div class="line">c2(no)-&gt;op2-&gt;e</div></pre></td></tr></table></figure>
-<img src="http://www.plantuml.com/plantuml/svg/Syp9J4vLqBLJSCfFib9mB2t9ICqhoKnEBCdCprC8IYqiJIqkuGBAAUW2rJY256DHLLoGdrUSokM8QbPUFb1PaK8YTZCXYcrqTI6g4t6fXfWD0000">
-<img src="http://www.plantuml.com/plantuml/svg/POr12i9034NtFKMM5d7keFG6Ue4u2KFiD9KcbOBqxbOThEZVvNt-onLZYucX7rBGonX8BECvZ5s-Lx0aPZI34vlluKsUsHrz44sWsF47RaKTX5xtNFsi3y2Jir9n_Qk8BQwg0XDxi_1DlJQtNWYiyAzjNVxE3m00">
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/30/test-diagram/" data-id="citykhyii0007ocopjcv3my03" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
-  </nav>
 </section>
         
           <aside id="sidebar">
