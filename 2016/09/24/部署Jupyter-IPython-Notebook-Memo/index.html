@@ -5,7 +5,9 @@
   
   <title>部署Jupyter/IPython Notebook Memo | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="需求：
+  <meta name="description" content="[toc]
+
+需求：
 基于 web 的 itervactive debug
 公网访问的 Web Python解析脚本
 支持更强大、可视化和可交互的文档
@@ -16,12 +18,14 @@ Brief of 解决方案
 和Markdown/Rmarkdown结合（未完成）
 
 
-IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
+IPython 和 JupyterIPython 通常指的是一个 Pytho">
 <meta property="og:type" content="article">
 <meta property="og:title" content="部署Jupyter/IPython Notebook Memo">
 <meta property="og:url" content="http://yoursite.com/2016/09/24/部署Jupyter-IPython-Notebook-Memo/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="需求：
+<meta property="og:description" content="[toc]
+
+需求：
 基于 web 的 itervactive debug
 公网访问的 Web Python解析脚本
 支持更强大、可视化和可交互的文档
@@ -32,7 +36,7 @@ Brief of 解决方案
 和Markdown/Rmarkdown结合（未完成）
 
 
-IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
+IPython 和 JupyterIPython 通常指的是一个 Pytho">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-7dfe26d822e0a207.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-e8e04b9a5dfb0f0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-a6705a8eea965001.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -40,10 +44,12 @@ IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-cf639bfbabfce7ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-e3161f7f19f080e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-d82d9ca02a61676b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-09-29T01:52:43.000Z">
+<meta property="og:updated_time" content="2016-10-09T06:19:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="部署Jupyter/IPython Notebook Memo">
-<meta name="twitter:description" content="需求：
+<meta name="twitter:description" content="[toc]
+
+需求：
 基于 web 的 itervactive debug
 公网访问的 Web Python解析脚本
 支持更强大、可视化和可交互的文档
@@ -54,7 +60,7 @@ Brief of 解决方案
 和Markdown/Rmarkdown结合（未完成）
 
 
-IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
+IPython 和 JupyterIPython 通常指的是一个 Pytho">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/544981-7dfe26d822e0a207.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -126,7 +132,9 @@ IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="需求："><a href="#需求：" class="headerlink" title="需求："></a>需求：</h1><ol>
+        <p>[toc]</p>
+<hr>
+<h1 id="需求："><a href="#需求：" class="headerlink" title="需求："></a>需求：</h1><ol>
 <li>基于 web 的 itervactive debug</li>
 <li>公网访问的 Web Python解析脚本</li>
 <li>支持更强大、可视化和可交互的文档</li>
@@ -152,7 +160,7 @@ IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
 <blockquote>
 <p>1CPU<br>256 MB Memory<br>10 GB Disk(SSD)<br>Ubuntu 16.04 x86_64<br>500GB Transfer/Bandwidth</p>
 </blockquote>
-<h1 id="Jupyter-IPython"><a href="#Jupyter-IPython" class="headerlink" title="Jupyter / IPython"></a>Jupyter / IPython</h1><h2 id="安装Notebook"><a href="#安装Notebook" class="headerlink" title="安装Notebook"></a>安装Notebook</h2><p>本文通过安装Canopy的发行版本实现Jupyter / IPython安装。<br>Canopy是一个科学计算的python发行版本。包括了需要的依赖package，包括IPython、Jupyter、Tornado（web服务器）以及其他科学计算库，例如Numpy、Scipy、Matplotlib等。</p>
+<h1 id="Jupyter-IPython"><a href="#Jupyter-IPython" class="headerlink" title="Jupyter / IPython"></a>Jupyter / IPython</h1><h2 id="安装Notebook"><a href="#安装Notebook" class="headerlink" title="安装Notebook"></a>安装Notebook</h2><p>本文通过安装Canopy的发行版本实现Jupyter / IPython安装。<br>Canopy是一个科学计算的python发行版本。包括了需要的依赖package，包括IPython、Jupiter、<a href="http://www.tornadoweb.org/en/stable/" target="_blank" rel="external">Tornado</a>（web服务器）以及其他科学计算库，例如Numpy、Scipy、Matplotlib等。</p>
 <p>因为在服务器端，这里有两种方案可用于下载并安装Canopy。</p>
 <ul>
 <li>最简单直接方案，服务器下载并安装：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Canopy -&gt;&gt; Server : wget</div><div class="line">Server -&gt;&gt; Server : install</div></pre></td></tr></table></figure>
@@ -194,7 +202,7 @@ IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
 <blockquote>
 <p>\$ nohup &lt;语句&gt; &amp;</p>
 </blockquote>
-<p>原程序的的标准输出被自动改向到当前目录下的nohup.out文件，起到了log的作用。<br><a href="http://www.cnblogs.com/allenblogs/archive/2011/05/19/2051136.html" target="_blank" rel="external">#reference-linux的nohup命令的用法</a></p>
+<p>原程序的的标准输出被自动改向到当前目录下的nohup.out文件，起到了log的作用。<br><a href="http://www.cnblogs.com/allenblogs/archive/2011/05/19/2051136.html" target="_blank" rel="external">#reference-linux的nohup命令的用法</a><br><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/" target="_blank" rel="external">#reference-Linux 技巧：让进程在后台可靠运行的几种方法</a></p>
 <h4 id="Bookstore"><a href="#Bookstore" class="headerlink" title="Bookstore"></a>Bookstore</h4><blockquote>
 <p>By default, the notebook server stores the notebook documents that it saves as files in the working directory of the notebook server, also known as the <code>notebook_dir</code>. This logic is implemented in the FileNotebookManager<br> class. However, the server can be configured to use a different notebook manager class, which can store the notebooks in a different format.<br>The <a href="https://github.com/rgbkrk/bookstore" target="_blank" rel="external">bookstore</a> package currently allows users to store notebooks on Rackspace CloudFiles or OpenStack Swift based object stores.<br>Writing a notebook manager is as simple as extending the base class NotebookManager.The <a href="https://github.com/khinsen/simple_notebook_manager" target="_blank" rel="external">simple_notebook_manager</a> provides a great example of an in memory notebook manager, created solely for the purpose of illustrating the notebook manager API.</p>
 </blockquote>
@@ -211,7 +219,7 @@ IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
 </blockquote>
 <p>至此，基于web，支持HTTP协议的Jupyter Notebook 服务完成部署了。执行<code>jupyter notebook --config=path/to/your/profile_root/profile_&lt;%profile_name&gt;/ipython_notebook_config.py</code>，然后访问你的IP：<code>http://&lt;your-ip&gt;:8888</code>即可。</p>
 <p><strong>PS：</strong><br><code>jupyter notebook --config=path/to/your/profile_root/profile_&lt;%profile_name&gt;/ipython_notebook_config.py</code>和直接运行 <code>jupyter notebook --port=9999 --ip=&#39;*&#39;</code> 效果完全一样。</p>
-<p><a href="https://ipython.org/ipython-doc/3/config/intro.html#profiles" target="_blank" rel="external">#reference-Porfiles</a><br><a href="http://jupyter.readthedocs.io/en/latest/migrating.html#id8" target="_blank" rel="external">#reference-Since Jupyter does not have profiles, how do I customize it?</a><br><a href="http://stackoverflow.com/questions/31962862/ipython-ipython-notebook-config-py-missing" target="_blank" rel="external">#reference-IPython - ipython_notebook_config.py missing</a><br><a href="http://stackoverflow.com/questions/32071672/where-should-i-place-my-settings-and-profiles-for-use-with-ipython-jupyter-4-0" target="_blank" rel="external">#reference-Where should I place my settings and profiles for use with IPython/Jupyter 4.0?</a><br><a href="http://stackoverflow.com/questions/32320836/how-do-i-get-ipython-profile-behavior-from-jupyter-4-x" target="_blank" rel="external">#reference-How do I get IPython profile behavior from Jupyter 4.x?</a><br><a href="https://github.com/ipython/ipython/issues/8818" target="_blank" rel="external">#reference-jupyter配置ipython notebook not creating/ignoring settings in ‘ipython_notebook_config.py’ #8818</a></p>
+<p><a href="https://ipython.org/ipython-doc/3/config/intro.html#profiles" target="_blank" rel="external">#reference-Porfiles</a><br><a href="http://jupyter.readthedocs.io/en/latest/migrating.html#id8" target="_blank" rel="external">#reference-Since Jupyter does not have profiles, how do I customize it?</a><br><a href="http://stackoverflow.com/questions/31962862/ipython-ipython-notebook-config-py-missing" target="_blank" rel="external">#reference-IPython - ipython_notebook_config.py missing</a><br><a href="http://stackoverflow.com/questions/32071672/where-should-i-place-my-settings-and-profiles-for-use-with-ipython-jupyter-4-0" target="_blank" rel="external">#reference-Where should I place my settings and profiles for use with IPython/Jupyter 4.0?</a><br><a href="http://stackoverflow.com/questions/32320836/how-do-i-get-ipython-profile-behavior-from-jupyter-4-x" target="_blank" rel="external">#reference-How do I get IPython profile behavior from Jupyter 4.x?</a><br><a href="https://github.com/ipython/ipython/issues/8818" target="_blank" rel="external">#reference-jupyter配置ipython notebook not creating/ignoring settings in ‘ipython_notebook_config.py’ #8818</a><br><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-jupyter-notebook-to-run-ipython-on-ubuntu-16-04" target="_blank" rel="external">#reference-how to set up a jupyter notebook to run python on ubuntu 16.04</a></p>
 <h2 id="Option-1"><a href="#Option-1" class="headerlink" title="Option"></a>Option</h2><h3 id="设置登录密码"><a href="#设置登录密码" class="headerlink" title="设置登录密码"></a>设置登录密码</h3><blockquote>
 <p>In [1]: from IPython.lib import passwd<br>In [2]: passwd()<br>Enter password:<br>Verify password:<br>Out[2]: ‘sha1:&lt;your-hash-passwd&gt;’</p>
 </blockquote>
@@ -302,7 +310,7 @@ IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/24/部署Jupyter-IPython-Notebook-Memo/" data-id="citykhyij0008ocopgsw4f7ln" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/24/部署Jupyter-IPython-Notebook-Memo/" data-id="ciu293y8c000euaop2blm46pw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -339,9 +347,23 @@ IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OCR/">OCR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StackEdit/">StackEdit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tesseract/">tesseract</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/同步/">同步</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源/">开源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文字识别/">文字识别</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/OCR/" style="font-size: 10px;">OCR</a> <a href="/tags/StackEdit/" style="font-size: 10px;">StackEdit</a> <a href="/tags/tesseract/" style="font-size: 10px;">tesseract</a> <a href="/tags/同步/" style="font-size: 10px;">同步</a> <a href="/tags/开源/" style="font-size: 10px;">开源</a> <a href="/tags/文字识别/" style="font-size: 10px;">文字识别</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -360,23 +382,23 @@ IPython 和 JupyterIPython 通常指的是一个 Python REPL(">
       <ul>
         
           <li>
-            <a href="/2016/10/07/Markdown Web  编辑器产品调研/">(no title)</a>
+            <a href="/2016/10/09/git的一些坑/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2016/10/07/diff怎么读/">(no title)</a>
+            <a href="/2016/10/09/前端的学习笔记/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2016/10/06/【转】翻墙路由器的原理与实现/">【转】翻墙路由器的原理与实现</a>
+            <a href="/2016/10/09/区块链（block chain）调研/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/">个人Markdown Web  编辑器产品设计&amp;部署</a>
+            <a href="/2016/10/09/Markdown Web  编辑器产品调研/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2016/09/29/一万字讲清楚怎么上Google/">一万字讲清楚怎么上Google</a>
+            <a href="/2016/10/08/文字识别初探/">文字识别初探</a>
           </li>
         
       </ul>

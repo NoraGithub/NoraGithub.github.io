@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>如何利用计算机网络协议知识访问Google | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="[toc]
+
+网络访问的简单模型#reference-前端经典面试题: 从输入URL到页面加载发生了什么？
+当我们在浏览网页的时候，计算机做了什么？
+
+在计算机眼里，没有域名概念，只有IP概念。当我们输入域名的时候，其实计算机做了一次 DNS查询，把域名和IP的映射（一个域名对应多个IP）获取并访问。
+和服务器（指定IP机器）进行“三次握手”后展示网页内容。（略）TCP“四次挥手”结束访问（略）S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何利用计算机网络协议知识访问Google">
+<meta property="og:url" content="http://yoursite.com/2016/09/29/如何利用计算机网络协议知识访问Google/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[toc]
+
+网络访问的简单模型#reference-前端经典面试题: 从输入URL到页面加载发生了什么？
+当我们在浏览网页的时候，计算机做了什么？
+
+在计算机眼里，没有域名概念，只有IP概念。当我们输入域名的时候，其实计算机做了一次 DNS查询，把域名和IP的映射（一个域名对应多个IP）获取并访问。
+和服务器（指定IP机器）进行“三次握手”后展示网页内容。（略）TCP“四次挥手”结束访问（略）S">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-909ab11f316bcc9c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-a13bc6b207f8d84d.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://yoursite.com/...">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-1629851c9094a57f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-69a62d3c96c71642.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-4ebf6537ab4976d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-10-09T06:19:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何利用计算机网络协议知识访问Google">
+<meta name="twitter:description" content="[toc]
+
+网络访问的简单模型#reference-前端经典面试题: 从输入URL到页面加载发生了什么？
+当我们在浏览网页的时候，计算机做了什么？
+
+在计算机眼里，没有域名概念，只有IP概念。当我们输入域名的时候，其实计算机做了一次 DNS查询，把域名和IP的映射（一个域名对应多个IP）获取并访问。
+和服务器（指定IP机器）进行“三次握手”后展示网页内容。（略）TCP“四次挥手”结束访问（略）S">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/544981-909ab11f316bcc9c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-如何利用计算机网络协议知识访问Google" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/29/如何利用计算机网络协议知识访问Google/" class="article-date">
+  <time datetime="2016-09-29T07:47:08.000Z" itemprop="datePublished">2016-09-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何利用计算机网络协议知识访问Google
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[toc]</p>
+<hr>
+<h1 id="网络访问的简单模型"><a href="#网络访问的简单模型" class="headerlink" title="网络访问的简单模型"></a>网络访问的简单模型</h1><p><a href="https://segmentfault.com/a/1190000006879700" target="_blank" rel="external">#reference-前端经典面试题: 从输入URL到页面加载发生了什么？</a></p>
+<p>当我们在浏览网页的时候，计算机做了什么？</p>
+<ol>
+<li>在计算机眼里，没有域名概念，只有IP概念。当我们输入域名的时候，其实计算机做了一次 DNS查询，把域名和IP的映射（一个域名对应多个IP）获取并访问。<br><img src="http://upload-images.jianshu.io/upload_images/544981-909ab11f316bcc9c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="域名查询"></li>
+<li>和服务器（指定IP机器）进行“三次握手”后展示网页内容。<br><img src="http://upload-images.jianshu.io/upload_images/544981-a13bc6b207f8d84d.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="“三次握手”建立连接"><br>（略）TCP“四次挥手”结束访问<br>（略）SSL/TLS“四次握手”<br>（略）<img src="..." alt="“四次握手”建立连接"></li>
+</ol>
+<h2 id="提炼问题"><a href="#提炼问题" class="headerlink" title="提炼问题"></a>提炼问题</h2><p>所以如果我们需要浏览Google，要做好两点。</p>
+<ol>
+<li>如何获取正确的IP地址（防止DNS污染）</li>
+<li>保护好网页内容。（可以检查ip包内数据然后评比访问）</li>
+</ol>
+<p>好的。<a href="https://github.com/softwaredownload/openwrt-fanqiang" target="_blank" rel="external">OpenWrt智能、自动、透明翻墙路由器教程 </a>应该是参考<a href="https://cokebar.info/archives/962" target="_blank" rel="external">Shadowsocks + GfwList 实现 OpenWRT 路由器自动翻墙</a>的DNS方案二进行实现。</p>
+<ol>
+<li>如何防治DNS污染？<br> a.  维护一个域名白名单list，白名单外域名请求自己vps，白名单请求114DNS<br> b.  维护一个域名黑名单list，黑名单域名请求自己vps，黑名单外114DNS<br> c.  借助ChinaDNS作为上游服务器，判断dns</li>
+<li>如何保护网页内容？<br> 针对ip决定tcp请求的访问通道。</li>
+</ol>
+<h1 id="计算机网络模型"><a href="#计算机网络模型" class="headerlink" title="计算机网络模型"></a>计算机网络模型</h1><h2 id="TCP-IP-网络模型（五层）"><a href="#TCP-IP-网络模型（五层）" class="headerlink" title="TCP/IP 网络模型（五层）"></a>TCP/IP 网络模型（五层）</h2><h2 id="OSI-网络模型（七层）"><a href="#OSI-网络模型（七层）" class="headerlink" title="OSI 网络模型（七层）"></a>OSI 网络模型（七层）</h2><h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><p>DNS,IP,HTTP</p>
+<h3 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h3><p>TCP UDP</p>
+<h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><p>###Advanced</p>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>openwrt本质是什么呢？是翻墙的路由器fanqiang解决方案，一套基于路由器硬件的Linux OS。它整合了一系列基于计算机网络的小工具。比如shadowsocks，dnsmasq，iptable(防火墙进行转发功能）</p>
+<p>dnamasq：dns<br>iptable：防火墙（ip包过滤规则）<br>chinadns<br>chnrouter:区分国内外ip段<br>Shadowsocks是一个轻量级socks5代理，以python写成；</p>
+<p>码农对于shadowsocks应该不陌生，而一般普通网民可能知之甚少。shadowsocks实质上也是一种socks5代理服务，类似于ssh代理。与vpn的全局代理不同，shadowsocks仅针对浏览器代理，不能代理应用软件，比如youtube、twitter客户端软件。如果把vpn比喻为一把屠龙刀，那么shadowsocks就是一把瑞士军刀，轻巧方便，功能却非常强大。</p>
+<p>这里发布的shadowsocks分为两个版本，说明如下：</p>
+<p>###shadowsocks-libev<br>官方原版包含 ss-{local,redir,tunnel} 三个可执行文件。默认启动 ss-local 建立本地SOCKS代理</p>
+<p>###shadowsocks-libev-spec<br>针对OpenWrt 路由器的优化版本包含 ss-{redir,rules,tunnel} 三个可执行文件。</p>
+<p>###ss-tunnel###<br>做 DNS 查询转发，ss-tunnel 默认转发127.0.0.1:5353 至 8.8.4.4:53 通过 ShadowSocks 服务器查询 DNS 用于线路优化。ss-rules 可设置 ignore.list 中的 IP 流量不走代理。</p>
+<p>###ss-redir###<br>建立透明代理, 做tcp转发。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/544981-1629851c9094a57f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="配置文件目录树"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/544981-69a62d3c96c71642.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="配置文件目录树"></p>
+<h1 id="Advanced"><a href="#Advanced" class="headerlink" title="Advanced"></a>Advanced</h1><p>1、apn是什么？<br>2、as、bgp概念<br>3、什么是骨干路由<br>4、openwrt（嵌入式框架，固件）（主流路由器固件有 dd-wrt,tomato,openwrt三类）。固件是嵌入在硬件设备中的软件，类似操作系统？<br>5、opkg（包管理工具，适用于嵌入式。类似apt/dpkg）</p>
+<h2 id="BGP"><a href="#BGP" class="headerlink" title="BGP"></a>BGP</h2><p>国外：Client–dnsmasq–ChinaDNS–shadowsocks–代理服务器–GoogleDNS<br>国内：Client–dnsmasq–ChinaDNS–114DNS</p>
+<p>域名和空间没有必然联系，域名的作用就是作为一个字符串映射到一个IP地址上，因为（1）IP地址太难记了（2）IP地址数目有限（同一个IP上可以放N个域名）所以才需要域名这么个东西。这就意味着，你有换空间的<strong>自由</strong>。哪天对空间服务商不高兴了，可以直接把他踹了，把域名解析到别家去，用另一家空间。哎哎，等会儿，啥叫<strong>域名解析</strong>？</p>
+<p>域名服务器？<br>name.server<br>a记录mx纪录cname纪录</p>
+<p>shadowsocks-libev:shadowsocks-libev 是一个 shadowsocks 协议的轻量级实现，是 shadowsocks-android, shadowsocks-ios 以及 shadowsocks-openwrt 的上游项目。其具有以下特点：<br>openssl<br>polarssl:嵌入式设备的精简ssl</p>
+<h2 id="DNS-抢答机制"><a href="#DNS-抢答机制" class="headerlink" title="DNS 抢答机制"></a>DNS 抢答机制</h2><p>PAC代理本质其实就是传统的HTTP代理?</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/544981-4ebf6537ab4976d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="端口关联的理解"></p>
+<p>Reference:<br><a href="http://drops.wooyun.org/papers/10177" target="_blank" rel="external">翻墙路由器的原理与实现</a><br><a href="http://www.cnblogs.com/ggjucheng/archive/2012/08/19/2646466.html" target="_blank" rel="external">linux平台下防火墙iptables原理(转)</a><br><a href="http://blog.mimvp.com/2015/03/anonymous-transparent-the-difference-between-http-ssl-socks-proxy/" target="_blank" rel="external">匿名、透明、HTTP、SSL、SOCKS代理的区别</a></p>
+<p>·SSH是标准的网络协议，可用于大多数UNIX操作系统，能够实现字符界面的远程登录管理，它默认使用22号端口，采用密文的形式在网络中传输数据，相对于通过明文传输的Telnet，具有更高的安全性。</p>
+<h2 id="路由选择算法"><a href="#路由选择算法" class="headerlink" title="路由选择算法"></a>路由选择算法</h2><h3 id="Dijkstra-Algorithm"><a href="#Dijkstra-Algorithm" class="headerlink" title="Dijkstra Algorithm"></a>Dijkstra Algorithm</h3><h3 id="dv"><a href="#dv" class="headerlink" title="dv"></a>dv</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/09/29/如何利用计算机网络协议知识访问Google/" data-id="ciu293y8b000duaopo4g5qbaw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          个人Markdown Web  编辑器产品设计&amp;部署
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/29/一万字讲清楚怎么上Google/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">一万字讲清楚怎么上Google</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OCR/">OCR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StackEdit/">StackEdit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tesseract/">tesseract</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/同步/">同步</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源/">开源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文字识别/">文字识别</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/OCR/" style="font-size: 10px;">OCR</a> <a href="/tags/StackEdit/" style="font-size: 10px;">StackEdit</a> <a href="/tags/tesseract/" style="font-size: 10px;">tesseract</a> <a href="/tags/同步/" style="font-size: 10px;">同步</a> <a href="/tags/开源/" style="font-size: 10px;">开源</a> <a href="/tags/文字识别/" style="font-size: 10px;">文字识别</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/09/git的一些坑/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/09/前端的学习笔记/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/09/区块链（block chain）调研/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/09/Markdown Web  编辑器产品调研/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/08/文字识别初探/">文字识别初探</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
