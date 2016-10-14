@@ -5,28 +5,28 @@
   
   <title>文字识别初探 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="随着中国互联网对广告的审核越来越严格，日常投放运营过程中，渠道对资质文件和创意的要求越来越高，如营业执照、身份证等。我们需要花费大量的人力成本对这些文件进行描述，如营业主题，姓名，生日等。有没有一种方案对文件进行快速的描述，减少人力成本？
-另一方面，这个需求是具有可扩展性的。
-因此对一些开源的框架以及开放的   API做基础调研。
-Tesseract&amp;amp;
-tesseract-ocr/lang">
+  <meta name="description" content="随着中国互联网对广告的审核越来越严格，日常投放运营过程中，渠道对资质文件和创意的要求越来越高，如营业执照、身份证等。我们需要花费大量的人力成本对这些文件的属性进行文本描述，如营业主题，姓名，生日等。有没有一种方案对文件进行快速的描述，减少人力成本？
+另一方面，这个需求是具有可扩展性的。图形学方向上的人工智能，是建立在图像识别基础上。计算广告日后必然和图形学和人工智能强关联，正好探索这个方向的可行性">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文字识别初探">
 <meta property="og:url" content="http://yoursite.com/2016/10/08/文字识别初探/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="随着中国互联网对广告的审核越来越严格，日常投放运营过程中，渠道对资质文件和创意的要求越来越高，如营业执照、身份证等。我们需要花费大量的人力成本对这些文件进行描述，如营业主题，姓名，生日等。有没有一种方案对文件进行快速的描述，减少人力成本？
-另一方面，这个需求是具有可扩展性的。
-因此对一些开源的框架以及开放的   API做基础调研。
-Tesseract&amp;amp;
-tesseract-ocr/lang">
-<meta property="og:updated_time" content="2016-10-09T06:19:21.000Z">
+<meta property="og:description" content="随着中国互联网对广告的审核越来越严格，日常投放运营过程中，渠道对资质文件和创意的要求越来越高，如营业执照、身份证等。我们需要花费大量的人力成本对这些文件的属性进行文本描述，如营业主题，姓名，生日等。有没有一种方案对文件进行快速的描述，减少人力成本？
+另一方面，这个需求是具有可扩展性的。图形学方向上的人工智能，是建立在图像识别基础上。计算广告日后必然和图形学和人工智能强关联，正好探索这个方向的可行性">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-da018847ebb20a99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-7940772e8e5a20c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-a53b4c3c27dfc4f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-22ec19a01e4bdc81.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-37cb90f52b93ce3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-3980f522eedf4222.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-e207723babdee53e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-cdddb73f504d1001.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-10-14T03:20:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文字识别初探">
-<meta name="twitter:description" content="随着中国互联网对广告的审核越来越严格，日常投放运营过程中，渠道对资质文件和创意的要求越来越高，如营业执照、身份证等。我们需要花费大量的人力成本对这些文件进行描述，如营业主题，姓名，生日等。有没有一种方案对文件进行快速的描述，减少人力成本？
-另一方面，这个需求是具有可扩展性的。
-因此对一些开源的框架以及开放的   API做基础调研。
-Tesseract&amp;amp;
-tesseract-ocr/lang">
+<meta name="twitter:description" content="随着中国互联网对广告的审核越来越严格，日常投放运营过程中，渠道对资质文件和创意的要求越来越高，如营业执照、身份证等。我们需要花费大量的人力成本对这些文件的属性进行文本描述，如营业主题，姓名，生日等。有没有一种方案对文件进行快速的描述，减少人力成本？
+另一方面，这个需求是具有可扩展性的。图形学方向上的人工智能，是建立在图像识别基础上。计算广告日后必然和图形学和人工智能强关联，正好探索这个方向的可行性">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/544981-da018847ebb20a99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -97,16 +97,49 @@ tesseract-ocr/lang">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>随着中国互联网对广告的审核越来越严格，日常投放运营过程中，渠道对资质文件和创意的要求越来越高，如营业执照、身份证等。我们需要花费大量的人力成本对这些文件进行描述，如营业主题，姓名，生日等。有没有一种方案对文件进行快速的描述，减少人力成本？</p>
-<p>另一方面，这个需求是具有可扩展性的。</p>
-<p>因此对一些开源的框架以及开放的   API做基础调研。</p>
-<p><a href="https://github.com/tesseract-ocr/tesseract" target="_blank" rel="external">Tesseract</a><br>&amp;</p>
-<p><a href="https://github.com/tesseract-ocr/langdata" target="_blank" rel="external">tesseract-ocr/langdata</a><br><a href="https://blog.philippklaus.de/2011/01/chinese-ocr/" target="_blank" rel="external">Chinese OCR</a><br><a href="https://github.com/tesseract-ocr/tesseract/wiki" target="_blank" rel="external">tesseract-ocr/wiki</a><br><a href="https://gist.github.com/henrik/1967035" target="_blank" rel="external">ocr markdown</a><br><a href="https://github.com/tesseract-ocr/tesseract/wiki/Compiling" target="_blank" rel="external">tesseract compiling</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;q=homebrew++tesseract+language&amp;cad=h" target="_blank" rel="external">homebrew tesseract language</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;q=%2Fopt%2Flocal%2Flib+macports&amp;cad=h" target="_blank" rel="external">/opt.local/lib macports</a><br><a href="https://trac.macports.org/wiki/FAQ" target="_blank" rel="external">macports</a><br><a href="http://www.zmonster.me/2015/04/17/tesseract-install-usage.html" target="_blank" rel="external">Tesseract:安装与命令行使用</a><br><a href="http://www.cnblogs.com/brooks-dotnet/archive/2010/10/05/1844203.html" target="_blank" rel="external">浅谈OCR之Tesseract</a><br><a href="https://www.google.com.hk/search?ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=Tesseract+%E6%80%8E%E4%B9%88%E7%94%A8&amp;gws_rd=ssl" target="_blank" rel="external">Tesseract 怎么用 谷歌搜索</a><br><a href="https://tonydeng.github.io/2016/07/28/on-the-use-of-tesseract-picture-text-recognition/" target="_blank" rel="external">利用Tesseract图片文字识别初探</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;c2coff=1&amp;safe=strict&amp;hl=zh-CN&amp;q=%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB+%E6%97%A5%E6%9C%9F+%E6%96%87%E5%AD%97+++github&amp;oq=%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB+%E6%97%A5%E6%9C%9F+%E6%96%87%E5%AD%97+++github&amp;gs_l=serp.3...41815.45626.0.46078.7.7.0.0.0.0.213.992.0j6j1.7.0....0...1c.1j4.64.serp..0.1.135...30i10k1.AFSagTaMses" target="_blank" rel="external">图像识别 日期 文字   github</a><br><a href="http://www.imageplusplus.com/#demo" target="_blank" rel="external">image++api用于文本分块还是文字识别</a></p>
+        <p>随着中国互联网对广告的审核越来越严格，日常投放运营过程中，渠道对资质文件和创意的要求越来越高，如营业执照、身份证等。我们需要花费大量的人力成本对这些文件的属性进行文本描述，如营业主题，姓名，生日等。有没有一种方案对文件进行快速的描述，减少人力成本？</p>
+<p>另一方面，这个需求是具有可扩展性的。图形学方向上的人工智能，是建立在图像识别基础上。计算广告日后必然和图形学和人工智能强关联，正好探索这个方向的可行性，并把该躺的坑给躺一遍。</p>
+<p>作为一个产品，会先对一些开源的框架以及开放的 API做基本的可行性调研。<br>随手Google之后，决定本地使用<a href="https://github.com/tesseract-ocr/tesseract" target="_blank" rel="external">Tesseract</a>观察目前OCR（Optical Character Recognition）引擎效果。</p>
+<p><a href="http://www.cnblogs.com/brooks-dotnet/archive/2010/10/05/1844203.html" target="_blank" rel="external">#reference-浅谈OCR之Tesseract</a><br><a href="http://www.zmonster.me/2015/04/17/tesseract-install-usage.html" target="_blank" rel="external">#reference-Tesseract:安装与命令行使用</a></p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>通过homebrew<a href="https://github.com/tesseract-ocr/tesseract#installing-tesseract" target="_blank" rel="external">安装</a>到本地<code>/usr/local/Cellar</code> <a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">#reference-homebrew</a></p>
+<blockquote>
+<p>brew install tesseract</p>
+</blockquote>
+<h1 id="直接识别"><a href="#直接识别" class="headerlink" title="直接识别"></a>直接识别</h1><p>尝试识别如下图片：<br><img src="http://upload-images.jianshu.io/upload_images/544981-da018847ebb20a99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文字识别原图"></p>
+<p>执行<code>tesseract &lt;%path_to_pic&gt; stdout</code>后得到。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/544981-7940772e8e5a20c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="直接识别后结果"></p>
+<p>可以看到英文和数字的识别正确率很高，中文识别这么不靠谱？显然不是，不同语言的文字识别机制可能不一样。Google后发现需要指定语言后识别。由于我们的目标是中文识别，<strong>必须解决语言包问题</strong>。当然可以自行选择自己愿意安装的语言包，但最方便的是支持所有available的语言包。<br>重新执行<code>brew install tesseract --all-languages</code> 安装所有语言包。</p>
+<p><a href="https://blog.philippklaus.de/2011/01/chinese-ocr/" target="_blank" rel="external">#reference-Chinese OCR</a><br><a href="https://tonydeng.github.io/2016/07/28/on-the-use-of-tesseract-picture-text-recognition/" target="_blank" rel="external">#reference-利用Tesseract图片文字识别初探</a><br><a href="https://gist.github.com/henrik/1967035" target="_blank" rel="external">#reference-ocr markdown</a></p>
+<p>现在我们执行<code>tesseract --list-langs</code>，可以看到</p>
+<blockquote>
+<p>$ tesseract –list-langs<br>List of available languages (107):<br>…<br>chi_sim<br>chi_tra<br>…</p>
+</blockquote>
+<p>简繁体的中文识别目前都已经支持。由于是大陆环境，我们将主要是用简体中文语言包进行识别。</p>
+<h1 id="中文识别"><a href="#中文识别" class="headerlink" title="中文识别"></a>中文识别</h1><p>再次通过语言包尝试识别，执行<code>tesseract &lt;%path_to_pic&gt; stdout -l chi_sim</code></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/544981-a53b4c3c27dfc4f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="中文识别后结果"></p>
+<p>显然，准确率大大提高。虽然如此，可用性还是不足以支撑生产环境的需求。</p>
+<h1 id="分块后中文识别"><a href="#分块后中文识别" class="headerlink" title="分块后中文识别"></a>分块后中文识别</h1><p>会不会因为单词识别文本太多，导致识别不够准确呢？毕竟即使是人，当看到一大块文本的时候也感到头晕目眩。我们把原文本一分为三后，再次识别。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/544981-22ec19a01e4bdc81.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文字识别原图1"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/544981-37cb90f52b93ce3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文字识别原图3"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/544981-3980f522eedf4222.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文字识别原图2"></p>
+<p> <img src="http://upload-images.jianshu.io/upload_images/544981-e207723babdee53e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="分块后中文识别结果"></p>
+<p>显然准确率有所提高。虽然也还是无法使用:(</p>
+<h2 id="如何分块"><a href="#如何分块" class="headerlink" title="如何分块"></a>如何分块</h2><p>那么我们应该如何对一张图片中的文本作分块呢？简单来说，就是利用<a href="http://opencv.org" target="_blank" rel="external">opencv</a>，看出来白色的色块 然后定位做文字识别。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/544981-cdddb73f504d1001.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>#后续探索</p>
+<p>后续可以进行探索的方向：</p>
+<ul>
+<li><a href="https://www.zhihu.com/question/19593313" target="_blank" rel="external">OCR 中文识别用哪种软件识别率比较高？</a></li>
+<li><a href="http://www.imageplusplus.com/#demo" target="_blank" rel="external">image++api</a></li>
+<li>如何更合适地对图片的文本区域分块</li>
+<li>根据图片直接判断语言</li>
+</ul>
+<p>原文发布于：</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/08/文字识别初探/" data-id="ciu29o96000082xop61011no6" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/10/08/文字识别初探/" data-id="ciu97vg6v000a27op3wq9ys9p" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OCR/">OCR</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tesseract/">tesseract</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开源/">开源</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/文字识别/">文字识别</a></li></ul>
@@ -117,7 +150,7 @@ tesseract-ocr/lang">
     
 <nav id="article-nav">
   
-    <a href="/2016/10/09/区块链（block chain）调研/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/10/09/前端的学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Nieuwer</strong>
       <div class="article-nav-title">
         
@@ -180,6 +213,14 @@ tesseract-ocr/lang">
       <ul>
         
           <li>
+            <a href="/2016/10/14/【译】快速开始Jupyter Notebook/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/10/计算机网络观测/">计算机网络观测</a>
+          </li>
+        
+          <li>
             <a href="/2016/10/09/git的一些坑/">(no title)</a>
           </li>
         
@@ -188,15 +229,7 @@ tesseract-ocr/lang">
           </li>
         
           <li>
-            <a href="/2016/10/09/前端的学习笔记/">(no title)</a>
-          </li>
-        
-          <li>
             <a href="/2016/10/09/Markdown Web  编辑器产品调研/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/09/区块链（block chain）调研/">(no title)</a>
           </li>
         
       </ul>
