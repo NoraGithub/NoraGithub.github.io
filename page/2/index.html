@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,94 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-个人Markdown-Web-编辑器产品设计-部署" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/" class="article-date">
+  <time datetime="2016-10-01T12:07:53.000Z" itemprop="datePublished">2016-10-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/">个人Markdown Web  编辑器产品设计&amp;部署</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近迷上了Markdown，希望积累些文字。同时，Sublime的Markdown插件已经能满足我对写作体验的追求，作为一个WebApp的狂热爱好者，决定使用StackEdit作为我的Markdown终端。另外，因为已经利用GitHub Page和Hexo建了一个Blog，必须兼容历史数据的同时具备一定的健壮性，起码，单独使用Hexo和StackEdit时，都要符合产品的使用预期。</p>
+<p><a href="MarkdownWeb编辑器产品调研">#为什么使用StackEdit作为我的Markdown终端？-Markdown Web  编辑器产品调研</a></p>
+<h1 id="我的场景"><a href="#我的场景" class="headerlink" title="我的场景"></a>我的场景</h1><ul>
+<li>Web端Markdown撰写 - StackEdit</li>
+<li>客户端Markdown撰写 - Sublime</li>
+<li>已经利用Hexo撰写过文章并发布到GitHub Pages，GitHub Pages只负责展现</li>
+</ul>
+<h1 id="其他背景"><a href="#其他背景" class="headerlink" title="其他背景"></a>其他背景</h1><h2 id="Hexo项目逻辑"><a href="#Hexo项目逻辑" class="headerlink" title="Hexo项目逻辑"></a>Hexo项目逻辑</h2><p>Hexo会根据<code>&lt;%hexo-root-directory&gt;/source/_posts</code>下的<code>*.md</code>文件每次生成（<code>hexo generate</code>）静态HTML文件保存于<code>&lt;%hexo-root-directory&gt;/.deply_git</code>文件夹，每次部署（<code>hexo deploy</code>），把<code>.deply_git</code>文件夹中的HTML文件同步到GitHub。利用<a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/" target="_blank" rel="external">GitHub Pages</a>设置，自动从master分支build成网页。</p>
+<p>（.md是Markdown文件后缀）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/source/_posts-&gt;.deploy_git:hexo generate</div><div class="line">.deploy_git-&gt;GitHub repo:hexo deploy</div><div class="line">GitHub repo-&gt;Hexo pages:GitHub Pages</div></pre></td></tr></table></figure>
+<p><a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">#reference-hexojs/hexo-deployer-git</a><br><a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="external">#reference-deployment</a></p>
+<h1 id="构思"><a href="#构思" class="headerlink" title="构思"></a>构思</h1><p>基于以上场景，简单的概念模型如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">StackEdit -&gt; Sublime : Synchronization</div><div class="line">Sublime -&gt; StackEdit : Synchronization</div><div class="line">Sublime -&gt; GitHub pages: publish</div></pre></td></tr></table></figure>
+<p>我需要考虑的点包括：</p>
+<ul>
+<li>对所有终端，“发布”后应该保持同步</li>
+<li><strong>撰写</strong>包括<strong>增 、删 、改 、查</strong> 操作</li>
+<li>两个终端都能互相<strong>撰写</strong>对方创建的md</li>
+<li>两个终端应该有一套同步&amp;冲突处理机制</li>
+<li>三个终端支持相同的Markdown语法</li>
+</ul>
+<h2 id="目前的解决方案"><a href="#目前的解决方案" class="headerlink" title="目前的解决方案"></a>目前的解决方案</h2><p><strong>涉及的开源项目：GitHub/GitHub Pages＋Hexo＋StackEdit</strong></p>
+<ul>
+<li>StackEdit充当Web端Markdown编辑器</li>
+<li>关联StackEdit到Github，StackEdit固定发布到repo <code>Markdown</code></li>
+<li>Github repo <code>Markdown</code>与本地文件夹<code>&lt;%hexo-root-directory&gt;/source/_posts&gt;</code>同步</li>
+<li>关联Hexo到GitHub repo<code>NoraGithub.github.io</code>，利用<a href="#Hexo项目逻辑">Hexo项目逻辑</a>中，<code>&lt;%hexo-root-directory&gt;/source/_posts&gt;</code> 和 <code>&lt;%hexo-root-directory&gt;/.deply_git</code> 的映射关系，发布到GitHub Pages</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">StackEdit-&gt;`Markdown` Repo:git push --force</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">`Markdown` Repo-&gt;/source/_posts:Git Synchronization</div><div class="line">/source/_posts-&gt;`Markdown` Repo:Git Synchronization</div><div class="line">/source/_posts-&gt;GitHub Pages: hexo generate -deploy</div></pre></td></tr></table></figure>
+<h2 id="冲突处理机制"><a href="#冲突处理机制" class="headerlink" title="冲突处理机制"></a>冲突处理机制</h2><ul>
+<li>由上图可见，和概念模型的区别是，StackEdit没办法获取（<code>git pull</code>/<code>git fetch</code>）到本地Sublime编写过的md文件，甚至无法知道产生过冲突，只能 <code>git push --force</code>。</li>
+<li>为了防止冲突，应该尽量StackEdit撰写文章，然后单向发布文章。</li>
+<li>实在必须本地Sublime编写，先<code>git pull</code> ，解决冲突后，在online的情况下，  CV（复制+黏贴）回到StackEdit，进入单向发布文章流程。</li>
+</ul>
+<p>#Advanced<br>git module<a href="https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97" target="_blank" rel="external">git工具－子模块</a></p>
+<h2 id="StackEdit"><a href="#StackEdit" class="headerlink" title="StackEdit"></a>StackEdit</h2><h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>what “github update” do</p>
+<p>windows 下奇怪路径导致不能git pull</p>
+<h1 id="个性化方案"><a href="#个性化方案" class="headerlink" title="个性化方案"></a>个性化方案</h1><p>##<a href="http://couchdb.apache.org/" target="_blank" rel="external">couchdb</a><br><a href="https://zh.wikipedia.org/wiki/CouchDB" target="_blank" rel="external">apache couchdb-wikipedia</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=couchdb+github+commit&amp;oq=couchdb+github+commit&amp;gs_l=serp.3...5756.6895.0.7150.7.7.0.0.0.0.159.671.3j3.6.0....0...1c.1.64.serp..1.4.456...0i30k1j0i8i30k1j0i5i30k1j30i10k1.G7oZjLggN_Y" target="_blank" rel="external">couched github commit</a><br><a href="http://wiki.apache.org/couchdb/Installing_on_OSX" target="_blank" rel="external">Installing on OSX</a><br><a href="https://github.com/apache/couchdb/blob/master/INSTALL.Unix.md" target="_blank" rel="external">Apache CouchDB INSTALL.Unix</a><br><a href="https://github.com/benweet/stackedit/blob/master/doc/couchdb-setup.md" target="_blank" rel="external">couchdb setup</a><br><a href="http://www.jdon.com/repository/couchdb.html" target="_blank" rel="external">couchdb的安装时使用</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=couchdb++stackedit+%E6%95%99%E7%A8%8B&amp;oq=couchdb++stackedit+%E6%95%99%E7%A8%8B&amp;gs_l=serp.3...1737704.1740833.0.1740989.21.12.9.0.0.0.207.867.4j3j1.8.0....0...1c.1.64.serp..5.2.209...0i8i30k1.J1f7Jf6RHzQ" target="_blank" rel="external">couchdb  stackedit 教程</a></p>
+<h1 id="如果可以的话"><a href="#如果可以的话" class="headerlink" title="如果可以的话"></a>如果可以的话</h1><p>理想状态下，Editor和Publisher应该在部署在同一个Server，作为同一个Website。</p>
+<h2 id="理想模型"><a href="#理想模型" class="headerlink" title="理想模型"></a>理想模型</h2><h3 id="未发布"><a href="#未发布" class="headerlink" title="未发布"></a>未发布</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">StackEditor-&gt;Browser:Cache()</div><div class="line">Browser-&gt;StackEdit Preview:present</div><div class="line">StackEditor--&gt;StackEdit Preview:WYSIWYG</div></pre></td></tr></table></figure>
+<p>WYSIWYG：What You See Is What You Get，所见即所得</p>
+<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">StackEdit-&gt;.md:publish</div><div class="line">.md-&gt;Hexo:present</div><div class="line">.md--&gt;Local:Synchronization</div></pre></td></tr></table></figure>
+<p>一旦冲突可以出线命令行界面，用于merge或rebase。<br>由于本文所有项目都是开源的，相信终有一天能实现。</p>
+<ul>
+<li>[x] GitHub Pages只负责展现，不能撰写</li>
+<li>[x] 对StackEdit/Sublime，存在“发布”/“未发布”状态，“发布”后应该尽量同步，“未发布”状态相互独立即可</li>
+<li>[]所谓“同步”，完全按照Git Flow管理（如果有协作，可能GitHub Flow更好）</li>
+<li>[]三个终端支持相同且完整的Markdown语法，这套语法应该涵盖UML、LaTex公式&amp; MathJax在内的分析师、PM常用表现工具</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Local--&gt;GitHub:git push</div><div class="line">GitHub--&gt;StackEdit:git push</div><div class="line">Local--&gt;Hexo:hexo g -d</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/" data-id="civ2ddd8e000ai0ophqdm4cop" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/StackEdit/">StackEdit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/同步/">同步</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-如何利用计算机网络协议知识访问Google" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -133,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/29/如何利用计算机网络协议知识访问Google/" data-id="ciu97vg73000d27opl5vw4trb" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/09/29/如何利用计算机网络协议知识访问Google/" data-id="civ2ddd8s000fi0opou49yj29" class="article-share-link">Share</a>
       
       
     </footer>
@@ -196,7 +284,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/29/【译】安装Canopy/" data-id="ciu97vg6h000427opmrgvgd50" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/09/29/【译】安装Canopy/" data-id="civ2ddd860006i0op61i6ynen" class="article-share-link">Share</a>
       
       
     </footer>
@@ -241,7 +329,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/29/hello-world/" data-id="ciu97vg6f000327oph4ccq25t" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/09/29/hello-world/" data-id="civ2ddd840005i0opm0m1v0vk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -268,7 +356,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/29/README/" data-id="ciu97vg60000027opemorbpnk" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/09/29/README/" data-id="civ2ddd7n0001i0opqoz351lg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -478,7 +566,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/24/部署Jupyter-IPython-Notebook-Memo/" data-id="ciu97vg78000g27opbh51ge9o" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/09/24/部署Jupyter-IPython-Notebook-Memo/" data-id="civ2ddd8y000gi0oppcu6m7ih" class="article-share-link">Share</a>
       
       
     </footer>
@@ -516,7 +604,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/30/test-diagram/" data-id="ciu97vg6p000727opgyvmcres" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/07/30/test-diagram/" data-id="civ2ddd800004i0opqq3nrzd4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -550,7 +638,7 @@
       
         <h2 id="BES-AMS服务对接"><a href="#BES-AMS服务对接" class="headerlink" title="BES_AMS服务对接"></a>BES_AMS服务对接</h2><p>主流的人群标签以及第三方数据主要是基于访客的浏览数据进行建模，对于toB类广告主，<strong>这类人群标签显然不够精准</strong>。BES是百度最大的ADX。AMS服务是百度关键词服务，通过API返回固定数量关键词对应的搜索人群（cookie），用于RTB过程中的(re)targeting。</p>
 <h2 id="The-Media-Trust对接"><a href="#The-Media-Trust对接" class="headerlink" title="The_Media_Trust对接"></a>The_Media_Trust对接</h2><p>进行海外投放过程中，像Imobi/Google/Mopub/Pubmatic渠道，有严格的创意&amp;政策要求。The Media Trust是保证创意、落地页无恶意代码以及政策违反的第三方服务机构，通过定时轮询，<strong>保证投放免受政策惩罚</strong>。</p>
-<h2 id="Peer-99-ADbug-brandsafety（品牌安全）对接"><a href="#Peer-99-ADbug-brandsafety（品牌安全）对接" class="headerlink" title="Peer_99/ADbug_brandsafety（品牌安全）对接"></a>Peer_99/ADbug_brandsafety（品牌安全）对接</h2><p>品牌类广告主对于品牌美誉度有要求，要求广告位所在的页面不影响品牌调性。国内机房竞价前请求海外服务器page级别的数据，判断是否危害广告主品牌安全。<strong>用于保护品牌类广告主广告调性</strong>。</p>
+<h2 id="Peer-39-ADbug-brandsafety（品牌安全）对接"><a href="#Peer-39-ADbug-brandsafety（品牌安全）对接" class="headerlink" title="Peer_39/ADbug_brandsafety（品牌安全）对接"></a>Peer_39/ADbug_brandsafety（品牌安全）对接</h2><p>品牌类广告主对于品牌美誉度有要求，要求广告位所在的页面不影响品牌调性。国内机房竞价前请求海外服务器page级别的数据，判断是否危害广告主品牌安全。<strong>用于保护品牌类广告主广告调性</strong>。</p>
 <h2 id="Sizmek-ad-serving对接"><a href="#Sizmek-ad-serving对接" class="headerlink" title="Sizmek_ad_serving对接"></a>Sizmek_ad_serving对接</h2><p>Sizmek为4A提供广告投放服务，包括brandsafety（品牌安全）／viewability（可视率）监测。<strong>通过对接，保证创意、落地页和竞价服务（DSP端、渠道端）相互兼容</strong>。</p>
 <h2 id="高通DSP投放"><a href="#高通DSP投放" class="headerlink" title="高通DSP投放"></a>高通DSP投放</h2><p>高通是2016年最重要的品牌类广告主，品牌类广告主的需求变化多且个性化。<strong>解决业务层面为当前产品/技术架构带来的挑战</strong>。</p>
 <ul>
@@ -628,7 +716,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/30/项目介绍/" data-id="ciu97vg75000f27opx7fd10nw" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/07/30/项目介绍/" data-id="civ2ddd91000hi0opuux8cxrk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -678,15 +766,15 @@
 </ol>
 <ul>
 <li>渠道资源分析&amp;测试服务&amp;阿里站内数据对接</li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#BES_AMS服务对接" target="_blank" rel="external">BES AMS服务对接</a></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#The_Media_Trust对接" target="_blank" rel="external">The Media Trust对接</a></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#Peer_99/ADbug_brandsafety（品牌安全）对接" target="_blank" rel="external">Peer 99/ADbug brandsafety（品牌安全）对接</a></li>
+<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#BES_AMS服务对接" target="_blank" rel="external">BES AMS服务对接</a><font color="#FF4500" size="1">2016.08-2016.10</font></li>
+<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#The_Media_Trust对接" target="_blank" rel="external">The Media Trust对接</a><font color="#FF4500" size="1">2016.08-2016.10</font></li>
+<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#Peer_39/ADbug_brandsafety（品牌安全）对接" target="_blank" rel="external">Peer 39/ADbug brandsafety（品牌安全）对接</a><font color="#FF4500" size="1">2016.04-2016.06</font></li>
 <li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#Sizmek_ad_serving对接" target="_blank" rel="external">Sizmek ad serving对接</a></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#高通DSP投放" target="_blank" rel="external">高通DSP投放</a></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#移动RTB/全渠道PMP/PDB市场对接" target="_blank" rel="external">移动RTB/全渠道PMP/PDB市场对接</a></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#SEM品牌推广" target="_blank" rel="external">SEM品牌推广</a></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#有赞商城DSP推广" target="_blank" rel="external">有赞商城DSP推广</a></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#移动SSP_iOS_SDK第一版" target="_blank" rel="external">移动SSP iOS SDK第一版</a></li>
+<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#高通DSP投放" target="_blank" rel="external">高通DSP投放</a><font color="#FF4500" size="1">2016.02-2016.04</font></li>
+<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#移动RTB/全渠道PMP/PDB市场对接" target="_blank" rel="external">移动RTB/全渠道PMP/PDB市场对接</a><font color="#FF4500" size="1">2015.03-2016.09</font></li>
+<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#SEM品牌推广" target="_blank" rel="external">SEM品牌推广</a><font color="#FF4500" size="1">2015.05-2015.06</font></li>
+<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#有赞商城DSP推广" target="_blank" rel="external">有赞商城DSP推广</a><font color="#FF4500" size="1">2015.05-2015.08</font></li>
+<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#移动SSP_iOS_SDK第一版" target="_blank" rel="external">移动SSP iOS SDK第一版</a><font color="#FF4500" size="1">2015.04-2015.04</font></li>
 </ul>
 <hr>
 <h2 id="数据产品经理"><a href="#数据产品经理" class="headerlink" title="数据产品经理"></a>数据产品经理</h2><p>唯品会（中国）有限公司    2014.07-2015.01<br>数据分析产品化。涉及数据产品的主要流程，从PRD文档、到产品的UI设计，以及跨系统的产品整合，甚至部分ETL，黑白盒数据测试和项目管理工作。</p>
@@ -696,11 +784,11 @@
 <li>参与创新APP项目，如， 我是妈咪 （ 母婴闪购电商）和 hey!购物 （基于库存的个性化推荐APP）;</li>
 </ol>
 <ul>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#总裁看板" target="_blank" rel="external">总裁看板</a></li>
+<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#总裁看板" target="_blank" rel="external">总裁看板</a><font color="#FF4500" size="1">2014.07-2015.01</font></li>
 <li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#创新APP项目" target="_blank" rel="external">创新APP项目</a></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#移动司南" target="_blank" rel="external">移动司南</a></li>
+<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#移动司南" target="_blank" rel="external">移动司南</a><font color="#FF4500" size="1">2015.10-2015.11</font></li>
 <li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#唯品司南" target="_blank" rel="external">唯品司南</a></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#唯品经纬" target="_blank" rel="external">唯品经纬</a></li>
+<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#唯品经纬" target="_blank" rel="external">唯品经纬</a><font color="#FF4500" size="1">2016.07-2016.07</font></li>
 </ul>
 <hr>
 <h2 id="数据分析师"><a href="#数据分析师" class="headerlink" title="数据分析师"></a>数据分析师</h2><p>唯品会（中国）有限公司    2013.07-2014.07<br>作为运营分析组一员，每周提供运营分析以及日常快捷反馈到总裁会，并根据反馈进行运营层面的分析建议。<br>负责市场运营方面日常分析：</p>
@@ -710,9 +798,9 @@
 <li>财务：市场费用的构成分析；</li>
 </ol>
 <ul>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#微信特卖" target="_blank" rel="external">微信特卖</a></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#归因模型" target="_blank" rel="external">归因模型</a></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#管理培训生" target="_blank" rel="external">管理培训生</a></li>
+<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#微信特卖" target="_blank" rel="external">微信特卖</a><font color="#FF4500" size="1">2014.06-2014.09</font></li>
+<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#归因模型" target="_blank" rel="external">归因模型</a><font color="#FF4500" size="1">2013.11-2014.04</font></li>
+<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#管理培训生" target="_blank" rel="external">管理培训生</a><font color="#FF4500" size="1">2013.07-2014.02</font></li>
 </ul>
 <hr>
 <h1 id="教育背景"><a href="#教育背景" class="headerlink" title="教育背景"></a>教育背景</h1><p>华南理工大学 软件工程 2009-2013</p>
@@ -728,7 +816,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/02/Resume/" data-id="ciu97vg69000127op4u8t4wn7" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/07/02/Resume/" data-id="civ2ddd7u0003i0op2bs5eg19" class="article-share-link">Share</a>
       
       
     </footer>
@@ -752,7 +840,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OCR/">OCR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StackEdit/">StackEdit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tesseract/">tesseract</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/同步/">同步</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源/">开源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文字识别/">文字识别</a></li></ul>
     </div>
@@ -771,7 +859,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li></ul>
     </div>
@@ -781,9 +869,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/10/27/《深入理解计算机操作系统》-chapter-7-链接-Memo/">《深入理解计算机操作系统》-chapter 7 链接  Memo</a>
+          </li>
         
           <li>
             <a href="/2016/10/14/【译】快速开始Jupyter Notebook/">(no title)</a>
@@ -794,11 +886,7 @@
           </li>
         
           <li>
-            <a href="/2016/10/09/git的一些坑/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/">购买域名+服务器+部署服务器+实现ssl协议</a>
+            <a href="/2016/10/09/前端的学习笔记/">(no title)</a>
           </li>
         
           <li>
