@@ -23,8 +23,9 @@
 重点客户/项目跟进（技术/英文/复杂等）；
 
 2016年，舜飞的战略方向有两个，一个是大的">
+<meta property="og:image" content="https://noragithub.github.io/PRD_deployment/SEM/SEM.png">
 <meta property="og:image" content="https://noragithub.github.io/PRD_deployment/S2S_scheme/S2S_scheme.jpg">
-<meta property="og:updated_time" content="2016-11-19T11:42:42.000Z">
+<meta property="og:updated_time" content="2016-11-19T12:11:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="STAR of Projects">
 <meta name="twitter:description" content="舜飞科技-DSP产品经理先后向CEO/产品负责人（创始人之一）汇报。偏后端项目管理，偏Scrum Master。数据驱动衡量需求价值并协调前端、后端和测试资源保证项目顺利上线。协助流量变现，移动端广告投放占比增长到50%以上。
@@ -34,7 +35,7 @@
 重点客户/项目跟进（技术/英文/复杂等）；
 
 2016年，舜飞的战略方向有两个，一个是大的">
-<meta name="twitter:image" content="https://noragithub.github.io/PRD_deployment/S2S_scheme/S2S_scheme.jpg">
+<meta name="twitter:image" content="https://noragithub.github.io/PRD_deployment/SEM/SEM.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -119,7 +120,7 @@
 <li>对概念（ 一般由第三方技术对接）的要求高。</li>
 </ul>
 <p>其中，“高通”是舜飞2016年最大的品牌广告主，同时高通的成功投放也是舜飞“品牌广告主”战略至关重要的一步。</p>
-<h2 id="“计划”一期设计-amp-测试"><a href="#“计划”一期设计-amp-测试" class="headerlink" title="“计划”一期设计&amp;测试"></a>“计划”一期设计&amp;测试</h2><h2 id="BES-AMS服务对接"><a href="#BES-AMS服务对接" class="headerlink" title="BES_AMS服务对接"></a>BES_AMS服务对接</h2><h3 id="Situation-Brief"><a href="#Situation-Brief" class="headerlink" title="Situation/Brief"></a>Situation/Brief</h3><p>主流的人群标签以及第三方数据主要是基于访客的浏览数据进行建模，对于toB类广告主，<strong>这类人群标签显然不够精准</strong>。BES是百度最大的ADX。AMS（Audience Matching Service）服务是百度关键词服务，通过API返回固定数量关键词对应的搜索人群（cookie），用于RTB过程中的(re)targeting。<br>另一方面，这个功能对于品牌广告主市场而言有强烈的吸引性，属于稀缺资源。渠道协议&amp; 文档已经到位，客户有强烈需求。</p>
+<h2 id="“计划”一期设计-amp-测试"><a href="#“计划”一期设计-amp-测试" class="headerlink" title="“计划”一期设计&amp;测试"></a>“计划”一期设计&amp;测试</h2><h2 id="BES-AMS服务对接"><a href="#BES-AMS服务对接" class="headerlink" title="BES_AMS服务对接"></a>BES_AMS服务对接</h2><h3 id="Situation"><a href="#Situation" class="headerlink" title="Situation"></a>Situation</h3><p>主流的人群标签以及第三方数据主要是基于访客的浏览数据进行建模，对于toB类广告主，<strong>这类人群标签显然不够精准</strong>。BES是百度最大的ADX。AMS（Audience Matching Service）服务是百度关键词服务，通过API返回固定数量关键词对应的搜索人群（cookie），用于RTB过程中的(re)targeting。<br>另一方面，这个功能对于品牌广告主市场而言有强烈的吸引性，属于稀缺资源。渠道协议&amp; 文档已经到位，客户有强烈需求。</p>
 <h3 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h3><p>按时上线，保证服务正常。</p>
 <h3 id="Action"><a href="#Action" class="headerlink" title="Action"></a>Action</h3><p>甄别背景信息&amp;设计产品、跟进进度&amp;撰写文档、保证测试</p>
 <ul>
@@ -166,7 +167,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">BiddingX-&gt;BES: words</div><div class="line">BES-&gt;BiddingX: tag_id</div></pre></td></tr></table></figure>
 <p><strong>曝光cookie mapping+cookie mapping 托管</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Other ADXs-&gt;BiddingX: Bid Request</div><div class="line">BiddingX-&gt;BiddingX:self-query</div><div class="line">BiddingX-&gt;Other ADXs: Bid Response</div></pre></td></tr></table></figure></p>
 <h3 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h3><p>按时上线，服务SAP、IBM广告主。</p>
-<h2 id="The-Media-Trust对接"><a href="#The-Media-Trust对接" class="headerlink" title="The_Media_Trust对接"></a>The_Media_Trust对接</h2><h3 id="Situation-Brief-1"><a href="#Situation-Brief-1" class="headerlink" title="Situation/Brief"></a>Situation/Brief</h3><p>进行海外投放过程中，像Imobi/Google/Mopub/Pubmatic渠道，有严格的创意&amp;政策要求。The Media Trust是保证创意、落地页无恶意代码以及政策违反的第三方服务机构，通过定时轮询，<strong>保证投放免受政策惩罚</strong>。<br>由于代理商广告创意包含恶意代码，BiddingX被Google惩罚，禁止投放。台湾、香港以及东南亚、国外广告主受严重影响，需要紧急上线该服务保证创意质量。</p>
+<h2 id="The-Media-Trust对接"><a href="#The-Media-Trust对接" class="headerlink" title="The_Media_Trust对接"></a>The_Media_Trust对接</h2><h3 id="Situation-1"><a href="#Situation-1" class="headerlink" title="Situation"></a>Situation</h3><p>进行海外投放过程中，像Imobi/Google/Mopub/Pubmatic渠道，有严格的创意&amp;政策要求。The Media Trust是保证创意、落地页无恶意代码以及政策违反的第三方服务机构，通过定时轮询，<strong>保证投放免受政策惩罚</strong>。<br>由于代理商广告创意包含恶意代码，BiddingX被Google惩罚，禁止投放。台湾、香港以及东南亚、国外广告主受严重影响，需要紧急上线该服务保证创意质量。</p>
 <h3 id="Task-1"><a href="#Task-1" class="headerlink" title="Task"></a>Task</h3><ul>
 <li>通过对接第三方服务、和Google沟通等恢复海外资源投放</li>
 <li>确认Google投放要求，避免类似情况出现</li>
@@ -190,7 +191,7 @@
 </li>
 </ul>
 <h3 id="Result-1"><a href="#Result-1" class="headerlink" title="Result"></a>Result</h3><p>Google恢复正常投放，顺利保证The Media Trust服务。</p>
-<h2 id="Peer-39-ADbug-brandsafety（品牌安全）对接"><a href="#Peer-39-ADbug-brandsafety（品牌安全）对接" class="headerlink" title="Peer_39/ADbug_brandsafety（品牌安全）对接"></a>Peer_39/ADbug_brandsafety（品牌安全）对接</h2><h3 id="Situation-Brief-2"><a href="#Situation-Brief-2" class="headerlink" title="Situation/Brief"></a>Situation/Brief</h3><p>品牌类广告主对于品牌美誉度有要求，要求广告位所在的页面不影响品牌调性。brandsafety指的正是这一类ad verification服务。Peer 39/ADbug是国内外该服务提供商中最出名的。机房竞价前请求（国内/海外）服务器page级别的属性数据，判断是否危害广告主品牌安全。<strong>用于保护品牌类广告主广告调性</strong>。<br>主要用于高通广告主第三波投放。</p>
+<h2 id="Peer-39-ADbug-brandsafety（品牌安全）对接"><a href="#Peer-39-ADbug-brandsafety（品牌安全）对接" class="headerlink" title="Peer_39/ADbug_brandsafety（品牌安全）对接"></a>Peer_39/ADbug_brandsafety（品牌安全）对接</h2><h3 id="Situation-2"><a href="#Situation-2" class="headerlink" title="Situation"></a>Situation</h3><p>品牌类广告主对于品牌美誉度有要求，要求广告位所在的页面不影响品牌调性。brandsafety指的正是这一类ad verification服务。Peer 39/ADbug是国内外该服务提供商中最出名的。机房竞价前请求（国内/海外）服务器page级别的属性数据，判断是否危害广告主品牌安全。<strong>用于保护品牌类广告主广告调性</strong>。<br>主要用于高通广告主第三波投放。</p>
 <h3 id="Task-2"><a href="#Task-2" class="headerlink" title="Task"></a>Task</h3><ul>
 <li>对接brandsafety服务</li>
 <li>调研brandsafety原理、关键指标和边界并分享</li>
@@ -211,7 +212,7 @@
 <li>基于行业内brandsafety的adserving调研并产出<a href="https://noragithub.github.io/PRD_deployment/%E5%93%81%E7%89%8C%E5%AE%A2%E6%88%B7%E5%85%B3%E5%BF%83%E7%9A%84brandsafety%E5%92%8C%E5%8F%8D%E4%BD%9C%E5%BC%8A/index.html" target="_blank" rel="external">PPT</a></li>
 </ul>
 <h3 id="Result-2"><a href="#Result-2" class="headerlink" title="Result"></a>Result</h3><p>顺利对接brandsafety服务，服务高通广告主并形成文档、ppt，完成分享</p>
-<h2 id="Sizmek-ad-serving对接"><a href="#Sizmek-ad-serving对接" class="headerlink" title="Sizmek_ad_serving对接"></a>Sizmek_ad_serving对接</h2><h3 id="Situation"><a href="#Situation" class="headerlink" title="Situation"></a>Situation</h3><p>Sizmek为4A提供广告投放服务，包括brandsafety（品牌安全）／viewability（可视率）监测。<strong>通过对接，保证创意、落地页和竞价服务（DSP端、渠道端）相互兼容</strong>。<br>Sizmek是高通项目的丙方，沟通问题依然存在。<br>主要用于高通广告主投放。</p>
+<h2 id="Sizmek-ad-serving对接"><a href="#Sizmek-ad-serving对接" class="headerlink" title="Sizmek_ad_serving对接"></a>Sizmek_ad_serving对接</h2><h3 id="Situation-3"><a href="#Situation-3" class="headerlink" title="Situation"></a>Situation</h3><p>Sizmek为4A提供广告投放服务，包括brandsafety（品牌安全）／viewability（可视率）监测。<strong>通过对接，保证创意、落地页和竞价服务（DSP端、渠道端）相互兼容</strong>。<br>Sizmek是高通项目的丙方，沟通问题依然存在。<br>主要用于高通广告主投放。</p>
 <h3 id="Task-3"><a href="#Task-3" class="headerlink" title="Task"></a>Task</h3><ul>
 <li>对接第三方动态创意服务</li>
 <li>确保video in banner创意正常投放</li>
@@ -224,7 +225,7 @@
 <li>确认好pdb市场对接</li>
 </ul>
 <h3 id="Result-3"><a href="#Result-3" class="headerlink" title="Result"></a>Result</h3><p>正常投放，并在投放过程中解决渠道对类mraid协议、创意兼容问题</p>
-<h2 id="高通DSP投放"><a href="#高通DSP投放" class="headerlink" title="高通DSP投放"></a>高通DSP投放</h2><h3 id="Situation-1"><a href="#Situation-1" class="headerlink" title="Situation"></a>Situation</h3><p>高通（甲方）的需求来自奥美（乙方）和sizmek（丙方），舜飞在商务投放中处于丁方的地位，需要向上把握需求。且商务决策中每一方的需求点都不一样，执行的细节有很大需要把握的空间和需求的正确性。<br>这个需求是</p>
+<h2 id="高通DSP投放"><a href="#高通DSP投放" class="headerlink" title="高通DSP投放"></a>高通DSP投放</h2><h3 id="Situation-4"><a href="#Situation-4" class="headerlink" title="Situation"></a>Situation</h3><p>高通（甲方）的需求来自奥美（乙方）和sizmek（丙方），舜飞在商务投放中处于丁方的地位，需要向上把握需求。且商务决策中每一方的需求点都不一样，执行的细节有很大需要把握的空间和需求的正确性。<br>这个需求是</p>
 <ul>
 <li>平分轮显（第一波投放）、轮流展现</li>
 <li>video in banner</li>
@@ -254,23 +255,25 @@
 <li>测试（设置合适的campaign）</li>
 </ul>
 <h3 id="Result-4"><a href="#Result-4" class="headerlink" title="Result"></a>Result</h3><p>舜飞有明确的规章制度把产品技术和商务区隔开，我无法得知整个投放涉及的预算，但后续第二第三波投放都主要由我对接，投放没有出现大问题，基本按进度上线</p>
-<h2 id="移动RTB-全渠道PMP-PDB市场对接"><a href="#移动RTB-全渠道PMP-PDB市场对接" class="headerlink" title="移动RTB/全渠道PMP/PDB市场对接"></a>移动RTB/全渠道PMP/PDB市场对接</h2><h3 id="Situation-Brief-Resultl"><a href="#Situation-Brief-Resultl" class="headerlink" title="Situation/Brief/Resultl"></a>Situation/Brief/Resultl</h3><p>14年后，互联网进入移动时代。同时广告市场也根据商务需求和技术发展进入了RTB/PMP/PDB的精细化运营的时代，RTB/PMP/PDB市场业务有区别，需要根据协议和商务业务调整竞价服务。从产品层面考虑兼容性，<strong>兼容跨渠道差异以及现有产品功能</strong><br>例如：</p>
+<h2 id="移动RTB-全渠道PMP-PDB市场对接"><a href="#移动RTB-全渠道PMP-PDB市场对接" class="headerlink" title="移动RTB/全渠道PMP/PDB市场对接"></a>移动RTB/全渠道PMP/PDB市场对接</h2><h3 id="Situation-Result"><a href="#Situation-Result" class="headerlink" title="Situation/Result"></a>Situation/Result</h3><p>14年后，互联网进入移动时代。同时广告市场也根据商务需求和技术发展进入了RTB/PMP/PDB的精细化运营的时代，RTB/PMP/PDB市场业务有区别，需要根据协议和商务业务调整竞价服务。从产品层面考虑兼容性，<strong>兼容跨渠道差异以及现有产品功能</strong>。<br>该项目由很多小项目组成，根据不同项目case by case 解决问题，兼产品经理和项目经理，根据协议进行产品需求设计，协调资源，推动进度，保证上线。<br>例如：</p>
 <ul>
-<li>腾讯渠道RTB和PMP/PDB通过两套（相似）协议和分离环境实现两部分流量的分发。流程由不一样的地方，为了高度的拓展性，牺牲了一定的的便利性：如何关联广告主，如何放量</li>
-<li>资质的扩展、adx的合并与分离等，</li>
-<li>竞价返量以及按比例返量。</li>
+<li>腾讯渠道RTB和PMP/PDB通过两套（相似）协议和分离环境实现两部分流量的分发。流程有不一样的地方，为了高度的拓展性，牺牲了一定的的便利性：如何关联广告主，如何放量。为了可理解性，希望一定的开发资源。</li>
+<li>资质的扩展、adx的合并与分离等（新旧数据）</li>
+<li>通过算法保证PDB按比例返量并考虑极端情况（提前和媒体&amp;广告主沟通）</li>
 </ul>
 <h2 id="SEM品牌推广"><a href="#SEM品牌推广" class="headerlink" title="SEM品牌推广"></a>SEM品牌推广</h2><p>SEM做广告投放</p>
-<h3 id="Situation-2"><a href="#Situation-2" class="headerlink" title="Situation"></a>Situation</h3><p>一直有人做sem投放，但调整和优化效果不明显</p>
-<h3 id="Task-5"><a href="#Task-5" class="headerlink" title="Task"></a>Task</h3><p>调整关键词和campaign，优化</p>
-<h3 id="Action-5"><a href="#Action-5" class="headerlink" title="Action"></a>Action</h3><h3 id="Result-5"><a href="#Result-5" class="headerlink" title="Result"></a>Result</h3><p>所有数据都明显优化</p>
-<h2 id="有赞商城DSP推广"><a href="#有赞商城DSP推广" class="headerlink" title="有赞商城DSP推广"></a>有赞商城DSP推广</h2><h3 id="Situation-3"><a href="#Situation-3" class="headerlink" title="Situation"></a>Situation</h3><p>电商APP推广，2015年重点客户之一。包括Banner创意和视频创意，尝试引导网页流量转化为APP激活，用于探索PC往APP转化路径。</p>
-<ul>
-<li>整合第三方DMP数据到DSP进行目标人群重定向</li>
-<li>利用S2S scheme统计激活数据</li>
-<li>优化后，满足Android端KPI</li>
+<h3 id="Situation-5"><a href="#Situation-5" class="headerlink" title="Situation"></a>Situation</h3><p>原MKT SEM离职，老板希望重新整理BiddingX品牌的SEM&amp;DSP投放，通过数据化运营优化后吸引客户注册</p>
+<h3 id="Task-5"><a href="#Task-5" class="headerlink" title="Task"></a>Task</h3><p>负责BiddingX品牌的SEM&amp; DSP营销，调整关键词和campaign，优化后吸引客户注册</p>
+<h3 id="Action-5"><a href="#Action-5" class="headerlink" title="Action"></a>Action</h3><ul>
+<li>整合Site Tracking和PDMP重定向目标人群</li>
+<li>利用数据可视化展现工作成果</li>
 </ul>
-<p>拓展电商客户</p>
+<h3 id="Result-5"><a href="#Result-5" class="headerlink" title="Result"></a>Result</h3><ul>
+<li>日均消费提高400%（700–&gt;3000)</li>
+<li>点击率提升100%(0.3%–&gt;0.7%)</li>
+<li>展示量提升100%<br><img src="https://noragithub.github.io/PRD_deployment/SEM/SEM.png" alt="SEM"></li>
+</ul>
+<h2 id="有赞商城DSP推广"><a href="#有赞商城DSP推广" class="headerlink" title="有赞商城DSP推广"></a>有赞商城DSP推广</h2><h3 id="Situation-6"><a href="#Situation-6" class="headerlink" title="Situation"></a>Situation</h3><p>电商APP推广，为了开拓电商客户，有赞是2015年重点客户之一。通过使用包括Banner创意和视频创意在内，尝试引导网页流量转化为APP激活，用于探索PC往APP转化路径。</p>
 <h3 id="Task-6"><a href="#Task-6" class="headerlink" title="Task"></a>Task</h3><ul>
 <li>通过投放优化，满足客户CPA需求</li>
 <li>尝试引导网页流量转化为APP激活 </li>
@@ -280,17 +283,18 @@
 <li>受众分析</li>
 <li>选择媒体</li>
 <li>不断建立测试campaign&amp; 调整优化创意、落地页、定向条件</li>
+<li>整合第三方DMP数据到DSP进行目标人群重定向</li>
 </ul>
 </li>
 <li>获取激活数据用于优化<ul>
 <li>对接第三方监测平台，通过S2S scheme获取激活数据<br><img src="https://noragithub.github.io/PRD_deployment/S2S_scheme/S2S_scheme.jpg" alt="S2S scheme"></li>
-<li>在PC端缺乏数据回传机制后放弃改方向投放</li>
+<li>在PC端缺乏数据回传机制后，改方向投放</li>
 </ul>
 </li>
-<li>使用项目管理平台（tower）协调优化师与开发资源</li>
+<li>使用项目管理平台（tower.im）协调优化师与开发资源</li>
 </ul>
-<h3 id="Result-6"><a href="#Result-6" class="headerlink" title="Result"></a>Result</h3><p>Android平台正常投放并达到客户CPA要求。</p>
-<h2 id="移动SSP-iOS-SDK第一版"><a href="#移动SSP-iOS-SDK第一版" class="headerlink" title="移动SSP_iOS_SDK第一版"></a>移动SSP_iOS_SDK第一版</h2><h3 id="Situation-Brief-3"><a href="#Situation-Brief-3" class="headerlink" title="Situation/Brief"></a>Situation/Brief</h3><p>DSP发展到一个阶段，意识到媒体是广告市场的竞争力所在，需要拓展自有的核心视频&amp; 信息流资源。商务团队已经有几个目标客户拓展中，有其紧急性，但与此同时，SSP开发团队项目由于需求持续变更，无法迭代。老板需要两周内完成完成第一版，后续迭代。</p>
+<h3 id="Result-6"><a href="#Result-6" class="headerlink" title="Result"></a>Result</h3><p>优化后，Android端正常投放并达到客户CPA要求。</p>
+<h2 id="移动SSP-iOS-SDK第一版"><a href="#移动SSP-iOS-SDK第一版" class="headerlink" title="移动SSP_iOS_SDK第一版"></a>移动SSP_iOS_SDK第一版</h2><h3 id="Situation-7"><a href="#Situation-7" class="headerlink" title="Situation"></a>Situation</h3><p>DSP发展到一个阶段，意识到媒体是广告市场的竞争力所在，需要拓展自有的核心视频&amp; 信息流资源。商务团队已经有几个目标客户拓展中，有其紧急性，但与此同时，SSP开发团队项目由于需求持续变更，无法迭代。老板需要两周内完成完成第一版，后续迭代。</p>
 <h3 id="Task-Result"><a href="#Task-Result" class="headerlink" title="Task/Result"></a>Task/Result</h3><p>保证移动SSP iOS SDK第一版两周内上线（老板deadline）</p>
 <h3 id="Action-7"><a href="#Action-7" class="headerlink" title="Action"></a>Action</h3><ul>
 <li>通过SSP PM不进行次要需求的开发（只保留关键指标：展示量&amp; 收入 的统计和测试）</li>
@@ -303,7 +307,7 @@
 <li>接手旧产品，并根据管理层反馈做快速迭代；</li>
 <li>参与创新APP项目，如， 我是妈咪 （ 母婴闪购电商）和 hey!购物 （基于库存的个性化推荐APP）;</li>
 </ol>
-<h2 id="总裁看板"><a href="#总裁看板" class="headerlink" title="总裁看板"></a>总裁看板</h2><h3 id="Situation-4"><a href="#Situation-4" class="headerlink" title="Situation"></a>Situation</h3><p>利用Oracle BIEE实现销售、流量业务的数据报表化，管理层通过每日邮件方式了解业务运营。原“总裁看板”产品经理离职，作为“总裁看板”第二任产品经理接手该项目。也是作为“数据产品经理”后，第一个接手负责的产品/项目。由于ETL开发人员紧张，也参与部分ETL开发工作（熟悉业务&amp;具备独立分析能力）。</p>
+<h2 id="总裁看板"><a href="#总裁看板" class="headerlink" title="总裁看板"></a>总裁看板</h2><h3 id="Situation-8"><a href="#Situation-8" class="headerlink" title="Situation"></a>Situation</h3><p>利用Oracle BIEE实现销售、流量业务的数据报表化，管理层通过每日邮件方式了解业务运营。原“总裁看板”产品经理离职，作为“总裁看板”第二任产品经理接手该项目。也是作为“数据产品经理”后，第一个接手负责的产品/项目。由于ETL开发人员紧张，也参与部分ETL开发工作（熟悉业务&amp;具备独立分析能力）。</p>
 <h3 id="Task-7"><a href="#Task-7" class="headerlink" title="Task"></a>Task</h3><ul>
 <li>保证产品数据正确&amp; 稳定运行，及时处理脏数据&amp; fix bug</li>
 <li>结合新业务进行产品迭代，通过数据向管理层传递最新业务的现状</li>
@@ -319,7 +323,7 @@
 <li>根据业务变化进行ETL工作</li>
 <li>协调资源保证产品按时上线</li>
 </ul>
-<h2 id="创新APP项目"><a href="#创新APP项目" class="headerlink" title="创新APP项目"></a>创新APP项目</h2><h3 id="Situation-Brief-Result"><a href="#Situation-Brief-Result" class="headerlink" title="Situation/Brief/Result"></a>Situation/Brief/Result</h3><p>唯品会执行多APP战略，要求基于目前的业务系统孵化新业务APP。BI部门也需要参与到业务运营，承担KPI，真正做到数据驱动业务（业绩）。包括“我是妈咪”（母婴特卖垂直领域电商APP）和“hey!购物”（基于库存的个性化推荐APP）。<br>由于对接品牌部门和市场部门业务分析，对推广业务熟悉。</p>
+<h2 id="创新APP项目"><a href="#创新APP项目" class="headerlink" title="创新APP项目"></a>创新APP项目</h2><h3 id="Situation-Result-1"><a href="#Situation-Result-1" class="headerlink" title="Situation/Result"></a>Situation/Result</h3><p>唯品会执行多APP战略，要求基于目前的业务系统孵化新业务APP。BI部门也需要参与到业务运营，承担KPI，真正做到数据驱动业务（业绩）。包括“我是妈咪”（母婴特卖垂直领域电商APP）和“hey!购物”（基于库存的个性化推荐APP）。<br>由于对接品牌部门和市场部门业务分析，对推广业务熟悉。</p>
 <ul>
 <li>负责整合旧系统的推广、渠道、账户业务逻辑到新app。</li>
 <li>负责H5推广活动页产品实现，通过微博、微信渠道吸引新用户</li>
@@ -336,7 +340,7 @@
 <li>了解需求细节</li>
 </ul>
 <h2 id="移动司南"><a href="#移动司南" class="headerlink" title="移动司南"></a>移动司南</h2><p><a href="https://noragithub.github.io/PRD_deployment/移动司南/index.html" target="_blank" rel="external">PRD</a></p>
-<h3 id="Situation-Brief-Result-1"><a href="#Situation-Brief-Result-1" class="headerlink" title="Situation/Brief/Result"></a>Situation/Brief/Result</h3><ol>
+<h3 id="Situation-Result-2"><a href="#Situation-Result-2" class="headerlink" title="Situation/Result"></a>Situation/Result</h3><ol>
 <li>面向对象是CXO level的管理层，数据需求主要是对经营profile的了解。</li>
 <li>当时部门要求pitch老板资源的，因此，对高保真要求高于详细文档要求。当时目标是成为独立事业部，开发和设计资源都很少，能够用口头沟通代替部分文字表达。</li>
 <li>这是第一份偏设计的PRD，而且要求（尽量）高保真，有问题，但不影响展示（主要根据手机屏幕大小做了取舍）<br>全面负责面向管理层的移动端分析产品，包括产品设计，数据探索和数据可视化。</li>
@@ -348,7 +352,7 @@
 <li>尽快提交设计获取反馈进行迭代</li>
 </ul>
 <p><a href="http://wiki.jikexueyuan.com/project/material-design/" target="_blank" rel="external">Android中文</a><br><a href="http://www.google.com/design/spec/material-design/" target="_blank" rel="external">Material Design</a><br><a href="https://isux.tencent.com/ios8-human-interface-guidelines.html" target="_blank" rel="external">iOS8人机界面指南</a><br><a href="https://developer.apple.com/ios/human-interface-guidelines/overview/design-principles/" target="_blank" rel="external">Human Interface Guidelines</a></p>
-<h2 id="唯品司南"><a href="#唯品司南" class="headerlink" title="唯品司南"></a>唯品司南</h2><h3 id="Situation-Brief-Result-2"><a href="#Situation-Brief-Result-2" class="headerlink" title="Situation/Brief/Result"></a>Situation/Brief/Result</h3><p>作为功能性产品经理，参与到品牌、档期、品类维度的分析产品中去<br>为品牌销售和区域销售提供数据决策的可视化产品。对常规化的分析进行ETL后，利用high-chart，e-chart框架展现，包括档期分析，退拒分析等。获得管理层高度认可。一期参与到后期数据验证，负责黑白盒数据测试&amp;验证，确保数据正确性。二期作为功能性产品经理，参与到品类分析、品牌分析的产品规划。并对数据可视化提供UE建议。</p>
+<h2 id="唯品司南"><a href="#唯品司南" class="headerlink" title="唯品司南"></a>唯品司南</h2><h3 id="Situation-Result-3"><a href="#Situation-Result-3" class="headerlink" title="Situation/Result"></a>Situation/Result</h3><p>作为功能性产品经理，参与到品牌、档期、品类维度的分析产品中去<br>为品牌销售和区域销售提供数据决策的可视化产品。对常规化的分析进行ETL后，利用high-chart，e-chart框架展现，包括档期分析，退拒分析等。获得管理层高度认可。一期参与到后期数据验证，负责黑白盒数据测试&amp;验证，确保数据正确性。二期作为功能性产品经理，参与到品类分析、品牌分析的产品规划。并对数据可视化提供UE建议。</p>
 <h3 id="Task-10"><a href="#Task-10" class="headerlink" title="Task"></a>Task</h3><ul>
 <li>了解产品指标体系&amp;统计口径，对数据进行黑盒测试，找出常规分析报告差异</li>
 <li>作为功能性产品经理，参与到品类分析、品牌分析的产品规划。并对数据可视化提供UE建议。</li>
@@ -359,7 +363,7 @@
 <li>了解数据口径</li>
 <li>分析产品，具体看什么指标，怎么看？具体如何同比，如何环比。</li>
 </ul>
-<h2 id="唯品经纬"><a href="#唯品经纬" class="headerlink" title="唯品经纬"></a>唯品经纬</h2><h3 id="Situation-Brief-Result-3"><a href="#Situation-Brief-Result-3" class="headerlink" title="Situation/Brief/Result"></a>Situation/Brief/Result</h3><p>“唯品经纬”属于创新项目，希望通过利用订单地址数据，挖掘客户有价值的人口统计学信息&amp; 进行职业信息分析，并根据这些信息找到营销切入点，实现的业务可视化，为市场进行地面推广提供支持。对唯品经纬数据部分进行黑盒测试。由于ETL离职，作为ETL开发参与到白盒测试，保证数据正确性。</p>
+<h2 id="唯品经纬"><a href="#唯品经纬" class="headerlink" title="唯品经纬"></a>唯品经纬</h2><h3 id="Situation-Result-4"><a href="#Situation-Result-4" class="headerlink" title="Situation/Result"></a>Situation/Result</h3><p>“唯品经纬”属于创新项目，希望通过利用订单地址数据，挖掘客户有价值的人口统计学信息&amp; 进行职业信息分析，并根据这些信息找到营销切入点，实现的业务可视化，为市场进行地面推广提供支持。对唯品经纬数据部分进行黑盒测试。由于ETL离职，作为ETL开发参与到白盒测试，保证数据正确性。</p>
 <h3 id="Task-11"><a href="#Task-11" class="headerlink" title="Task"></a>Task</h3><ul>
 <li>了解产品指标体系&amp;统计口径，对数据进行黑盒测试，找出常规分析报告差异</li>
 <li>作为ETL，协助指标体系口径一致</li>
@@ -377,7 +381,7 @@
 <li>促销组合：不同促销形式的效果&amp;组合分析，并形成报表系统；</li>
 <li>财务：市场费用的构成分析；</li>
 </ol>
-<h2 id="微信特卖"><a href="#微信特卖" class="headerlink" title="微信特卖"></a>微信特卖</h2><h3 id="Situation-Brief-Result-4"><a href="#Situation-Brief-Result-4" class="headerlink" title="Situation/Brief/Result"></a>Situation/Brief/Result</h3><p>100%对微信商城的BI分析负责，形成虚拟团队向品牌副总裁汇报。利用微信公众号，在微信端进行销售。</p>
+<h2 id="微信特卖"><a href="#微信特卖" class="headerlink" title="微信特卖"></a>微信特卖</h2><h3 id="Situation-Result-5"><a href="#Situation-Result-5" class="headerlink" title="Situation/Result"></a>Situation/Result</h3><p>100%对微信商城的BI分析负责，形成虚拟团队向品牌副总裁汇报。利用微信公众号，在微信端进行销售。</p>
 <h3 id="Task-12"><a href="#Task-12" class="headerlink" title="Task"></a>Task</h3><ul>
 <li>每周提供微信数据周报以及数据分析</li>
 <li>对微信常态分析产品化</li>
@@ -388,8 +392,8 @@
 <li>提供业务报表</li>
 <li>和大数据部门沟通，形成微信报表产品</li>
 </ul>
-<h2 id="归因模型"><a href="#归因模型" class="headerlink" title="归因模型"></a>归因模型</h2><h3 id="Situation-Result"><a href="#Situation-Result" class="headerlink" title="Situation/Result"></a>Situation/Result</h3><p>独立分析项目。确认定岗BI部门后，参与到BI对市场部的跨渠道归因模型项目中，探索跨投放与销售的因果关系。利用归因（助攻模型）模型衡量渠道贡献价值，尝试利用图论实现可视化，提供业务决策支持。</p>
-<h3 id="Task-13"><a href="#Task-13" class="headerlink" title="Task"></a>Task</h3><h3 id="Action-14"><a href="#Action-14" class="headerlink" title="Action"></a>Action</h3><h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><h2 id="电子商务代运营"><a href="#电子商务代运营" class="headerlink" title="电子商务代运营"></a>电子商务代运营</h2><h3 id="Situation-Brief-4"><a href="#Situation-Brief-4" class="headerlink" title="Situation/Brief"></a>Situation/Brief</h3><p>大二参与到电商创业团队，当时天猫（淘宝商城）刚成立，全网都有流量、运营资源倾斜，从高利润品类切入（化妆品），做到50w/m销售业绩</p>
+<h2 id="归因模型"><a href="#归因模型" class="headerlink" title="归因模型"></a>归因模型</h2><h3 id="Situation-Result-6"><a href="#Situation-Result-6" class="headerlink" title="Situation/Result"></a>Situation/Result</h3><p>独立分析项目。确认定岗BI部门后，参与到BI对市场部的跨渠道归因模型项目中，探索跨投放与销售的因果关系。利用归因（助攻模型）模型衡量渠道贡献价值，尝试利用图论实现可视化，提供业务决策支持。</p>
+<h3 id="Task-13"><a href="#Task-13" class="headerlink" title="Task"></a>Task</h3><h3 id="Action-14"><a href="#Action-14" class="headerlink" title="Action"></a>Action</h3><h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><h2 id="电子商务代运营"><a href="#电子商务代运营" class="headerlink" title="电子商务代运营"></a>电子商务代运营</h2><h3 id="Situation-9"><a href="#Situation-9" class="headerlink" title="Situation"></a>Situation</h3><p>大二参与到电商创业团队，当时天猫（淘宝商城）刚成立，全网都有流量、运营资源倾斜，从高利润品类切入（化妆品），做到50w/m销售业绩</p>
 <h3 id="Task-14"><a href="#Task-14" class="headerlink" title="Task"></a>Task</h3><p>确认推广目标，参与淘店运营</p>
 <h3 id="Action-15"><a href="#Action-15" class="headerlink" title="Action"></a>Action</h3><ul>
 <li>微博运营活动策划，目标设定，拉去资源，淘店引流</li>
