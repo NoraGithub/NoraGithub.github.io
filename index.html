@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -174,6 +174,7 @@
 <li>调研brandsafety原理、关键指标和边界并分享</li>
 </ul>
 <h3 id="Action-2"><a href="#Action-2" class="headerlink" title="Action"></a>Action</h3><ul>
+<li>控制商务期望（最重要）</li>
 <li>探索&amp;明确产品需求和商务紧急性<ul>
 <li>需求&amp;里程碑确认</li>
 <li>技术&amp;产品文档确认</li>
@@ -189,53 +190,86 @@
 <li>基于行业内brandsafety的adserving调研并产出<a href="https://noragithub.github.io/PRD_deployment/%E5%93%81%E7%89%8C%E5%AE%A2%E6%88%B7%E5%85%B3%E5%BF%83%E7%9A%84brandsafety%E5%92%8C%E5%8F%8D%E4%BD%9C%E5%BC%8A/index.html" target="_blank" rel="external">PPT</a></li>
 </ul>
 <h3 id="Result-2"><a href="#Result-2" class="headerlink" title="Result"></a>Result</h3><p>顺利对接brandsafety服务，服务高通广告主并形成文档、ppt，完成分享</p>
-<h2 id="Sizmek-ad-serving对接"><a href="#Sizmek-ad-serving对接" class="headerlink" title="Sizmek_ad_serving对接"></a>Sizmek_ad_serving对接</h2><h3 id="Situation-3"><a href="#Situation-3" class="headerlink" title="Situation"></a>Situation</h3><p>Sizmek为4A提供广告投放服务，包括brandsafety（品牌安全）／viewability（可视率）监测。<strong>通过对接，保证创意、落地页和竞价服务（DSP端、渠道端）相互兼容</strong>。<br>Sizmek是高通项目的丙方，沟通问题依然存在。<br>主要用于高通广告主投放。</p>
+<h2 id="Sizmek-ad-serving对接"><a href="#Sizmek-ad-serving对接" class="headerlink" title="Sizmek_ad_serving对接"></a>Sizmek_ad_serving对接</h2><h3 id="Situation-3"><a href="#Situation-3" class="headerlink" title="Situation"></a>Situation</h3><p>Sizmek为4A提供广告创意&amp; 监测服务，包括动态创意和brandsafety （品牌安全-post bid）／viewability（可视率）监测。<strong>通过对接，保证创意、落地页和竞价服务（DSP端、渠道端）相互兼容</strong>。</p>
+<p>主要用于高通广告主投放。</p>
 <h3 id="Task-3"><a href="#Task-3" class="headerlink" title="Task"></a>Task</h3><ul>
-<li>对接第三方动态创意服务</li>
-<li>确保video in banner创意正常投放</li>
+<li>对接第三方动态创意服务（通过HTML投放js）</li>
+<li>保证video in banner正常投放（在banner广告位做视频投放）</li>
 </ul>
 <h3 id="Action-3"><a href="#Action-3" class="headerlink" title="Action"></a>Action</h3><ul>
-<li>确认“动态创意”包含什么服务，是否有特殊需求</li>
-<li>分终端的adserving测试</li>
-<li>渠道／广告位粒度的协议确认</li>
-<li>确认可竟得的impression数据</li>
-<li>确认好pdb市场对接</li>
+<li>控制商务期望（最重要）</li>
+<li>探索&amp;明确产品需求<ul>
+<li>确认“动态创意”包含什么服务（通过HTML投放js）</li>
+<li>确认video in banner投放具体细节<ul>
+<li>特殊广告形式下的成本（CDN）</li>
+<li>非expandable</li>
+<li>确认具体尺寸&amp; 分别尺寸可竟得的impression数据</li>
+<li>具体创意尺寸&amp; 格式、压缩方式、加载时长等（第几帧开始第几帧结束）</li>
 </ul>
-<h3 id="Result-3"><a href="#Result-3" class="headerlink" title="Result"></a>Result</h3><p>正常投放，并在投放过程中解决渠道对类mraid协议、创意兼容问题</p>
-<h2 id="高通DSP投放"><a href="#高通DSP投放" class="headerlink" title="高通DSP投放"></a>高通DSP投放</h2><h3 id="Situation-4"><a href="#Situation-4" class="headerlink" title="Situation"></a>Situation</h3><p>高通（甲方）的需求来自奥美（乙方）和sizmek（丙方），舜飞在商务投放中处于丁方的地位，需要向上把握需求。且商务决策中每一方的需求点都不一样，执行的细节有很大需要把握的空间和需求的正确性。<br>这个需求是</p>
+</li>
+<li>广告主方/渠道方是否有特殊需求<ul>
+<li>渠道/广告位粒度的协议确认</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>测试<ul>
+<li>保证统计、监测服务正常</li>
+<li>分终端、分ADX的adserving测试</li>
+</ul>
+</li>
+</ul>
+<h3 id="Result-3"><a href="#Result-3" class="headerlink" title="Result"></a>Result</h3><p>正常投放，并在投放过程中解决渠道对类Mraid协议、创意兼容问题（设备级别）</p>
+<h2 id="高通DSP投放"><a href="#高通DSP投放" class="headerlink" title="高通DSP投放"></a>高通DSP投放</h2><h3 id="Situation-4"><a href="#Situation-4" class="headerlink" title="Situation"></a>Situation</h3><p>高通（甲方）的需求来自奥美（乙方）和sizmek（丙方），舜飞在商务投放中处于丁方的地位，需要向上把握需求。且商务决策中每一方的需求点都不一样，执行的细节有很大需要把握的空间和需求的正确性。</p>
 <ul>
-<li>平分轮显（第一波投放）、轮流展现</li>
-<li>video in banner</li>
-<li>pdb</li>
 <li>需求来源于邮件，而且同一个需求在不同的时间点由不同的人提出，继续确认哪些需求是同一个需求，那些不是，确认范围和时间点。</li>
-<li>说清楚频次控制的制肘</li>
-<li>测试（重点，敲黑板，设置campaign的技巧）</li>
 </ul>
 <p>主要用于高通广告主第二波投放。</p>
 <p>高通是2016年最重要的品牌类广告主，品牌类广告主的需求变化多且个性化。<strong>解决业务层面为当前产品/技术架构带来的挑战</strong>。</p>
-<ul>
-<li>跨渠道跨创意的频次控制(by adx&amp;by creative&amp;by cookie)</li>
-<li>无法预测的累积时间段的频次控制（by cookie&amp;by time)</li>
-<li>创意轮流显示且平分显示次数(by creative&amp;by cookie)</li>
-<li>控制商务期望</li>
-</ul>
 <h3 id="Task-Result"><a href="#Task-Result" class="headerlink" title="Task/Result"></a>Task/Result</h3><ul>
-<li>确认客户需求，包括媒介需求&amp; 产品功能需求</li>
 <li>保证campaign按时上线</li>
+<li>满足商务“平分轮显”需求</li>
 </ul>
 <h3 id="Action-4"><a href="#Action-4" class="headerlink" title="Action"></a>Action</h3><ul>
-<li>控制商务期望（最重要）</li>
-<li>明确商务需求，确认需求边界于关键时间点</li>
-<li>从商务需求确认为技术需求。拆分子任务和关键验证点</li>
-<li>测试（设置合适的campaign）</li>
-<li>考虑扩展性</li>
-<li>定义“平分轮显”（展示量分创意包按天平分，多个创意面对同一个访客遍历结束前不重复出现），争取最高的创意reach<br>保证线上的测试和统计无误</li>
+<li>控制商务期望（最重要）<ul>
+<li>明确cookie保存周期最多半年（频次控制by cookie&amp;by time）</li>
+</ul>
+</li>
+<li>明确商务需求，包括媒介需求&amp; 产品功能需求，确认需求边界于关键时间点<ul>
+<li>确认“平分轮显”具体要求（by day）<ul>
+<li>跨渠道跨创意的频次控制(by adx&amp;by creative&amp;by cookie)    </li>
+<li>无法预测的累积时间段的频次控制（by cookie&amp;by time)</li>
+<li>创意轮流显示且平分显示次数(by creative&amp;by cookie)</li>
+</ul>
+</li>
+<li>保证优酷/腾讯/爱奇艺PDB 市场对接完成（OTV）</li>
+</ul>
+</li>
+<li>从商务需求转化为技术需求，拆分子任务和关键验证点（创意按by cookie/by 频次 随机）</li>
+<li>测试<ul>
+<li>设置合适的campaign（按活动/按创意，对比频次数据，预期数据无差异）</li>
+<li>保证统计discrepancy</li>
+</ul>
+</li>
+<li>广告主方/渠道方是否有特殊需求<ul>
+<li>渠道/广告位粒度的协议确认</li>
+<li>确认RTB/PDB市场完成对接</li>
+</ul>
+</li>
+<li>考虑可扩展性<ul>
+<li>跨渠道跨创意的频次控制(by adx&amp;by creative&amp;by cookie)</li>
+<li>campaign、产品、创意包粒度的“平分轮显”需求</li>
+<li>全局轮显&amp; 用户轮显</li>
+<li>3+reach最多</li>
+</ul>
+</li>
 </ul>
 <h2 id="移动RTB-全渠道PMP-PDB市场对接"><a href="#移动RTB-全渠道PMP-PDB市场对接" class="headerlink" title="移动RTB/全渠道PMP/PDB市场对接"></a>移动RTB/全渠道PMP/PDB市场对接</h2><h3 id="Situation-Result"><a href="#Situation-Result" class="headerlink" title="Situation/Result"></a>Situation/Result</h3><p>14年后，互联网进入移动时代。同时广告市场也根据商务需求和技术发展进入了RTB/PMP/PDB的精细化运营的时代，RTB/PMP/PDB市场业务有区别，需要根据协议和商务业务调整竞价服务。从产品层面考虑兼容性，<strong>兼容跨渠道差异以及现有产品功能</strong>。<br>该项目由很多小项目组成，根据不同项目case by case 解决问题，兼产品经理和项目经理，根据协议进行产品需求设计，协调资源，推动进度，保证上线。<br>例如：</p>
 <ul>
 <li>腾讯渠道RTB和PMP/PDB通过两套（相似）协议和分离环境实现两部分流量的分发。流程有不一样的地方，为了高度的拓展性，牺牲了一定的的便利性：如何关联广告主，如何放量。为了可理解性，希望一定的开发资源。</li>
 <li>资质的扩展、adx的合并与分离等（新旧数据）</li>
 <li>通过算法保证PDB按比例返量并考虑极端情况（提前和媒体&amp;广告主沟通）</li>
+<li>PDB竞价暂停情况</li>
 </ul>
 <h2 id="SEM品牌推广"><a href="#SEM品牌推广" class="headerlink" title="SEM品牌推广"></a>SEM品牌推广</h2><p>SEM做广告投放</p>
 <h3 id="Situation-5"><a href="#Situation-5" class="headerlink" title="Situation"></a>Situation</h3><p>原MKT SEM离职，老板希望重新整理BiddingX品牌的SEM&amp;DSP投放，通过数据化运营优化后吸引客户注册</p>
@@ -388,7 +422,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/15/STAR-of-Projects/" data-id="civknrbfq0003npopfab86i4q" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/11/15/STAR-of-Projects/" data-id="civknrbfq0003npopfab86i4q" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -424,7 +458,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/27/《深入理解计算机操作系统》-chapter-7-链接-Memo/" data-id="civknrbfy0007npopm6ba8cs4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/27/《深入理解计算机操作系统》-chapter-7-链接-Memo/" data-id="civknrbfy0007npopm6ba8cs4" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -453,7 +487,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/14/【译】快速开始Jupyter Notebook/" data-id="civknrbg30009npopge38g8os" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/14/【译】快速开始Jupyter Notebook/" data-id="civknrbg30009npopge38g8os" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -517,7 +551,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/10/计算机网络观测/" data-id="civknrbgj000enpop68nge9jw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/10/计算机网络观测/" data-id="civknrbgj000enpop68nge9jw" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -544,7 +578,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/09/Markdown Web  编辑器产品调研/" data-id="civknrbfc0000npopuepvm3xz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/09/Markdown Web  编辑器产品调研/" data-id="civknrbfc0000npopuepvm3xz" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -578,7 +612,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/09/git的一些坑/" data-id="civknrbfu0004npop7qbz158r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/09/git的一些坑/" data-id="civknrbfu0004npop7qbz158r" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -628,7 +662,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/" data-id="civknrbgm000fnpopj8df6zli" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/" data-id="civknrbgm000fnpopj8df6zli" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -659,7 +693,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/09/区块链（block chain）调研/" data-id="civknrbgg000dnpop2jl2abkh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/09/区块链（block chain）调研/" data-id="civknrbgg000dnpop2jl2abkh" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -688,7 +722,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/09/前端的学习笔记/" data-id="civknrbg9000bnpopq89sixey" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/09/前端的学习笔记/" data-id="civknrbg9000bnpopq89sixey" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -762,7 +796,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/08/文字识别初探/" data-id="civknrbgo000gnpop67b2nv4u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/08/文字识别初探/" data-id="civknrbgo000gnpop67b2nv4u" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OCR/">OCR</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tesseract/">tesseract</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开源/">开源</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/文字识别/">文字识别</a></li></ul>
@@ -788,7 +822,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OCR/">OCR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StackEdit/">StackEdit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tesseract/">tesseract</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/同步/">同步</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源/">开源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文字识别/">文字识别</a></li></ul>
     </div>
@@ -798,7 +832,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/OCR/" style="font-size: 10px;">OCR</a> <a href="/tags/StackEdit/" style="font-size: 10px;">StackEdit</a> <a href="/tags/tesseract/" style="font-size: 10px;">tesseract</a> <a href="/tags/同步/" style="font-size: 10px;">同步</a> <a href="/tags/开源/" style="font-size: 10px;">开源</a> <a href="/tags/文字识别/" style="font-size: 10px;">文字识别</a>
     </div>
@@ -817,7 +851,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -854,7 +888,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
