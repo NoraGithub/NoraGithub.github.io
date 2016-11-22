@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -84,30 +84,24 @@
 
 
 
-<meta name="description" content="weibo的git使用笔记。Git远程操作详解Git 使用规范流程git rebase 阮一峰 谷歌搜索Error:cannot pull with rebase:you have unstated changesyou have unstated changesgit workflow 常用命令多人协作分支管理策略管理修改
-探索.git目录
-git diff（谷歌）diff 原理Diff 算法的">
+<meta name="description" content="weibo的git使用笔记。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Busihacker">
 <meta property="og:url" content="http://yoursite.com/2016/10/09/git的一些坑/index.html">
 <meta property="og:site_name" content="Busihacker">
-<meta property="og:description" content="weibo的git使用笔记。Git远程操作详解Git 使用规范流程git rebase 阮一峰 谷歌搜索Error:cannot pull with rebase:you have unstated changesyou have unstated changesgit workflow 常用命令多人协作分支管理策略管理修改
-探索.git目录
-git diff（谷歌）diff 原理Diff 算法的">
-<meta property="og:updated_time" content="2016-10-09T06:19:21.000Z">
+<meta property="og:description" content="weibo的git使用笔记。">
+<meta property="og:updated_time" content="2016-11-22T15:28:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Busihacker">
-<meta name="twitter:description" content="weibo的git使用笔记。Git远程操作详解Git 使用规范流程git rebase 阮一峰 谷歌搜索Error:cannot pull with rebase:you have unstated changesyou have unstated changesgit workflow 常用命令多人协作分支管理策略管理修改
-探索.git目录
-git diff（谷歌）diff 原理Diff 算法的">
+<meta name="twitter:description" content="weibo的git使用笔记。">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -120,7 +114,7 @@ git diff（谷歌）diff 原理Diff 算法的">
   <title>  | Busihacker </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -175,7 +169,7 @@ git diff（谷歌）diff 原理Diff 算法的">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
           </a>
         </li>
       
@@ -185,7 +179,7 @@ git diff（谷歌）diff 原理Diff 算法的">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -195,7 +189,7 @@ git diff（谷歌）diff 原理Diff 算法的">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -248,7 +242,7 @@ git diff（谷歌）diff 原理Diff 算法的">
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-10-09T14:19:21+08:00" content="2016-10-09">
               2016-10-09
             </time>
@@ -277,7 +271,8 @@ git diff（谷歌）diff 原理Diff 算法的">
       
 
       
-        <p>weibo的git使用笔记。<br><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html?bsh_bid=1314465090" target="_blank" rel="external">Git远程操作详解</a><br><a href="http://www.ruanyifeng.com/blog/2015/08/git-use-process.html" target="_blank" rel="external">Git 使用规范流程</a><br><a href="https://www.google.com.hk/search?q=git+rebase++%E9%98%AE%E4%B8%80%E5%B3%B0&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">git rebase 阮一峰 谷歌搜索</a><br><a href="http://stackoverflow.com/questions/23517464/error-cannot-pull-with-rebase-you-have-unstaged-changes" target="_blank" rel="external">Error:cannot pull with rebase:you have unstated changes</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=you+have+unstaged+changes++&amp;oq=you+have+unstaged+changes++&amp;gs_l=serp.3..0j0i30k1l6j0i5i30k1l3.68687.78840.0.79129.12.12.0.0.0.0.188.1132.6j4.10.0....0...1c.1.64.serp..2.1.82.6SnD5AXtjG0" target="_blank" rel="external">you have unstated changes</a><br><a href="http://www.cnblogs.com/kidsitcn/p/4450466.html" target="_blank" rel="external">git workflow 常用命令</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013760174128707b935b0be6fc4fc6ace66c4f15618f8d000" target="_blank" rel="external">多人协作</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758410364457b9e3d821f4244beb0fd69c61a185ae0000" target="_blank" rel="external">分支管理策略</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374829472990293f16b45df14f35b94b3e8a026220c5000" target="_blank" rel="external">管理修改</a></p>
+        <p>weibo的git使用笔记。<br><a id="more"></a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html?bsh_bid=1314465090" target="_blank" rel="external">Git远程操作详解</a><br><a href="http://www.ruanyifeng.com/blog/2015/08/git-use-process.html" target="_blank" rel="external">Git 使用规范流程</a><br><a href="https://www.google.com.hk/search?q=git+rebase++%E9%98%AE%E4%B8%80%E5%B3%B0&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">git rebase 阮一峰 谷歌搜索</a><br><a href="http://stackoverflow.com/questions/23517464/error-cannot-pull-with-rebase-you-have-unstaged-changes" target="_blank" rel="external">Error:cannot pull with rebase:you have unstated changes</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=you+have+unstaged+changes++&amp;oq=you+have+unstaged+changes++&amp;gs_l=serp.3..0j0i30k1l6j0i5i30k1l3.68687.78840.0.79129.12.12.0.0.0.0.188.1132.6j4.10.0....0...1c.1.64.serp..2.1.82.6SnD5AXtjG0" target="_blank" rel="external">you have unstated changes</a><br><a href="http://www.cnblogs.com/kidsitcn/p/4450466.html" target="_blank" rel="external">git workflow 常用命令</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013760174128707b935b0be6fc4fc6ace66c4f15618f8d000" target="_blank" rel="external">多人协作</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758410364457b9e3d821f4244beb0fd69c61a185ae0000" target="_blank" rel="external">分支管理策略</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374829472990293f16b45df14f35b94b3e8a026220c5000" target="_blank" rel="external">管理修改</a></p>
 <p><a href="http://www.cnblogs.com/zhongxinWang/p/4235448.html" target="_blank" rel="external">探索.git目录</a></p>
 <h1 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h1><p><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=diff+%E5%8E%9F%E7%90%86+&amp;oq=diff+%E5%8E%9F%E7%90%86+&amp;gs_l=serp.3..0i30k1j0i5i30k1l2.68361.68361.0.68637.1.1.0.0.0.0.83.83.1.1.0....0...1c.1.64.serp..0.1.82.DtZbCTJhHNs" target="_blank" rel="external">（谷歌）diff 原理</a><br><a href="https://segmentfault.com/q/1010000000367833" target="_blank" rel="external">Diff 算法的原理是什么, 怎样学习和理解?</a><br><a href="http://www.voidcn.com/blog/dog250/article/p-5859714.html" target="_blank" rel="external">diff程序的算法</a><br><a href="http://www.ruanyifeng.com/blog/2012/08/how_to_read_diff.html" target="_blank" rel="external">读懂diff（阮一峰）</a><br><a href="https://lists.gnu.org/archive/html/emacs-devel/2010-01/msg01182.html" target="_blank" rel="external">Interpreting git diff -cc[was:merge conflict]</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=git+diff+--cc+%E6%80%8E%E4%B9%88%E8%AF%BB&amp;oq=git+diff+--cc+%E6%80%8E%E4%B9%88%E8%AF%BB&amp;gs_l=serp.3...8438.11111.0.11377.11.9.2.0.0.0.227.772.3j2j1.6.0....0...1c.1.64.serp..3.0.0.bCGBg-Hw7IU" target="_blank" rel="external">git diff –cc 怎么读</a><br><a href="https://github.com/colinta/SublimeFileDiffs" target="_blank" rel="external">sublime  diff</a><br><a href="http://www.oschina.net/translate/20-powerful-sublimetext-plugins" target="_blank" rel="external">20 个强大的 Sublime Text 插件 </a></p>
 <p>#git push –force 的使用场景<br>git checkout -b dev<br>git add -all<br>git checkout master</p>
@@ -309,7 +304,7 @@ git diff（谷歌）diff 原理Diff 算法的">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/09/区块链（block chain）调研/" rel="next" title="">
+              <a href="/2016/10/09/前端的学习笔记/" rel="next" title="">
                 <i class="fa fa-chevron-left"></i> 
               </a>
             
@@ -317,8 +312,8 @@ git diff（谷歌）diff 原理Diff 算法的">
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/" rel="prev" title="购买域名+服务器+部署服务器+实现ssl协议">
-                购买域名+服务器+部署服务器+实现ssl协议 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/09/Markdown Web  编辑器产品调研/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -368,10 +363,10 @@ git diff（谷歌）diff 原理Diff 算法的">
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -379,7 +374,7 @@ git diff（谷歌）diff 原理Diff 算法的">
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="http://ww3.sinaimg.cn/mw690/6fa34428jw8eyydwfqrecj20ro0ro42v.jpg"
                alt="Nora Chan" />
           <p class="site-author-name" itemprop="name">Nora Chan</p>
           <p class="site-description motion-element" itemprop="description"></p>
@@ -388,7 +383,7 @@ git diff（谷歌）diff 原理Diff 算法的">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">20</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
@@ -398,7 +393,7 @@ git diff（谷歌）diff 原理Diff 算法的">
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">8</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-name">标签</span>
               </a>
             </div>
           
@@ -408,6 +403,44 @@ git diff（谷歌）diff 原理Diff 算法的">
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/NoraGithub" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/users/06ff1db1651f" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-jianshu"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1872970792" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/Nora_Chan" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-zhihu"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
           
         </div>
 
@@ -453,13 +486,13 @@ git diff（谷歌）diff 原理Diff 算法的">
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
@@ -524,6 +557,13 @@ git diff（谷歌）diff 原理Diff 算法的">
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
