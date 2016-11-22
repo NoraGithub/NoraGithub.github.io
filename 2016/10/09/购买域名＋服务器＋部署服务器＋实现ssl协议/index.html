@@ -1,16 +1,95 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+<!doctype html>
+
+
+
   
-  <title>购买域名+服务器+部署服务器+实现ssl协议 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="两条a记录主要是为了负载均衡吧？常用域名记录解释：A记录、MX记录、CNAME记录、TXT记录、AAAA记录、NS记录如何建立个人网站？新手教程：建立网站的全套流程与详细解释2014年网站SEO常见作弊方法详细解析Godaddy注册商域名修改DNS地址管理DNS个人godaddy域名备案解决方案godaddy 对域名的所有权以及备案问题。免费的是最贵的免费域名如何抢注一个刚刚过期的域名
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="两条a记录主要是为了负载均衡吧？常用域名记录解释：A记录、MX记录、CNAME记录、TXT记录、AAAA记录、NS记录如何建立个人网站？新手教程：建立网站的全套流程与详细解释2014年网站SEO常见作弊方法详细解析Godaddy注册商域名修改DNS地址管理DNS个人godaddy域名备案解决方案godaddy 对域名的所有权以及备案问题。免费的是最贵的免费域名如何抢注一个刚刚过期的域名
 SSL协议">
 <meta property="og:type" content="article">
 <meta property="og:title" content="购买域名+服务器+部署服务器+实现ssl协议">
 <meta property="og:url" content="http://yoursite.com/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Busihacker">
 <meta property="og:description" content="两条a记录主要是为了负载均衡吧？常用域名记录解释：A记录、MX记录、CNAME记录、TXT记录、AAAA记录、NS记录如何建立个人网站？新手教程：建立网站的全套流程与详细解释2014年网站SEO常见作弊方法详细解析Godaddy注册商域名修改DNS地址管理DNS个人godaddy域名备案解决方案godaddy 对域名的所有权以及备案问题。免费的是最贵的免费域名如何抢注一个刚刚过期的域名
 SSL协议">
 <meta property="og:updated_time" content="2016-10-09T06:54:32.000Z">
@@ -18,75 +97,182 @@ SSL协议">
 <meta name="twitter:title" content="购买域名+服务器+部署服务器+实现ssl协议">
 <meta name="twitter:description" content="两条a记录主要是为了负载均衡吧？常用域名记录解释：A记录、MX记录、CNAME记录、TXT记录、AAAA记录、NS记录如何建立个人网站？新手教程：建立网站的全套流程与详细解释2014年网站SEO常见作弊方法详细解析Godaddy注册商域名修改DNS地址管理DNS个人godaddy域名备案解决方案godaddy 对域名的所有权以及备案问题。免费的是最贵的免费域名如何抢注一个刚刚过期的域名
 SSL协议">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
 
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> 购买域名+服务器+部署服务器+实现ssl协议 | Busihacker </title>
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-购买域名＋服务器＋部署服务器＋实现ssl协议" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/" class="article-date">
-  <time datetime="2016-10-09T06:19:21.000Z" itemprop="datePublished">2016-10-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      购买域名+服务器+部署服务器+实现ssl协议
-    </h1>
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
   
 
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Busihacker</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                购买域名+服务器+部署服务器+实现ssl协议
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-09T14:19:21+08:00" content="2016-10-09">
+              2016-10-09
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
       
         <p><a href="https://www.google.com.hk/search?ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=%E4%B8%A4%E6%9D%A1+a%E8%AE%B0%E5%BD%95&amp;gws_rd=ssl" target="_blank" rel="external">两条a记录主要是为了负载均衡吧？</a><br><a href="https://www.ezloo.com/2011/04/a_mx_cname_txt_aaaa_ns.html" target="_blank" rel="external">常用域名记录解释：A记录、MX记录、CNAME记录、TXT记录、AAAA记录、NS记录</a><br><a href="https://www.zhihu.com/question/19774219" target="_blank" rel="external">如何建立个人网站？</a><br><a href="http://yihui.name/cn/2009/06/how-to-build-a  -website-as-a-dummy/" target="_blank" rel="external">新手教程：建立网站的全套流程与详细解释</a><br><a href="https://www.douban.com/group/topic/61689932/" target="_blank" rel="external">2014年网站SEO常见作弊方法详细解析</a><br><a href="https://support.dnspod.cn/Kb/showarticle/tsid/42/" target="_blank" rel="external">Godaddy注册商域名修改DNS地址</a><br><a href="https://sg.godaddy.com/zh/help/dns-680" target="_blank" rel="external">管理DNS</a><br><a href="http://www.ixirong.com/2015/04/15/how-blog-record-by-aliyun/" target="_blank" rel="external">个人godaddy域名备案解决方案</a><br>godaddy 对域名的所有权以及备案问题。<br>免费的是最贵的<a href="https://www.zhihu.com/question/19835955" target="_blank" rel="external">免费域名</a><br><a href="https://www.zhihu.com/question/20845371" target="_blank" rel="external">如何抢注一个刚刚过期的域名</a></p>
 <p>SSL协议与加密<br><a href="http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html" target="_blank" rel="external">SSL/TLS协议运行机制的概述</a><br><a href="http://www.ruanyifeng.com/blog/2016/08/migrate-from-http-to-https.html" target="_blank" rel="external">HTTPS 升级指南</a><br><a href="http://www.asiapeak.com/PGPTheory.php" target="_blank" rel="external">PGP加密原理</a><br><a href="http://www.ruanyifeng.com/blog/2013/07/gpg.html" target="_blank" rel="external">GPG入门教程</a><br><a href="http://pgp.sourceforge.net/pgpintro.php" target="_blank" rel="external">关于pgp</a><br><a href="http://www.ruanyifeng.com/blog/2013/06/rsa_algorithm_part_one.html" target="_blank" rel="external">RSA算法原理</a><br><a href="http://www.ruanyifeng.com/blog/2013/07/rsa_algorithm_part_two.html" target="_blank" rel="external">RSA算法原理</a><br>http协议与ssl协议<br>[<a href="https://segmentfault.com/a/1190000006921322" target="_blank" rel="external">TCP三次握手&amp;Render Tree页面渲染=&gt;从输入URL到页面显示的过程？</a>]<br><a href="https://www.sslshopper.com/ssl-converter.html" target="_blank" rel="external">不同format的certificate和private/public key</a></p>
@@ -105,134 +291,291 @@ SSL协议">
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/" data-id="civknrbgm000fnpopj8df6zli" class="article-share-link">Partager</a>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/09/git的一些坑/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/09/Markdown Web  编辑器产品调研/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
       
       
     </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
-  
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
     
-<nav id="article-nav">
-  
-    <a href="/2016/10/09/git的一些坑/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
-      <div class="article-nav-title">
+  </div>
+
+
+        </div>
         
-          (no title)
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Nora Chan" />
+          <p class="site-author-name" itemprop="name">Nora Chan</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用startssl认证证书"><span class="nav-number">1.</span> <span class="nav-text">使用startssl认证证书</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#远程服务"><span class="nav-number">2.</span> <span class="nav-text">远程服务</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
         
       </div>
-    </a>
-  
-  
-    <a href="/2016/10/09/区块链（block chain）调研/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title"></div>
-    </a>
-  
-</nav>
+    </main>
 
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
   
-</article>
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Nora Chan</span>
+</div>
 
-</section>
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
         
-          <aside id="sidebar">
-  
-    
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OCR/">OCR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/StackEdit/">StackEdit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tesseract/">tesseract</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/同步/">同步</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开源/">开源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文字识别/">文字识别</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/OCR/" style="font-size: 10px;">OCR</a> <a href="/tags/StackEdit/" style="font-size: 10px;">StackEdit</a> <a href="/tags/tesseract/" style="font-size: 10px;">tesseract</a> <a href="/tags/同步/" style="font-size: 10px;">同步</a> <a href="/tags/开源/" style="font-size: 10px;">开源</a> <a href="/tags/文字识别/" style="font-size: 10px;">文字识别</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/11/15/STAR-of-Projects/">STAR of Projects</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/27/《深入理解计算机操作系统》-chapter-7-链接-Memo/">《深入理解计算机操作系统》-chapter 7 链接  Memo</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/14/【译】快速开始Jupyter Notebook/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/10/计算机网络观测/">计算机网络观测</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/09/Markdown Web  编辑器产品调研/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
     </div>
   </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
+
   
-    <a href="/" class="mobile-nav-link">Home</a>
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+
+
+
   
-</nav>
-    
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  
 
 
-<script src="/js/script.js"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
 
-  </div>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
 </body>
 </html>
