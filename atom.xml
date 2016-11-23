@@ -480,33 +480,6 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2016/10/09/git%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/"/>
-    <id>http://yoursite.com/2016/10/09/git的一些坑/</id>
-    <published>2016-10-09T06:19:21.000Z</published>
-    <updated>2016-11-22T15:28:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>weibo的git使用笔记。<br><a id="more"></a></p>
-<p><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html?bsh_bid=1314465090" target="_blank" rel="external">Git远程操作详解</a><br><a href="http://www.ruanyifeng.com/blog/2015/08/git-use-process.html" target="_blank" rel="external">Git 使用规范流程</a><br><a href="https://www.google.com.hk/search?q=git+rebase++%E9%98%AE%E4%B8%80%E5%B3%B0&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">git rebase 阮一峰 谷歌搜索</a><br><a href="http://stackoverflow.com/questions/23517464/error-cannot-pull-with-rebase-you-have-unstaged-changes" target="_blank" rel="external">Error:cannot pull with rebase:you have unstated changes</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=you+have+unstaged+changes++&amp;oq=you+have+unstaged+changes++&amp;gs_l=serp.3..0j0i30k1l6j0i5i30k1l3.68687.78840.0.79129.12.12.0.0.0.0.188.1132.6j4.10.0....0...1c.1.64.serp..2.1.82.6SnD5AXtjG0" target="_blank" rel="external">you have unstated changes</a><br><a href="http://www.cnblogs.com/kidsitcn/p/4450466.html" target="_blank" rel="external">git workflow 常用命令</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013760174128707b935b0be6fc4fc6ace66c4f15618f8d000" target="_blank" rel="external">多人协作</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758410364457b9e3d821f4244beb0fd69c61a185ae0000" target="_blank" rel="external">分支管理策略</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374829472990293f16b45df14f35b94b3e8a026220c5000" target="_blank" rel="external">管理修改</a></p>
-<p><a href="http://www.cnblogs.com/zhongxinWang/p/4235448.html" target="_blank" rel="external">探索.git目录</a></p>
-<h1 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h1><p><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=diff+%E5%8E%9F%E7%90%86+&amp;oq=diff+%E5%8E%9F%E7%90%86+&amp;gs_l=serp.3..0i30k1j0i5i30k1l2.68361.68361.0.68637.1.1.0.0.0.0.83.83.1.1.0....0...1c.1.64.serp..0.1.82.DtZbCTJhHNs" target="_blank" rel="external">（谷歌）diff 原理</a><br><a href="https://segmentfault.com/q/1010000000367833" target="_blank" rel="external">Diff 算法的原理是什么, 怎样学习和理解?</a><br><a href="http://www.voidcn.com/blog/dog250/article/p-5859714.html" target="_blank" rel="external">diff程序的算法</a><br><a href="http://www.ruanyifeng.com/blog/2012/08/how_to_read_diff.html" target="_blank" rel="external">读懂diff（阮一峰）</a><br><a href="https://lists.gnu.org/archive/html/emacs-devel/2010-01/msg01182.html" target="_blank" rel="external">Interpreting git diff -cc[was:merge conflict]</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=git+diff+--cc+%E6%80%8E%E4%B9%88%E8%AF%BB&amp;oq=git+diff+--cc+%E6%80%8E%E4%B9%88%E8%AF%BB&amp;gs_l=serp.3...8438.11111.0.11377.11.9.2.0.0.0.227.772.3j2j1.6.0....0...1c.1.64.serp..3.0.0.bCGBg-Hw7IU" target="_blank" rel="external">git diff –cc 怎么读</a><br><a href="https://github.com/colinta/SublimeFileDiffs" target="_blank" rel="external">sublime  diff</a><br><a href="http://www.oschina.net/translate/20-powerful-sublimetext-plugins" target="_blank" rel="external">20 个强大的 Sublime Text 插件 </a></p>
-<p>#git push –force 的使用场景<br>git checkout -b dev<br>git add -all<br>git checkout master</p>
-<p><strong>initialization后，从未<code>git commit</code> ，checkout后git branch –list 也看不到自己的分支。</strong><a href="blog.jobbole.com/87700/">如何在git里撤销几乎任何操作</a></p>
-<p>#文件的命名不要带有<code>/</code><br><a href="https://www.google.com.hk/search?q=invalid+path+git+pull&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">windows下不接受这种命名</a><br>导致git pull 后git rm，永远无法和remote repository保持一致。<br>这个时候可能一定会遇到push force问题。（由于是没用的文件，我直接舍弃了该文件。）</p>
-<p>##git push –force 的使用场景<br>push错误后，<br><a href="https://segmentfault.com/q/1010000002898735" target="_blank" rel="external">git 怎样删除远程仓库的某次错误提交？</a><br><a href="https://www.google.com.hk/search?q=push%E5%90%8E%E6%92%A4%E9%94%80&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">push后撤销</a></p>
-<p>## </p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;weibo的git使用笔记。&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>购买域名+服务器+部署服务器+实现ssl协议</title>
     <link href="http://yoursite.com/2016/10/09/%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D%EF%BC%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8B%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8B%E5%AE%9E%E7%8E%B0ssl%E5%8D%8F%E8%AE%AE/"/>
     <id>http://yoursite.com/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/</id>
@@ -533,6 +506,33 @@
     <summary type="html">
     
       &lt;p&gt;未完成&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2016/10/09/git%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/"/>
+    <id>http://yoursite.com/2016/10/09/git的一些坑/</id>
+    <published>2016-10-09T06:19:21.000Z</published>
+    <updated>2016-11-22T15:28:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>weibo的git使用笔记。<br><a id="more"></a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html?bsh_bid=1314465090" target="_blank" rel="external">Git远程操作详解</a><br><a href="http://www.ruanyifeng.com/blog/2015/08/git-use-process.html" target="_blank" rel="external">Git 使用规范流程</a><br><a href="https://www.google.com.hk/search?q=git+rebase++%E9%98%AE%E4%B8%80%E5%B3%B0&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">git rebase 阮一峰 谷歌搜索</a><br><a href="http://stackoverflow.com/questions/23517464/error-cannot-pull-with-rebase-you-have-unstaged-changes" target="_blank" rel="external">Error:cannot pull with rebase:you have unstated changes</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=you+have+unstaged+changes++&amp;oq=you+have+unstaged+changes++&amp;gs_l=serp.3..0j0i30k1l6j0i5i30k1l3.68687.78840.0.79129.12.12.0.0.0.0.188.1132.6j4.10.0....0...1c.1.64.serp..2.1.82.6SnD5AXtjG0" target="_blank" rel="external">you have unstated changes</a><br><a href="http://www.cnblogs.com/kidsitcn/p/4450466.html" target="_blank" rel="external">git workflow 常用命令</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013760174128707b935b0be6fc4fc6ace66c4f15618f8d000" target="_blank" rel="external">多人协作</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758410364457b9e3d821f4244beb0fd69c61a185ae0000" target="_blank" rel="external">分支管理策略</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374829472990293f16b45df14f35b94b3e8a026220c5000" target="_blank" rel="external">管理修改</a></p>
+<p><a href="http://www.cnblogs.com/zhongxinWang/p/4235448.html" target="_blank" rel="external">探索.git目录</a></p>
+<h1 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h1><p><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=diff+%E5%8E%9F%E7%90%86+&amp;oq=diff+%E5%8E%9F%E7%90%86+&amp;gs_l=serp.3..0i30k1j0i5i30k1l2.68361.68361.0.68637.1.1.0.0.0.0.83.83.1.1.0....0...1c.1.64.serp..0.1.82.DtZbCTJhHNs" target="_blank" rel="external">（谷歌）diff 原理</a><br><a href="https://segmentfault.com/q/1010000000367833" target="_blank" rel="external">Diff 算法的原理是什么, 怎样学习和理解?</a><br><a href="http://www.voidcn.com/blog/dog250/article/p-5859714.html" target="_blank" rel="external">diff程序的算法</a><br><a href="http://www.ruanyifeng.com/blog/2012/08/how_to_read_diff.html" target="_blank" rel="external">读懂diff（阮一峰）</a><br><a href="https://lists.gnu.org/archive/html/emacs-devel/2010-01/msg01182.html" target="_blank" rel="external">Interpreting git diff -cc[was:merge conflict]</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=git+diff+--cc+%E6%80%8E%E4%B9%88%E8%AF%BB&amp;oq=git+diff+--cc+%E6%80%8E%E4%B9%88%E8%AF%BB&amp;gs_l=serp.3...8438.11111.0.11377.11.9.2.0.0.0.227.772.3j2j1.6.0....0...1c.1.64.serp..3.0.0.bCGBg-Hw7IU" target="_blank" rel="external">git diff –cc 怎么读</a><br><a href="https://github.com/colinta/SublimeFileDiffs" target="_blank" rel="external">sublime  diff</a><br><a href="http://www.oschina.net/translate/20-powerful-sublimetext-plugins" target="_blank" rel="external">20 个强大的 Sublime Text 插件 </a></p>
+<p>#git push –force 的使用场景<br>git checkout -b dev<br>git add -all<br>git checkout master</p>
+<p><strong>initialization后，从未<code>git commit</code> ，checkout后git branch –list 也看不到自己的分支。</strong><a href="blog.jobbole.com/87700/">如何在git里撤销几乎任何操作</a></p>
+<p>#文件的命名不要带有<code>/</code><br><a href="https://www.google.com.hk/search?q=invalid+path+git+pull&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">windows下不接受这种命名</a><br>导致git pull 后git rm，永远无法和remote repository保持一致。<br>这个时候可能一定会遇到push force问题。（由于是没用的文件，我直接舍弃了该文件。）</p>
+<p>##git push –force 的使用场景<br>push错误后，<br><a href="https://segmentfault.com/q/1010000002898735" target="_blank" rel="external">git 怎样删除远程仓库的某次错误提交？</a><br><a href="https://www.google.com.hk/search?q=push%E5%90%8E%E6%92%A4%E9%94%80&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">push后撤销</a></p>
+<p>## </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;weibo的git使用笔记。&lt;br&gt;
     
     </summary>
     
