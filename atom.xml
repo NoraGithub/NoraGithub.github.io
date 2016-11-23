@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://noragithub.github.io#http://yoursite.com/"/>
+  <link href="http://noragithub.github.io/"/>
   <updated>2016-11-22T14:24:18.000Z</updated>
-  <id>http://noragithub.github.io#http://yoursite.com/</id>
+  <id>http://noragithub.github.io/</id>
   
   <author>
     <name>Nora Chan</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>STAR of Projects</title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/11/15/STAR-of-Projects/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/11/15/STAR-of-Projects/</id>
+    <link href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/"/>
+    <id>http://noragithub.github.io/2016/11/15/STAR-of-Projects/</id>
     <published>2016-11-15T12:57:53.000Z</published>
     <updated>2016-11-22T14:24:18.000Z</updated>
     
@@ -371,8 +371,8 @@
   
   <entry>
     <title>《深入理解计算机操作系统》-chapter 7 链接  Memo</title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/10/27/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8B-chapter-7-%E9%93%BE%E6%8E%A5-Memo/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/10/27/《深入理解计算机操作系统》-chapter-7-链接-Memo/</id>
+    <link href="http://noragithub.github.io/2016/10/27/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8B-chapter-7-%E9%93%BE%E6%8E%A5-Memo/"/>
+    <id>http://noragithub.github.io/2016/10/27/《深入理解计算机操作系统》-chapter-7-链接-Memo/</id>
     <published>2016-10-27T00:24:35.000Z</published>
     <updated>2016-11-22T15:26:02.000Z</updated>
     
@@ -390,8 +390,8 @@
   
   <entry>
     <title></title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/10/14/%E3%80%90%E8%AF%91%E3%80%91%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8BJupyter%20Notebook/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/10/14/【译】快速开始Jupyter Notebook/</id>
+    <link href="http://noragithub.github.io/2016/10/14/%E3%80%90%E8%AF%91%E3%80%91%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8BJupyter%20Notebook/"/>
+    <id>http://noragithub.github.io/2016/10/14/【译】快速开始Jupyter Notebook/</id>
     <published>2016-10-14T03:20:26.000Z</published>
     <updated>2016-11-22T15:27:28.000Z</updated>
     
@@ -413,8 +413,8 @@
   
   <entry>
     <title>计算机网络观测</title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/10/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%A7%82%E6%B5%8B/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/10/10/计算机网络观测/</id>
+    <link href="http://noragithub.github.io/2016/10/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%A7%82%E6%B5%8B/"/>
+    <id>http://noragithub.github.io/2016/10/10/计算机网络观测/</id>
     <published>2016-10-10T00:39:17.000Z</published>
     <updated>2016-11-22T15:27:05.000Z</updated>
     
@@ -460,8 +460,8 @@
   
   <entry>
     <title></title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/10/09/git%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/10/09/git的一些坑/</id>
+    <link href="http://noragithub.github.io/2016/10/09/git%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/"/>
+    <id>http://noragithub.github.io/2016/10/09/git的一些坑/</id>
     <published>2016-10-09T06:19:21.000Z</published>
     <updated>2016-11-22T15:28:24.000Z</updated>
     
@@ -487,8 +487,8 @@
   
   <entry>
     <title>购买域名+服务器+部署服务器+实现ssl协议</title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/10/09/%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D%EF%BC%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8B%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8B%E5%AE%9E%E7%8E%B0ssl%E5%8D%8F%E8%AE%AE/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/</id>
+    <link href="http://noragithub.github.io/2016/10/09/%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D%EF%BC%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8B%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8B%E5%AE%9E%E7%8E%B0ssl%E5%8D%8F%E8%AE%AE/"/>
+    <id>http://noragithub.github.io/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/</id>
     <published>2016-10-09T06:19:21.000Z</published>
     <updated>2016-11-22T15:27:42.000Z</updated>
     
@@ -520,8 +520,8 @@
   
   <entry>
     <title></title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/10/09/%E5%8C%BA%E5%9D%97%E9%93%BE%EF%BC%88block%20chain%EF%BC%89%E8%B0%83%E7%A0%94/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/10/09/区块链（block chain）调研/</id>
+    <link href="http://noragithub.github.io/2016/10/09/%E5%8C%BA%E5%9D%97%E9%93%BE%EF%BC%88block%20chain%EF%BC%89%E8%B0%83%E7%A0%94/"/>
+    <id>http://noragithub.github.io/2016/10/09/区块链（block chain）调研/</id>
     <published>2016-10-09T06:19:21.000Z</published>
     <updated>2016-11-22T15:29:18.000Z</updated>
     
@@ -544,8 +544,8 @@
   
   <entry>
     <title></title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/10/09/Markdown%20Web%20%20%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/10/09/Markdown Web  编辑器产品调研/</id>
+    <link href="http://noragithub.github.io/2016/10/09/Markdown%20Web%20%20%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94/"/>
+    <id>http://noragithub.github.io/2016/10/09/Markdown Web  编辑器产品调研/</id>
     <published>2016-10-09T06:19:21.000Z</published>
     <updated>2016-11-22T15:28:43.000Z</updated>
     
@@ -565,8 +565,8 @@
   
   <entry>
     <title></title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/10/09/%E5%89%8D%E7%AB%AF%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/10/09/前端的学习笔记/</id>
+    <link href="http://noragithub.github.io/2016/10/09/%E5%89%8D%E7%AB%AF%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://noragithub.github.io/2016/10/09/前端的学习笔记/</id>
     <published>2016-10-09T06:19:21.000Z</published>
     <updated>2016-11-22T15:28:57.000Z</updated>
     
@@ -588,8 +588,8 @@
   
   <entry>
     <title>文字识别初探</title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/10/08/%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB%E5%88%9D%E6%8E%A2/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/10/08/文字识别初探/</id>
+    <link href="http://noragithub.github.io/2016/10/08/%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB%E5%88%9D%E6%8E%A2/"/>
+    <id>http://noragithub.github.io/2016/10/08/文字识别初探/</id>
     <published>2016-10-08T03:57:23.000Z</published>
     <updated>2016-11-22T15:26:49.000Z</updated>
     
@@ -641,20 +641,20 @@
     </summary>
     
     
-      <category term="文字识别" scheme="http://noragithub.github.io#http://yoursite.com/tags/%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/"/>
+      <category term="文字识别" scheme="http://noragithub.github.io/tags/%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/"/>
     
-      <category term="tesseract" scheme="http://noragithub.github.io#http://yoursite.com/tags/tesseract/"/>
+      <category term="tesseract" scheme="http://noragithub.github.io/tags/tesseract/"/>
     
-      <category term="OCR" scheme="http://noragithub.github.io#http://yoursite.com/tags/OCR/"/>
+      <category term="OCR" scheme="http://noragithub.github.io/tags/OCR/"/>
     
-      <category term="开源" scheme="http://noragithub.github.io#http://yoursite.com/tags/%E5%BC%80%E6%BA%90/"/>
+      <category term="开源" scheme="http://noragithub.github.io/tags/%E5%BC%80%E6%BA%90/"/>
     
   </entry>
   
   <entry>
     <title>【转】翻墙路由器的原理与实现</title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/10/06/%E3%80%90%E8%BD%AC%E3%80%91%E7%BF%BB%E5%A2%99%E8%B7%AF%E7%94%B1%E5%99%A8%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/10/06/【转】翻墙路由器的原理与实现/</id>
+    <link href="http://noragithub.github.io/2016/10/06/%E3%80%90%E8%BD%AC%E3%80%91%E7%BF%BB%E5%A2%99%E8%B7%AF%E7%94%B1%E5%99%A8%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0/"/>
+    <id>http://noragithub.github.io/2016/10/06/【转】翻墙路由器的原理与实现/</id>
     <published>2016-10-06T15:05:42.000Z</published>
     <updated>2016-11-22T15:26:36.000Z</updated>
     
@@ -975,8 +975,8 @@
   
   <entry>
     <title>个人Markdown Web  编辑器产品设计&amp;部署</title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/10/01/%E4%B8%AA%E4%BA%BAMarkdown-Web-%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1-%E9%83%A8%E7%BD%B2/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/</id>
+    <link href="http://noragithub.github.io/2016/10/01/%E4%B8%AA%E4%BA%BAMarkdown-Web-%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1-%E9%83%A8%E7%BD%B2/"/>
+    <id>http://noragithub.github.io/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/</id>
     <published>2016-10-01T12:07:53.000Z</published>
     <updated>2016-11-22T15:27:57.000Z</updated>
     
@@ -1040,20 +1040,20 @@
     </summary>
     
     
-      <category term="Markdown" scheme="http://noragithub.github.io#http://yoursite.com/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://noragithub.github.io/tags/Markdown/"/>
     
-      <category term="StackEdit" scheme="http://noragithub.github.io#http://yoursite.com/tags/StackEdit/"/>
+      <category term="StackEdit" scheme="http://noragithub.github.io/tags/StackEdit/"/>
     
-      <category term="Hexo" scheme="http://noragithub.github.io#http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://noragithub.github.io/tags/Hexo/"/>
     
-      <category term="同步" scheme="http://noragithub.github.io#http://yoursite.com/tags/%E5%90%8C%E6%AD%A5/"/>
+      <category term="同步" scheme="http://noragithub.github.io/tags/%E5%90%8C%E6%AD%A5/"/>
     
   </entry>
   
   <entry>
     <title>如何利用计算机网络协议知识访问Google</title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/09/29/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E7%9F%A5%E8%AF%86%E8%AE%BF%E9%97%AEGoogle/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/09/29/如何利用计算机网络协议知识访问Google/</id>
+    <link href="http://noragithub.github.io/2016/09/29/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E7%9F%A5%E8%AF%86%E8%AE%BF%E9%97%AEGoogle/"/>
+    <id>http://noragithub.github.io/2016/09/29/如何利用计算机网络协议知识访问Google/</id>
     <published>2016-09-29T07:47:08.000Z</published>
     <updated>2016-11-22T15:29:40.000Z</updated>
     
@@ -1120,8 +1120,8 @@
   
   <entry>
     <title>【译】安装Canopy</title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/09/29/%E3%80%90%E8%AF%91%E3%80%91%E5%AE%89%E8%A3%85Canopy/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/09/29/【译】安装Canopy/</id>
+    <link href="http://noragithub.github.io/2016/09/29/%E3%80%90%E8%AF%91%E3%80%91%E5%AE%89%E8%A3%85Canopy/"/>
+    <id>http://noragithub.github.io/2016/09/29/【译】安装Canopy/</id>
     <published>2016-09-29T07:44:31.000Z</published>
     <updated>2016-11-22T15:28:12.000Z</updated>
     
@@ -1166,8 +1166,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/09/29/hello-world/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/09/29/hello-world/</id>
+    <link href="http://noragithub.github.io/2016/09/29/hello-world/"/>
+    <id>http://noragithub.github.io/2016/09/29/hello-world/</id>
     <published>2016-09-29T01:52:43.000Z</published>
     <updated>2016-09-29T01:52:43.000Z</updated>
     
@@ -1193,8 +1193,8 @@
   
   <entry>
     <title></title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/09/29/README/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/09/29/README/</id>
+    <link href="http://noragithub.github.io/2016/09/29/README/"/>
+    <id>http://noragithub.github.io/2016/09/29/README/</id>
     <published>2016-09-29T01:10:45.000Z</published>
     <updated>2016-09-29T01:10:45.000Z</updated>
     
@@ -1213,8 +1213,8 @@
   
   <entry>
     <title>部署Jupyter/IPython Notebook Memo</title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/09/24/%E9%83%A8%E7%BD%B2Jupyter-IPython-Notebook-Memo/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/09/24/部署Jupyter-IPython-Notebook-Memo/</id>
+    <link href="http://noragithub.github.io/2016/09/24/%E9%83%A8%E7%BD%B2Jupyter-IPython-Notebook-Memo/"/>
+    <id>http://noragithub.github.io/2016/09/24/部署Jupyter-IPython-Notebook-Memo/</id>
     <published>2016-09-24T12:55:44.000Z</published>
     <updated>2016-11-22T15:30:00.000Z</updated>
     
@@ -1417,8 +1417,8 @@
   
   <entry>
     <title>test diagram</title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/07/30/test-diagram/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/07/30/test-diagram/</id>
+    <link href="http://noragithub.github.io/2016/07/30/test-diagram/"/>
+    <id>http://noragithub.github.io/2016/07/30/test-diagram/</id>
     <published>2016-07-30T12:09:37.000Z</published>
     <updated>2016-09-29T01:52:43.000Z</updated>
     
@@ -1437,8 +1437,8 @@
   
   <entry>
     <title>项目介绍</title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/07/30/项目介绍/</id>
+    <link href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://noragithub.github.io/2016/07/30/项目介绍/</id>
     <published>2016-07-30T07:30:06.000Z</published>
     <updated>2016-11-22T15:25:12.000Z</updated>
     
@@ -1533,8 +1533,8 @@
   
   <entry>
     <title>Resume</title>
-    <link href="http://noragithub.github.io#http://yoursite.com/2016/07/02/Resume/"/>
-    <id>http://noragithub.github.io#http://yoursite.com/2016/07/02/Resume/</id>
+    <link href="http://noragithub.github.io/2016/07/02/Resume/"/>
+    <id>http://noragithub.github.io/2016/07/02/Resume/</id>
     <published>2016-07-02T02:44:55.000Z</published>
     <updated>2016-11-22T15:24:49.000Z</updated>
     
