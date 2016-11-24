@@ -325,7 +325,19 @@
           
 
           
+
+          <br></br>
+            <!--更新时间-->
+            <span class="post-meta-item-text">最近更新于</span>
+            <time itemprop="dateUpdated" datetime="2016-11-24T22:13:21+08:00" content="2016-11-24">
+              2016-11-24
+            </time>
+          </span>
         </div>
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
       </header>
     
 
@@ -337,20 +349,12 @@
 
       
         
-          
-            <h1 id="选择-amp-配置模版（profie、social-link）"><a href="#选择-amp-配置模版（profie、social-link）" class="headerlink" title="选择&amp;配置模版（profie、social link）"></a>选择&amp;配置模版（profie、social link）</h1><h2 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h2><p>新建页面和新建博客是不一样的，新建页面利用<code>hexo new page %pagename</code>，创建后会有pagename文件夹，文件夹有index.md，md内容为该页面内容。<br>新建博客利用<code>hexo new %blogname</code>创建后有%blogname.md为名的博客md文件</p>
-<h2 id="设置404页面"><a href="#设置404页面" class="headerlink" title="设置404页面"></a>设置404页面</h2><p>我们希望404</p>
-<h2 id="设置about"><a href="#设置about" class="headerlink" title="设置about"></a>设置about</h2><h1 id="设置rss"><a href="#设置rss" class="headerlink" title="设置rss"></a>设置rss</h1><p>感觉rss是一个模版粒度的设置，换了模版就有必要重新设置（如果有需要）<br><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E6%98%BE%E7%A4%BA-feed-%E9%93%BE%E6%8E%A5" target="_blank" rel="external">显示feed链接</a></p>
-<h1 id="设置分享插件（duoshuo）"><a href="#设置分享插件（duoshuo）" class="headerlink" title="设置分享插件（duoshuo）"></a>设置分享插件（duoshuo）</h1><h1 id="设置站内搜索"><a href="#设置站内搜索" class="headerlink" title="设置站内搜索"></a>设置站内搜索</h1><p>利用Next主题的local search插件的时候，会出现一个特别的情况：<br>当你在yoursite.com/page1做search的时候，点击搜索结果会出现异常：<br>会navigate到yoursite.com/page1/%search_result_relativePath<br>出现这个问题的主要原因是站点配置/path_your_blog/source/_cofig.yml的url值配置问题，改为absolutePath可以杜绝这个情况。<br>即，<br><code>yoursite.com</code><br><code>http://yoursite.com/</code><br>其中最后的斜杠<code>/</code>不能遗漏，会导致转义出现问题</p>
-<h2 id="encode-amp-decode"><a href="#encode-amp-decode" class="headerlink" title="encode&amp; decode"></a>encode&amp; decode</h2><p>根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把<code>/</code>转为<code>%2F</code>进行页面访问。<br>检查yoursite.com/search.xml可以发现<code>npm install hexo-generator-searchdb --save</code>会根据文章简历索引，并编码后访问<br><a href="">#reference:</a><br><a href="http://www.w3school.com.cn/tags/html_ref_urlencode.html" target="_blank" rel="external">#reference: HTML URL 编码</a></p>
-<h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>update time</p>
-<h1 id="SEO优化设置"><a href="#SEO优化设置" class="headerlink" title="SEO优化设置"></a>SEO优化设置</h1><h2 id="keywords"><a href="#keywords" class="headerlink" title="keywords"></a>keywords</h2><h2 id="友链"><a href="#友链" class="headerlink" title="友链"></a>友链</h2><h2 id="sitetracking"><a href="#sitetracking" class="headerlink" title="sitetracking"></a>sitetracking</h2><h2 id="出现在搜索引擎"><a href="#出现在搜索引擎" class="headerlink" title="出现在搜索引擎"></a>出现在搜索引擎</h2><h1 id="Favicon"><a href="#Favicon" class="headerlink" title="Favicon"></a>Favicon</h1><p><a href="http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg" target="_blank" rel="external">http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg</a></p>
-<h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><p> Github 访问速度太慢，有没有通过反向代理或者CDN加速的方式提高访问速度？特别是如果更新DNS的情况下</p>
-<h1 id="可能有的问题"><a href="#可能有的问题" class="headerlink" title="可能有的问题"></a>可能有的问题</h1><p>https协议的支持<br>seo支持<br>自定义监测支持<br><a href="https://github.com/PaicHyperionDev/hexo-generator-search/issues/8" target="_blank" rel="external">提示有编码错误</a></p>
-<h2 id="不支持所有页面进行local-search"><a href="#不支持所有页面进行local-search" class="headerlink" title="不支持所有页面进行local search"></a>不支持所有页面进行local search</h2><p>当对配置中 search- field从<code>post</code>修改为<code>all</code>，会提醒post is not defined </p>
-<p>updatetime function</p>
-
-          
+          <p>未完成<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/24/Hexo-Blog-Setup以及常见配置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -436,7 +440,19 @@
           
 
           
+
+          <br></br>
+            <!--更新时间-->
+            <span class="post-meta-item-text">最近更新于</span>
+            <time itemprop="dateUpdated" datetime="2016-11-24T15:47:49+08:00" content="2016-11-24">
+              2016-11-24
+            </time>
+          </span>
         </div>
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
       </header>
     
 
@@ -539,7 +555,19 @@
           
 
           
+
+          <br></br>
+            <!--更新时间-->
+            <span class="post-meta-item-text">最近更新于</span>
+            <time itemprop="dateUpdated" datetime="2016-11-22T23:26:02+08:00" content="2016-11-22">
+              2016-11-22
+            </time>
+          </span>
         </div>
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
       </header>
     
 
@@ -642,7 +670,19 @@
           
 
           
+
+          <br></br>
+            <!--更新时间-->
+            <span class="post-meta-item-text">最近更新于</span>
+            <time itemprop="dateUpdated" datetime="2016-11-22T23:27:28+08:00" content="2016-11-22">
+              2016-11-22
+            </time>
+          </span>
         </div>
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
       </header>
     
 
@@ -746,7 +786,19 @@
           
 
           
+
+          <br></br>
+            <!--更新时间-->
+            <span class="post-meta-item-text">最近更新于</span>
+            <time itemprop="dateUpdated" datetime="2016-11-22T23:27:05+08:00" content="2016-11-22">
+              2016-11-22
+            </time>
+          </span>
         </div>
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
       </header>
     
 
@@ -849,7 +901,19 @@
           
 
           
+
+          <br></br>
+            <!--更新时间-->
+            <span class="post-meta-item-text">最近更新于</span>
+            <time itemprop="dateUpdated" datetime="2016-11-22T23:28:57+08:00" content="2016-11-22">
+              2016-11-22
+            </time>
+          </span>
         </div>
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
       </header>
     
 
@@ -865,6 +929,121 @@
 <p>未完成<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/10/09/前端的学习笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/" itemprop="url">
+                  购买域名+服务器+部署服务器+实现ssl协议
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-09T14:19:21+08:00" content="2016-10-09">
+              2016-10-09
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          <br></br>
+            <!--更新时间-->
+            <span class="post-meta-item-text">最近更新于</span>
+            <time itemprop="dateUpdated" datetime="2016-11-22T23:27:42+08:00" content="2016-11-22">
+              2016-11-22
+            </time>
+          </span>
+        </div>
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>未完成<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -953,7 +1132,19 @@
           
 
           
+
+          <br></br>
+            <!--更新时间-->
+            <span class="post-meta-item-text">最近更新于</span>
+            <time itemprop="dateUpdated" datetime="2016-11-22T23:28:43+08:00" content="2016-11-22">
+              2016-11-22
+            </time>
+          </span>
         </div>
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
       </header>
     
 
@@ -1056,7 +1247,19 @@
           
 
           
+
+          <br></br>
+            <!--更新时间-->
+            <span class="post-meta-item-text">最近更新于</span>
+            <time itemprop="dateUpdated" datetime="2016-11-22T23:28:24+08:00" content="2016-11-22">
+              2016-11-22
+            </time>
+          </span>
         </div>
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
       </header>
     
 
@@ -1071,109 +1274,6 @@
           <p>weibo的git使用笔记。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/10/09/git的一些坑/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/" itemprop="url">
-                  购买域名+服务器+部署服务器+实现ssl协议
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-09T14:19:21+08:00" content="2016-10-09">
-              2016-10-09
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>未完成<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1262,7 +1362,19 @@
           
 
           
+
+          <br></br>
+            <!--更新时间-->
+            <span class="post-meta-item-text">最近更新于</span>
+            <time itemprop="dateUpdated" datetime="2016-11-22T23:29:18+08:00" content="2016-11-22">
+              2016-11-22
+            </time>
+          </span>
         </div>
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
       </header>
     
 
