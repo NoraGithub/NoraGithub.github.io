@@ -39,22 +39,15 @@
     
     <entry>
       <title></title>
-      <url>%2F2016%2F10%2F09%2F%E5%89%8D%E7%AB%AF%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
-      <content type="text"><![CDATA[[toc] 未完成 Chrome ConsoleJavascriptCSSDOMHTMLReact Natie微信小程序小程序 native #jquery]]></content>
-    </entry>
-
-    
-    <entry>
-      <title></title>
-      <url>%2F2016%2F10%2F09%2FMarkdown%20Web%20%20%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94%2F</url>
-      <content type="text"><![CDATA[Markdown Web 编辑器产品调研未完成 Markdown 写作工具链总结 [ 免费篇 ]我有我的young【markdown+stylish】Markdown寫作部落格Logdown 的啓發 - StackEdit—&gt;有趣的HTML5：离线存储(一直认为stackedit的文件在本地会对应一份文件，今儿打算同步这份文件，然而使用的cache local技术，所以这个方案并不可行）]]></content>
-    </entry>
-
-    
-    <entry>
-      <title></title>
       <url>%2F2016%2F10%2F09%2F%E5%8C%BA%E5%9D%97%E9%93%BE%EF%BC%88block%20chain%EF%BC%89%E8%B0%83%E7%A0%94%2F</url>
       <content type="text"><![CDATA[未开始 Web2Web Bootstrap 笑来兄在微信公号发布的，torren不依附于任何服务器，很难将其关闭，或许这就是未来信息存储和传播的主要方式，永久保存不消失，创造永恒的信息世界 挖矿石如何产生比特币的比特币挖矿算法是怎样的？比特币如何挖矿区块链(Blockchain)知乎 主题精华比特币 挖矿]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[购买域名+服务器+部署服务器+实现ssl协议]]></title>
+      <url>%2F2016%2F10%2F09%2F%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D%EF%BC%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8B%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8B%E5%AE%9E%E7%8E%B0ssl%E5%8D%8F%E8%AE%AE%2F</url>
+      <content type="text"><![CDATA[未完成 两条a记录主要是为了负载均衡吧？常用域名记录解释：A记录、MX记录、CNAME记录、TXT记录、AAAA记录、NS记录如何建立个人网站？新手教程：建立网站的全套流程与详细解释2014年网站SEO常见作弊方法详细解析Godaddy注册商域名修改DNS地址管理DNS个人godaddy域名备案解决方案godaddy 对域名的所有权以及备案问题。免费的是最贵的免费域名如何抢注一个刚刚过期的域名 SSL协议与加密SSL/TLS协议运行机制的概述HTTPS 升级指南PGP加密原理GPG入门教程关于pgpRSA算法原理RSA算法原理http协议与ssl协议[TCP三次握手&amp;Render Tree页面渲染=&gt;从输入URL到页面显示的过程？]不同format的certificate和private/public key 使用startssl认证证书站点启用https替换http完整步骤（申请StartSSL免费证书，nginx配置）怎样申请StartSSL免费ssl证书SSL Certificate ReviewsStartSSL申请全过程 让网站拥有免费SSL证书现在就启用 HTTPS，免费的！how to obtain and install an SSL/TLS certificate for freeopenssl、x509、crt、cer、key、csr、ssl、tls 这些都是什么鬼?crt csr 谷歌搜索伪造 证书 谷歌搜索tornado使用nginx作为反向代理公钥 私钥 原理 谷歌搜索rsa pop关系 谷歌搜索使用Tornado搭建HTTPS网站How to create HTTPS tornado serverSSL和SSH的区别SSL SSH 谷歌搜索generating-a-gpg-keygenerating-an-ssh-key ipython notebookWhen using a password, it is a good idea to also use SSL, so that your password is not sent unencrypted by your browser. You can start the notebook to communicate via a secure protocol mode using a self-signed certificate with the command: $ ipython notebook –certfile=mycert.pem A self-signed certificate can be generated with openssl. For example, the following command will create a certificate valid for 365 days with both the key and certificate data written to the same file: $ openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem 远程服务下一步：部署到域名进行访问busihacker.com认证ssl/tls证书https://&lt;your-domain&gt;:9999]]></content>
     </entry>
 
     
@@ -66,9 +59,16 @@
 
     
     <entry>
-      <title><![CDATA[购买域名+服务器+部署服务器+实现ssl协议]]></title>
-      <url>%2F2016%2F10%2F09%2F%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D%EF%BC%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8B%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8B%E5%AE%9E%E7%8E%B0ssl%E5%8D%8F%E8%AE%AE%2F</url>
-      <content type="text"><![CDATA[未完成 两条a记录主要是为了负载均衡吧？常用域名记录解释：A记录、MX记录、CNAME记录、TXT记录、AAAA记录、NS记录如何建立个人网站？新手教程：建立网站的全套流程与详细解释2014年网站SEO常见作弊方法详细解析Godaddy注册商域名修改DNS地址管理DNS个人godaddy域名备案解决方案godaddy 对域名的所有权以及备案问题。免费的是最贵的免费域名如何抢注一个刚刚过期的域名 SSL协议与加密SSL/TLS协议运行机制的概述HTTPS 升级指南PGP加密原理GPG入门教程关于pgpRSA算法原理RSA算法原理http协议与ssl协议[TCP三次握手&amp;Render Tree页面渲染=&gt;从输入URL到页面显示的过程？]不同format的certificate和private/public key 使用startssl认证证书站点启用https替换http完整步骤（申请StartSSL免费证书，nginx配置）怎样申请StartSSL免费ssl证书SSL Certificate ReviewsStartSSL申请全过程 让网站拥有免费SSL证书现在就启用 HTTPS，免费的！how to obtain and install an SSL/TLS certificate for freeopenssl、x509、crt、cer、key、csr、ssl、tls 这些都是什么鬼?crt csr 谷歌搜索伪造 证书 谷歌搜索tornado使用nginx作为反向代理公钥 私钥 原理 谷歌搜索rsa pop关系 谷歌搜索使用Tornado搭建HTTPS网站How to create HTTPS tornado serverSSL和SSH的区别SSL SSH 谷歌搜索generating-a-gpg-keygenerating-an-ssh-key ipython notebookWhen using a password, it is a good idea to also use SSL, so that your password is not sent unencrypted by your browser. You can start the notebook to communicate via a secure protocol mode using a self-signed certificate with the command: $ ipython notebook –certfile=mycert.pem A self-signed certificate can be generated with openssl. For example, the following command will create a certificate valid for 365 days with both the key and certificate data written to the same file: $ openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem 远程服务下一步：部署到域名进行访问busihacker.com认证ssl/tls证书https://&lt;your-domain&gt;:9999]]></content>
+      <title></title>
+      <url>%2F2016%2F10%2F09%2F%E5%89%8D%E7%AB%AF%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
+      <content type="text"><![CDATA[[toc] 未完成 Chrome ConsoleJavascriptCSSDOMHTMLReact Natie微信小程序小程序 native #jquery]]></content>
+    </entry>
+
+    
+    <entry>
+      <title></title>
+      <url>%2F2016%2F10%2F09%2FMarkdown%20Web%20%20%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94%2F</url>
+      <content type="text"><![CDATA[Markdown Web 编辑器产品调研未完成 Markdown 写作工具链总结 [ 免费篇 ]我有我的young【markdown+stylish】Markdown寫作部落格Logdown 的啓發 - StackEdit—&gt;有趣的HTML5：离线存储(一直认为stackedit的文件在本地会对应一份文件，今儿打算同步这份文件，然而使用的cache local技术，所以这个方案并不可行）]]></content>
     </entry>
 
     
