@@ -86,12 +86,15 @@
 
 
 
+<meta name="description" content="不成熟思想家。偏好数据技术栈，希望充当一个能做产品需求分析、设计和项目管理的Program Manager。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Busihacker">
 <meta property="og:url" content="http://noragithub.github.io/index.html">
 <meta property="og:site_name" content="Busihacker">
+<meta property="og:description" content="不成熟思想家。偏好数据技术栈，希望充当一个能做产品需求分析、设计和项目管理的Program Manager。">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Busihacker">
+<meta name="twitter:description" content="不成熟思想家。偏好数据技术栈，希望充当一个能做产品需求分析、设计和项目管理的Program Manager。">
 
 
 
@@ -165,7 +168,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle">inner peace</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -284,6 +287,117 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/24/Hexo-Blog-Setup以及常见配置/" itemprop="url">
+                  Hexo Blog Setup以及常见配置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-24T09:08:34+08:00" content="2016-11-24">
+              2016-11-24
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/24/Hexo-Blog-Setup以及常见配置/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/24/Hexo-Blog-Setup以及常见配置/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="选择-amp-配置模版（profie、social-link）"><a href="#选择-amp-配置模版（profie、social-link）" class="headerlink" title="选择&amp;配置模版（profie、social link）"></a>选择&amp;配置模版（profie、social link）</h1><h2 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h2><p>新建页面和新建博客是不一样的，新建页面利用<code>hexo new page %pagename</code>，创建后会有pagename文件夹，文件夹有index.md，md内容为该页面内容。<br>新建博客利用<code>hexo new %blogname</code>创建后有%blogname.md为名的博客md文件</p>
+<h2 id="设置404页面"><a href="#设置404页面" class="headerlink" title="设置404页面"></a>设置404页面</h2><p>我们希望404</p>
+<h2 id="设置about"><a href="#设置about" class="headerlink" title="设置about"></a>设置about</h2><h1 id="设置rss"><a href="#设置rss" class="headerlink" title="设置rss"></a>设置rss</h1><p>感觉rss是一个模版粒度的设置，换了模版就有必要重新设置（如果有需要）<br><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E6%98%BE%E7%A4%BA-feed-%E9%93%BE%E6%8E%A5" target="_blank" rel="external">显示feed链接</a></p>
+<h1 id="设置分享插件（duoshuo）"><a href="#设置分享插件（duoshuo）" class="headerlink" title="设置分享插件（duoshuo）"></a>设置分享插件（duoshuo）</h1><h1 id="设置站内搜索"><a href="#设置站内搜索" class="headerlink" title="设置站内搜索"></a>设置站内搜索</h1><p>利用Next主题的local search插件的时候，会出现一个特别的情况：<br>当你在yoursite.com/page1做search的时候，点击搜索结果会出现异常：<br>会navigate到yoursite.com/page1/%search_result_relativePath<br>出现这个问题的主要原因是站点配置/path_your_blog/source/_cofig.yml的url值配置问题，改为absolutePath可以杜绝这个情况。<br>即，<br><code>yoursite.com</code><br><code>http://yoursite.com/</code><br>其中最后的斜杠<code>/</code>不能遗漏，会导致转义出现问题</p>
+<h2 id="encode-amp-decode"><a href="#encode-amp-decode" class="headerlink" title="encode&amp; decode"></a>encode&amp; decode</h2><p>根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把<code>/</code>转为<code>%2F</code>进行页面访问。<br>检查yoursite.com/search.xml可以发现<code>npm install hexo-generator-searchdb --save</code>会根据文章简历索引，并编码后访问<br><a href="">#reference:</a><br><a href="http://www.w3school.com.cn/tags/html_ref_urlencode.html" target="_blank" rel="external">#reference: HTML URL 编码</a></p>
+<h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>update time</p>
+<h1 id="SEO优化设置"><a href="#SEO优化设置" class="headerlink" title="SEO优化设置"></a>SEO优化设置</h1><h2 id="keywords"><a href="#keywords" class="headerlink" title="keywords"></a>keywords</h2><h2 id="友链"><a href="#友链" class="headerlink" title="友链"></a>友链</h2><h2 id="sitetracking"><a href="#sitetracking" class="headerlink" title="sitetracking"></a>sitetracking</h2><h2 id="出现在搜索引擎"><a href="#出现在搜索引擎" class="headerlink" title="出现在搜索引擎"></a>出现在搜索引擎</h2><h1 id="Favicon"><a href="#Favicon" class="headerlink" title="Favicon"></a>Favicon</h1><p><a href="http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg" target="_blank" rel="external">http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg</a></p>
+<h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><p> Github 访问速度太慢，有没有通过反向代理或者CDN加速的方式提高访问速度？特别是如果更新DNS的情况下</p>
+<h1 id="可能有的问题"><a href="#可能有的问题" class="headerlink" title="可能有的问题"></a>可能有的问题</h1><p>https协议的支持<br>seo支持<br>自定义监测支持<br><a href="https://github.com/PaicHyperionDev/hexo-generator-search/issues/8" target="_blank" rel="external">提示有编码错误</a></p>
+<h2 id="不支持所有页面进行local-search"><a href="#不支持所有页面进行local-search" class="headerlink" title="不支持所有页面进行local search"></a>不支持所有页面进行local search</h2><p>当对配置中 search- field从<code>post</code>修改为<code>all</code>，会提醒post is not defined </p>
+<p>updatetime function</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/15/STAR-of-Projects/" itemprop="url">
                   STAR of Projects
                 </a>
@@ -334,7 +448,7 @@
 
       
         
-          <h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>偏好数据技术&amp;后端技术技术栈积累，希望充当一个能做产品需求分析、设计&amp;项目管理的programmer manager。<br>本文档的主要是对每个经手项目做详细的S（Situation）T（Task）A（Action）R（Result）分析<br>
+          <h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>偏好数据技术&amp;后端技术技术栈积累，希望充当一个能做产品需求分析、设计&amp;项目管理的Program Manager。<br>本文档的主要是对每个经手项目做详细的S（Situation）T（Task）A（Action）R（Result）分析<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/11/15/STAR-of-Projects/#more" rel="contents">
               阅读全文 &raquo;
@@ -697,6 +811,110 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/09/前端的学习笔记/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-09T14:19:21+08:00" content="2016-10-09">
+              2016-10-09
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/09/前端的学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/09/前端的学习笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>[toc]</p>
+<p>未完成<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/09/前端的学习笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/09/Markdown Web  编辑器产品调研/" itemprop="url">
                   未命名
                 </a>
@@ -750,109 +968,6 @@
           <h1 id="Markdown-Web-编辑器产品调研"><a href="#Markdown-Web-编辑器产品调研" class="headerlink" title="Markdown Web  编辑器产品调研"></a>Markdown Web  编辑器产品调研</h1><p>未完成</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/10/09/Markdown Web  编辑器产品调研/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/" itemprop="url">
-                  购买域名+服务器+部署服务器+实现ssl协议
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-09T14:19:21+08:00" content="2016-10-09">
-              2016-10-09
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>未完成<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1006,6 +1121,109 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/" itemprop="url">
+                  购买域名+服务器+部署服务器+实现ssl协议
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-09T14:19:21+08:00" content="2016-10-09">
+              2016-10-09
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>未完成<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/09/区块链（block chain）调研/" itemprop="url">
                   未命名
                 </a>
@@ -1088,218 +1306,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/09/前端的学习笔记/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-09T14:19:21+08:00" content="2016-10-09">
-              2016-10-09
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/09/前端的学习笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/09/前端的学习笔记/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>[toc]</p>
-<p>未完成<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/09/前端的学习笔记/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/08/文字识别初探/" itemprop="url">
-                  文字识别初探
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-08T11:57:23+08:00" content="2016-10-08">
-              2016-10-08
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/08/文字识别初探/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/08/文字识别初探/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="http://nojsstats.appspot.com/UA-47491561-2/www.jianshu.com/p/e96a8f303d69" alt="统计代码"><br>随着中国互联网对广告的审核越来越严格，日常投放运营过程中，渠道对资质文件和创意的要求越来越高，如营业执照、身份证等。我们需要花费大量的人力成本对这些文件的属性进行文本描述，如营业主题，姓名，生日等。有没有一种方案对文件进行快速的描述，减少人力成本？</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/08/文字识别初探/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1335,12 +1346,12 @@
                src="http://ww3.sinaimg.cn/mw690/6fa34428jw8eyydwfqrecj20ro0ro42v.jpg"
                alt="Nora Chan" />
           <p class="site-author-name" itemprop="name">Nora Chan</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+          <p class="site-description motion-element" itemprop="description">不成熟思想家。偏好数据技术栈，希望充当一个能做产品需求分析、设计和项目管理的Program Manager。</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1451,6 +1462,22 @@
 </div>
 
         
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
 
         
       </div>

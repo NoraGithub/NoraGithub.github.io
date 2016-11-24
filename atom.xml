@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Busihacker</title>
-  
+  <subtitle>inner peace</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://noragithub.github.io/"/>
-  <updated>2016-11-22T14:24:18.000Z</updated>
+  <updated>2016-11-24T08:00:36.000Z</updated>
   <id>http://noragithub.github.io/</id>
   
   <author>
@@ -16,13 +16,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo Blog Setup以及常见配置</title>
+    <link href="http://noragithub.github.io/2016/11/24/Hexo-Blog-Setup%E4%BB%A5%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE/"/>
+    <id>http://noragithub.github.io/2016/11/24/Hexo-Blog-Setup以及常见配置/</id>
+    <published>2016-11-24T01:08:34.000Z</published>
+    <updated>2016-11-24T08:00:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="选择-amp-配置模版（profie、social-link）"><a href="#选择-amp-配置模版（profie、social-link）" class="headerlink" title="选择&amp;配置模版（profie、social link）"></a>选择&amp;配置模版（profie、social link）</h1><h2 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h2><p>新建页面和新建博客是不一样的，新建页面利用<code>hexo new page %pagename</code>，创建后会有pagename文件夹，文件夹有index.md，md内容为该页面内容。<br>新建博客利用<code>hexo new %blogname</code>创建后有%blogname.md为名的博客md文件</p>
+<h2 id="设置404页面"><a href="#设置404页面" class="headerlink" title="设置404页面"></a>设置404页面</h2><p>我们希望404</p>
+<h2 id="设置about"><a href="#设置about" class="headerlink" title="设置about"></a>设置about</h2><h1 id="设置rss"><a href="#设置rss" class="headerlink" title="设置rss"></a>设置rss</h1><p>感觉rss是一个模版粒度的设置，换了模版就有必要重新设置（如果有需要）<br><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E6%98%BE%E7%A4%BA-feed-%E9%93%BE%E6%8E%A5" target="_blank" rel="external">显示feed链接</a></p>
+<h1 id="设置分享插件（duoshuo）"><a href="#设置分享插件（duoshuo）" class="headerlink" title="设置分享插件（duoshuo）"></a>设置分享插件（duoshuo）</h1><h1 id="设置站内搜索"><a href="#设置站内搜索" class="headerlink" title="设置站内搜索"></a>设置站内搜索</h1><p>利用Next主题的local search插件的时候，会出现一个特别的情况：<br>当你在yoursite.com/page1做search的时候，点击搜索结果会出现异常：<br>会navigate到yoursite.com/page1/%search_result_relativePath<br>出现这个问题的主要原因是站点配置/path_your_blog/source/_cofig.yml的url值配置问题，改为absolutePath可以杜绝这个情况。<br>即，<br><code>yoursite.com</code><br><code>http://yoursite.com/</code><br>其中最后的斜杠<code>/</code>不能遗漏，会导致转义出现问题</p>
+<h2 id="encode-amp-decode"><a href="#encode-amp-decode" class="headerlink" title="encode&amp; decode"></a>encode&amp; decode</h2><p>根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把<code>/</code>转为<code>%2F</code>进行页面访问。<br>检查yoursite.com/search.xml可以发现<code>npm install hexo-generator-searchdb --save</code>会根据文章简历索引，并编码后访问<br><a href="">#reference:</a><br><a href="http://www.w3school.com.cn/tags/html_ref_urlencode.html" target="_blank" rel="external">#reference: HTML URL 编码</a></p>
+<h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>update time</p>
+<h1 id="SEO优化设置"><a href="#SEO优化设置" class="headerlink" title="SEO优化设置"></a>SEO优化设置</h1><h2 id="keywords"><a href="#keywords" class="headerlink" title="keywords"></a>keywords</h2><h2 id="友链"><a href="#友链" class="headerlink" title="友链"></a>友链</h2><h2 id="sitetracking"><a href="#sitetracking" class="headerlink" title="sitetracking"></a>sitetracking</h2><h2 id="出现在搜索引擎"><a href="#出现在搜索引擎" class="headerlink" title="出现在搜索引擎"></a>出现在搜索引擎</h2><h1 id="Favicon"><a href="#Favicon" class="headerlink" title="Favicon"></a>Favicon</h1><p><a href="http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg" target="_blank" rel="external">http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg</a></p>
+<h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><p> Github 访问速度太慢，有没有通过反向代理或者CDN加速的方式提高访问速度？特别是如果更新DNS的情况下</p>
+<h1 id="可能有的问题"><a href="#可能有的问题" class="headerlink" title="可能有的问题"></a>可能有的问题</h1><p>https协议的支持<br>seo支持<br>自定义监测支持<br><a href="https://github.com/PaicHyperionDev/hexo-generator-search/issues/8" target="_blank" rel="external">提示有编码错误</a></p>
+<h2 id="不支持所有页面进行local-search"><a href="#不支持所有页面进行local-search" class="headerlink" title="不支持所有页面进行local search"></a>不支持所有页面进行local search</h2><p>当对配置中 search- field从<code>post</code>修改为<code>all</code>，会提醒post is not defined </p>
+<p>updatetime function</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;选择-amp-配置模版（profie、social-link）&quot;&gt;&lt;a href=&quot;#选择-amp-配置模版（profie、social-link）&quot; class=&quot;headerlink&quot; title=&quot;选择&amp;amp;配置模版（profie、social link
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>STAR of Projects</title>
     <link href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/"/>
     <id>http://noragithub.github.io/2016/11/15/STAR-of-Projects/</id>
     <published>2016-11-15T12:57:53.000Z</published>
-    <updated>2016-11-22T14:24:18.000Z</updated>
+    <updated>2016-11-24T07:47:49.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>偏好数据技术&amp;后端技术技术栈积累，希望充当一个能做产品需求分析、设计&amp;项目管理的programmer manager。<br>本文档的主要是对每个经手项目做详细的S（Situation）T（Task）A（Action）R（Result）分析<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>偏好数据技术&amp;后端技术技术栈积累，希望充当一个能做产品需求分析、设计&amp;项目管理的Program Manager。<br>本文档的主要是对每个经手项目做详细的S（Situation）T（Task）A（Action）R（Result）分析<br><a id="more"></a></p>
 <h1 id="舜飞科技-DSP产品经理"><a href="#舜飞科技-DSP产品经理" class="headerlink" title="舜飞科技-DSP产品经理"></a>舜飞科技-DSP产品经理</h1><p>先后向CEO/产品负责人（创始人之一）汇报。<br>偏后端项目管理，偏Scrum Master。数据驱动衡量需求价值并协调前端、后端和测试资源保证项目顺利上线。协助流量变现，移动端广告投放占比增长到50%以上。</p>
 <ol>
 <li>构建产品部文档和项目管理制度；</li>
@@ -362,7 +391,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;headerlink&quot; title=&quot;Summary&quot;&gt;&lt;/a&gt;Summary&lt;/h1&gt;&lt;p&gt;偏好数据技术&amp;amp;后端技术技术栈积累，希望充当一个能做产品需求分析、设计&amp;amp;项目管理的programmer manager。&lt;br&gt;本文档的主要是对每个经手项目做详细的S（Situation）T（Task）A（Action）R（Result）分析&lt;br&gt;
+      &lt;h1 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;headerlink&quot; title=&quot;Summary&quot;&gt;&lt;/a&gt;Summary&lt;/h1&gt;&lt;p&gt;偏好数据技术&amp;amp;后端技术技术栈积累，希望充当一个能做产品需求分析、设计&amp;amp;项目管理的Program Manager。&lt;br&gt;本文档的主要是对每个经手项目做详细的S（Situation）T（Task）A（Action）R（Result）分析&lt;br&gt;
     
     </summary>
     
@@ -460,6 +489,29 @@
   
   <entry>
     <title></title>
+    <link href="http://noragithub.github.io/2016/10/09/%E5%89%8D%E7%AB%AF%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://noragithub.github.io/2016/10/09/前端的学习笔记/</id>
+    <published>2016-10-09T06:19:21.000Z</published>
+    <updated>2016-11-22T15:28:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>[toc]</p>
+<p>未完成<br><a id="more"></a></p>
+<h1 id="Chrome-Console"><a href="#Chrome-Console" class="headerlink" title="Chrome Console"></a>Chrome Console</h1><h1 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h1><h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h1 id="React-Natie"><a href="#React-Natie" class="headerlink" title="React Natie"></a>React Natie</h1><h1 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h1><p><a href="https://www.google.com.hk/search?q=%E5%B0%8F%E7%A8%8B%E5%BA%8F+native&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">小程序 native</a></p>
+<p>#jquery</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;[toc]&lt;/p&gt;
+&lt;p&gt;未完成&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
     <link href="http://noragithub.github.io/2016/10/09/Markdown%20Web%20%20%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94/"/>
     <id>http://noragithub.github.io/2016/10/09/Markdown Web  编辑器产品调研/</id>
     <published>2016-10-09T06:19:21.000Z</published>
@@ -473,6 +525,33 @@
     <summary type="html">
     
       &lt;h1 id=&quot;Markdown-Web-编辑器产品调研&quot;&gt;&lt;a href=&quot;#Markdown-Web-编辑器产品调研&quot; class=&quot;headerlink&quot; title=&quot;Markdown Web  编辑器产品调研&quot;&gt;&lt;/a&gt;Markdown Web  编辑器产品调研&lt;/h1&gt;&lt;p&gt;未完成&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://noragithub.github.io/2016/10/09/git%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/"/>
+    <id>http://noragithub.github.io/2016/10/09/git的一些坑/</id>
+    <published>2016-10-09T06:19:21.000Z</published>
+    <updated>2016-11-22T15:28:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>weibo的git使用笔记。<br><a id="more"></a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html?bsh_bid=1314465090" target="_blank" rel="external">Git远程操作详解</a><br><a href="http://www.ruanyifeng.com/blog/2015/08/git-use-process.html" target="_blank" rel="external">Git 使用规范流程</a><br><a href="https://www.google.com.hk/search?q=git+rebase++%E9%98%AE%E4%B8%80%E5%B3%B0&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">git rebase 阮一峰 谷歌搜索</a><br><a href="http://stackoverflow.com/questions/23517464/error-cannot-pull-with-rebase-you-have-unstaged-changes" target="_blank" rel="external">Error:cannot pull with rebase:you have unstated changes</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=you+have+unstaged+changes++&amp;oq=you+have+unstaged+changes++&amp;gs_l=serp.3..0j0i30k1l6j0i5i30k1l3.68687.78840.0.79129.12.12.0.0.0.0.188.1132.6j4.10.0....0...1c.1.64.serp..2.1.82.6SnD5AXtjG0" target="_blank" rel="external">you have unstated changes</a><br><a href="http://www.cnblogs.com/kidsitcn/p/4450466.html" target="_blank" rel="external">git workflow 常用命令</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013760174128707b935b0be6fc4fc6ace66c4f15618f8d000" target="_blank" rel="external">多人协作</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758410364457b9e3d821f4244beb0fd69c61a185ae0000" target="_blank" rel="external">分支管理策略</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374829472990293f16b45df14f35b94b3e8a026220c5000" target="_blank" rel="external">管理修改</a></p>
+<p><a href="http://www.cnblogs.com/zhongxinWang/p/4235448.html" target="_blank" rel="external">探索.git目录</a></p>
+<h1 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h1><p><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=diff+%E5%8E%9F%E7%90%86+&amp;oq=diff+%E5%8E%9F%E7%90%86+&amp;gs_l=serp.3..0i30k1j0i5i30k1l2.68361.68361.0.68637.1.1.0.0.0.0.83.83.1.1.0....0...1c.1.64.serp..0.1.82.DtZbCTJhHNs" target="_blank" rel="external">（谷歌）diff 原理</a><br><a href="https://segmentfault.com/q/1010000000367833" target="_blank" rel="external">Diff 算法的原理是什么, 怎样学习和理解?</a><br><a href="http://www.voidcn.com/blog/dog250/article/p-5859714.html" target="_blank" rel="external">diff程序的算法</a><br><a href="http://www.ruanyifeng.com/blog/2012/08/how_to_read_diff.html" target="_blank" rel="external">读懂diff（阮一峰）</a><br><a href="https://lists.gnu.org/archive/html/emacs-devel/2010-01/msg01182.html" target="_blank" rel="external">Interpreting git diff -cc[was:merge conflict]</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=git+diff+--cc+%E6%80%8E%E4%B9%88%E8%AF%BB&amp;oq=git+diff+--cc+%E6%80%8E%E4%B9%88%E8%AF%BB&amp;gs_l=serp.3...8438.11111.0.11377.11.9.2.0.0.0.227.772.3j2j1.6.0....0...1c.1.64.serp..3.0.0.bCGBg-Hw7IU" target="_blank" rel="external">git diff –cc 怎么读</a><br><a href="https://github.com/colinta/SublimeFileDiffs" target="_blank" rel="external">sublime  diff</a><br><a href="http://www.oschina.net/translate/20-powerful-sublimetext-plugins" target="_blank" rel="external">20 个强大的 Sublime Text 插件 </a></p>
+<p>#git push –force 的使用场景<br>git checkout -b dev<br>git add -all<br>git checkout master</p>
+<p><strong>initialization后，从未<code>git commit</code> ，checkout后git branch –list 也看不到自己的分支。</strong><a href="blog.jobbole.com/87700/">如何在git里撤销几乎任何操作</a></p>
+<p>#文件的命名不要带有<code>/</code><br><a href="https://www.google.com.hk/search?q=invalid+path+git+pull&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">windows下不接受这种命名</a><br>导致git pull 后git rm，永远无法和remote repository保持一致。<br>这个时候可能一定会遇到push force问题。（由于是没用的文件，我直接舍弃了该文件。）</p>
+<p>##git push –force 的使用场景<br>push错误后，<br><a href="https://segmentfault.com/q/1010000002898735" target="_blank" rel="external">git 怎样删除远程仓库的某次错误提交？</a><br><a href="https://www.google.com.hk/search?q=push%E5%90%8E%E6%92%A4%E9%94%80&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">push后撤销</a></p>
+<p>## </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;weibo的git使用笔记。&lt;br&gt;
     
     </summary>
     
@@ -514,33 +593,6 @@
   
   <entry>
     <title></title>
-    <link href="http://noragithub.github.io/2016/10/09/git%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/"/>
-    <id>http://noragithub.github.io/2016/10/09/git的一些坑/</id>
-    <published>2016-10-09T06:19:21.000Z</published>
-    <updated>2016-11-22T15:28:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>weibo的git使用笔记。<br><a id="more"></a></p>
-<p><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html?bsh_bid=1314465090" target="_blank" rel="external">Git远程操作详解</a><br><a href="http://www.ruanyifeng.com/blog/2015/08/git-use-process.html" target="_blank" rel="external">Git 使用规范流程</a><br><a href="https://www.google.com.hk/search?q=git+rebase++%E9%98%AE%E4%B8%80%E5%B3%B0&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">git rebase 阮一峰 谷歌搜索</a><br><a href="http://stackoverflow.com/questions/23517464/error-cannot-pull-with-rebase-you-have-unstaged-changes" target="_blank" rel="external">Error:cannot pull with rebase:you have unstated changes</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=you+have+unstaged+changes++&amp;oq=you+have+unstaged+changes++&amp;gs_l=serp.3..0j0i30k1l6j0i5i30k1l3.68687.78840.0.79129.12.12.0.0.0.0.188.1132.6j4.10.0....0...1c.1.64.serp..2.1.82.6SnD5AXtjG0" target="_blank" rel="external">you have unstated changes</a><br><a href="http://www.cnblogs.com/kidsitcn/p/4450466.html" target="_blank" rel="external">git workflow 常用命令</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013760174128707b935b0be6fc4fc6ace66c4f15618f8d000" target="_blank" rel="external">多人协作</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758410364457b9e3d821f4244beb0fd69c61a185ae0000" target="_blank" rel="external">分支管理策略</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374829472990293f16b45df14f35b94b3e8a026220c5000" target="_blank" rel="external">管理修改</a></p>
-<p><a href="http://www.cnblogs.com/zhongxinWang/p/4235448.html" target="_blank" rel="external">探索.git目录</a></p>
-<h1 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h1><p><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=diff+%E5%8E%9F%E7%90%86+&amp;oq=diff+%E5%8E%9F%E7%90%86+&amp;gs_l=serp.3..0i30k1j0i5i30k1l2.68361.68361.0.68637.1.1.0.0.0.0.83.83.1.1.0....0...1c.1.64.serp..0.1.82.DtZbCTJhHNs" target="_blank" rel="external">（谷歌）diff 原理</a><br><a href="https://segmentfault.com/q/1010000000367833" target="_blank" rel="external">Diff 算法的原理是什么, 怎样学习和理解?</a><br><a href="http://www.voidcn.com/blog/dog250/article/p-5859714.html" target="_blank" rel="external">diff程序的算法</a><br><a href="http://www.ruanyifeng.com/blog/2012/08/how_to_read_diff.html" target="_blank" rel="external">读懂diff（阮一峰）</a><br><a href="https://lists.gnu.org/archive/html/emacs-devel/2010-01/msg01182.html" target="_blank" rel="external">Interpreting git diff -cc[was:merge conflict]</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=git+diff+--cc+%E6%80%8E%E4%B9%88%E8%AF%BB&amp;oq=git+diff+--cc+%E6%80%8E%E4%B9%88%E8%AF%BB&amp;gs_l=serp.3...8438.11111.0.11377.11.9.2.0.0.0.227.772.3j2j1.6.0....0...1c.1.64.serp..3.0.0.bCGBg-Hw7IU" target="_blank" rel="external">git diff –cc 怎么读</a><br><a href="https://github.com/colinta/SublimeFileDiffs" target="_blank" rel="external">sublime  diff</a><br><a href="http://www.oschina.net/translate/20-powerful-sublimetext-plugins" target="_blank" rel="external">20 个强大的 Sublime Text 插件 </a></p>
-<p>#git push –force 的使用场景<br>git checkout -b dev<br>git add -all<br>git checkout master</p>
-<p><strong>initialization后，从未<code>git commit</code> ，checkout后git branch –list 也看不到自己的分支。</strong><a href="blog.jobbole.com/87700/">如何在git里撤销几乎任何操作</a></p>
-<p>#文件的命名不要带有<code>/</code><br><a href="https://www.google.com.hk/search?q=invalid+path+git+pull&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">windows下不接受这种命名</a><br>导致git pull 后git rm，永远无法和remote repository保持一致。<br>这个时候可能一定会遇到push force问题。（由于是没用的文件，我直接舍弃了该文件。）</p>
-<p>##git push –force 的使用场景<br>push错误后，<br><a href="https://segmentfault.com/q/1010000002898735" target="_blank" rel="external">git 怎样删除远程仓库的某次错误提交？</a><br><a href="https://www.google.com.hk/search?q=push%E5%90%8E%E6%92%A4%E9%94%80&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">push后撤销</a></p>
-<p>## </p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;weibo的git使用笔记。&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
     <link href="http://noragithub.github.io/2016/10/09/%E5%8C%BA%E5%9D%97%E9%93%BE%EF%BC%88block%20chain%EF%BC%89%E8%B0%83%E7%A0%94/"/>
     <id>http://noragithub.github.io/2016/10/09/区块链（block chain）调研/</id>
     <published>2016-10-09T06:19:21.000Z</published>
@@ -557,29 +609,6 @@
     <summary type="html">
     
       &lt;p&gt;未开始&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://noragithub.github.io/2016/10/09/%E5%89%8D%E7%AB%AF%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://noragithub.github.io/2016/10/09/前端的学习笔记/</id>
-    <published>2016-10-09T06:19:21.000Z</published>
-    <updated>2016-11-22T15:28:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>[toc]</p>
-<p>未完成<br><a id="more"></a></p>
-<h1 id="Chrome-Console"><a href="#Chrome-Console" class="headerlink" title="Chrome Console"></a>Chrome Console</h1><h1 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h1><h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h1 id="React-Natie"><a href="#React-Natie" class="headerlink" title="React Natie"></a>React Natie</h1><h1 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h1><p><a href="https://www.google.com.hk/search?q=%E5%B0%8F%E7%A8%8B%E5%BA%8F+native&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">小程序 native</a></p>
-<p>#jquery</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;[toc]&lt;/p&gt;
-&lt;p&gt;未完成&lt;br&gt;
     
     </summary>
     
@@ -1525,99 +1554,6 @@
     <summary type="html">
     
       &lt;p&gt;Brief of Each Project&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Resume</title>
-    <link href="http://noragithub.github.io/2016/07/02/Resume/"/>
-    <id>http://noragithub.github.io/2016/07/02/Resume/</id>
-    <published>2016-07-02T02:44:55.000Z</published>
-    <updated>2016-11-22T15:24:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>陈驹峥 15920548066<br><a href="mailto:cjz741262008cjz@gmail.com?subject=请输入你的标题&cc=741262008@qq.com" target="_blank" rel="external"> cjz741262008cjz@gmail.com</a> </p>
-<ul>
-<li>软件工程的数据挖掘方向，了解商业数据与工程建模，致力于从数据出发的商业决策与运营优化</li>
-<li>互联网广告投放（24月）+零售运营（18月）+<font color="#FF4500" size="1">快消品运营（12月)-大学生创业</font></li>
-<li>熟悉数字营销和互联网广告市场，包括 DSP/ADX/SSP/RTB/PMP/PDB/SEM</li>
-<li>熟悉电子商务推广运营和数据分析，包括活动运营/流量运营/DMP/Site Tracking/Cookie Mapping</li>
-</ul>
-<p>工具：<br>熟悉HQL &amp; SQL ，了解<a href="http://www.jianshu.com/p/9a23c38349aa" target="_blank" rel="external">分布式架构</a>与数据库基础知识<br>Excel &amp; Tableau 实现分析可视化<br>Python &amp; R 实现商业分析</p>
-<p>模型 &amp; 技术：<br>协同过滤，K-means聚类，隐语义+随即梯度下降，决策树<br>较了解 数据库，数据仓库，BI，项目管理（git)  计算机网络</p>
-<a id="more"></a>
-<hr>
-<h1 id="工作经验"><a href="#工作经验" class="headerlink" title="工作经验"></a>工作经验</h1><h2 id="DSP产品经理"><a href="#DSP产品经理" class="headerlink" title="DSP产品经理"></a>DSP产品经理</h2><p>舜飞科技    2015.01至今<br>偏后端项目管理，偏Scrum Master。数据驱动衡量需求价值并协调前端、后端和测试资源保证项目顺利上线。协助流量变现，移动端广告投放占比增长到50%以上。</p>
-<ol>
-<li>构建产品部文档和项目管理制度；</li>
-<li>负责渠道/媒介对接，衡量渠道价值，安排优先级；</li>
-<li>重点客户/项目跟进；</li>
-</ol>
-<ul>
-<li>渠道资源分析&amp;数据探索</li>
-<li>“计划”一期设计&amp;测试</li>
-<li>广点通DMP服务对接</li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#BES_AMS服务对接">BES AMS服务对接</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#BES_AMS服务对接">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2016.08-2016.10</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#The_Media_Trust对接">The Media Trust对接</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#The_Media_Trust对接">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2016.08-2016.10</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#Peer_39/ADbug_brandsafety（品牌安全）对接">Peer 39/ADbug brandsafety（品牌安全）对接</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#Peer_39/ADbug_brandsafety（品牌安全）对接">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2016.04-2016.06</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#Sizmek_ad_serving对接">Sizmek ad serving对接</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#Sizmek_ad_serving对接">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2015.12-2016.06</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#高通DSP投放">高通DSP投放</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#高通DSP投放">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2016.02-2016.04</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#移动RTB/全渠道PMP/PDB市场对接">移动RTB/全渠道PMP/PDB市场对接</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#移动RTB/全渠道PMP/PDB市场对接">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2015.03-2016.11</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#SEM品牌推广">SEM品牌推广</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#SEM品牌推广">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2015.05-2015.06</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#有赞商城DSP推广">有赞商城DSP推广</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#有赞商城DSP推广">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2015.05-2015.08</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#移动SSP_iOS_SDK第一版">移动SSP iOS SDK第一版</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#移动SSP_iOS_SDK第一版">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2015.04-2015.04</font></li>
-</ul>
-<hr>
-<h2 id="数据产品经理"><a href="#数据产品经理" class="headerlink" title="数据产品经理"></a>数据产品经理</h2><p>唯品会（中国）有限公司    2014.07-2015.01<br>数据分析产品化。涉及数据产品的主要流程，从PRD文档、到产品的UI设计，以及跨系统的产品整合，甚至部分ETL，黑白盒数据测试和项目管理工作。</p>
-<ol>
-<li>负责面向管理层的APP数据产品, 产品化常规的运营分析流程，支持决策；</li>
-<li>接手旧产品，并根据管理层反馈做快速迭代；</li>
-<li>参与创新APP项目，如， 我是妈咪 （ 母婴闪购电商）和 hey!购物 （基于库存的个性化推荐APP）;</li>
-</ol>
-<ul>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#总裁看板">总裁看板</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#总裁看板">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2014.07-2015.01</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#创新APP项目">创新APP项目</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#创新APP项目">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2014.10-2015.01</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#移动司南">移动司南</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#移动司南">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2014.10-2014.11</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#唯品司南">唯品司南</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#唯品司南">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2014.07-2014.07</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#唯品经纬">唯品经纬</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#唯品经纬">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2014.07-2014.07</font></li>
-</ul>
-<hr>
-<h2 id="数据分析师"><a href="#数据分析师" class="headerlink" title="数据分析师"></a>数据分析师</h2><p>唯品会（中国）有限公司    2013.07-2014.07<br>作为运营分析组一员，每周提供运营分析以及日常快捷反馈到总裁会，并根据反馈进行运营层面的分析建议。<br>负责市场运营方面日常分析：</p>
-<ol>
-<li>广告投放&amp;渠道：为衡量渠道价值进行资源分配而构造归因模型；</li>
-<li>促销组合：不同促销形式的效果&amp;组合分析，并形成报表系统；</li>
-<li>财务：市场费用的构成分析；</li>
-</ol>
-<ul>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#微信特卖">微信特卖</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#微信特卖">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2014.06-2014.09</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#归因模型">归因模型</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#归因模型">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2013.11-2014.04</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#管理培训生">管理培训生</a>-<font color="#FF4500" size="1">2013.07-2014.02</font></li>
-</ul>
-<hr>
-<h1 id="教育背景"><a href="#教育背景" class="headerlink" title="教育背景"></a>教育背景</h1><p>华南理工大学 软件工程 2009-2013</p>
-<ul>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#电子商务代运营">电子商务代运营</a>&emsp;&emsp;<font size="1"><a href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/#电子商务代运营">[STAR介绍]</a></font>-<font color="#FF4500" size="1">2011.09-2012.06</font></li>
-<li><a href="http://noragithub.github.io/2016/07/30/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D/#个性化推荐系统">个性化推荐系统</a>-<font color="#FF4500" size="1">2012.09-2013.06</font></li>
-</ul>
-<hr>
-<h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><p>托福：82<br>托业：755<br>软件学院篮球队</p>
-<p><a href="http://weibo.com/1872970792" target="_blank" rel="external"><strong>微博</strong></a>| <a href="http://www.jianshu.com/users/06ff1db1651f" target="_blank" rel="external"><strong>简书</strong></a> |<a href="https://www.zhihu.com/people/Nora_Chan" target="_blank" rel="external"><strong>知乎</strong></a>|<a href="https://github.com/NoraGithub" target="_blank" rel="external"><strong>Github</strong></a></p>
-<p><a href="https://busihacker.com:9999" target="_blank" rel="external">Jupyter Notebook</a><br><a href="http://noragithub.github.io/">Hexo + Git Blog</a><br>一万字讲清楚如何翻墙<br><a href="http://www.jianshu.com/p/e96a8f303d69" target="_blank" rel="external">文字识别初探</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;headerlink&quot; title=&quot;Summary&quot;&gt;&lt;/a&gt;Summary&lt;/h1&gt;&lt;p&gt;陈驹峥 15920548066&lt;br&gt;&lt;a href=&quot;mailto:cjz741262008cjz@gmail.com?subject=请输入你的标题&amp;cc=741262008@qq.com&quot;&gt; cjz741262008cjz@gmail.com&lt;/a&gt; &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;软件工程的数据挖掘方向，了解商业数据与工程建模，致力于从数据出发的商业决策与运营优化&lt;/li&gt;
-&lt;li&gt;互联网广告投放（24月）+零售运营（18月）+&lt;font color=#FF4500 size=1&gt;快消品运营（12月)-大学生创业&lt;/font&gt;&lt;/li&gt;
-&lt;li&gt;熟悉数字营销和互联网广告市场，包括 DSP/ADX/SSP/RTB/PMP/PDB/SEM&lt;/li&gt;
-&lt;li&gt;熟悉电子商务推广运营和数据分析，包括活动运营/流量运营/DMP/Site Tracking/Cookie Mapping&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;工具：&lt;br&gt;熟悉HQL &amp;amp; SQL ，了解&lt;a href=&quot;http://www.jianshu.com/p/9a23c38349aa&quot;&gt;分布式架构&lt;/a&gt;与数据库基础知识&lt;br&gt;Excel &amp;amp; Tableau 实现分析可视化&lt;br&gt;Python &amp;amp; R 实现商业分析&lt;/p&gt;
-&lt;p&gt;模型 &amp;amp; 技术：&lt;br&gt;协同过滤，K-means聚类，隐语义+随即梯度下降，决策树&lt;br&gt;较了解 数据库，数据仓库，BI，项目管理（git)  计算机网络&lt;/p&gt;
     
     </summary>
     
