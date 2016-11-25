@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="数据科学, 数据分析, 产品需求分析, 云计算, 项目管理, slash" />
+  <meta name="keywords" content="hexo, 定制化, 结构" />
 
 
 
@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://noragithub.github.io/2016/11/24/Hexo-Blog-Setup以及常见配置/index.html">
 <meta property="og:site_name" content="Busihacker">
 <meta property="og:description" content="未完成">
-<meta property="og:updated_time" content="2016-11-25T01:01:11.000Z">
+<meta property="og:updated_time" content="2016-11-25T01:58:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Blog Setup以及常见配置">
 <meta name="twitter:description" content="未完成">
@@ -330,7 +330,7 @@
           <br />
             <!--更新时间-->
             <span class="post-meta-item-text">最近更新于</span>
-            <time itemprop="dateUpdated" datetime="2016-11-25T09:01:11+08:00" content="2016-11-25">
+            <time itemprop="dateUpdated" datetime="2016-11-25T09:58:30+08:00" content="2016-11-25">
               2016-11-25
             </time>
           </span>
@@ -356,7 +356,8 @@
 <h1 id="设置分享插件（duoshuo）"><a href="#设置分享插件（duoshuo）" class="headerlink" title="设置分享插件（duoshuo）"></a>设置分享插件（duoshuo）</h1><h1 id="设置站内搜索"><a href="#设置站内搜索" class="headerlink" title="设置站内搜索"></a>设置站内搜索</h1><p>利用Next主题的local search插件的时候，会出现一个特别的情况：<br>当你在yoursite.com/page1做search的时候，点击搜索结果会出现异常：<br>会navigate到yoursite.com/page1/%search_result_relativePath<br>出现这个问题的主要原因是站点配置/path_your_blog/source/_cofig.yml的url值配置问题，改为absolutePath可以杜绝这个情况。<br>即，<br><code>yoursite.com</code><br><code>http://yoursite.com/</code><br>其中最后的斜杠<code>/</code>不能遗漏，会导致转义出现问题</p>
 <h2 id="encode-amp-decode"><a href="#encode-amp-decode" class="headerlink" title="encode&amp; decode"></a>encode&amp; decode</h2><p>根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把<code>/</code>转为<code>%2F</code>进行页面访问。<br>检查yoursite.com/search.xml可以发现<code>npm install hexo-generator-searchdb --save</code>会根据文章简历索引，并编码后访问<br><a href="">#reference:</a><br><a href="http://www.w3school.com.cn/tags/html_ref_urlencode.html" target="_blank" rel="external">#reference: HTML URL 编码</a></p>
 <h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>update time</p>
-<h1 id="SEO优化设置"><a href="#SEO优化设置" class="headerlink" title="SEO优化设置"></a>SEO优化设置</h1><h2 id="keywords"><a href="#keywords" class="headerlink" title="keywords"></a>keywords</h2><h2 id="友链"><a href="#友链" class="headerlink" title="友链"></a>友链</h2><h2 id="sitetracking"><a href="#sitetracking" class="headerlink" title="sitetracking"></a>sitetracking</h2><h2 id="出现在搜索引擎"><a href="#出现在搜索引擎" class="headerlink" title="出现在搜索引擎"></a>出现在搜索引擎</h2><h1 id="Favicon"><a href="#Favicon" class="headerlink" title="Favicon"></a>Favicon</h1><p><a href="http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg" target="_blank" rel="external">http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg</a></p>
+<h1 id="SEO优化设置"><a href="#SEO优化设置" class="headerlink" title="SEO优化设置"></a>SEO优化设置</h1><h2 id="keywords"><a href="#keywords" class="headerlink" title="keywords"></a>keywords</h2><p>页面级别配置</p>
+<h2 id="友链"><a href="#友链" class="headerlink" title="友链"></a>友链</h2><h2 id="sitetracking"><a href="#sitetracking" class="headerlink" title="sitetracking"></a>sitetracking</h2><h2 id="出现在搜索引擎"><a href="#出现在搜索引擎" class="headerlink" title="出现在搜索引擎"></a>出现在搜索引擎</h2><h1 id="Favicon"><a href="#Favicon" class="headerlink" title="Favicon"></a>Favicon</h1><p><a href="http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg" target="_blank" rel="external">http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg</a></p>
 <h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><p> Github 访问速度太慢，有没有通过反向代理或者CDN加速的方式提高访问速度？特别是如果更新DNS的情况下</p>
 <h1 id="可能有的问题"><a href="#可能有的问题" class="headerlink" title="可能有的问题"></a>可能有的问题</h1><p>https协议的支持<br>seo支持<br>自定义监测支持<br><a href="https://github.com/PaicHyperionDev/hexo-generator-search/issues/8" target="_blank" rel="external">提示有编码错误</a></p>
 <h2 id="不支持所有页面进行local-search"><a href="#不支持所有页面进行local-search" class="headerlink" title="不支持所有页面进行local search"></a>不支持所有页面进行local search</h2><p>当对配置中 search- field从<code>post</code>修改为<code>all</code>，会提醒post is not defined </p>
