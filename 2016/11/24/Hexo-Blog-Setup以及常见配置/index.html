@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="未完成">
+<meta name="description" content="使用Hexo进行了Blog的Setup后，我们希望选择一个心仪的theme（即不同页面类型保持一致的风格），配置需要的功能选项/属性，甚至进行一些个性化的定制。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo Blog Setup以及常见配置">
 <meta property="og:url" content="http://noragithub.github.io/2016/11/24/Hexo-Blog-Setup以及常见配置/index.html">
 <meta property="og:site_name" content="Busihacker">
-<meta property="og:description" content="未完成">
-<meta property="og:updated_time" content="2016-11-26T13:43:41.000Z">
+<meta property="og:description" content="使用Hexo进行了Blog的Setup后，我们希望选择一个心仪的theme（即不同页面类型保持一致的风格），配置需要的功能选项/属性，甚至进行一些个性化的定制。">
+<meta property="og:updated_time" content="2016-12-07T13:26:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Blog Setup以及常见配置">
-<meta name="twitter:description" content="未完成">
+<meta name="twitter:description" content="使用Hexo进行了Blog的Setup后，我们希望选择一个心仪的theme（即不同页面类型保持一致的风格），配置需要的功能选项/属性，甚至进行一些个性化的定制。">
 
 
 
@@ -113,7 +113,7 @@
   };
 </script>
 
-  <title> Hexo Blog Setup以及常见配置 | Busihacker </title>
+  <title> Hexo Blog Setup以及常见配置 | Busihacker </title> 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -278,10 +278,14 @@
 
     
       <header class="post-header">
-
         
         
           <h1 class="post-title" itemprop="name headline">
+            
+            
+            <font color=#FF4500 size=1> 撰写中</font>
+            
+
             
             
               
@@ -330,8 +334,8 @@
           <br />
             <!--更新时间-->
             <span class="post-meta-item-text">最近更新于</span>
-            <time itemprop="dateUpdated" datetime="2016-11-26T21:43:41+08:00" content="2016-11-26">
-              2016-11-26
+            <time itemprop="dateUpdated" datetime="2016-12-07T21:26:45+08:00" content="2016-12-07">
+              2016-12-07
             </time>
           </span>
         </div>
@@ -349,20 +353,125 @@
       
 
       
-        <p>未完成<br><a id="more"></a></p>
-<h1 id="选择-amp-配置模版（profie、social-link）"><a href="#选择-amp-配置模版（profie、social-link）" class="headerlink" title="选择&amp;配置模版（profie、social link）"></a>选择&amp;配置模版（profie、social link）</h1><h2 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h2><p>新建页面和新建博客是不一样的，新建页面利用<code>hexo new page %pagename</code>，创建后会有pagename文件夹，文件夹有index.md，md内容为该页面内容。<br>新建博客利用<code>hexo new %blogname</code>创建后有%blogname.md为名的博客md文件</p>
+        <p>使用Hexo进行了Blog的Setup后，我们希望选择一个心仪的theme（即不同页面类型保持一致的风格），配置需要的功能选项/属性，甚至进行一些个性化的定制。<br><a id="more"></a><br>如何预览和使用心仪的theme，Google后有足够的信息，这里就不详细介绍了。Hexo默认theme是landscape。网络上也有不少对默认主题的自定义配置方案，例如，<a href="http://blog.sunnyxx.com/2014/03/07/hexo_customize/" target="_blank" rel="external">hexo的私人订制</a><br>Simple is the best，毕竟不是搞设计和前端开发的。个人选择了Next作为theme，一方面偏好它的极简主义，另一方面，整体设计的留白和交互都很不错。</p>
+<p>theme本身很优秀，但我们还是有一些个性化的需求，需要了解Hexo的更详细配置（对应next下的主题级别的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">配置</a>），或，简单地修改脚本。例如：</p>
+<ul>
+<li>post granularity的SEO</li>
+<li>post granularity的tracking &amp; conversation tracking</li>
+<li>隐藏部分post，不按timeline呈现，按特定方式访问</li>
+<li>设置404 page</li>
+<li>新增简历 page</li>
+<li>修改搜索的UI（未完成）</li>
+<li>…</li>
+</ul>
+<p>大部分信息网络页都有，利用这篇文章简单总结，并探索Hexo &amp; Next theme的架构。</p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="Hexo（site）-配置"><a href="#Hexo（site）-配置" class="headerlink" title="Hexo（site） 配置"></a>Hexo（site） 配置</h2><p>Hexo级别的<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">配置</a> 关于站点/项目级别的内容、样式属性。如网站标题、网站描述、网站的SEO关键词、项目Github地址等。一般是内容属性。<br>类似meta类。</p>
+<h2 id="theme-配置"><a href="#theme-配置" class="headerlink" title="theme 配置"></a>theme 配置</h2><p>theme级别的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">配置</a>已经对基础设置，如，如何切换theme，更新profie、social link等，做了比较详细的介绍。主要是样式属性。</p>
+<p>就像html+css把内容、样式分离开来一样，theme负责Hexo的默认展现（样式）。<br>除了配置外信息一般存放于./source目录</p>
+<h1 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1><p>theme级别的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">配置</a>有部分用户路径是没有考虑，如404页面，搜索等。</p>
+<h2 id="Hexo的布局（layout）"><a href="#Hexo的布局（layout）" class="headerlink" title="Hexo的布局（layout）"></a>Hexo的布局（layout）</h2><h3 id="默认布局（样式）-post"><a href="#默认布局（样式）-post" class="headerlink" title="默认布局（样式）-post"></a>默认布局（样式）-post</h3><p>layout（布局）概念类似一种页面类型，（默认情况下，但是如何新建一个type？新的渲染格式？）Hexo有三种不同的layout，不同layout保存的路径并不一样。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Layout</th>
+<th style="text-align:left">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">post</td>
+<td style="text-align:left">./source/_post</td>
+</tr>
+<tr>
+<td style="text-align:center">page</td>
+<td style="text-align:left">./source</td>
+</tr>
+<tr>
+<td style="text-align:center">draft</td>
+<td style="text-align:left">./source/_draft</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>不同layout的唯一区别是保存到不同的路径（to some extent）</li>
+<li>layout支持自定义，存放目录和post一样，当scaffold无自定义类型时，调用默认layout</li>
+<li>hexo publish 可用于发表草稿（draft–&gt;post，参考1）</li>
+<li>hexo new page</li>
+</ol>
+<p>可以利用layout组织template</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">template</th>
+<th style="text-align:center">Page</th>
+<th style="text-align:center">Fallback</th>
+<th>Path</th>
+<th>Fallback Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">index</td>
+<td style="text-align:center">Home page</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">post</td>
+<td style="text-align:center">Posts</td>
+<td style="text-align:center">index</td>
+<td>_post</td>
+</tr>
+<tr>
+<td style="text-align:center">page</td>
+<td style="text-align:center">Pages</td>
+<td style="text-align:center">index</td>
+<td>source</td>
+<td>source/%pagename</td>
+</tr>
+<tr>
+<td style="text-align:center">archive</td>
+<td style="text-align:center">Archives</td>
+<td style="text-align:center">index</td>
+</tr>
+<tr>
+<td style="text-align:center">category</td>
+<td style="text-align:center">Category archives</td>
+<td style="text-align:center">archive</td>
+</tr>
+<tr>
+<td style="text-align:center">tag</td>
+<td style="text-align:center">Tag archives</td>
+<td style="text-align:center">archive</td>
+</tr>
+</tbody>
+</table>
+<p>Fallback位于类似于scaffolds，只是定义了变量，<br>不同template的渲染文件位于./themes/next/layout/*下，利用swig组成，swig是一个js模版引擎</p>
+<p>/source/_其它（page？）<br><a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="external">reference-写作</a></p>
+<p>hexo new draft ..<br>其中..d的layout是post，并非draft，有点坑啊。。。<br>在scaffolds中国年增加变量layout: draft解决该问题，然而历史的的md都会被认为是默认的layout：post，需手动添加layout: draft补充<br>在post.swig和post-collapse的 </p><h1>标签增加<p></p>
+<pre><code>{% if post.layout === "draft" %}
+        <font color="#FF4500" size="1"> 撰写中</font>
+        {% endif %}
+</code></pre><p>用于提醒。</p>
+<h2 id="scaffold自定义模版（样式）"><a href="#scaffold自定义模版（样式）" class="headerlink" title="scaffold自定义模版（样式）"></a>scaffold自定义模版（样式）</h2><p>scaffolds/%layout<br>scaffolds决定不同layout的变量，在initial一个article时出现的变量，不同的layout变量使用不同的template和不同的path<br>template上述内容的展现方式<br>切换布局</p>
+<p><em>如果要显示草稿，页面级别设置是没用的，只能全站级别</em><br><strong>希望修改为页面级别，而且修改样式提醒为草稿以及首页显示后提醒草稿样式</strong></p>
 <h2 id="设置404页面"><a href="#设置404页面" class="headerlink" title="设置404页面"></a>设置404页面</h2><p>我们希望404</p>
-<h2 id="设置about"><a href="#设置about" class="headerlink" title="设置about"></a>设置about</h2><h1 id="设置rss"><a href="#设置rss" class="headerlink" title="设置rss"></a>设置rss</h1><p>感觉rss是一个模版粒度的设置，换了模版就有必要重新设置（如果有需要）<br><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E6%98%BE%E7%A4%BA-feed-%E9%93%BE%E6%8E%A5" target="_blank" rel="external">显示feed链接</a></p>
+<h2 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h2><p>新建page和新建post是不一样的，新建page利用<code>hexo new page %pagename</code>，创建后会有%pagename文件夹，文件夹有index.md，md内容为该页面调用内容。</p>
+<p>新建博客利用<code>hexo new %postname</code>创建后有%blogname.md为名的post文件，存放于source/_post</p>
+<h2 id="设置about"><a href="#设置about" class="headerlink" title="设置about"></a>设置about</h2><p>同理</p>
+<h1 id="设置rss"><a href="#设置rss" class="headerlink" title="设置rss"></a>设置rss</h1><p>感觉rss是一个模版粒度的设置，换了模版就有必要重新设置（如果有需要）<br><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E6%98%BE%E7%A4%BA-feed-%E9%93%BE%E6%8E%A5" target="_blank" rel="external">显示feed链接</a></p>
 <h1 id="设置分享插件（duoshuo）"><a href="#设置分享插件（duoshuo）" class="headerlink" title="设置分享插件（duoshuo）"></a>设置分享插件（duoshuo）</h1><h1 id="设置站内搜索"><a href="#设置站内搜索" class="headerlink" title="设置站内搜索"></a>设置站内搜索</h1><p>利用Next主题的local search插件的时候，会出现一个特别的情况：<br>当你在yoursite.com/page1做search的时候，点击搜索结果会出现异常：<br>会navigate到yoursite.com/page1/%search_result_relativePath<br>出现这个问题的主要原因是站点配置/path_your_blog/source/_cofig.yml的url值配置问题，改为absolutePath可以杜绝这个情况。<br>即，<br><code>yoursite.com</code><br><code>http://yoursite.com/</code><br>其中最后的斜杠<code>/</code>不能遗漏，会导致转义出现问题</p>
 <h2 id="encode-amp-decode"><a href="#encode-amp-decode" class="headerlink" title="encode&amp; decode"></a>encode&amp; decode</h2><p>根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把<code>/</code>转为<code>%2F</code>进行页面访问。<br>检查yoursite.com/search.xml可以发现<code>npm install hexo-generator-searchdb --save</code>会根据文章简历索引，并编码后访问<br><a href="">#reference:</a><br><a href="http://www.w3school.com.cn/tags/html_ref_urlencode.html" target="_blank" rel="external">#reference: HTML URL 编码</a></p>
 <h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>update time</p>
 <h1 id="SEO优化设置"><a href="#SEO优化设置" class="headerlink" title="SEO优化设置"></a>SEO优化设置</h1><h2 id="keywords"><a href="#keywords" class="headerlink" title="keywords"></a>keywords</h2><p>页面级别配置</p>
 <h2 id="友链"><a href="#友链" class="headerlink" title="友链"></a>友链</h2><h2 id="sitetracking"><a href="#sitetracking" class="headerlink" title="sitetracking"></a>sitetracking</h2><h2 id="出现在搜索引擎"><a href="#出现在搜索引擎" class="headerlink" title="出现在搜索引擎"></a>出现在搜索引擎</h2><h1 id="Favicon"><a href="#Favicon" class="headerlink" title="Favicon"></a>Favicon</h1><p><a href="http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg" target="_blank" rel="external">http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg</a></p>
 <h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><p> Github 访问速度太慢，有没有通过反向代理或者CDN加速的方式提高访问速度？特别是如果更新DNS的情况下</p>
+<p>经过调研，最简单快速的方法是利用coding.net（墙内版Github）的pages服务设置hook自动更新 </p>
 <h1 id="可能有的问题"><a href="#可能有的问题" class="headerlink" title="可能有的问题"></a>可能有的问题</h1><p>https协议的支持<br>seo支持<br>自定义监测支持<br><a href="https://github.com/PaicHyperionDev/hexo-generator-search/issues/8" target="_blank" rel="external">提示有编码错误</a></p>
 <h2 id="不支持所有页面进行local-search"><a href="#不支持所有页面进行local-search" class="headerlink" title="不支持所有页面进行local search"></a>不支持所有页面进行local search</h2><p>当对配置中 search- field从<code>post</code>修改为<code>all</code>，会提醒post is not defined </p>
 <p>updatetime function</p>
-<h1 id="定制化（进阶）"><a href="#定制化（进阶）" class="headerlink" title="定制化（进阶）"></a>定制化（进阶）</h1><p>从html角度进行个性化定制</p>
+<h1 id="定制化（进阶）"><a href="#定制化（进阶）" class="headerlink" title="定制化（进阶）"></a>定制化（进阶）</h1><p><a href="https://hexo.io/zh-cn/docs/templates.html" target="_blank" rel="external">结构</a></p>
+<p>为了进行个性化定制，先定义一些主要的数据类型：<br>页面（类型），如首页，归档页，标签页等：page<br>页面：默认（default）post</p>
+<p>我们页了解下Hexo框架下，页面（html）的生成逻辑。<br>另外也应该了解同一个选项，hexo的<br>配置的优先级：page&gt;theme&gt;hexo<br>从html角度进行个性化定制</p>
 <p>我们来看看hexo 的名录以及各目录下配置或文件的作用<br><code>tree -L 3  -I node_modules\|public</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml//站点配置</div><div class="line">├── db.json</div><div class="line">├── debug.log</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">│   ├── draft.md//草稿</div><div class="line">│   ├── page.md//页面</div><div class="line">│   └── post.md//博客</div><div class="line">├── source</div><div class="line">│   ├── 404 //404页面</div><div class="line">│   │   └── index.md</div><div class="line">│   ├── _posts //博客目录</div><div class="line">│   │   ├── Hexo-Blog-Setup以?\217\212常?\201?\205\215置.md</div><div class="line">│   │   ├── Markdown\ Web\ \ ?\226?\221?\231?产?\223\201?\203?\224.md</div><div class="line">│   │   ├── README.md</div><div class="line">│   │   ├── ..</div><div class="line">│   │   ├── ..</div><div class="line">│   │   </div><div class="line">│   ├── about //关于页面</div><div class="line">│   │   └── index.md</div><div class="line">│   └── tags //tags页面</div><div class="line">│       └── index.md</div><div class="line">└── themes//模版信息</div><div class="line">    ├── landscape //landscape模版脚本</div><div class="line">    │   ├── Gruntfile.js</div><div class="line">    │   ├── LICENSE</div><div class="line">    │   ├── README.md</div><div class="line">    │   ├── _config.yml</div><div class="line">    │   ├── languages</div><div class="line">    │   ├── layout</div><div class="line">    │   ├── package.json</div><div class="line">    │   ├── scripts</div><div class="line">    │   └── source</div><div class="line">    └── next //next模版脚本</div><div class="line">        ├── README.en.md</div><div class="line">        ├── README.md</div><div class="line">        ├── _config.yml//模版配置</div><div class="line">        ├── bower.json</div><div class="line">        ├── gulpfile.coffee</div><div class="line">        ├── languages</div><div class="line">        ├── layout</div><div class="line">        ├── package.json</div><div class="line">        ├── scripts</div><div class="line">        ├── source</div><div class="line">        └── test//测试</div></pre></td></tr></table></figure>
 <p>我们进到next模版目录详细研究<br><code>tree -I test</code></p>
@@ -371,8 +480,15 @@
 <p>为了增加page的toc<br>可以在page.swig里添加逻辑语句进行渲染</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">#默认设置</div><div class="line">&#123;% block sidebar %&#125;</div><div class="line">  &#123;&#123; sidebar_template.render(false) &#125;&#125;</div><div class="line">&#123;% endblock %&#125;</div><div class="line">#&#125;</div><div class="line"></div><div class="line">&#123;#</div><div class="line">&lt;!--page增加sidebar控制--&gt;</div><div class="line">&lt;!--sidebar不代表toc，toc是sidebar的一部分--&gt;</div><div class="line">&lt;!--sidebar_template.render(false)显示非toc部分--&gt;</div><div class="line">&lt;!--sidebar_template.render(true)显示toc部分--&gt;</div><div class="line">&lt;!--toc和非toc是二选一的关系--&gt;</div><div class="line">#&#125;</div><div class="line">&#123;% block sidebar %&#125;</div><div class="line"> &#123;% if theme.sidebar.display == &apos;always&apos; %&#125;</div><div class="line">  &#123;&#123; sidebar_template.render(true) &#125;&#125;</div><div class="line"> &#123;% else %&#125;</div><div class="line">  &#123;&#123; sidebar_template.render(false) &#125;&#125;</div><div class="line"> &#123;% endif %&#125;</div><div class="line">&#123;% endblock %&#125;</div></pre></td></tr></table></figure>
 <p>page是所有页面变量？<br>在%page_name/index.md里增加变量toc: true变量，<br>在page.swig增加判断逻辑对该变量校验<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&#123;#</div><div class="line">&lt;!--page增加sidebar控制--&gt;</div><div class="line">&lt;!--sidebar不代表toc，toc是sidebar的一部分--&gt;</div><div class="line">&lt;!--sidebar_template.render(false)显示非toc部分--&gt;</div><div class="line">&lt;!--sidebar_template.render(true)显示toc部分--&gt;</div><div class="line">&lt;!--toc和非toc是二选一的关系--&gt;</div><div class="line"></div><div class="line">&#123;% block sidebar %&#125;</div><div class="line"> &#123;% if theme.sidebar.display == &apos;always&apos; %&#125;</div><div class="line">  &#123;&#123; sidebar_template.render(true) &#125;&#125;</div><div class="line"> &#123;% else %&#125;</div><div class="line">  &#123;&#123; sidebar_template.render(false) &#125;&#125;</div><div class="line"> &#123;% endif %&#125;</div><div class="line">&#123;% endblock %&#125;</div><div class="line">#&#125;</div><div class="line"></div><div class="line">&#123;% block sidebar %&#125;</div><div class="line"> &#123;% if page.toc %&#125;</div><div class="line">  &#123;&#123; sidebar_template.render(true) &#125;&#125;</div><div class="line"> &#123;% else %&#125;</div><div class="line">  &#123;&#123; sidebar_template.render(false) &#125;&#125;</div><div class="line"> &#123;% endif %&#125;</div><div class="line">&#123;% endblock %&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="在about增加update时间"><a href="#在about增加update时间" class="headerlink" title="在about增加update时间"></a>在about增加update时间</h2><h2 id="在about自我简介＋resume链接"><a href="#在about自我简介＋resume链接" class="headerlink" title="在about自我简介＋resume链接"></a>在about自我简介＋resume链接</h2><p>增加type:about</p>
-
+<h2 id="在about增加update时间"><a href="#在about增加update时间" class="headerlink" title="在about增加update时间"></a>在about增加update时间</h2><h2 id="在about自我简介＋resume链接"><a href="#在about自我简介＋resume链接" class="headerlink" title="在about自我简介＋resume链接"></a>在about自我简介＋resume链接</h2><p>增加is_hidden: true属性<br>首页不显示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;% block content %&#125;</div><div class="line">  &lt;section id=&quot;posts&quot; class=&quot;posts-expand&quot;&gt;</div><div class="line">    &#123;% for post in page.posts %&#125;</div><div class="line">    &#123;#test#&#125;</div><div class="line">      &#123;% if post.is_hidden != &apos;true&apos; %&#125;</div><div class="line">        &#123;&#123; post_template.render(post, true) &#125;&#125;</div><div class="line">      &#123;% endif %&#125;</div><div class="line">    &#123;% endfor %&#125;</div><div class="line">  &lt;/section&gt;</div><div class="line"></div><div class="line">  &#123;% include &apos;_partials/pagination.swig&apos; %&#125;</div><div class="line">&#123;% endblock %&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="自己创建-amp-管理主题"><a href="#自己创建-amp-管理主题" class="headerlink" title="自己创建&amp;管理主题"></a>自己创建&amp;管理主题</h1><h1 id="regenerate"><a href="#regenerate" class="headerlink" title="regenerate"></a>regenerate</h1><p>hexo clean<br>删除db.json</p>
+<h1 id="支持流程图"><a href="#支持流程图" class="headerlink" title="支持流程图"></a>支持流程图</h1><p>npm install hexo-diagram –save<br>npm install phantomjs  -g<br><code>phantomjs@2.1.7: Package renamed to phantomjs-prebuilt. Please update &#39;phantomjs&#39; package references to &#39;phantomjs-prebuilt&#39;</code><br>npm install phantomjs-prebuilt -g<br>通过sublime插件搜索node_module下所有包涵’phantomjs’语句，替换为’phantomjs-prebuilt’</p>
+<p>/Users/NoraChan/Desktop/Blog/node_modules/.bin/esvalidate:<br>/Users/NoraChan/Desktop/Blog/node_modules/esprima/bin/esvalidate.js:<br>/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.coffee:<br>/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.js:</p>
+<p>npm install phantomjs  –save<br>–save和-g的区别是？（phantomjs-prebuilt）</p>
+<p>决定按照insecure方式处理<br>修改回这些文件<br>/Users/NoraChan/Desktop/Blog/node_modules/.bin/esvalidate:<br>/Users/NoraChan/Desktop/Blog/node_modules/esprima/bin/esvalidate.js:<br>/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.coffee:<br>/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.js:</p>
+<p><a href="http://www.luohanjie.com/2016-03-22/hexo-support-flowchart.html#fnref2" target="_blank" rel="external">hexo-diagram 渲染问题</a></p>
+<p>流程图支持的markdown语法</p>
+</h1>
       
     </div>
 
@@ -429,6 +545,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/05/draft-test/" rel="prev" title="draft_test">
+                draft_test <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -519,7 +639,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -603,7 +723,48 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#选择-amp-配置模版（profie、social-link）"><span class="nav-number">1.</span> <span class="nav-text">选择&配置模版（profie、social link）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#新建页面"><span class="nav-number">1.1.</span> <span class="nav-text">新建页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置404页面"><span class="nav-number">1.2.</span> <span class="nav-text">设置404页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置about"><span class="nav-number">1.3.</span> <span class="nav-text">设置about</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置rss"><span class="nav-number">2.</span> <span class="nav-text">设置rss</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置分享插件（duoshuo）"><span class="nav-number">3.</span> <span class="nav-text">设置分享插件（duoshuo）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置站内搜索"><span class="nav-number">4.</span> <span class="nav-text">设置站内搜索</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#encode-amp-decode"><span class="nav-number">4.1.</span> <span class="nav-text">encode& decode</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文章配置"><span class="nav-number">5.</span> <span class="nav-text">文章配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SEO优化设置"><span class="nav-number">6.</span> <span class="nav-text">SEO优化设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#keywords"><span class="nav-number">6.1.</span> <span class="nav-text">keywords</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#友链"><span class="nav-number">6.2.</span> <span class="nav-text">友链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sitetracking"><span class="nav-number">6.3.</span> <span class="nav-text">sitetracking</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#出现在搜索引擎"><span class="nav-number">6.4.</span> <span class="nav-text">出现在搜索引擎</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Favicon"><span class="nav-number">7.</span> <span class="nav-text">Favicon</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反向代理"><span class="nav-number">8.</span> <span class="nav-text">反向代理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可能有的问题"><span class="nav-number">9.</span> <span class="nav-text">可能有的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#不支持所有页面进行local-search"><span class="nav-number">9.1.</span> <span class="nav-text">不支持所有页面进行local search</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#定制化（进阶）"><span class="nav-number">10.</span> <span class="nav-text">定制化（进阶）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在about增加update时间"><span class="nav-number">10.1.</span> <span class="nav-text">在about增加update时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在about自我简介＋resume链接"><span class="nav-number">10.2.</span> <span class="nav-text">在about自我简介＋resume链接</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo（site）-配置"><span class="nav-number">1.1.</span> <span class="nav-text">Hexo（site） 配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#theme-配置"><span class="nav-number">1.2.</span> <span class="nav-text">theme 配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进阶"><span class="nav-number">2.</span> <span class="nav-text">进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo的布局（layout）"><span class="nav-number">2.1.</span> <span class="nav-text">Hexo的布局（layout）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#默认布局（样式）-post"><span class="nav-number">2.1.1.</span> <span class="nav-text">默认布局（样式）-post</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">标签增加
+{% if post.layout === "draft" %}
+         撰写中
+        {% endif %}
+用于提醒。
+scaffold自定义模版（样式）scaffolds/%layoutscaffolds决定不同layout的变量，在initial一个article时出现的变量，不同的layout变量使用不同的template和不同的pathtemplate上述内容的展现方式切换布局
+如果要显示草稿，页面级别设置是没用的，只能全站级别希望修改为页面级别，而且修改样式提醒为草稿以及首页显示后提醒草稿样式
+设置404页面我们希望404
+新建页面新建page和新建post是不一样的，新建page利用hexo new page %pagename，创建后会有%pagename文件夹，文件夹有index.md，md内容为该页面调用内容。
+新建博客利用hexo new %postname创建后有%blogname.md为名的post文件，存放于source/_post
+设置about同理
+设置rss感觉rss是一个模版粒度的设置，换了模版就有必要重新设置（如果有需要）显示feed链接
+设置分享插件（duoshuo）设置站内搜索利用Next主题的local search插件的时候，会出现一个特别的情况：当你在yoursite.com/page1做search的时候，点击搜索结果会出现异常：会navigate到yoursite.com/page1/%search_result_relativePath出现这个问题的主要原因是站点配置/path_your_blog/source/_cofig.yml的url值配置问题，改为absolutePath可以杜绝这个情况。即，yoursite.comhttp://yoursite.com/其中最后的斜杠/不能遗漏，会导致转义出现问题
+encode& decode根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把/转为%2F进行页面访问。检查yoursite.com/search.xml可以发现npm install hexo-generator-searchdb --save会根据文章简历索引，并编码后访问#reference:#reference: HTML URL 编码
+文章配置update time
+SEO优化设置keywords页面级别配置
+友链sitetracking出现在搜索引擎Faviconhttp://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg
+反向代理 Github 访问速度太慢，有没有通过反向代理或者CDN加速的方式提高访问速度？特别是如果更新DNS的情况下
+经过调研，最简单快速的方法是利用coding.net（墙内版Github）的pages服务设置hook自动更新 
+可能有的问题https协议的支持seo支持自定义监测支持提示有编码错误
+不支持所有页面进行local search当对配置中 search- field从post修改为all，会提醒post is not defined 
+updatetime function
+定制化（进阶）结构
+为了进行个性化定制，先定义一些主要的数据类型：页面（类型），如首页，归档页，标签页等：page页面：默认（default）post
+我们页了解下Hexo框架下，页面（html）的生成逻辑。另外也应该了解同一个选项，hexo的配置的优先级：page>theme>hexo从html角度进行个性化定制
+我们来看看hexo 的名录以及各目录下配置或文件的作用tree -L 3  -I node_modules\|public
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546.├── _config.yml//站点配置├── db.json├── debug.log├── package.json├── scaffolds│   ├── draft.md//草稿│   ├── page.md//页面│   └── post.md//博客├── source│   ├── 404 //404页面│   │   └── index.md│   ├── _posts //博客目录│   │   ├── Hexo-Blog-Setup以?\217\212常?\201?\205\215置.md│   │   ├── Markdown\ Web\ \ ?\226?\221?\231?产?\223\201?\203?\224.md│   │   ├── README.md│   │   ├── ..│   │   ├── ..│   │   │   ├── about //关于页面│   │   └── index.md│   └── tags //tags页面│       └── index.md└── themes//模版信息    ├── landscape //landscape模版脚本    │   ├── Gruntfile.js    │   ├── LICENSE    │   ├── README.md    │   ├── _config.yml    │   ├── languages    │   ├── layout    │   ├── package.json    │   ├── scripts    │   └── source    └── next //next模版脚本        ├── README.en.md        ├── README.md        ├── _config.yml//模版配置        ├── bower.json        ├── gulpfile.coffee        ├── languages        ├── layout        ├── package.json        ├── scripts        ├── source        └── test//测试
+我们进到next模版目录详细研究tree -I test
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178179180181182183184185186187188189190191192193194195196197198199200201202203204205206207208209210211212213214215216217218219220221222223224225226227228229230231232233234235236237238239240241242243244245246247248249250251252253254255256257258259260261262263264265266267268269270271272273274275276277278279280.├── README.en.md├── README.md├── _config.yml├── bower.json├── gulpfile.coffee├── languages//语言包│   ├── zh-Hans.yml│   ├── default.yml│   ├── en.yml│   ├── zh-hk.yml│   ├── ..│   └── ..│   ├── layout//layout控制│   ├── _layout.swig//layout javascript 模版引擎│   ├── _macro//所有变量│   │   ├── post-collapse.swig│   │   ├── post.swig│   │   ├── reward.swig│   │   ├── sidebar.swig│   │   └── wechat-subscriber.swig│   ├── _partials│   │   ├── comments.swig│   │   ├── duoshuo-hot-articles.swig│   │   ├── footer.swig│   │   ├── head│   │   │   └── external-fonts.swig│   │   ├── head.swig│   │   ├── header.swig│   │   ├── pagination.swig│   │   ├── search│   │   │   ├── localsearch.swig│   │   │   ├── swiftype.swig│   │   │   └── tinysou.swig│   │   ├── search.swig│   │   └── share│   │       ├── add-this.swig│   │       ├── baidushare.swig│   │       ├── duoshuo_share.swig│   │       └── jiathis.swig│   ├── _scripts│   │   ├── baidu-push.swig│   │   ├── boostrap.swig│   │   ├── commons.swig│   │   ├── pages│   │   │   └── post-details.swig│   │   ├── schemes│   │   │   ├── mist.swig│   │   │   ├── muse.swig│   │   │   └── pisces.swig│   │   ├── third-party│   │   │   ├── analytics│   │   │   │   ├── baidu-analytics.swig│   │   │   │   ├── busuanzi-counter.swig│   │   │   │   ├── cnzz-analytics.swig│   │   │   │   ├── facebook-sdk.swig│   │   │   │   ├── google-analytics.swig│   │   │   │   └── tencent-analytics.swig│   │   │   ├── analytics.swig│   │   │   ├── comments│   │   │   │   ├── disqus.swig│   │   │   │   └── duoshuo.swig│   │   │   ├── comments.swig│   │   │   ├── lean-analytics.swig│   │   │   ├── localsearch.swig│   │   │   ├── mathjax.swig│   │   │   └── tinysou.swig│   │   └── vendors.swig│   ├── archive.swig│   ├── category.swig│   ├── index.swig│   ├── page.swig│   ├── post.swig│   └── tag.swig├── package.json├── scripts│   ├── merge-configs.js│   └── tags│       ├── center-quote.js│       ├── full-image.js│       └── group-pictures.js└── source    ├── 404.html    ├── css    │   ├── _common    │   │   ├── components    │   │   │   ├── back-to-top.styl    │   │   │   ├── buttons.styl    │   │   │   ├── comments.styl    │   │   │   ├── components.styl    │   │   │   ├── footer    │   │   │   │   └── footer.styl    │   │   │   ├── header    │   │   │   │   ├── header.styl    │   │   │   │   ├── headerband.styl    │   │   │   │   ├── menu.styl    │   │   │   │   ├── site-meta.styl    │   │   │   │   └── site-nav.styl    │   │   │   ├── highlight    │   │   │   │   ├── highlight.styl    │   │   │   │   └── theme.styl    │   │   │   ├── pages    │   │   │   │   ├── archive.styl    │   │   │   │   ├── categories.styl    │   │   │   │   ├── pages.styl    │   │   │   │   └── post-detail.styl    │   │   │   ├── pagination.styl    │   │   │   ├── post    │   │   │   │   ├── post-collapse.styl    │   │   │   │   ├── post-eof.styl    │   │   │   │   ├── post-expand.styl    │   │   │   │   ├── post-gallery.styl    │   │   │   │   ├── post-meta.styl    │   │   │   │   ├── post-more-link.styl    │   │   │   │   ├── post-nav.styl    │   │   │   │   ├── post-reward.styl    │   │   │   │   ├── post-tags.styl    │   │   │   │   ├── post-title.styl    │   │   │   │   ├── post-type.styl    │   │   │   │   └── post.styl    │   │   │   ├── sidebar    │   │   │   │   ├── sidebar-author-links.styl    │   │   │   │   ├── sidebar-author.styl    │   │   │   │   ├── sidebar-blogroll.styl    │   │   │   │   ├── sidebar-feed-link.styl    │   │   │   │   ├── sidebar-nav.styl    │   │   │   │   ├── sidebar-toc.styl    │   │   │   │   ├── sidebar-toggle.styl    │   │   │   │   ├── sidebar.styl    │   │   │   │   └── site-state.styl    │   │   │   ├── tag-cloud.styl    │   │   │   ├── tags    │   │   │   │   ├── blockquote-center.styl    │   │   │   │   ├── full-image.styl    │   │   │   │   ├── group-pictures.styl    │   │   │   │   └── tags.styl    │   │   │   └── third-party    │   │   │       ├── baidushare.styl    │   │   │       ├── busuanzi-counter.styl    │   │   │       ├── duoshuo.styl    │   │   │       ├── jiathis.styl    │   │   │       ├── localsearch.styl    │   │   │       └── third-party.styl    │   │   ├── outline    │   │   │   └── outline.styl    │   │   └── scaffolding    │   │       ├── base.styl    │   │       ├── helpers.styl    │   │       ├── normalize.styl    │   │       ├── scaffolding.styl    │   │       └── tables.styl    │   ├── _custom    │   │   └── custom.styl    │   ├── _mixins    │   │   ├── Mist.styl    │   │   ├── Muse.styl    │   │   ├── Pisces.styl    │   │   ├── base.styl    │   │   └── custom.styl    │   ├── _schemes    │   │   ├── Mist    │   │   │   ├── _base.styl    │   │   │   ├── _header.styl    │   │   │   ├── _logo.styl    │   │   │   ├── _menu.styl    │   │   │   ├── _posts-expanded.styl    │   │   │   ├── _search.styl    │   │   │   ├── index.styl    │   │   │   ├── outline    │   │   │   │   └── outline.styl    │   │   │   └── sidebar    │   │   │       └── sidebar-blogroll.styl    │   │   ├── Muse    │   │   │   ├── _layout.styl    │   │   │   ├── _logo.styl    │   │   │   ├── _menu.styl    │   │   │   ├── _search.styl    │   │   │   ├── index.styl    │   │   │   └── sidebar    │   │   │       └── sidebar-blogroll.styl    │   │   └── Pisces    │   │       ├── _brand.styl    │   │       ├── _full-image.styl    │   │       ├── _layout.styl    │   │       ├── _menu.styl    │   │       ├── _posts.styl    │   │       ├── _sidebar.styl    │   │       └── index.styl    │   ├── _variables    │   │   ├── Mist.styl    │   │   ├── Muse.styl    │   │   ├── Pisces.styl    │   │   ├── base.styl    │   │   └── custom.styl    │   └── main.styl    ├── fonts    ├── images    │   ├── avatar.gif    │   ├── cc-by-nc-nd.svg    │   ├── cc-by-nc-sa.svg    │   ├── cc-by-nc.svg    │   ├── cc-by-nd.svg    │   ├── cc-by-sa.svg    │   ├── cc-by.svg    │   ├── cc-zero.svg    │   ├── loading.gif    │   ├── placeholder.gif    │   ├── quote-l.svg    │   ├── quote-r.svg    │   └── searchicon.png    ├── js    │   └── src    │       ├── affix.js    │       ├── bootstrap.js    │       ├── hook-duoshuo.js    │       ├── motion.js    │       ├── post-details.js    │       ├── schemes    │       │   └── pisces.js    │       ├── scrollspy.js    │       └── utils.js    └── vendors        ├── fancybox        │   └── source        │       ├── blank.gif        │       ├── fancybox_loading.gif        │       ├── fancybox_loading@2x.gif        │       ├── fancybox_overlay.png        │       ├── fancybox_sprite.png        │       ├── fancybox_sprite@2x.png        │       ├── helpers        │       │   ├── fancybox_buttons.png        │       │   ├── jquery.fancybox-buttons.css        │       │   ├── jquery.fancybox-buttons.js        │       │   ├── jquery.fancybox-media.js        │       │   ├── jquery.fancybox-thumbs.css        │       │   └── jquery.fancybox-thumbs.js        │       ├── jquery.fancybox.css        │       ├── jquery.fancybox.js        │       └── jquery.fancybox.pack.js        ├── fastclick        │   ├── LICENSE        │   ├── README.md        │   ├── bower.json        │   └── lib        │       ├── fastclick.js        │       └── fastclick.min.js        ├── font-awesome        │   ├── HELP-US-OUT.txt        │   ├── bower.json        │   ├── css        │   │   ├── font-awesome.css        │   │   ├── font-awesome.css.map        │   │   └── font-awesome.min.css        │   └── fonts        │       ├── FontAwesome.otf        │       ├── fontawesome-webfont.eot        │       ├── fontawesome-webfont.svg        │       ├── fontawesome-webfont.ttf        │       ├── fontawesome-webfont.woff        │       └── fontawesome-webfont.woff2        ├── jquery        │   └── index.js        ├── jquery_lazyload        │   ├── CONTRIBUTING.md        │   ├── README.md        │   ├── bower.json        │   ├── jquery.lazyload.js        │   └── jquery.scrollstop.js        ├── ua-parser-js        │   └── dist        │       ├── ua-parser.min.js        │       └── ua-parser.pack.js        └── velocity            ├── bower.json            ├── velocity.js            ├── velocity.min.js            ├── velocity.ui.js            └── velocity.ui.min.js
+更新语言包的映射表。更新_marco/post.swig，用于增加updated time元素，在post增加updated变量swig使用指南从源码级别优化hexo next主题
+为了增加page的toc可以在page.swig里添加逻辑语句进行渲染
+1234567891011121314151617181920#默认设置{% block sidebar %}  {{ sidebar_template.render(false) }}{% endblock %}#}{#<!--page增加sidebar控制--><!--sidebar不代表toc，toc是sidebar的一部分--><!--sidebar_template.render(false)显示非toc部分--><!--sidebar_template.render(true)显示toc部分--><!--toc和非toc是二选一的关系-->#}{% block sidebar %} {% if theme.sidebar.display == 'always' %}  {{ sidebar_template.render(true) }} {% else %}  {{ sidebar_template.render(false) }} {% endif %}{% endblock %}
+page是所有页面变量？在%page_name/index.md里增加变量toc: true变量，在page.swig增加判断逻辑对该变量校验1234567891011121314151617181920212223{#<!--page增加sidebar控制--><!--sidebar不代表toc，toc是sidebar的一部分--><!--sidebar_template.render(false)显示非toc部分--><!--sidebar_template.render(true)显示toc部分--><!--toc和非toc是二选一的关系-->{% block sidebar %} {% if theme.sidebar.display == 'always' %}  {{ sidebar_template.render(true) }} {% else %}  {{ sidebar_template.render(false) }} {% endif %}{% endblock %}#}{% block sidebar %} {% if page.toc %}  {{ sidebar_template.render(true) }} {% else %}  {{ sidebar_template.render(false) }} {% endif %}{% endblock %}
+在about增加update时间在about自我简介＋resume链接增加is_hidden: true属性首页不显示123456789101112{% block content %}  <section id="posts" class="posts-expand">    {% for post in page.posts %}    {#test#}      {% if post.is_hidden != 'true' %}        {{ post_template.render(post, true) }}      {% endif %}    {% endfor %}  </section>  {% include '_partials/pagination.swig' %}{% endblock %}
+自己创建&管理主题regeneratehexo clean删除db.json
+支持流程图npm install hexo-diagram –savenpm install phantomjs  -gphantomjs@2.1.7: Package renamed to phantomjs-prebuilt. Please update 'phantomjs' package references to 'phantomjs-prebuilt'npm install phantomjs-prebuilt -g通过sublime插件搜索node_module下所有包涵’phantomjs’语句，替换为’phantomjs-prebuilt’
+/Users/NoraChan/Desktop/Blog/node_modules/.bin/esvalidate:/Users/NoraChan/Desktop/Blog/node_modules/esprima/bin/esvalidate.js:/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.coffee:/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.js:
+npm install phantomjs  –save–save和-g的区别是？（phantomjs-prebuilt）
+决定按照insecure方式处理修改回这些文件/Users/NoraChan/Desktop/Blog/node_modules/.bin/esvalidate:/Users/NoraChan/Desktop/Blog/node_modules/esprima/bin/esvalidate.js:/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.coffee:/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.js:
+hexo-diagram 渲染问题
+流程图支持的markdown语法
+</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#scaffold自定义模版（样式）"><span class="nav-number">3.1.</span> <span class="nav-text">scaffold自定义模版（样式）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置404页面"><span class="nav-number">3.2.</span> <span class="nav-text">设置404页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建页面"><span class="nav-number">3.3.</span> <span class="nav-text">新建页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置about"><span class="nav-number">3.4.</span> <span class="nav-text">设置about</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置rss"><span class="nav-number">4.</span> <span class="nav-text">设置rss</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置分享插件（duoshuo）"><span class="nav-number">5.</span> <span class="nav-text">设置分享插件（duoshuo）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置站内搜索"><span class="nav-number">6.</span> <span class="nav-text">设置站内搜索</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#encode-amp-decode"><span class="nav-number">6.1.</span> <span class="nav-text">encode& decode</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文章配置"><span class="nav-number">7.</span> <span class="nav-text">文章配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SEO优化设置"><span class="nav-number">8.</span> <span class="nav-text">SEO优化设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#keywords"><span class="nav-number">8.1.</span> <span class="nav-text">keywords</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#友链"><span class="nav-number">8.2.</span> <span class="nav-text">友链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sitetracking"><span class="nav-number">8.3.</span> <span class="nav-text">sitetracking</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#出现在搜索引擎"><span class="nav-number">8.4.</span> <span class="nav-text">出现在搜索引擎</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Favicon"><span class="nav-number">9.</span> <span class="nav-text">Favicon</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反向代理"><span class="nav-number">10.</span> <span class="nav-text">反向代理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可能有的问题"><span class="nav-number">11.</span> <span class="nav-text">可能有的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#不支持所有页面进行local-search"><span class="nav-number">11.1.</span> <span class="nav-text">不支持所有页面进行local search</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#定制化（进阶）"><span class="nav-number">12.</span> <span class="nav-text">定制化（进阶）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在about增加update时间"><span class="nav-number">12.1.</span> <span class="nav-text">在about增加update时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在about自我简介＋resume链接"><span class="nav-number">12.2.</span> <span class="nav-text">在about自我简介＋resume链接</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自己创建-amp-管理主题"><span class="nav-number">13.</span> <span class="nav-text">自己创建&管理主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#regenerate"><span class="nav-number">14.</span> <span class="nav-text">regenerate</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#支持流程图"><span class="nav-number">15.</span> <span class="nav-text">支持流程图</span></a></li></ol></div>
             
           </div>
         </section>
