@@ -587,19 +587,16 @@
     <link href="http://noragithub.github.io/2016/10/14/%E3%80%90%E8%AF%91%E3%80%91%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8BJupyter%20Notebook/"/>
     <id>http://noragithub.github.io/2016/10/14/【译】快速开始Jupyter Notebook/</id>
     <published>2016-10-14T03:20:26.000Z</published>
-    <updated>2016-12-07T13:43:09.000Z</updated>
+    <updated>2016-12-07T13:48:43.000Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>
-<p><a href="http://nbviewer.jupyter.org/github/ipython/ipython/blob/3.x/examples/Notebook/Index.ipynb" target="_blank" rel="external">#reference-Jupyter Notebook </a></p>
-<p>未完成<br><!-- more --></p>
+    <content type="html"><![CDATA[<p><a href="http://nbviewer.jupyter.org/github/ipython/ipython/blob/3.x/examples/Notebook/Index.ipynb" target="_blank" rel="external">#reference-Jupyter Notebook </a><br><a id="more"></a></p>
 <p>If you would like to learn more about the specific elements within the Notebook Editor, you can go through the User Interface Tour by selecting Help in the menubar then selecting User Interface Tour.</p>
 <p>（<a href="http://jupyter-notebook.readthedocs.io/en/latest/ui_components.html）" target="_blank" rel="external">http://jupyter-notebook.readthedocs.io/en/latest/ui_components.html）</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;a href=&quot;http://nbviewer.jupyter.org/github/ipython/ipython/blob/3.x/examples/Notebook/Index.ipynb&quot; target=&quot;_blank&quot; rel
+      &lt;p&gt;&lt;a href=&quot;http://nbviewer.jupyter.org/github/ipython/ipython/blob/3.x/examples/Notebook/Index.ipynb&quot;&gt;#reference-Jupyter Notebook &lt;/a&gt;&lt;br&gt;
     
     </summary>
     
@@ -658,17 +655,16 @@
     <link href="http://noragithub.github.io/2016/10/09/%E5%89%8D%E7%AB%AF%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://noragithub.github.io/2016/10/09/前端的学习笔记/</id>
     <published>2016-10-09T06:19:21.000Z</published>
-    <updated>2016-12-07T13:33:22.000Z</updated>
+    <updated>2016-12-07T13:49:29.000Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>
+    <content type="html"><![CDATA[<p>前段学习的一些问题和摘要<br><a id="more"></a></p>
 <h1 id="Chrome-Console"><a href="#Chrome-Console" class="headerlink" title="Chrome Console"></a>Chrome Console</h1><h1 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h1><h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h1 id="React-Natie"><a href="#React-Natie" class="headerlink" title="React Natie"></a>React Natie</h1><h1 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h1><p><a href="https://www.google.com.hk/search?q=%E5%B0%8F%E7%A8%8B%E5%BA%8F+native&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">小程序 native</a></p>
 <p>#jquery</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;Chrome-Console&quot;&gt;&lt;a href=&quot;#Chrome-Console&quot; class=&quot;headerlink&quot; title=&quot;Chrome Console&quot;&gt;&lt;/a&gt;Chrome Console&lt;/h1&gt;&lt;h1 id=
+      &lt;p&gt;前段学习的一些问题和摘要&lt;br&gt;
     
     </summary>
     
@@ -680,10 +676,9 @@
     <link href="http://noragithub.github.io/2016/10/09/git%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/"/>
     <id>http://noragithub.github.io/2016/10/09/git的一些坑/</id>
     <published>2016-10-09T06:19:21.000Z</published>
-    <updated>2016-12-07T13:42:14.000Z</updated>
+    <updated>2016-12-07T13:48:48.000Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>
-<p>weibo的git使用笔记。</p>
+    <content type="html"><![CDATA[<p>weibo的git使用笔记。<br><a id="more"></a></p>
 <p><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html?bsh_bid=1314465090" target="_blank" rel="external">Git远程操作详解</a><br><a href="http://www.ruanyifeng.com/blog/2015/08/git-use-process.html" target="_blank" rel="external">Git 使用规范流程</a><br><a href="https://www.google.com.hk/search?q=git+rebase++%E9%98%AE%E4%B8%80%E5%B3%B0&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">git rebase 阮一峰 谷歌搜索</a><br><a href="http://stackoverflow.com/questions/23517464/error-cannot-pull-with-rebase-you-have-unstaged-changes" target="_blank" rel="external">Error:cannot pull with rebase:you have unstated changes</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=you+have+unstaged+changes++&amp;oq=you+have+unstaged+changes++&amp;gs_l=serp.3..0j0i30k1l6j0i5i30k1l3.68687.78840.0.79129.12.12.0.0.0.0.188.1132.6j4.10.0....0...1c.1.64.serp..2.1.82.6SnD5AXtjG0" target="_blank" rel="external">you have unstated changes</a><br><a href="http://www.cnblogs.com/kidsitcn/p/4450466.html" target="_blank" rel="external">git workflow 常用命令</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013760174128707b935b0be6fc4fc6ace66c4f15618f8d000" target="_blank" rel="external">多人协作</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758410364457b9e3d821f4244beb0fd69c61a185ae0000" target="_blank" rel="external">分支管理策略</a><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001374829472990293f16b45df14f35b94b3e8a026220c5000" target="_blank" rel="external">管理修改</a></p>
 <p><a href="http://www.cnblogs.com/zhongxinWang/p/4235448.html" target="_blank" rel="external">探索.git目录</a></p>
 <h1 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h1><p><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=diff+%E5%8E%9F%E7%90%86+&amp;oq=diff+%E5%8E%9F%E7%90%86+&amp;gs_l=serp.3..0i30k1j0i5i30k1l2.68361.68361.0.68637.1.1.0.0.0.0.83.83.1.1.0....0...1c.1.64.serp..0.1.82.DtZbCTJhHNs" target="_blank" rel="external">（谷歌）diff 原理</a><br><a href="https://segmentfault.com/q/1010000000367833" target="_blank" rel="external">Diff 算法的原理是什么, 怎样学习和理解?</a><br><a href="http://www.voidcn.com/blog/dog250/article/p-5859714.html" target="_blank" rel="external">diff程序的算法</a><br><a href="http://www.ruanyifeng.com/blog/2012/08/how_to_read_diff.html" target="_blank" rel="external">读懂diff（阮一峰）</a><br><a href="https://lists.gnu.org/archive/html/emacs-devel/2010-01/msg01182.html" target="_blank" rel="external">Interpreting git diff -cc[was:merge conflict]</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=git+diff+--cc+%E6%80%8E%E4%B9%88%E8%AF%BB&amp;oq=git+diff+--cc+%E6%80%8E%E4%B9%88%E8%AF%BB&amp;gs_l=serp.3...8438.11111.0.11377.11.9.2.0.0.0.227.772.3j2j1.6.0....0...1c.1.64.serp..3.0.0.bCGBg-Hw7IU" target="_blank" rel="external">git diff –cc 怎么读</a><br><a href="https://github.com/colinta/SublimeFileDiffs" target="_blank" rel="external">sublime  diff</a><br><a href="http://www.oschina.net/translate/20-powerful-sublimetext-plugins" target="_blank" rel="external">20 个强大的 Sublime Text 插件 </a></p>
@@ -696,9 +691,7 @@
     
     <summary type="html">
     
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;weibo的git使用笔记。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2014/06/git_remote.html?bsh_bid=1314465090&quot; target=&quot;_blan
+      &lt;p&gt;weibo的git使用笔记。&lt;br&gt;
     
     </summary>
     
@@ -710,9 +703,9 @@
     <link href="http://noragithub.github.io/2016/10/09/%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D%EF%BC%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8B%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8B%E5%AE%9E%E7%8E%B0ssl%E5%8D%8F%E8%AE%AE/"/>
     <id>http://noragithub.github.io/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/</id>
     <published>2016-10-09T06:19:21.000Z</published>
-    <updated>2016-12-07T13:38:20.000Z</updated>
+    <updated>2016-12-07T13:49:14.000Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>
+    <content type="html"><![CDATA[<p>纪录部署busihacker.com的一些问题<br><a id="more"></a></p>
 <p><a href="https://www.google.com.hk/search?ie=utf-8&amp;oe=UTF-8&amp;hl=zh-CN&amp;q=%E4%B8%A4%E6%9D%A1+a%E8%AE%B0%E5%BD%95&amp;gws_rd=ssl" target="_blank" rel="external">两条a记录主要是为了负载均衡吧？</a><br><a href="https://www.ezloo.com/2011/04/a_mx_cname_txt_aaaa_ns.html" target="_blank" rel="external">常用域名记录解释：A记录、MX记录、CNAME记录、TXT记录、AAAA记录、NS记录</a><br><a href="https://www.zhihu.com/question/19774219" target="_blank" rel="external">如何建立个人网站？</a><br><a href="http://yihui.name/cn/2009/06/how-to-build-a  -website-as-a-dummy/" target="_blank" rel="external">新手教程：建立网站的全套流程与详细解释</a><br><a href="https://www.douban.com/group/topic/61689932/" target="_blank" rel="external">2014年网站SEO常见作弊方法详细解析</a><br><a href="https://support.dnspod.cn/Kb/showarticle/tsid/42/" target="_blank" rel="external">Godaddy注册商域名修改DNS地址</a><br><a href="https://sg.godaddy.com/zh/help/dns-680" target="_blank" rel="external">管理DNS</a><br><a href="http://www.ixirong.com/2015/04/15/how-blog-record-by-aliyun/" target="_blank" rel="external">个人godaddy域名备案解决方案</a><br>godaddy 对域名的所有权以及备案问题。<br>免费的是最贵的<a href="https://www.zhihu.com/question/19835955" target="_blank" rel="external">免费域名</a><br><a href="https://www.zhihu.com/question/20845371" target="_blank" rel="external">如何抢注一个刚刚过期的域名</a></p>
 <p>SSL协议与加密<br><a href="http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html" target="_blank" rel="external">SSL/TLS协议运行机制的概述</a><br><a href="http://www.ruanyifeng.com/blog/2016/08/migrate-from-http-to-https.html" target="_blank" rel="external">HTTPS 升级指南</a><br><a href="http://www.asiapeak.com/PGPTheory.php" target="_blank" rel="external">PGP加密原理</a><br><a href="http://www.ruanyifeng.com/blog/2013/07/gpg.html" target="_blank" rel="external">GPG入门教程</a><br><a href="http://pgp.sourceforge.net/pgpintro.php" target="_blank" rel="external">关于pgp</a><br><a href="http://www.ruanyifeng.com/blog/2013/06/rsa_algorithm_part_one.html" target="_blank" rel="external">RSA算法原理</a><br><a href="http://www.ruanyifeng.com/blog/2013/07/rsa_algorithm_part_two.html" target="_blank" rel="external">RSA算法原理</a><br>http协议与ssl协议<br>[<a href="https://segmentfault.com/a/1190000006921322" target="_blank" rel="external">TCP三次握手&amp;Render Tree页面渲染=&gt;从输入URL到页面显示的过程？</a>]<br><a href="https://www.sslshopper.com/ssl-converter.html" target="_blank" rel="external">不同format的certificate和private/public key</a></p>
 <h1 id="使用startssl认证证书"><a href="#使用startssl认证证书" class="headerlink" title="使用startssl认证证书"></a>使用startssl认证证书</h1><p><a href="https://www.zghhome.cn/?p=310" target="_blank" rel="external">站点启用https替换http完整步骤（申请StartSSL免费证书，nginx配置）</a><br><a href="https://amon.org/how-to-apply-for-startssl-free-ssl-ca.html" target="_blank" rel="external">怎样申请StartSSL免费ssl证书</a><br><a href="https://www.sslshopper.com/certificate-authority-reviews.html" target="_blank" rel="external">SSL Certificate Reviews</a><br><a href="http://www.laozuo.org/2823.html" target="_blank" rel="external">StartSSL申请全过程 让网站拥有免费SSL证书</a><br><a href="https://www.oschina.net/translate/switch-to-https-now-for-free" target="_blank" rel="external">现在就启用 HTTPS，免费的！</a><br><a href="http://arstechnica.com/security/2009/12/how-to-get-set-with-a-secure-sertificate-for-free/2/" target="_blank" rel="external">how to obtain and install an SSL/TLS certificate for free</a><br><a href="http://www.cnblogs.com/yjmyzz/p/openssl-tutorial.html" target="_blank" rel="external">openssl、x509、crt、cer、key、csr、ssl、tls 这些都是什么鬼?</a><br><a href="https://www.google.com.hk/search?q=crt++csr&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">crt csr 谷歌搜索</a><br><a href="https://www.google.com.hk/search?q=%E4%BC%AA%E9%80%A0++%E8%AF%81%E4%B9%A6&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">伪造 证书 谷歌搜索</a><br><a href="http://docs.pythontab.com/tornado/introduction-to-tornado/ch8.html#ch8-2-2" target="_blank" rel="external">tornado使用nginx作为反向代理</a><br><a href="https://www.google.com.hk/search?q=%E5%85%AC%E9%92%A5+%E7%A7%81%E9%92%A5+%E5%8E%9F%E7%90%86&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">公钥 私钥 原理 谷歌搜索</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=rsa+pgp+%E5%85%B3%E7%B3%BB&amp;oq=rsa+pgp+%E5%85%B3%E7%B3%BB&amp;gs_l=serp.3...495206.496328.0.496470.8.6.0.0.0.0.0.0..0.0....0...1c.1.64.serp..8.0.0.nVv5C48oNSk" target="_blank" rel="external">rsa pop关系 谷歌搜索</a><br><a href="http://www.yeolar.com/note/2015/04/30/tornado-ssl-https/" target="_blank" rel="external">使用Tornado搭建HTTPS网站</a><br><a href="stackoverflow.com/questions/18307131/how-to-create-https-tornado-server">How to create HTTPS tornado server</a><br><a href="http://blog.csdn.net/simanstar/article/details/40592057" target="_blank" rel="external">SSL和SSH的区别</a><br><a href="https://www.google.com.hk/search?q=ssh+ssl&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">SSL SSH 谷歌搜索</a><br><a href="https://help.github.com/articles/generating-a-gpg-key/" target="_blank" rel="external">generating-a-gpg-key</a><br><a href="https://help.github.com/articles/generating-an-ssh-key/" target="_blank" rel="external">generating-an-ssh-key</a></p>
@@ -731,8 +724,7 @@
     
     <summary type="html">
     
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.google.com.hk/search?ie=utf-8&amp;amp;oe=UTF-8&amp;amp;hl=zh-CN&amp;amp;q=%E4%B8%A4%E6%9D%A1+a%E8%AE%B0%E5%BD%
+      &lt;p&gt;纪录部署busihacker.com的一些问题&lt;br&gt;
     
     </summary>
     
@@ -744,9 +736,9 @@
     <link href="http://noragithub.github.io/2016/10/09/%E5%8C%BA%E5%9D%97%E9%93%BE%EF%BC%88block%20chain%EF%BC%89%E8%B0%83%E7%A0%94/"/>
     <id>http://noragithub.github.io/2016/10/09/区块链（block chain）调研/</id>
     <published>2016-10-09T06:19:21.000Z</published>
-    <updated>2016-12-07T13:32:21.000Z</updated>
+    <updated>2016-12-07T13:49:47.000Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>
+    <content type="html"><![CDATA[<p>区块链和大数据结合貌似可以有作为，开个头。<br><a id="more"></a></p>
 <p><a href="https://elendirx.github.io/web2web/" target="_blank" rel="external">Web2Web Bootstrap</a></p>
 <blockquote>
 <p>笑来兄在微信公号发布的，torren不依附于任何服务器，很难将其关闭，或许这就是未来信息存储和传播的主要方式，永久保存不消失，创造永恒的信息世界</p>
@@ -756,10 +748,7 @@
     
     <summary type="html">
     
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;a href=&quot;https://elendirx.github.io/web2web/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Web2Web Bootstrap&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;
+      &lt;p&gt;区块链和大数据结合貌似可以有作为，开个头。&lt;br&gt;
     
     </summary>
     
@@ -1249,9 +1238,9 @@
     <link href="http://noragithub.github.io/2016/09/29/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E7%9F%A5%E8%AF%86%E8%AE%BF%E9%97%AEGoogle/"/>
     <id>http://noragithub.github.io/2016/09/29/如何利用计算机网络协议知识访问Google/</id>
     <published>2016-09-29T07:47:08.000Z</published>
-    <updated>2016-12-07T13:30:57.000Z</updated>
+    <updated>2016-12-07T13:50:11.000Z</updated>
     
-    <content type="html"><![CDATA[<p>[toc]</p>
+    <content type="html"><![CDATA[<p>留坑，关于路由翻墙。</p>
 <hr>
 <a id="more"></a>
 <h1 id="网络访问的简单模型"><a href="#网络访问的简单模型" class="headerlink" title="网络访问的简单模型"></a>网络访问的简单模型</h1><p><a href="https://segmentfault.com/a/1190000006879700" target="_blank" rel="external">#reference-前端经典面试题: 从输入URL到页面加载发生了什么？</a></p>
@@ -1302,7 +1291,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;[toc]&lt;/p&gt;
+      &lt;p&gt;留坑，关于路由翻墙。&lt;/p&gt;
 &lt;hr&gt;
     
     </summary>
