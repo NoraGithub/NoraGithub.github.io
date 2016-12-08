@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://noragithub.github.io/2016/11/24/Hexo-Blog-Setup以及常见配置/index.html">
 <meta property="og:site_name" content="Busihacker">
 <meta property="og:description" content="使用Hexo进行了Blog的Setup后，我们希望选择一个心仪的theme（即不同页面类型保持一致的风格），配置需要的功能选项/属性，甚至进行一些个性化的定制。">
-<meta property="og:updated_time" content="2016-12-08T01:23:39.000Z">
+<meta property="og:updated_time" content="2016-12-08T14:59:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Blog Setup以及常见配置">
 <meta name="twitter:description" content="使用Hexo进行了Blog的Setup后，我们希望选择一个心仪的theme（即不同页面类型保持一致的风格），配置需要的功能选项/属性，甚至进行一些个性化的定制。">
@@ -334,7 +334,7 @@
           <br />
             <!--更新时间-->
             <span class="post-meta-item-text">最近更新于</span>
-            <time itemprop="dateUpdated" datetime="2016-12-08T09:23:39+08:00" content="2016-12-08">
+            <time itemprop="dateUpdated" datetime="2016-12-08T22:59:32+08:00" content="2016-12-08">
               2016-12-08
             </time>
           </span>
@@ -395,7 +395,7 @@
 <ol>
 <li>不同layout的唯一区别是保存到不同的路径（to some extent）</li>
 <li>layout支持自定义，存放目录和post一样，当scaffold无自定义类型时，调用默认layout</li>
-<li>hexo publish 可用于发表草稿（draft–&gt;post，参考1）</li>
+<li>hexo publish 可用于发表草稿（draft–&gt;post，参考1）（仅用于发表草稿，不代表支持转移目录）</li>
 <li>hexo new page</li>
 </ol>
 <p>可以利用layout组织template</p>
@@ -457,9 +457,17 @@
 <h2 id="设置404页面"><a href="#设置404页面" class="headerlink" title="设置404页面"></a>设置404页面</h2><p>我们希望404</p>
 <h2 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h2><p>新建page和新建post是不一样的，新建page利用<code>hexo new page %pagename</code>，创建后会有%pagename文件夹，文件夹有index.md，md内容为该页面调用内容。</p>
 <p>新建博客利用<code>hexo new %postname</code>创建后有%blogname.md为名的post文件，存放于source/_post</p>
+<p>/2016/12/06/photoe-test/%2F2016%2F11%2F24%2FHexo-Blog-Setup%E4%BB%A5%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%2F 404</p>
+<p>这种页面的404还是显示不正常</p>
 <h2 id="设置about"><a href="#设置about" class="headerlink" title="设置about"></a>设置about</h2><p>同理</p>
 <h1 id="设置rss"><a href="#设置rss" class="headerlink" title="设置rss"></a>设置rss</h1><p>感觉rss是一个模版粒度的设置，换了模版就有必要重新设置（如果有需要）<br><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E6%98%BE%E7%A4%BA-feed-%E9%93%BE%E6%8E%A5" target="_blank" rel="external">显示feed链接</a></p>
 <h1 id="设置分享插件（duoshuo）"><a href="#设置分享插件（duoshuo）" class="headerlink" title="设置分享插件（duoshuo）"></a>设置分享插件（duoshuo）</h1><h1 id="设置站内搜索"><a href="#设置站内搜索" class="headerlink" title="设置站内搜索"></a>设置站内搜索</h1><p>利用Next主题的local search插件的时候，会出现一个特别的情况：<br>当你在yoursite.com/page1做search的时候，点击搜索结果会出现异常：<br>会navigate到yoursite.com/page1/%search_result_relativePath<br>出现这个问题的主要原因是站点配置/path_your_blog/source/_cofig.yml的url值配置问题，改为absolutePath可以杜绝这个情况。<br>即，<br><code>yoursite.com</code><br><code>http://yoursite.com/</code><br>其中最后的斜杠<code>/</code>不能遗漏，会导致转义出现问题</p>
+<p>新问题：<br>修改generator-search-db<br>search.ejs</p>
+<pre><code>&lt;!--modified by Nora
+ &lt;url&gt;&lt;%- encodeURIComponent(config.root + post.path) %&gt;&lt;/url&gt;
+ --&gt;
+ &lt;url&gt;&lt;%- config.url + config.root + encodeURIComponent( post.path) %&gt;&lt;/url&gt;
+</code></pre><p>增加绝对路径<br>生成search.xml</p>
 <h2 id="encode-amp-decode"><a href="#encode-amp-decode" class="headerlink" title="encode&amp; decode"></a>encode&amp; decode</h2><p>根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把<code>/</code>转为<code>%2F</code>进行页面访问。<br>检查yoursite.com/search.xml可以发现<code>npm install hexo-generator-searchdb --save</code>会根据文章简历索引，并编码后访问<br><a href="">#reference:</a><br><a href="http://www.w3school.com.cn/tags/html_ref_urlencode.html" target="_blank" rel="external">#reference: HTML URL 编码</a></p>
 <h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>update time</p>
 <h1 id="SEO优化设置"><a href="#SEO优化设置" class="headerlink" title="SEO优化设置"></a>SEO优化设置</h1><h2 id="keywords"><a href="#keywords" class="headerlink" title="keywords"></a>keywords</h2><p>页面级别配置</p>
@@ -733,9 +741,17 @@ scaffold自定义模版（样式）scaffolds/%layoutscaffolds决定不同layout�
 设置404页面我们希望404
 新建页面新建page和新建post是不一样的，新建page利用hexo new page %pagename，创建后会有%pagename文件夹，文件夹有index.md，md内容为该页面调用内容。
 新建博客利用hexo new %postname创建后有%blogname.md为名的post文件，存放于source/_post
+/2016/12/06/photoe-test/%2F2016%2F11%2F24%2FHexo-Blog-Setup%E4%BB%A5%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%2F 404
+这种页面的404还是显示不正常
 设置about同理
 设置rss感觉rss是一个模版粒度的设置，换了模版就有必要重新设置（如果有需要）显示feed链接
 设置分享插件（duoshuo）设置站内搜索利用Next主题的local search插件的时候，会出现一个特别的情况：当你在yoursite.com/page1做search的时候，点击搜索结果会出现异常：会navigate到yoursite.com/page1/%search_result_relativePath出现这个问题的主要原因是站点配置/path_your_blog/source/_cofig.yml的url值配置问题，改为absolutePath可以杜绝这个情况。即，yoursite.comhttp://yoursite.com/其中最后的斜杠/不能遗漏，会导致转义出现问题
+新问题：修改generator-search-dbsearch.ejs
+<!--modified by Nora
+ <url><%- encodeURIComponent(config.root + post.path) %></url>
+ -->
+ <url><%- config.url + config.root + encodeURIComponent( post.path) %></url>
+增加绝对路径生成search.xml
 encode& decode根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把/转为%2F进行页面访问。检查yoursite.com/search.xml可以发现npm install hexo-generator-searchdb --save会根据文章简历索引，并编码后访问#reference:#reference: HTML URL 编码
 文章配置update time
 SEO优化设置keywords页面级别配置
