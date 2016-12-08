@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://noragithub.github.io/"/>
-  <updated>2016-12-08T01:23:39.000Z</updated>
+  <updated>2016-12-07T13:13:47.000Z</updated>
   <id>http://noragithub.github.io/</id>
   
   <author>
@@ -14,27 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Markdown Web  编辑器产品调研</title>
-    <link href="http://noragithub.github.io/2016/12/08/Markdown%20Web%20%20%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94/"/>
-    <id>http://noragithub.github.io/2016/12/08/Markdown Web  编辑器产品调研/</id>
-    <published>2016-12-08T01:23:39.000Z</published>
-    <updated>2016-12-08T01:23:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>
-<h1 id="Markdown-Web-编辑器产品调研"><a href="#Markdown-Web-编辑器产品调研" class="headerlink" title="Markdown Web  编辑器产品调研"></a>Markdown Web  编辑器产品调研</h1><p><a href="http://blog.aforget.net/markdown-xie-zuo-gong-ju-lian-zong-jie/" target="_blank" rel="external">Markdown 写作工具链总结 [ 免费篇 ]</a><br><a href="https://zhuanlan.zhihu.com/p/20723176?refer=wonderful" target="_blank" rel="external">我有我的young【markdown+stylish】</a><br><a href="http://jeffyon.blogspot.jp/2015/05/markdownmd.html" target="_blank" rel="external">Markdown寫作部落格</a><br><a href="http://blog.unicsolution.com/2013/08/logdown.html" target="_blank" rel="external">Logdown 的啓發 - StackEdit</a>—&gt;<a href="https://segmentfault.com/a/1190000000732617" target="_blank" rel="external">有趣的HTML5：离线存储</a><br>(一直认为stackedit的文件在本地会对应一份文件，今儿打算同步这份文件，然而使用的cache local技术，所以这个方案并不可行）</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;Markdown-Web-编辑器产品调研&quot;&gt;&lt;a href=&quot;#Markdown-Web-编辑器产品调研&quot; class=&quot;headerlink&quot; title=&quot;Markdown Web  编辑器产品调研&quot;&gt;&lt;/a&gt;Markdow
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>test_draft_layout</title>
@@ -777,8 +756,8 @@
   
   <entry>
     <title>购买域名+服务器+部署服务器+实现ssl协议</title>
-    <link href="http://noragithub.github.io/2016/10/09/%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D%EF%BC%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8B%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8B%E5%AE%9E%E7%8E%B0ssl%E5%8D%8F%E8%AE%AE/"/>
-    <id>http://noragithub.github.io/2016/10/09/购买域名＋服务器＋部署服务器＋实现ssl协议/</id>
+    <link href="http://noragithub.github.io/2016/10/09/%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D+%E6%9C%8D%E5%8A%A1%E5%99%A8+%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8+%E5%AE%9E%E7%8E%B0ssl%E5%8D%8F%E8%AE%AE/"/>
+    <id>http://noragithub.github.io/2016/10/09/购买域名+服务器+部署服务器+实现ssl协议/</id>
     <published>2016-10-09T06:15:00.000Z</published>
     <updated>2016-12-08T02:30:16.000Z</updated>
     
@@ -1272,7 +1251,7 @@
     <link href="http://noragithub.github.io/2016/10/01/%E4%B8%AA%E4%BA%BAMarkdown-Web-%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1-%E9%83%A8%E7%BD%B2/"/>
     <id>http://noragithub.github.io/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/</id>
     <published>2016-10-01T12:07:53.000Z</published>
-    <updated>2016-12-08T01:23:39.000Z</updated>
+    <updated>2016-12-08T03:25:03.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近迷上了Markdown，希望积累些文字。同时，Sublime的Markdown插件已经能满足我对写作体验的追求，作为一个WebApp的狂热爱好者，决定使用StackEdit作为我的Markdown终端。另外，因为已经利用GitHub Page和Hexo建了一个Blog，必须兼容历史数据的同时具备一定的健壮性，起码，单独使用Hexo和StackEdit时，都要符合产品的使用预期。</p>
 <a id="more"></a>
@@ -1441,6 +1420,27 @@
     <summary type="html">
     
       &lt;p&gt;本文主要翻译了Canopy相关的几篇文档，主要用于理解Canopy环境和快速安装/启动Canopy。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown Web 编辑器产品调研</title>
+    <link href="http://noragithub.github.io/2016/09/29/Markdown-Web-%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94/"/>
+    <id>http://noragithub.github.io/2016/09/29/Markdown-Web-编辑器产品调研/</id>
+    <published>2016-09-29T07:34:00.000Z</published>
+    <updated>2016-12-08T03:32:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<h1 id="Markdown-Web-编辑器产品调研"><a href="#Markdown-Web-编辑器产品调研" class="headerlink" title="Markdown Web 编辑器产品调研"></a>Markdown Web 编辑器产品调研</h1><p><a href="http://blog.aforget.net/markdown-xie-zuo-gong-ju-lian-zong-jie/" target="_blank" rel="external">Markdown 写作工具链总结 [ 免费篇 ]</a><br><a href="https://zhuanlan.zhihu.com/p/20723176?refer=wonderful" target="_blank" rel="external">我有我的young【markdown+stylish】</a><br><a href="http://jeffyon.blogspot.jp/2015/05/markdownmd.html" target="_blank" rel="external">Markdown寫作部落格</a><br><a href="http://blog.unicsolution.com/2013/08/logdown.html" target="_blank" rel="external">Logdown 的啓發 - StackEdit</a>—&gt;<a href="https://segmentfault.com/a/1190000000732617" target="_blank" rel="external">有趣的HTML5：离线存储</a><br>(一直认为stackedit的文件在本地会对应一份文件，今儿打算同步这份文件，然而使用的cache local技术，所以这个方案并不可行）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;Markdown-Web-编辑器产品调研&quot;&gt;&lt;a href=&quot;#Markdown-Web-编辑器产品调研&quot; class=&quot;headerlink&quot; title=&quot;Markdown Web 编辑器产品调研&quot;&gt;&lt;/a&gt;Markdown
     
     </summary>
     
