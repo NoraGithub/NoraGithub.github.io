@@ -1269,75 +1269,6 @@
   
   <entry>
     <title>个人Markdown Web  编辑器产品设计&amp;部署</title>
-    <link href="http://noragithub.github.io/2016/10/01/%E4%B8%AA%E4%BA%BAMarkdown%20Web%20%20%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1&amp;%E9%83%A8%E7%BD%B2/"/>
-    <id>http://noragithub.github.io/2016/10/01/个人Markdown Web  编辑器产品设计&amp;部署/</id>
-    <published>2016-10-01T12:07:53.000Z</published>
-    <updated>2016-12-08T01:23:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近迷上了Markdown，希望积累些文字。同时，Sublime的Markdown插件已经能满足我对写作体验的追求，作为一个WebApp的狂热爱好者，决定使用StackEdit作为我的Markdown终端。另外，因为已经利用GitHub Page和Hexo建了一个Blog，必须兼容历史数据的同时具备一定的健壮性，起码，单独使用Hexo和StackEdit时，都要符合产品的使用预期。</p>
-<p><a href="MarkdownWeb编辑器产品调研">#为什么使用StackEdit作为我的Markdown终端？-Markdown Web  编辑器产品调研</a></p>
-<h1 id="我的场景"><a href="#我的场景" class="headerlink" title="我的场景"></a>我的场景</h1><ul>
-<li>Web端Markdown撰写 - StackEdit</li>
-<li>客户端Markdown撰写 - Sublime</li>
-<li>已经利用Hexo撰写过文章并发布到GitHub Pages，GitHub Pages只负责展现</li>
-</ul>
-<h1 id="其他背景"><a href="#其他背景" class="headerlink" title="其他背景"></a>其他背景</h1><h2 id="Hexo项目逻辑"><a href="#Hexo项目逻辑" class="headerlink" title="Hexo项目逻辑"></a>Hexo项目逻辑</h2><p>Hexo会根据<code>&lt;%hexo-root-directory&gt;/source/_posts</code>下的<code>*.md</code>文件每次生成（<code>hexo generate</code>）静态HTML文件保存于<code>&lt;%hexo-root-directory&gt;/.deply_git</code>文件夹，每次部署（<code>hexo deploy</code>），把<code>.deply_git</code>文件夹中的HTML文件同步到GitHub。利用<a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/" target="_blank" rel="external">GitHub Pages</a>设置，自动从master分支build成网页。</p>
-<p>（.md是Markdown文件后缀）<br><img src="/diagrams/个人Markdown Web  编辑器产品设计&amp;部署-diagram-0.png" alt=""><br><a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">#reference-hexojs/hexo-deployer-git</a><br><a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="external">#reference-deployment</a></p>
-<h1 id="构思"><a href="#构思" class="headerlink" title="构思"></a>构思</h1><p>基于以上场景，简单的概念模型如下：<br><img src="/diagrams/个人Markdown Web  编辑器产品设计&amp;部署-diagram-1.png" alt=""><br>我需要考虑的点包括：</p>
-<ul>
-<li>对所有终端，“发布”后应该保持同步</li>
-<li><strong>撰写</strong>包括<strong>增 、删 、改 、查</strong> 操作</li>
-<li>两个终端都能互相<strong>撰写</strong>对方创建的md</li>
-<li>两个终端应该有一套同步&amp;冲突处理机制</li>
-<li>三个终端支持相同的Markdown语法</li>
-</ul>
-<h2 id="目前的解决方案"><a href="#目前的解决方案" class="headerlink" title="目前的解决方案"></a>目前的解决方案</h2><p><strong>涉及的开源项目：GitHub/GitHub Pages＋Hexo＋StackEdit</strong></p>
-<ul>
-<li>StackEdit充当Web端Markdown编辑器</li>
-<li>关联StackEdit到Github，StackEdit固定发布到repo <code>Markdown</code></li>
-<li>Github repo <code>Markdown</code>与本地文件夹<code>&lt;%hexo-root-directory&gt;/source/_posts&gt;</code>同步</li>
-<li>关联Hexo到GitHub repo<code>NoraGithub.github.io</code>，利用<a href="#Hexo项目逻辑">Hexo项目逻辑</a>中，<code>&lt;%hexo-root-directory&gt;/source/_posts&gt;</code> 和 <code>&lt;%hexo-root-directory&gt;/.deply_git</code> 的映射关系，发布到GitHub Pages<br><img src="/diagrams/个人Markdown Web  编辑器产品设计&amp;部署-diagram-2.png" alt=""></li>
-</ul>
-<p><img src="/diagrams/个人Markdown Web  编辑器产品设计&amp;部署-diagram-3.png" alt=""></p>
-<h2 id="冲突处理机制"><a href="#冲突处理机制" class="headerlink" title="冲突处理机制"></a>冲突处理机制</h2><ul>
-<li>由上图可见，和概念模型的区别是，StackEdit没办法获取（<code>git pull</code>/<code>git fetch</code>）到本地Sublime编写过的md文件，甚至无法知道产生过冲突，只能 <code>git push --force</code>。</li>
-<li>为了防止冲突，应该尽量StackEdit撰写文章，然后单向发布文章。</li>
-<li>实在必须本地Sublime编写，先<code>git pull</code> ，解决冲突后，在online的情况下，  CV（复制+黏贴）回到StackEdit，进入单向发布文章流程。</li>
-</ul>
-<p>#Advanced<br>git module<a href="https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97" target="_blank" rel="external">git工具－子模块</a></p>
-<h2 id="StackEdit"><a href="#StackEdit" class="headerlink" title="StackEdit"></a>StackEdit</h2><h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>what “github update” do</p>
-<p>windows 下奇怪路径导致不能git pull</p>
-<h1 id="个性化方案"><a href="#个性化方案" class="headerlink" title="个性化方案"></a>个性化方案</h1><p>##<a href="http://couchdb.apache.org/" target="_blank" rel="external">couchdb</a><br><a href="https://zh.wikipedia.org/wiki/CouchDB" target="_blank" rel="external">apache couchdb-wikipedia</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=couchdb+github+commit&amp;oq=couchdb+github+commit&amp;gs_l=serp.3...5756.6895.0.7150.7.7.0.0.0.0.159.671.3j3.6.0....0...1c.1.64.serp..1.4.456...0i30k1j0i8i30k1j0i5i30k1j30i10k1.G7oZjLggN_Y" target="_blank" rel="external">couched github commit</a><br><a href="http://wiki.apache.org/couchdb/Installing_on_OSX" target="_blank" rel="external">Installing on OSX</a><br><a href="https://github.com/apache/couchdb/blob/master/INSTALL.Unix.md" target="_blank" rel="external">Apache CouchDB INSTALL.Unix</a><br><a href="https://github.com/benweet/stackedit/blob/master/doc/couchdb-setup.md" target="_blank" rel="external">couchdb setup</a><br><a href="http://www.jdon.com/repository/couchdb.html" target="_blank" rel="external">couchdb的安装时使用</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;q=couchdb++stackedit+%E6%95%99%E7%A8%8B&amp;oq=couchdb++stackedit+%E6%95%99%E7%A8%8B&amp;gs_l=serp.3...1737704.1740833.0.1740989.21.12.9.0.0.0.207.867.4j3j1.8.0....0...1c.1.64.serp..5.2.209...0i8i30k1.J1f7Jf6RHzQ" target="_blank" rel="external">couchdb  stackedit 教程</a></p>
-<h1 id="如果可以的话"><a href="#如果可以的话" class="headerlink" title="如果可以的话"></a>如果可以的话</h1><p>理想状态下，Editor和Publisher应该在部署在同一个Server，作为同一个Website。</p>
-<h2 id="理想模型"><a href="#理想模型" class="headerlink" title="理想模型"></a>理想模型</h2><h3 id="未发布"><a href="#未发布" class="headerlink" title="未发布"></a>未发布</h3><p><img src="/diagrams/个人Markdown Web  编辑器产品设计&amp;部署-diagram-4.png" alt=""><br>WYSIWYG：What You See Is What You Get，所见即所得</p>
-<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><p><img src="/diagrams/个人Markdown Web  编辑器产品设计&amp;部署-diagram-5.png" alt=""><br>一旦冲突可以出线命令行界面，用于merge或rebase。<br>由于本文所有项目都是开源的，相信终有一天能实现。</p>
-<ul>
-<li>[x] GitHub Pages只负责展现，不能撰写</li>
-<li>[x] 对StackEdit/Sublime，存在“发布”/“未发布”状态，“发布”后应该尽量同步，“未发布”状态相互独立即可</li>
-<li>[]所谓“同步”，完全按照Git Flow管理（如果有协作，可能GitHub Flow更好）</li>
-<li>[]三个终端支持相同且完整的Markdown语法，这套语法应该涵盖UML、LaTex公式&amp; MathJax在内的分析师、PM常用表现工具<br><img src="/diagrams/个人Markdown Web  编辑器产品设计&amp;部署-diagram-6.png" alt=""></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近迷上了Markdown，希望积累些文字。同时，Sublime的Markdown插件已经能满足我对写作体验的追求，作为一个WebApp的狂热爱好者，决定使用StackEdit作为我的Markdown终端。另外，因为已经利用GitHub Page和Hexo建了一个Blog，
-    
-    </summary>
-    
-    
-      <category term="Markdown" scheme="http://noragithub.github.io/tags/Markdown/"/>
-    
-      <category term="StackEdit" scheme="http://noragithub.github.io/tags/StackEdit/"/>
-    
-      <category term="Hexo" scheme="http://noragithub.github.io/tags/Hexo/"/>
-    
-      <category term="同步" scheme="http://noragithub.github.io/tags/%E5%90%8C%E6%AD%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>个人Markdown Web  编辑器产品设计&amp;部署</title>
     <link href="http://noragithub.github.io/2016/10/01/%E4%B8%AA%E4%BA%BAMarkdown-Web-%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1-%E9%83%A8%E7%BD%B2/"/>
     <id>http://noragithub.github.io/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/</id>
     <published>2016-10-01T12:07:53.000Z</published>
@@ -1537,6 +1468,26 @@
     <summary type="html">
     
       &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://noragithub.github.io/2016/09/29/README/"/>
+    <id>http://noragithub.github.io/2016/09/29/README/</id>
+    <published>2016-09-29T01:10:45.000Z</published>
+    <updated>2016-09-29T01:10:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Personal markdown article used to synchronize between stackedit and hexo. This file is used to initialize github, as recommended.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Personal markdown article used to synchronize between stackedit and hexo. This file is used to initialize github, as recommended.&lt;/p&gt;
+
     
     </summary>
     
