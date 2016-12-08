@@ -86,16 +86,23 @@
 
 
 
-<meta name="description" content="利用104.128.92.224进行观测，因为作为一台服务器有独立ip">
+<meta name="description" content="Summary104.128.92.224和119.29.198.230是两台独立服务器（VPS），其中，104.128.92.224位于Los Angeles，119.29.198.230位于广州。通过对它们的网络行为进行监控，对比他们收取到回复的差异，确认GFW的特殊价值并探索计算机应用层协议的原理与细节。（本文以LA服务器和广州服务器分别指代）本文主要参考翻墙路由器的原理与实现来探索计算机网">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机网络观测">
 <meta property="og:url" content="http://noragithub.github.io/2016/10/10/计算机网络观测/index.html">
 <meta property="og:site_name" content="Busihacker">
-<meta property="og:description" content="利用104.128.92.224进行观测，因为作为一台服务器有独立ip">
-<meta property="og:updated_time" content="2016-12-07T13:39:36.000Z">
+<meta property="og:description" content="Summary104.128.92.224和119.29.198.230是两台独立服务器（VPS），其中，104.128.92.224位于Los Angeles，119.29.198.230位于广州。通过对它们的网络行为进行监控，对比他们收取到回复的差异，确认GFW的特殊价值并探索计算机应用层协议的原理与细节。（本文以LA服务器和广州服务器分别指代）本文主要参考翻墙路由器的原理与实现来探索计算机网">
+<meta property="og:image" content="http://of2r0f294.bkt.clouddn.com/20161015-%E8%BF%94%E5%9B%9E%E9%94%99%E8%AF%AFIP_ID">
+<meta property="og:image" content="http://noragithub.github.io/diagrams/计算机网络观测-diagram-0.png">
+<meta property="og:image" content="http://of2r0f294.bkt.clouddn.com/20161107-%E4%BB%A3%E7%A0%81%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E5%88%86%E4%B8%BA%E7%BC%96%E8%AF%91%E5%92%8C%E9%93%BE%E6%8E%A5%E4%B8%A4%E4%B8%AA%E8%BF%87%E7%A8%8B_ID">
+<meta property="og:image" content="http://of2r0f294.bkt.clouddn.com/20161107-%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%8E%E6%96%87%E4%BB%B6_ID">
+<meta property="og:image" content="http://of2r0f294.bkt.clouddn.com/20161107-%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B_ID">
+<meta property="og:image" content="http://noragithub.github.io/diagrams/计算机网络观测-diagram-1.png">
+<meta property="og:updated_time" content="2016-12-08T01:23:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络观测">
-<meta name="twitter:description" content="利用104.128.92.224进行观测，因为作为一台服务器有独立ip">
+<meta name="twitter:description" content="Summary104.128.92.224和119.29.198.230是两台独立服务器（VPS），其中，104.128.92.224位于Los Angeles，119.29.198.230位于广州。通过对它们的网络行为进行监控，对比他们收取到回复的差异，确认GFW的特殊价值并探索计算机应用层协议的原理与细节。（本文以LA服务器和广州服务器分别指代）本文主要参考翻墙路由器的原理与实现来探索计算机网">
+<meta name="twitter:image" content="http://of2r0f294.bkt.clouddn.com/20161015-%E8%BF%94%E5%9B%9E%E9%94%99%E8%AF%AFIP_ID">
 
 
 
@@ -334,8 +341,8 @@
           <br />
             <!--更新时间-->
             <span class="post-meta-item-text">最近更新于</span>
-            <time itemprop="dateUpdated" datetime="2016-12-07T21:39:36+08:00" content="2016-12-07">
-              2016-12-07
+            <time itemprop="dateUpdated" datetime="2016-12-08T09:23:39+08:00" content="2016-12-08">
+              2016-12-08
             </time>
           </span>
         </div>
@@ -353,35 +360,128 @@
       
 
       
-        <p>利用104.128.92.224进行观测，因为作为一台服务器有独立ip</p>
+        <h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p><code>104.128.92.224</code>和<code>119.29.198.230</code>是两台独立服务器（VPS），其中，<code>104.128.92.224</code>位于Los Angeles，<code>119.29.198.230</code>位于广州。通过对它们的网络行为进行监控，对比他们收取到回复的差异，确认GFW的特殊价值并探索计算机应用层协议的原理与细节。（本文以<code>LA服务器</code>和<code>广州服务器</code>分别指代）<br>本文主要参考<a href="http://drops.wooyun.org/papers/10177" target="_blank" rel="external">翻墙路由器的原理与实现</a>来探索<strong>计算机网络</strong>（主要是应用层），并对探索过程中遇到的问题做简单记录，遇到问题涉及<strong>计算机操作系统</strong>、<strong>编译原理</strong>的部分知识。</p>
 <a id="more"></a>
-<h1 id="NetfilterQueue"><a href="#NetfilterQueue" class="headerlink" title="NetfilterQueue"></a>NetfilterQueue</h1><p>安装NetfilterQueue显示：</p>
-<ol>
-<li></li>
-</ol>
+<p><a href="http://ip.cn/index.php?ip=104.128.92.224" target="_blank" rel="external">#reference-104.128.92.224的IP地址</a><br><a href="http://ip.cn/index.php?ip=119.29.198.230" target="_blank" rel="external">#reference-119.29.198.230的IP地址</a><br> <a href="http://noragithub.github.io/2016/10/06/%E3%80%90%E8%BD%AC%E3%80%91%E7%BF%BB%E5%A2%99%E8%B7%AF%E7%94%B1%E5%99%A8%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0/">#reference-【转】翻墙路由器的原理与实现</a></p>
+<p> #reference- 操作系统的差异，Ubuntu<br> <a href="https://pypi.python.org/pypi/NetfilterQueue" target="_blank" rel="external">#reference-netfilterqueue文档</a></p>
+<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><h2 id="NetfilterQueue"><a href="#NetfilterQueue" class="headerlink" title="NetfilterQueue"></a>NetfilterQueue</h2><p>我们主要利用<a href="https://github.com/kti/python-netfilterqueue" target="_blank" rel="external">NetfilterQueue</a>进行计算机网络的观测，这是Libnetfilter_queue的python实现，Libnetfilter_queue是<a href="http://netfilter.org/projects/libnetfilter_queue/" target="_blank" rel="external">Netfilter project</a>的一部分。<br>Linux下，NetfilterQueue允许用户访问符合iptables规则的IP包。iptables也是Netfilter project的一部分，理解成一张用于保存IP包转发规则的table就好，主要用于防火墙。利用这套规则，计算机可以接受、丢弃，改变（转发）和标记IP包。</p>
+<p>###升级apt-get<br>更新资源并升级：</p>
 <blockquote>
-<p>unable to execute ‘gcc’: No such file or directory<br>error: Setup script exited with error: command ‘gcc’ failed with exit status 1</p>
+<p>\$ sudo apt-get update &amp;&amp; sudo apt-get upgrad</p>
 </blockquote>
-<p><a href="http://stackoverflow.com/questions/11094718/error-command-gcc-failed-with-exit-status-1-while-installing-eventlet" target="_blank" rel="external">error: command ‘gcc’ failed with exit status 1 while installing eventlet</a></p>
-<p>执行</p>
+<p><a href="http://blog.csdn.net/ai_net/article/details/7710324" target="_blank" rel="external">http://blog.csdn.net/ai_net/article/details/7710324</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>NetfilterQueue有依赖，不细心的童鞋会走弯路（例如我T_T）</p>
 <blockquote>
-<p>sudo apt-get update<br>sudo apt-get install python-dev </p>
+<p>sudo apt-get install build-essential python-dev libnetfilter-queue-dev # 系统依赖<br>sudo pip install NetfilterQueue # NetfilterQueue安装</p>
 </blockquote>
-<p>失败</p>
-<ol>
-<li>执行<br>sudo apt-get install gcc</li>
-</ol>
-<p>成功</p>
-<p>3.报错<br>   netfilterqueue.c:268:42: fatal error: libnfnetlink/linux_nfnetlink.h: No such file or directory<br>    compilation terminated.<br>    error: command ‘gcc’ failed with exit status 1</p>
-<p>4。 有依赖<br><a href="https://pypi.python.org/pypi/NetfilterQueue" target="_blank" rel="external">https://pypi.python.org/pypi/NetfilterQueue</a></p>
+<h4 id="安装过程中可能遇到的问题"><a href="#安装过程中可能遇到的问题" class="headerlink" title="安装过程中可能遇到的问题"></a>安装过程中可能遇到的问题</h4><p>未安装gcc，无法编译。显示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">unable to execute &apos;gcc&apos;: No such file or directory</div><div class="line">error: Setup script exited with error: command &apos;gcc&apos; failed with exit status 1</div></pre></td></tr></table></figure>
+<p>安装gcc</p>
 <blockquote>
-<p>apt-get install build-essential python-dev libnetfilter-queue-dev<br>pip install NetfilterQueue</p>
+<p> \$ sudo apt-get install gcc</p>
 </blockquote>
-<p>done</p>
-<h1 id="dpkt"><a href="#dpkt" class="headerlink" title="dpkt"></a>dpkt</h1><p>pip install dpkt</p>
-<p>Done</p>
-<h1 id="Bind-dig"><a href="#Bind-dig" class="headerlink" title="Bind-dig"></a>Bind-dig</h1><p><a href="https://www.isc.org/downloads/bind/" target="_blank" rel="external">https://www.isc.org/downloads/bind/</a><br><a href="http://askubuntu.com/questions/25098/how-do-i-install-dig" target="_blank" rel="external">http://askubuntu.com/questions/25098/how-do-i-install-dig</a><br><a href="http://www.nowtaxes.com.tw/node/1114" target="_blank" rel="external">http://www.nowtaxes.com.tw/node/1114</a></p>
-<p>为了观测被墙情况，使用<br>119.29.198.230</p>
+<h2 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h2><p>pip是python下包管理工具。主要用于安装和管理python包，和easy_install类似。</p>
+<h3 id="Install-amp-Update-amp-Upgrade"><a href="#Install-amp-Update-amp-Upgrade" class="headerlink" title="Install&amp; Update&amp; Upgrade"></a>Install&amp; Update&amp; Upgrade</h3><p>不正确地安装会有问题。</p>
+<blockquote>
+<p> \$ sudo apt-get install python-pip</p>
+</blockquote>
+<p><a href="http://www.saltycrane.com/blog/2010/02/how-install-pip-ubuntu/" target="_blank" rel="external">#reference-How to install pip on Ubuntu</a><br><a href="https://pip.pypa.io/en/stable/installing/" target="_blank" rel="external">#reference-Doc_installing</a><br><a href="http://www.cnblogs.com/PandaBamboo/p/3180568.html" target="_blank" rel="external">#reference-easy_install进行模块/包管理</a><br><a href="http://askubuntu.com/questions/91815/how-to-install-software-or-upgrade-from-an-old-unsupported-release" target="_blank" rel="external">#reference-How to install software or upgrade from an old unsupported release</a></p>
+<h2 id="dpkt"><a href="#dpkt" class="headerlink" title="dpkt"></a>dpkt</h2><blockquote>
+<p> \$ sudo pip install dpkt</p>
+</blockquote>
+<h2 id="Bind-dig"><a href="#Bind-dig" class="headerlink" title="Bind-dig"></a>Bind-dig</h2><p>dig 命令全称Domain Information Groper，系统自带，观测过程中需要用到的主要命令。<br><a href="https://www.isc.org/downloads/bind/" target="_blank" rel="external">#reference-Internet System Consortium-BIND</a><br><a href="http://askubuntu.com/questions/25098/how-do-i-install-dig" target="_blank" rel="external">#reference-How do I install dig</a><br><a href="http://www.nowtaxes.com.tw/node/1114" target="_blank" rel="external">#reference-使用 Ubuntu 安裝 Bind9: Domain Name Service (DNS)
+</a></p>
+<h1 id="计算机网络观测"><a href="#计算机网络观测" class="headerlink" title="计算机网络观测"></a>计算机网络观测</h1><h2 id="DNS劫持观测"><a href="#DNS劫持观测" class="headerlink" title="DNS劫持观测"></a>DNS劫持观测</h2><p>广州服务器：</p>
+<blockquote>
+<p>$ dig @8.8.8.8 twitter.com</p>
+<p>; &lt;&lt;&gt;&gt; DiG 9.8.3-P1 &lt;&lt;&gt;&gt; @8.8.8.8 twitter.com<br>; (1 server found)<br>;; global options: +cmd<br>;; Got answer:<br>;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 45740<br>;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0</p>
+<p>;; QUESTION SECTION:<br>;twitter.com.            IN    A</p>
+<p>;; ANSWER SECTION:<br>twitter.com.        60    IN    A    243.185.187.39</p>
+<p>;; Query time: 112 msec<br>;; SERVER: 8.8.8.8#53(8.8.8.8)<br>;; WHEN: Sat Oct 15 13:07:17 2016<br>;; MSG SIZE  rcvd: 45</p>
+</blockquote>
+<p><img src="http://of2r0f294.bkt.clouddn.com/20161015-%E8%BF%94%E5%9B%9E%E9%94%99%E8%AF%AFIP_ID" alt="返回错误IP"></p>
+<p>; &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Ubuntu &lt;&lt;&gt;&gt; @8.8.8.8 twitter<br>; (1 server found)<br>;; global options: +cmd<br>;; Got answer:<br>;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NXDOMAIN, id: 55863<br>;; flags: qr rd ra ad; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1</p>
+<p>;; OPT PSEUDOSECTION:<br>; EDNS: version: 0, flags:; udp: 512<br>;; QUESTION SECTION:<br>;twitter.            IN    A</p>
+<p>;; AUTHORITY SECTION:<br>.            81741    IN    SOA    a.root-servers.net. nstld.verisign-grs.com. 2016110901 1800 900 604800 86400</p>
+<p>;; Query time: 25 msec<br>;; SERVER: 8.8.8.8#53(8.8.8.8)<br>;; WHEN: Wed Nov 09 21:01:40 EST 2016<br>;; MSG SIZE  rcvd: 111<br>显然，返回的IP地址错误。</p>
+<h2 id="安装apt-get-install-…"><a href="#安装apt-get-install-…" class="headerlink" title="安装apt-get install …"></a>安装apt-get install …</h2><p><a href="http://askubuntu.com/questions/91815/how-to-install-software-or-upgrade-from-an-old-unsupported-release" target="_blank" rel="external">http://askubuntu.com/questions/91815/how-to-install-software-or-upgrade-from-an-old-unsupported-release</a></p>
+<p>sudo 权限下完成</p>
+<p>(#4。 有依赖)<br><a href="https://pypi.python.org/pypi/NetfilterQueue" target="_blank" rel="external">https://pypi.python.org/pypi/NetfilterQueue</a></p>
+<blockquote>
+<p>\$ sudo apt-get install build-essential python-dev libnetfilter-queue-dev</p>
+</blockquote>
+<p>&amp;&amp;<br>sudo apt-get install python-pip</p>
+<blockquote>
+<p>sudo pip install NetfilterQueue<br>sudo pip install dpkt</p>
+</blockquote>
+<p>#开始观测</p>
+<blockquote>
+<p>mkdir computer_network_observe<br>cd computer_network_observe</p>
+</blockquote>
+<h1 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h1><p> 操作系统&amp;编译原理</p>
+<p>执行<code>from netfilterqueue import NetfilterQueue</code>遇到编译错误<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ImportError: /usr/local/lib/python2.6/dist-packages/netfilterqueue.so: undefined symbol: nfq_set_verdict2</div></pre></td></tr></table></figure></p>
+<p>网络上并没有现成的信息解决该问题，简单记录下解决该问题的详细思路。<br>#reference-详细错误信息：</p>
+<ul>
+<li><a href="https://github.com/kti/python-netfilterqueue/issues/16" target="_blank" rel="external">ImportError: /usr/local/lib/python2.6/dist-packages/netfilterqueue.so: undefined symbol: nfq_set_verdict2 #16</a></li>
+<li><a href="http://stackoverflow.com/questions/40229918/netfilterqueue-importing-makes-compile-error" target="_blank" rel="external">netfilterqueue importing makes compile error</a></li>
+</ul>
+<p><a href="http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/nm.html" target="_blank" rel="external">#reference-nm 目标文件格式分析</a><br><a href="http://man.linuxde.net/ldd]http://man.linuxde.net/ldd" target="_blank" rel="external">#reference-ldd ldd命令</a><br><a href="http://tieba.baidu.com/p/315634750" target="_blank" rel="external">#reference-Linux Shell脚本Ldd命令原理使用方法</a><br><a href="http://blog.csdn.net/tenfyguo/article/details/5605120" target="_blank" rel="external">#reference-浅析ldd命令</a></p>
+<h2 id="定义问题"><a href="#定义问题" class="headerlink" title="定义问题"></a>定义问题</h2><p>尝试理解错误信息，问题的是<code>netfilterqueue.so</code>有未定义的符号<code>nfq_set_verdict2</code>，而<code>.so</code>文件是编译的中间过程文件。<code>so</code> stands for <code>shared object</code>。</p>
+<p>链接可在编译（compile-time）、加载（load-time）或运行（run-time）时执行。<br>顺序：<br><img src="/diagrams/计算机网络观测-diagram-0.png" alt=""><br>标准的编译过程是基于脚本时利用cpp撰写的：<br><img src="http://of2r0f294.bkt.clouddn.com/20161107-%E4%BB%A3%E7%A0%81%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E5%88%86%E4%B8%BA%E7%BC%96%E8%AF%91%E5%92%8C%E9%93%BE%E6%8E%A5%E4%B8%A4%E4%B8%AA%E8%BF%87%E7%A8%8B_ID" alt="代码编译过程分为编译和链接两个过程"><br><img src="http://of2r0f294.bkt.clouddn.com/20161107-%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%8E%E6%96%87%E4%BB%B6_ID" alt="编译过程与文件"><br><img src="http://of2r0f294.bkt.clouddn.com/20161107-%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B_ID" alt="编译过程"><br><a href="http://7905648.blog.51cto.com/7895648/1297255#0-tsina-1-7558-397232819ff9a47a7b7e80a40613cfe1" target="_blank" rel="external">#reference-C语言的编译链接过程详解</a><br><a href="http://lxwei.github.io/posts/262.html" target="_blank" rel="external">#reference-从源代码到可执行文件全过程</a><br>当脚本来自python：<br>可以利用python库，通过”.pyx”文件生成c，最后编译为机器码（二进制）<br>Python<a href="http://gashero.iteye.com/blog/649516" target="_blank" rel="external">Cython应用手记</a></p>
+<p>##静态链接<br>输入：可重定位的目标文件（object file），命令行参数<br>输出：可执行的目标文件</p>
+<blockquote>
+<p>输入的可重定位目标文件由各种不同的代码和数据节（section）组成。指令在一个节中，初始化的全局变量在另一个节中，而未初始化的变量又在另外一个节中。<br><img src="/diagrams/计算机网络观测-diagram-1.png" alt=""><br>我们查看<a href="https://github.com/kti/python-netfilterqueue" target="_blank" rel="external">NetfilterQueue</a>的文件和步骤发现，”.c”,”.pxd”,”.pyx”主要用于编译NetfilterQueue，因此问题应该主要来自对系统的依赖文件。<br>对系统的依赖主要是这些：</p>
+<p>NetfilterQueue is a C extention module that links against libnetfilter_queue. Before installing, ensure you have:</p>
+<ul>
+<li>A C compiler</li>
+<li>Python development files</li>
+<li>Libnetfilter_queue development files and associated dependencies</li>
+</ul>
+<p>On Debian or Ubuntu, install these files with:</p>
+<p><code>apt-get install build-essential python-dev libnetfilter-queue-dev</code></p>
+</blockquote>
+<p>由于.c是由.pyx生成的，.pxd定义了函数模版<br>查看<a href="https://github.com/kti/python-netfilterqueue/blob/master/netfilterqueue.pyx" target="_blank" rel="external">.pyx</a> 文件中可以发现<code>nfq_set_verdict2</code>从未被定义，即，它主要来自其它头文件（.h）的include，<a href="https://github.com/kti/python-netfilterqueue/blob/master/netfilterqueue.pxd" target="_blank" rel="external">.pxd</a><br> 发现该变量来自<code>cdef extern from &quot;libnetfilter_queue/libnetfilter_queue.h&quot;:</code></p>
+<p>怀疑是由于是开源项目，内核版本的升级过程也将一些类库升级，却不能向前兼容。于是，升级内核libnetfilter_queue版本。<br>参考<a href="http://chyeh.logdown.com/posts/91924-libnefilter-queueqi-bu-zou" target="_blank" rel="external">libnefilter-queue起步走</a>，下载最新的对应项目</p>
+<ul>
+<li>libmnl-1.0.4</li>
+<li>libnetfilter_queue-1.0.2</li>
+<li>libnfnetlink-1.0.1</li>
+</ul>
+<p>下载相关项目：</p>
+<blockquote>
+<p>\$ wget <a href="http://netfilter.org/projects/libmnl/files/libmnl-1.0.4.tar.bz2" target="_blank" rel="external">http://netfilter.org/projects/libmnl/files/libmnl-1.0.4.tar.bz2</a><br>\$ wget <a href="http://netfilter.org/projects/libnetfilter_queue/files/libnetfilter_queue-1.0.2.tar.bz2" target="_blank" rel="external">http://netfilter.org/projects/libnetfilter_queue/files/libnetfilter_queue-1.0.2.tar.bz2</a><br>\$  wget <a href="http://netfilter.org/projects/libnfnetlink/files/libnfnetlink-1.0.1.tar.bz2" target="_blank" rel="external">http://netfilter.org/projects/libnfnetlink/files/libnfnetlink-1.0.1.tar.bz2</a></p>
+</blockquote>
+<p>按顺序执行安装</p>
+<ul>
+<li><p>libmnl-1.0.4</p>
+<blockquote>
+<p>\$ tar -jxvf libmnl-1.0.4.tar.bz2<br>\$ cd libmnl-1.0.4/<br>\$  ./configure<br>\$  make<br>\$  sudo make install  </p>
+</blockquote>
+</li>
+<li><p>libnetfilter_queue-1.0.2</p>
+<blockquote>
+<p>\$ tar -jxvf libnetfilter_queue-1.0.2.tar.bz2<br>\$ cd libnetfilter_queue-1.0.2/<br>\$  ./configure<br>\$  make<br>\$  sudo make install  </p>
+</blockquote>
+</li>
+<li><p>libnfnetlink-1.0.1</p>
+<blockquote>
+<p>\$ tar -jxvf libnfnetlink-1.0.1.tar.bz2<br>\$ cd libnfnetlink-1.0.1/<br>\$  ./configure<br>\$  make<br>\$  sudo make install  </p>
+</blockquote>
+</li>
+</ul>
+<p>安装完依旧是不生效的。那么计算机是如何找到这个运行时的文件夹就很关键了。<br>参考<a href="http://www.voidcn.com/blog/tqtuuuu/article/p-3700026.html" target="_blank" rel="external">libnetfilter_queue setup(安装向导)</a>和<a href="http://blog.sina.com.cn/s/blog_4b3bae23010081fg.html" target="_blank" rel="external">编译中接触到 pkg config</a><br>在 <code>/etc/ld.so.conf</code> 文件中添加库的搜索路径<code>/usr/local</code>，并执行<code>/sbin/ldconfig</code> 命令。</p>
+<p><a href="www.cnblogs.com/amboyna/archive/2008/02/16/1070474.html">#reference-linux各文件夹的作用</a><br>执行成功。</p>
+<h3 id="搬瓦工机器有问题"><a href="#搬瓦工机器有问题" class="headerlink" title="搬瓦工机器有问题"></a>搬瓦工机器有问题</h3><p>pip update后，安装netfilterqueue成功，发现和root权限有根本性的差异。<br>打算重新sudo pip install netfilterqueue 先运行计算机观测。（从安装pip开始）<br> 问题相信信息：<br> <a href="http://stackoverflow.com/questions/40231588/netfilterqueue-tiped-are-you-root-which-i-was-already-the-root" target="_blank" rel="external">#reference-NetfilterQueue tiped “are you root ” ,which I was already the “root”</a><br>证据</p>
+<blockquote>
+<p>sudo which python<br>/usr/bin/python<br>which python<br>/root/canopy/bin/python</p>
+</blockquote>
+<p> 结果两个都问了，are you root.<br> 这就很尴尬了。</p>
+<p>import os<br>if os.geteuid() != 0:<br>    print “This program must be run as root. Aborting.”<br>    sys.exit(1)</p>
+<p>证明我已经是root。</p>
+<p> cd /temp<br>尝试重新安装所有依赖，并改目标目录。<br>失败。</p>
+<p>Linux 下用户权限设置<br><a href="http://askubuntu.com/questions/302358/permission-denied-error" target="_blank" rel="external">#reference-permission denied error</a><br><a href="https://www.google.com.hk/search?newwindow=1&amp;c2coff=1&amp;safe=strict&amp;hl=zh-CN&amp;q=+visudo+permission+de&amp;oq=+visudo+permission+de&amp;gs_l=serp.3..0j0i30k1l3j0i8i30k1l3j0i5i30k1l2.290009.295367.0.296570.17.13.0.0.0.0.558.2178.2-3j1j1j1.6.0....0...1c.1.64.serp..11.6.2174...0i13k1j0i7i30k1j0i7i10i30k1j35i39k1.3Yf3P28PMq0" target="_blank" rel="external">https://www.google.com.hk/search?newwindow=1&amp;c2coff=1&amp;safe=strict&amp;hl=zh-CN&amp;q=+visudo+permission+de&amp;oq=+visudo+permission+de&amp;gs_l=serp.3..0j0i30k1l3j0i8i30k1l3j0i5i30k1l2.290009.295367.0.296570.17.13.0.0.0.0.558.2178.2-3j1j1j1.6.0....0...1c.1.64.serp..11.6.2174...0i13k1j0i7i30k1j0i7i10i30k1j35i39k1.3Yf3P28PMq0</a><br><a href="http://blog.csdn.net/stormbjm/article/details/9086163" target="_blank" rel="external">#reference-linux下添加用户并赋予root权限</a></p>
+<p>脚本<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sql</div><div class="line"><span class="keyword">print</span> <span class="string">'f'</span></div></pre></td></tr></table></figure></p>
+<p>#思考<br>其实我目前遇到的问题都是范运维问题，能否通过docker容器解决呢？如果解决是否有机会产品经理学习计算机知识的市场呢？其实还蛮有趣的。</p>
 
       
     </div>
@@ -432,16 +532,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/09/前端的学习笔记/" rel="next" title="前段学习笔记">
-                <i class="fa fa-chevron-left"></i> 前段学习笔记
+              <a href="/2016/10/08/文字识别初探/" rel="next" title="文字识别初探">
+                <i class="fa fa-chevron-left"></i> 文字识别初探
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/14/【译】快速开始Jupyter Notebook/" rel="prev" title="【译】快速开始Jupyter Notebook">
-                【译】快速开始Jupyter Notebook <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/27/《深入理解计算机操作系统》-chapter-7-链接-Memo/" rel="prev" title="《深入理解计算机操作系统》-chapter 7 链接  Memo">
+                《深入理解计算机操作系统》-chapter 7 链接  Memo <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -533,7 +633,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-count">25</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -617,7 +717,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NetfilterQueue"><span class="nav-number">1.</span> <span class="nav-text">NetfilterQueue</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#dpkt"><span class="nav-number">2.</span> <span class="nav-text">dpkt</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bind-dig"><span class="nav-number">3.</span> <span class="nav-text">Bind-dig</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Summary"><span class="nav-number">1.</span> <span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工具"><span class="nav-number">2.</span> <span class="nav-text">工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NetfilterQueue"><span class="nav-number">2.1.</span> <span class="nav-text">NetfilterQueue</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">2.1.1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装过程中可能遇到的问题"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">安装过程中可能遇到的问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pip"><span class="nav-number">2.2.</span> <span class="nav-text">pip</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-amp-Update-amp-Upgrade"><span class="nav-number">2.2.1.</span> <span class="nav-text">Install& Update& Upgrade</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dpkt"><span class="nav-number">2.3.</span> <span class="nav-text">dpkt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bind-dig"><span class="nav-number">2.4.</span> <span class="nav-text">Bind-dig</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络观测"><span class="nav-number">3.</span> <span class="nav-text">计算机网络观测</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS劫持观测"><span class="nav-number">3.1.</span> <span class="nav-text">DNS劫持观测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装apt-get-install-…"><span class="nav-number">3.2.</span> <span class="nav-text">安装apt-get install …</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#遇到的问题"><span class="nav-number">4.</span> <span class="nav-text">遇到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义问题"><span class="nav-number">4.1.</span> <span class="nav-text">定义问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#搬瓦工机器有问题"><span class="nav-number">4.1.1.</span> <span class="nav-text">搬瓦工机器有问题</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>

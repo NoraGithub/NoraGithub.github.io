@@ -120,7 +120,7 @@
 <meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571360138.png">
 <meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571486027.png">
 <meta property="og:image" content="http://static.wooyun.org//drops/20151117/2015111702571412746.png">
-<meta property="og:updated_time" content="2016-11-22T15:26:36.000Z">
+<meta property="og:updated_time" content="2016-12-08T01:23:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【转】翻墙路由器的原理与实现">
 <meta name="twitter:description" content="[toc]
@@ -365,8 +365,8 @@
           <br />
             <!--更新时间-->
             <span class="post-meta-item-text">最近更新于</span>
-            <time itemprop="dateUpdated" datetime="2016-11-22T23:26:36+08:00" content="2016-11-22">
-              2016-11-22
+            <time itemprop="dateUpdated" datetime="2016-12-08T09:23:39+08:00" content="2016-12-08">
+              2016-12-08
             </time>
           </span>
         </div>
@@ -544,7 +544,7 @@
 <h3 id="安装Python的NetfilterQueue"><a href="#安装Python的NetfilterQueue" class="headerlink" title="安装Python的NetfilterQueue"></a>安装Python的NetfilterQueue</h3><p>OpenWRT提供了NetfilterQueue的C的库。但是使用C来做实验太笨重了。所以我选择了Python。但是Python的NetfilterQueue的库没有在OpenWRT中。下载<a href="https://github.com/fqrouter/fqrouter" target="_blank" rel="external">https://github.com/fqrouter/fqrouter</a> 解压后可以得到一个名字叫fqrouter的目录。然后给<code>feeds.con</code>添加一行<code>src-link fqrouter /opt/fqrouter/package</code>。把<code>/opt/fqrouter</code>替换为你解压的目录。然后<code>scripts/feeds update -a</code>，再执行<code>scripts/feeds install python-netfilterqueue</code>就添加好了。然后在<code>make menuconfig</code>中选择Languages=&gt;Python=&gt;python-netfilterqueue。</p>
 <p>有了这个库就赋予了我们使用Python任意抓包，修改包和发包的能力。在OpenWRT上，除了python没有第二种脚本语言可以如此简单地获得这些能力。</p>
 <h3 id="安装Python的dpkt"><a href="#安装Python的dpkt" class="headerlink" title="安装Python的dpkt"></a>安装Python的dpkt</h3><p>能够抓取和发送IP包之后，第二个头疼的问题是如何解析和构造任意的IP包。Python有一个库叫dpkt可以帮我们很好地完成这项任务。这是我们选择Python做实验的第二个重要理由。</p>
-<p>在路由器上直接下载<a href="http://dpkt.googlecode.com/files/dpkt-1.7.tar.gz，然后解压缩，拷贝其中的dpkt目录到/usr/lib/python2.7/site-packages下。" target="_blank" rel="external">http://dpkt.googlecode.com/files/dpkt-1.7.tar.gz，然后解压缩，拷贝其中的dpkt目录到/usr/lib/python2.7/site-packages下。</a></p>
+<p>在路由器上直接下载<a href="http://dpkt.googlecode.com/files/dpkt-1.7.tar.gz" target="_blank" rel="external">http://dpkt.googlecode.com/files/dpkt-1.7.tar.gz</a> ，然后解压缩，拷贝其中的dpkt目录到/usr/lib/python2.7/site-packages下。</p>
 <h2 id="DNS劫持观测"><a href="#DNS劫持观测" class="headerlink" title="DNS劫持观测"></a>DNS劫持观测</h2><p>我们要做的第一个实验是用python代码观测到DNS劫持的全过程。</p>
 <h3 id="应用层观测"><a href="#应用层观测" class="headerlink" title="应用层观测"></a>应用层观测</h3><p>dig是DNS的客户端，可以很方便地构造出我们想要的DNS请求。<code>dig @8.8.8.8 twitter.com</code>。可以得到相应如下</p>
 <blockquote>
@@ -554,8 +554,8 @@
 <p>;; Query time: 110 msec<br>;; SERVER: 8.8.8.8#53(8.8.8.8)<br>;; WHEN: Sun Jan 13 13:22:10 2013<br>;; MSG SIZE  rcvd: 45</p>
 </blockquote>
 <p>可以很清楚地看到我们得到的错误答案59.24.3.173。</p>
-<h3 id="抓包观测"><a href="#抓包观测" class="headerlink" title="抓包观测"></a>抓包观测</h3><p>使用iptables我们可以让特定的IP包经过应用层的代码，从而使得我们用python观测DNS查询过程提供了可能。代码如下，保存文件名<a href="https://gist.github.com/4524294" target="_blank" rel="external">dns_hijacking_observation.py</a>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">from netfilterqueue import NetfilterQueue</div><div class="line">import subprocess</div><div class="line">import signal   </div><div class="line">def observe_dns_hijacking(nfqueue_element):</div><div class="line">   print(&apos;packet past through me&apos;)</div><div class="line">   nfqueue_element.accept()   </div><div class="line">nfqueue = NetfilterQueue()</div><div class="line">nfqueue.bind(0, observe_dns_hijacking)   </div><div class="line">def clean_up(*args):</div><div class="line">   subprocess.call(&apos;iptables -D OUTPUT -p udp --dst 8.8.8.8 -j QUEUE&apos;, shell=True)</div><div class="line">   subprocess.call(&apos;iptables -D INPUT -p udp --src 8.8.8.8 -j QUEUE&apos;, shell=True)   </div><div class="line">signal.signal(signal.SIGINT, clean_up)   </div><div class="line">try:</div><div class="line">   subprocess.call(&apos;iptables -I INPUT -p udp --src 8.8.8.8 -j QUEUE&apos;, shell=True)</div><div class="line">   subprocess.call(&apos;iptables -I OUTPUT -p udp --dst 8.8.8.8 -j QUEUE&apos;, shell=True)</div><div class="line">   print(&apos;running..&apos;)</div><div class="line">   nfqueue.run()</div><div class="line">except KeyboardInterrupt:</div><div class="line">   print(&apos;bye&apos;)</div></pre></td></tr></table></figure>
+<h3 id="抓包观测"><a href="#抓包观测" class="headerlink" title="抓包观测"></a>抓包观测</h3><p>使用iptables我们可以让特定的IP包经过应用层的代码，从而使得我们用python观测DNS查询过程提供了可能。代码如下，保存文件名<a href="https://gist.github.com/4524294" target="_blank" rel="external">dns_hijacking_obversation.py</a>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">from netfilterqueue import NetfilterQueue</div><div class="line">import subprocess</div><div class="line">import signal</div><div class="line">def observe_dns_hijacking(nfqueue_element):</div><div class="line">   print(&apos;packet past through me&apos;)</div><div class="line">   nfqueue_element.accept()   </div><div class="line">nfqueue = NetfilterQueue()</div><div class="line">nfqueue.bind(0, observe_dns_hijacking)   </div><div class="line">def clean_up(*args):</div><div class="line">   subprocess.call(&apos;iptables -D OUTPUT -p udp --dst 8.8.8.8 -j QUEUE&apos;, shell=True)</div><div class="line">   subprocess.call(&apos;iptables -D INPUT -p udp --src 8.8.8.8 -j QUEUE&apos;, shell=True)   </div><div class="line">signal.signal(signal.SIGINT, clean_up)   </div><div class="line">try:</div><div class="line">   subprocess.call(&apos;iptables -I INPUT -p udp --src 8.8.8.8 -j QUEUE&apos;, shell=True)</div><div class="line">   subprocess.call(&apos;iptables -I OUTPUT -p udp --dst 8.8.8.8 -j QUEUE&apos;, shell=True)</div><div class="line">   print(&apos;running..&apos;)</div><div class="line">   nfqueue.run()</div><div class="line">except KeyboardInterrupt:</div><div class="line">   print(&apos;bye&apos;)</div></pre></td></tr></table></figure>
 <p>执行<code>python dns_hijacking_observation.py</code>，再使用<code>dig @8.8.8.8 twitter.com</code>应该可以看到<code>package past through me</code>。这就说明DNS的请求和答案都经过了python代码了。</p>
 <p>上一步主要是验证NetfilterQueue是不是工作正常。这一步则要靠dpkt的了。代码如下，文件名相同（<a href="https://gist.github.com/4524299）：" target="_blank" rel="external">https://gist.github.com/4524299）：</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">from netfilterqueue import NetfilterQueue</div><div class="line">import subprocess</div><div class="line">import signal</div><div class="line">import dpkt</div><div class="line">import traceback</div><div class="line">import socket   </div><div class="line">def observe_dns_hijacking(nfqueue_element):</div><div class="line">   try:</div><div class="line">       ip_packet = dpkt.ip.IP(nfqueue_element.get_payload())</div><div class="line">       dns_packet = dpkt.dns.DNS(ip_packet.udp.data)</div><div class="line">       print(repr(dns_packet))</div><div class="line">       for answer in dns_packet.an:</div><div class="line">           print(socket.inet_ntoa(answer[&apos;rdata&apos;]))</div><div class="line">       nfqueue_element.accept()</div><div class="line">   except:</div><div class="line">       traceback.print_exc()</div><div class="line">       nfqueue_element.accept()   </div><div class="line">nfqueue = NetfilterQueue()</div><div class="line">nfqueue.bind(0, observe_dns_hijacking)   </div><div class="line">def clean_up(*args):   </div><div class="line">   subprocess.call(&apos;iptables -D OUTPUT -p udp --dst 8.8.8.8 -j QUEUE&apos;, shell=True)</div><div class="line">   subprocess.call(&apos;iptables -D INPUT -p udp --src 8.8.8.8 -j QUEUE&apos;, shell=True)   </div><div class="line">signal.signal(signal.SIGINT, clean_up)   </div><div class="line">try:</div><div class="line">   subprocess.call(&apos;iptables -I INPUT -p udp --src 8.8.8.8 -j QUEUE&apos;, shell=True)</div><div class="line">   subprocess.call(&apos;iptables -I OUTPUT -p udp --dst 8.8.8.8 -j QUEUE&apos;, shell=True)</div><div class="line">   print(&apos;running..&apos;)</div><div class="line">   nfqueue.run()</div><div class="line">except KeyboardInterrupt:</div><div class="line">   print(&apos;bye&apos;)</div></pre></td></tr></table></figure>
@@ -734,7 +734,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/" rel="next" title="个人Markdown Web  编辑器产品设计&部署">
+              <a href="/2016/10/01/个人Markdown Web  编辑器产品设计&部署/" rel="next" title="个人Markdown Web  编辑器产品设计&部署">
                 <i class="fa fa-chevron-left"></i> 个人Markdown Web  编辑器产品设计&部署
               </a>
             
@@ -835,7 +835,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-count">25</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
