@@ -98,7 +98,7 @@
 <meta property="og:image" content="http://of2r0f294.bkt.clouddn.com/20161107-%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%8E%E6%96%87%E4%BB%B6_ID">
 <meta property="og:image" content="http://of2r0f294.bkt.clouddn.com/20161107-%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B_ID">
 <meta property="og:image" content="http://noragithub.github.io/diagrams/计算机网络观测-diagram-1.png">
-<meta property="og:updated_time" content="2016-12-08T01:23:39.000Z">
+<meta property="og:updated_time" content="2016-12-09T12:40:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络观测">
 <meta name="twitter:description" content="Summary104.128.92.224和119.29.198.230是两台独立服务器（VPS），其中，104.128.92.224位于Los Angeles，119.29.198.230位于广州。通过对它们的网络行为进行监控，对比他们收取到回复的差异，确认GFW的特殊价值并探索计算机应用层协议的原理与细节。（本文以LA服务器和广州服务器分别指代）本文主要参考翻墙路由器的原理与实现来探索计算机网">
@@ -341,8 +341,8 @@
           <br />
             <!--更新时间-->
             <span class="post-meta-item-text">最近更新于</span>
-            <time itemprop="dateUpdated" datetime="2016-12-08T09:23:39+08:00" content="2016-12-08">
-              2016-12-08
+            <time itemprop="dateUpdated" datetime="2016-12-09T20:40:02+08:00" content="2016-12-09">
+              2016-12-09
             </time>
           </span>
         </div>
@@ -362,7 +362,7 @@
       
         <h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p><code>104.128.92.224</code>和<code>119.29.198.230</code>是两台独立服务器（VPS），其中，<code>104.128.92.224</code>位于Los Angeles，<code>119.29.198.230</code>位于广州。通过对它们的网络行为进行监控，对比他们收取到回复的差异，确认GFW的特殊价值并探索计算机应用层协议的原理与细节。（本文以<code>LA服务器</code>和<code>广州服务器</code>分别指代）<br>本文主要参考<a href="http://drops.wooyun.org/papers/10177" target="_blank" rel="external">翻墙路由器的原理与实现</a>来探索<strong>计算机网络</strong>（主要是应用层），并对探索过程中遇到的问题做简单记录，遇到问题涉及<strong>计算机操作系统</strong>、<strong>编译原理</strong>的部分知识。</p>
 <a id="more"></a>
-<p><a href="http://ip.cn/index.php?ip=104.128.92.224" target="_blank" rel="external">#reference-104.128.92.224的IP地址</a><br><a href="http://ip.cn/index.php?ip=119.29.198.230" target="_blank" rel="external">#reference-119.29.198.230的IP地址</a><br> <a href="http://noragithub.github.io/2016/10/06/%E3%80%90%E8%BD%AC%E3%80%91%E7%BF%BB%E5%A2%99%E8%B7%AF%E7%94%B1%E5%99%A8%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0/">#reference-【转】翻墙路由器的原理与实现</a></p>
+<p><a href="http://ip.cn/index.php?ip=104.128.92.224" target="_blank" rel="external">#reference-104.128.92.224的IP地址</a><br><a href="http://ip.cn/index.php?ip=119.29.198.230" target="_blank" rel="external">#reference-119.29.198.230的IP地址</a><br> <a href="/2016/10/06/%E3%80%90%E8%BD%AC%E3%80%91%E7%BF%BB%E5%A2%99%E8%B7%AF%E7%94%B1%E5%99%A8%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0/">#reference-【转】翻墙路由器的原理与实现</a></p>
 <p> #reference- 操作系统的差异，Ubuntu<br> <a href="https://pypi.python.org/pypi/NetfilterQueue" target="_blank" rel="external">#reference-netfilterqueue文档</a></p>
 <h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><h2 id="NetfilterQueue"><a href="#NetfilterQueue" class="headerlink" title="NetfilterQueue"></a>NetfilterQueue</h2><p>我们主要利用<a href="https://github.com/kti/python-netfilterqueue" target="_blank" rel="external">NetfilterQueue</a>进行计算机网络的观测，这是Libnetfilter_queue的python实现，Libnetfilter_queue是<a href="http://netfilter.org/projects/libnetfilter_queue/" target="_blank" rel="external">Netfilter project</a>的一部分。<br>Linux下，NetfilterQueue允许用户访问符合iptables规则的IP包。iptables也是Netfilter project的一部分，理解成一张用于保存IP包转发规则的table就好，主要用于防火墙。利用这套规则，计算机可以接受、丢弃，改变（转发）和标记IP包。</p>
 <p>###升级apt-get<br>更新资源并升级：</p>
