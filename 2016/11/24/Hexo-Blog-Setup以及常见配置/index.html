@@ -89,10 +89,10 @@
 <meta name="description" content="使用Hexo进行了Blog的Setup后，我们希望选择一个心仪的theme（即不同页面类型保持一致的风格），配置需要的功能选项/属性，甚至进行一些个性化的定制。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo Blog Setup以及常见配置">
-<meta property="og:url" content="http://noragithub.github.io/2016/11/24/Hexo-Blog-Setup以及常见配置/index.html">
+<meta property="og:url" content="check_hexo_config_url/2016/11/24/Hexo-Blog-Setup以及常见配置/index.html">
 <meta property="og:site_name" content="Busihacker">
 <meta property="og:description" content="使用Hexo进行了Blog的Setup后，我们希望选择一个心仪的theme（即不同页面类型保持一致的风格），配置需要的功能选项/属性，甚至进行一些个性化的定制。">
-<meta property="og:updated_time" content="2016-12-09T12:41:53.000Z">
+<meta property="og:updated_time" content="2016-12-09T14:13:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Blog Setup以及常见配置">
 <meta name="twitter:description" content="使用Hexo进行了Blog的Setup后，我们希望选择一个心仪的theme（即不同页面类型保持一致的风格），配置需要的功能选项/属性，甚至进行一些个性化的定制。">
@@ -334,7 +334,7 @@
           <br />
             <!--更新时间-->
             <span class="post-meta-item-text">最近更新于</span>
-            <time itemprop="dateUpdated" datetime="2016-12-09T20:41:53+08:00" content="2016-12-09">
+            <time itemprop="dateUpdated" datetime="2016-12-09T22:13:21+08:00" content="2016-12-09">
               2016-12-09
             </time>
           </span>
@@ -468,10 +468,10 @@
  --&gt;
  &lt;url&gt;&lt;%- config.url + config.root + encodeURIComponent( post.path) %&gt;&lt;/url&gt;
 </code></pre><p>增加绝对路径<br>生成search.xml</p>
-<p>再更新：<br>确认了html 属性href作相对引用的逻辑后，修改为：<br>因为href=’/path’<br>会直接访问当前主域名＋path</p>
+<p>再更新：<br>确认了html 属性href作相对引用的逻辑后，修改为：<br>因为href=’/path’<br>会直接访问当前主域名＋path（取决于浏览器）</p>
 <pre><code>&lt;url&gt;&lt;%-  config.root + encodeURIComponent( post.path) %&gt;&lt;/url&gt;
 </code></pre><p>因为使用相对路径404页面也更新为：<br> <script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8" homepageurl="/ " homepagename="回到我的主页"></p>
-<p>其它md的相对路径也按照该逻辑处理。减少绝对路径使用，因为有多个发布地点。</p>
+<p>其它md的相对路径也按照该逻辑处理。减少绝对路径使用，因为有多个发布地点。<br>为了减少所有的绝对饮用，url设置为url:  check_hexo_config_url 观察是否有问题。</p>
 <h2 id="github的包含关系。"><a href="#github的包含关系。" class="headerlink" title="github的包含关系。"></a>github的包含关系。</h2><p>例如_post已经在一个仓库了，希望建一个新的仓库包涵旧仓库</p>
 <h2 id="encode-amp-decode"><a href="#encode-amp-decode" class="headerlink" title="encode&amp; decode"></a>encode&amp; decode</h2><p>根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把<code>/</code>转为<code>%2F</code>进行页面访问。<br>检查yoursite.com/search.xml可以发现<code>npm install hexo-generator-searchdb --save</code>会根据文章简历索引，并编码后访问<br><a href="">#reference:</a><br><a href="http://www.w3school.com.cn/tags/html_ref_urlencode.html">#reference: HTML URL 编码</a></p>
 <h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>update time</p>
@@ -580,7 +580,7 @@
         <div class="ds-share flat" data-thread-key="2016/11/24/Hexo-Blog-Setup以及常见配置/"
      data-title="Hexo Blog Setup以及常见配置"
      data-content=""
-     data-url="http://noragithub.github.io/2016/11/24/Hexo-Blog-Setup以及常见配置/">
+     data-url="check_hexo_config_url/2016/11/24/Hexo-Blog-Setup以及常见配置/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -608,7 +608,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/11/24/Hexo-Blog-Setup以及常见配置/"
-           data-title="Hexo Blog Setup以及常见配置" data-url="http://noragithub.github.io/2016/11/24/Hexo-Blog-Setup以及常见配置/">
+           data-title="Hexo Blog Setup以及常见配置" data-url="check_hexo_config_url/2016/11/24/Hexo-Blog-Setup以及常见配置/">
       </div>
     
   </div>
@@ -758,10 +758,10 @@ scaffold自定义模版（样式）scaffolds/%layoutscaffolds决定不同layout�
  -->
  <url><%- config.url + config.root + encodeURIComponent( post.path) %></url>
 增加绝对路径生成search.xml
-再更新：确认了html 属性href作相对引用的逻辑后，修改为：因为href=’/path’会直接访问当前主域名＋path
+再更新：确认了html 属性href作相对引用的逻辑后，修改为：因为href=’/path’会直接访问当前主域名＋path（取决于浏览器）
 <url><%-  config.root + encodeURIComponent( post.path) %></url>
 因为使用相对路径404页面也更新为： </p>
-<p>其它md的相对路径也按照该逻辑处理。减少绝对路径使用，因为有多个发布地点。</p>
+<p>其它md的相对路径也按照该逻辑处理。减少绝对路径使用，因为有多个发布地点。<br>为了减少所有的绝对饮用，url设置为url:  check_hexo_config_url 观察是否有问题。</p>
 <h2 id="github的包含关系。"><a href="#github的包含关系。" class="headerlink" title="github的包含关系。"></a>github的包含关系。</h2><p>例如_post已经在一个仓库了，希望建一个新的仓库包涵旧仓库</p>
 <h2 id="encode-amp-decode"><a href="#encode-amp-decode" class="headerlink" title="encode&amp; decode"></a>encode&amp; decode</h2><p>根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把<code>/</code>转为<code>%2F</code>进行页面访问。<br>检查yoursite.com/search.xml可以发现<code>npm install hexo-generator-searchdb --save</code>会根据文章简历索引，并编码后访问<br><a href="">#reference:</a><br><a href="http://www.w3school.com.cn/tags/html_ref_urlencode.html">#reference: HTML URL 编码</a></p>
 <h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>update time</p>

@@ -4,9 +4,9 @@
   <subtitle>inner peace</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://noragithub.github.io/"/>
+  <link href="check_hexo_config_url/"/>
   <updated>2016-12-07T13:13:47.000Z</updated>
-  <id>http://noragithub.github.io/</id>
+  <id>check_hexo_config_url/</id>
   
   <author>
     <name>Nora Chan</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>test_draft_layout</title>
-    <link href="http://noragithub.github.io/2016/12/07/test-draft-layout/"/>
-    <id>http://noragithub.github.io/2016/12/07/test-draft-layout/</id>
+    <link href="check_hexo_config_url/2016/12/07/test-draft-layout/"/>
+    <id>check_hexo_config_url/2016/12/07/test-draft-layout/</id>
     <published>2016-12-07T13:13:47.000Z</published>
     <updated>2016-12-07T13:13:47.000Z</updated>
     
@@ -31,8 +31,8 @@
   
   <entry>
     <title>photoe_test</title>
-    <link href="http://noragithub.github.io/2016/12/06/photoe-test/"/>
-    <id>http://noragithub.github.io/2016/12/06/photoe-test/</id>
+    <link href="check_hexo_config_url/2016/12/06/photoe-test/"/>
+    <id>check_hexo_config_url/2016/12/06/photoe-test/</id>
     <published>2016-12-06T03:22:45.000Z</published>
     <updated>2016-12-08T01:23:39.000Z</updated>
     
@@ -45,8 +45,8 @@
   
   <entry>
     <title>draft_test</title>
-    <link href="http://noragithub.github.io/2016/12/05/draft-test/"/>
-    <id>http://noragithub.github.io/2016/12/05/draft-test/</id>
+    <link href="check_hexo_config_url/2016/12/05/draft-test/"/>
+    <id>check_hexo_config_url/2016/12/05/draft-test/</id>
     <published>2016-12-05T03:36:06.000Z</published>
     <updated>2016-12-05T03:36:07.000Z</updated>
     
@@ -59,10 +59,10 @@
   
   <entry>
     <title>Hexo Blog Setup以及常见配置</title>
-    <link href="http://noragithub.github.io/2016/11/24/Hexo-Blog-Setup%E4%BB%A5%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE/"/>
-    <id>http://noragithub.github.io/2016/11/24/Hexo-Blog-Setup以及常见配置/</id>
+    <link href="check_hexo_config_url/2016/11/24/Hexo-Blog-Setup%E4%BB%A5%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE/"/>
+    <id>check_hexo_config_url/2016/11/24/Hexo-Blog-Setup以及常见配置/</id>
     <published>2016-11-24T01:08:34.000Z</published>
-    <updated>2016-12-09T12:41:53.000Z</updated>
+    <updated>2016-12-09T14:13:21.000Z</updated>
     
     <content type="html"><![CDATA[<p>使用Hexo进行了Blog的Setup后，我们希望选择一个心仪的theme（即不同页面类型保持一致的风格），配置需要的功能选项/属性，甚至进行一些个性化的定制。<br><a id="more"></a><br>如何预览和使用心仪的theme，Google后有足够的信息，这里就不详细介绍了。Hexo默认theme是landscape。网络上也有不少对默认主题的自定义配置方案，例如，<a href="http://blog.sunnyxx.com/2014/03/07/hexo_customize/" target="_blank" rel="external">hexo的私人订制</a><br>Simple is the best，毕竟不是搞设计和前端开发的。个人选择了Next作为theme，一方面偏好它的极简主义，另一方面，整体设计的留白和交互都很不错。</p>
 <p>theme本身很优秀，但我们还是有一些个性化的需求，需要了解Hexo的更详细配置（对应next下的主题级别的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">配置</a>），或，简单地修改脚本。例如：</p>
@@ -179,10 +179,10 @@
  --&gt;
  &lt;url&gt;&lt;%- config.url + config.root + encodeURIComponent( post.path) %&gt;&lt;/url&gt;
 </code></pre><p>增加绝对路径<br>生成search.xml</p>
-<p>再更新：<br>确认了html 属性href作相对引用的逻辑后，修改为：<br>因为href=’/path’<br>会直接访问当前主域名＋path</p>
+<p>再更新：<br>确认了html 属性href作相对引用的逻辑后，修改为：<br>因为href=’/path’<br>会直接访问当前主域名＋path（取决于浏览器）</p>
 <pre><code>&lt;url&gt;&lt;%-  config.root + encodeURIComponent( post.path) %&gt;&lt;/url&gt;
 </code></pre><p>因为使用相对路径404页面也更新为：<br> <script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8" homepageurl="/ " homepagename="回到我的主页"></p>
-<p>其它md的相对路径也按照该逻辑处理。减少绝对路径使用，因为有多个发布地点。</p>
+<p>其它md的相对路径也按照该逻辑处理。减少绝对路径使用，因为有多个发布地点。<br>为了减少所有的绝对饮用，url设置为url:  check_hexo_config_url 观察是否有问题。</p>
 <h2 id="github的包含关系。"><a href="#github的包含关系。" class="headerlink" title="github的包含关系。"></a>github的包含关系。</h2><p>例如_post已经在一个仓库了，希望建一个新的仓库包涵旧仓库</p>
 <h2 id="encode-amp-decode"><a href="#encode-amp-decode" class="headerlink" title="encode&amp; decode"></a>encode&amp; decode</h2><p>根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把<code>/</code>转为<code>%2F</code>进行页面访问。<br>检查yoursite.com/search.xml可以发现<code>npm install hexo-generator-searchdb --save</code>会根据文章简历索引，并编码后访问<br><a href="">#reference:</a><br><a href="http://www.w3school.com.cn/tags/html_ref_urlencode.html">#reference: HTML URL 编码</a></p>
 <h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>update time</p>
@@ -226,8 +226,8 @@
   
   <entry>
     <title>STAR of Projects</title>
-    <link href="http://noragithub.github.io/2016/11/15/STAR-of-Projects/"/>
-    <id>http://noragithub.github.io/2016/11/15/STAR-of-Projects/</id>
+    <link href="check_hexo_config_url/2016/11/15/STAR-of-Projects/"/>
+    <id>check_hexo_config_url/2016/11/15/STAR-of-Projects/</id>
     <published>2016-11-15T12:57:53.000Z</published>
     <updated>2016-12-09T12:40:05.000Z</updated>
     
@@ -580,8 +580,8 @@
   
   <entry>
     <title>《深入理解计算机操作系统》-chapter 7 链接  Memo</title>
-    <link href="http://noragithub.github.io/2016/10/27/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8B-chapter-7-%E9%93%BE%E6%8E%A5-Memo/"/>
-    <id>http://noragithub.github.io/2016/10/27/《深入理解计算机操作系统》-chapter-7-链接-Memo/</id>
+    <link href="check_hexo_config_url/2016/10/27/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%8B-chapter-7-%E9%93%BE%E6%8E%A5-Memo/"/>
+    <id>check_hexo_config_url/2016/10/27/《深入理解计算机操作系统》-chapter-7-链接-Memo/</id>
     <published>2016-10-27T00:24:35.000Z</published>
     <updated>2016-12-08T01:23:39.000Z</updated>
     
@@ -609,8 +609,8 @@
   
   <entry>
     <title>【译】快速开始Jupyter Notebook</title>
-    <link href="http://noragithub.github.io/2016/10/12/%E3%80%90%E8%AF%91%E3%80%91%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8BJupyter%20Notebook/"/>
-    <id>http://noragithub.github.io/2016/10/12/【译】快速开始Jupyter Notebook/</id>
+    <link href="check_hexo_config_url/2016/10/12/%E3%80%90%E8%AF%91%E3%80%91%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8BJupyter%20Notebook/"/>
+    <id>check_hexo_config_url/2016/10/12/【译】快速开始Jupyter Notebook/</id>
     <published>2016-10-12T03:08:00.000Z</published>
     <updated>2016-12-08T02:40:12.000Z</updated>
     
@@ -630,8 +630,8 @@
   
   <entry>
     <title>计算机网络观测</title>
-    <link href="http://noragithub.github.io/2016/10/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%A7%82%E6%B5%8B/"/>
-    <id>http://noragithub.github.io/2016/10/10/计算机网络观测/</id>
+    <link href="check_hexo_config_url/2016/10/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%A7%82%E6%B5%8B/"/>
+    <id>check_hexo_config_url/2016/10/10/计算机网络观测/</id>
     <published>2016-10-10T00:39:17.000Z</published>
     <updated>2016-12-09T12:40:02.000Z</updated>
     
@@ -770,8 +770,8 @@
   
   <entry>
     <title>购买域名+服务器+部署服务器+实现ssl协议</title>
-    <link href="http://noragithub.github.io/2016/10/09/%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D+%E6%9C%8D%E5%8A%A1%E5%99%A8+%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8+%E5%AE%9E%E7%8E%B0ssl%E5%8D%8F%E8%AE%AE/"/>
-    <id>http://noragithub.github.io/2016/10/09/购买域名+服务器+部署服务器+实现ssl协议/</id>
+    <link href="check_hexo_config_url/2016/10/09/%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D+%E6%9C%8D%E5%8A%A1%E5%99%A8+%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8+%E5%AE%9E%E7%8E%B0ssl%E5%8D%8F%E8%AE%AE/"/>
+    <id>check_hexo_config_url/2016/10/09/购买域名+服务器+部署服务器+实现ssl协议/</id>
     <published>2016-10-09T06:15:00.000Z</published>
     <updated>2016-12-09T11:57:28.000Z</updated>
     
@@ -803,8 +803,8 @@
   
   <entry>
     <title>前端学习笔记</title>
-    <link href="http://noragithub.github.io/2016/10/09/%E5%89%8D%E7%AB%AF%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://noragithub.github.io/2016/10/09/前端的学习笔记/</id>
+    <link href="check_hexo_config_url/2016/10/09/%E5%89%8D%E7%AB%AF%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>check_hexo_config_url/2016/10/09/前端的学习笔记/</id>
     <published>2016-10-09T06:15:00.000Z</published>
     <updated>2016-12-08T02:31:09.000Z</updated>
     
@@ -824,8 +824,8 @@
   
   <entry>
     <title>区块链（block chain）调研</title>
-    <link href="http://noragithub.github.io/2016/10/09/%E5%8C%BA%E5%9D%97%E9%93%BE%EF%BC%88block%20chain%EF%BC%89%E8%B0%83%E7%A0%94/"/>
-    <id>http://noragithub.github.io/2016/10/09/区块链（block chain）调研/</id>
+    <link href="check_hexo_config_url/2016/10/09/%E5%8C%BA%E5%9D%97%E9%93%BE%EF%BC%88block%20chain%EF%BC%89%E8%B0%83%E7%A0%94/"/>
+    <id>check_hexo_config_url/2016/10/09/区块链（block chain）调研/</id>
     <published>2016-10-09T06:11:00.000Z</published>
     <updated>2016-12-08T02:39:30.000Z</updated>
     
@@ -848,8 +848,8 @@
   
   <entry>
     <title>git的一些坑</title>
-    <link href="http://noragithub.github.io/2016/10/09/git%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/"/>
-    <id>http://noragithub.github.io/2016/10/09/git的一些坑/</id>
+    <link href="check_hexo_config_url/2016/10/09/git%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/"/>
+    <id>check_hexo_config_url/2016/10/09/git的一些坑/</id>
     <published>2016-10-09T06:09:00.000Z</published>
     <updated>2016-12-08T02:41:03.000Z</updated>
     
@@ -875,8 +875,8 @@
   
   <entry>
     <title>文字识别初探</title>
-    <link href="http://noragithub.github.io/2016/10/08/%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB%E5%88%9D%E6%8E%A2/"/>
-    <id>http://noragithub.github.io/2016/10/08/文字识别初探/</id>
+    <link href="check_hexo_config_url/2016/10/08/%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB%E5%88%9D%E6%8E%A2/"/>
+    <id>check_hexo_config_url/2016/10/08/文字识别初探/</id>
     <published>2016-10-08T03:57:23.000Z</published>
     <updated>2016-12-09T12:40:01.000Z</updated>
     
@@ -928,20 +928,20 @@
     </summary>
     
     
-      <category term="文字识别" scheme="http://noragithub.github.io/tags/%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/"/>
+      <category term="文字识别" scheme="check_hexo_config_url/tags/%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/"/>
     
-      <category term="tesseract" scheme="http://noragithub.github.io/tags/tesseract/"/>
+      <category term="tesseract" scheme="check_hexo_config_url/tags/tesseract/"/>
     
-      <category term="OCR" scheme="http://noragithub.github.io/tags/OCR/"/>
+      <category term="OCR" scheme="check_hexo_config_url/tags/OCR/"/>
     
-      <category term="开源" scheme="http://noragithub.github.io/tags/%E5%BC%80%E6%BA%90/"/>
+      <category term="开源" scheme="check_hexo_config_url/tags/%E5%BC%80%E6%BA%90/"/>
     
   </entry>
   
   <entry>
     <title>【转】翻墙路由器的原理与实现</title>
-    <link href="http://noragithub.github.io/2016/10/06/%E3%80%90%E8%BD%AC%E3%80%91%E7%BF%BB%E5%A2%99%E8%B7%AF%E7%94%B1%E5%99%A8%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0/"/>
-    <id>http://noragithub.github.io/2016/10/06/【转】翻墙路由器的原理与实现/</id>
+    <link href="check_hexo_config_url/2016/10/06/%E3%80%90%E8%BD%AC%E3%80%91%E7%BF%BB%E5%A2%99%E8%B7%AF%E7%94%B1%E5%99%A8%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0/"/>
+    <id>check_hexo_config_url/2016/10/06/【转】翻墙路由器的原理与实现/</id>
     <published>2016-10-06T15:05:42.000Z</published>
     <updated>2016-12-08T01:23:39.000Z</updated>
     
@@ -1262,8 +1262,8 @@
   
   <entry>
     <title>个人Markdown Web  编辑器产品设计&amp;部署</title>
-    <link href="http://noragithub.github.io/2016/10/01/%E4%B8%AA%E4%BA%BAMarkdown-Web-%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1-%E9%83%A8%E7%BD%B2/"/>
-    <id>http://noragithub.github.io/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/</id>
+    <link href="check_hexo_config_url/2016/10/01/%E4%B8%AA%E4%BA%BAMarkdown-Web-%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1-%E9%83%A8%E7%BD%B2/"/>
+    <id>check_hexo_config_url/2016/10/01/个人Markdown-Web-编辑器产品设计-部署/</id>
     <published>2016-10-01T12:07:53.000Z</published>
     <updated>2016-12-08T03:25:03.000Z</updated>
     
@@ -1320,20 +1320,20 @@
     </summary>
     
     
-      <category term="Markdown" scheme="http://noragithub.github.io/tags/Markdown/"/>
+      <category term="Markdown" scheme="check_hexo_config_url/tags/Markdown/"/>
     
-      <category term="StackEdit" scheme="http://noragithub.github.io/tags/StackEdit/"/>
+      <category term="StackEdit" scheme="check_hexo_config_url/tags/StackEdit/"/>
     
-      <category term="Hexo" scheme="http://noragithub.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="check_hexo_config_url/tags/Hexo/"/>
     
-      <category term="同步" scheme="http://noragithub.github.io/tags/%E5%90%8C%E6%AD%A5/"/>
+      <category term="同步" scheme="check_hexo_config_url/tags/%E5%90%8C%E6%AD%A5/"/>
     
   </entry>
   
   <entry>
     <title>如何利用计算机网络协议知识访问Google</title>
-    <link href="http://noragithub.github.io/2016/09/29/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E7%9F%A5%E8%AF%86%E8%AE%BF%E9%97%AEGoogle/"/>
-    <id>http://noragithub.github.io/2016/09/29/如何利用计算机网络协议知识访问Google/</id>
+    <link href="check_hexo_config_url/2016/09/29/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E7%9F%A5%E8%AF%86%E8%AE%BF%E9%97%AEGoogle/"/>
+    <id>check_hexo_config_url/2016/09/29/如何利用计算机网络协议知识访问Google/</id>
     <published>2016-09-29T07:47:08.000Z</published>
     <updated>2016-12-08T01:23:39.000Z</updated>
     
@@ -1396,8 +1396,8 @@
   
   <entry>
     <title>【译】安装Canopy</title>
-    <link href="http://noragithub.github.io/2016/09/29/%E3%80%90%E8%AF%91%E3%80%91%E5%AE%89%E8%A3%85Canopy/"/>
-    <id>http://noragithub.github.io/2016/09/29/【译】安装Canopy/</id>
+    <link href="check_hexo_config_url/2016/09/29/%E3%80%90%E8%AF%91%E3%80%91%E5%AE%89%E8%A3%85Canopy/"/>
+    <id>check_hexo_config_url/2016/09/29/【译】安装Canopy/</id>
     <published>2016-09-29T07:44:31.000Z</published>
     <updated>2016-12-08T01:23:39.000Z</updated>
     
@@ -1442,8 +1442,8 @@
   
   <entry>
     <title>Markdown Web 编辑器产品调研</title>
-    <link href="http://noragithub.github.io/2016/09/29/Markdown-Web-%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94/"/>
-    <id>http://noragithub.github.io/2016/09/29/Markdown-Web-编辑器产品调研/</id>
+    <link href="check_hexo_config_url/2016/09/29/Markdown-Web-%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94/"/>
+    <id>check_hexo_config_url/2016/09/29/Markdown-Web-编辑器产品调研/</id>
     <published>2016-09-29T07:34:00.000Z</published>
     <updated>2016-12-08T03:32:05.000Z</updated>
     
@@ -1463,8 +1463,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://noragithub.github.io/2016/09/29/hello-world/"/>
-    <id>http://noragithub.github.io/2016/09/29/hello-world/</id>
+    <link href="check_hexo_config_url/2016/09/29/hello-world/"/>
+    <id>check_hexo_config_url/2016/09/29/hello-world/</id>
     <published>2016-09-29T01:52:43.000Z</published>
     <updated>2016-09-29T01:52:43.000Z</updated>
     
@@ -1490,8 +1490,8 @@
   
   <entry>
     <title></title>
-    <link href="http://noragithub.github.io/2016/09/29/README/"/>
-    <id>http://noragithub.github.io/2016/09/29/README/</id>
+    <link href="check_hexo_config_url/2016/09/29/README/"/>
+    <id>check_hexo_config_url/2016/09/29/README/</id>
     <published>2016-09-29T01:10:45.000Z</published>
     <updated>2016-09-29T01:10:45.000Z</updated>
     
