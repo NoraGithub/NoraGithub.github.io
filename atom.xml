@@ -62,7 +62,7 @@
     <link href="check_hexo_config_url/2016/11/24/Hexo-Blog-Setup%E4%BB%A5%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE/"/>
     <id>check_hexo_config_url/2016/11/24/Hexo-Blog-Setup以及常见配置/</id>
     <published>2016-11-24T01:08:34.000Z</published>
-    <updated>2016-12-09T14:13:21.000Z</updated>
+    <updated>2016-12-11T02:36:45.000Z</updated>
     
     <content type="html"><![CDATA[<p>使用Hexo进行了Blog的Setup后，我们希望选择一个心仪的theme（即不同页面类型保持一致的风格），配置需要的功能选项/属性，甚至进行一些个性化的定制。<br><a id="more"></a><br>如何预览和使用心仪的theme，Google后有足够的信息，这里就不详细介绍了。Hexo默认theme是landscape。网络上也有不少对默认主题的自定义配置方案，例如，<a href="http://blog.sunnyxx.com/2014/03/07/hexo_customize/" target="_blank" rel="external">hexo的私人订制</a><br>Simple is the best，毕竟不是搞设计和前端开发的。个人选择了Next作为theme，一方面偏好它的极简主义，另一方面，整体设计的留白和交互都很不错。</p>
 <p>theme本身很优秀，但我们还是有一些个性化的需求，需要了解Hexo的更详细配置（对应next下的主题级别的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">配置</a>），或，简单地修改脚本。例如：</p>
@@ -75,12 +75,43 @@
 <li>修改搜索的UI（未完成）</li>
 <li>…</li>
 </ul>
-<p>大部分信息网络页都有，利用这篇文章简单总结，并探索Hexo &amp; Next theme的架构。</p>
+<p>大部分信息网络页都有，利用这篇文章简单总结，并在最后探索Hexo &amp; Next theme的架构。</p>
 <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="Hexo（site）-配置"><a href="#Hexo（site）-配置" class="headerlink" title="Hexo（site） 配置"></a>Hexo（site） 配置</h2><p>Hexo级别的<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">配置</a> 关于站点/项目级别的内容、样式属性。如网站标题、网站描述、网站的SEO关键词、项目Github地址等。一般是内容属性。<br>类似meta类。</p>
 <h2 id="theme-配置"><a href="#theme-配置" class="headerlink" title="theme 配置"></a>theme 配置</h2><p>theme级别的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">配置</a>已经对基础设置，如，如何切换theme，更新profie、social link等，做了比较详细的介绍。主要是样式属性。</p>
-<p>就像html+css把内容、样式分离开来一样，theme负责Hexo的默认展现（样式）。<br>除了配置外信息一般存放于./source目录</p>
+<p>就像html+css把内容、样式分离开来一样，theme负责Hexo的默认展现（样式）。<br>除了配置外的内容信息一般存放于./source目录</p>
 <h1 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1><p>theme级别的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">配置</a>有部分用户路径是没有考虑，如404页面，搜索等。</p>
-<h2 id="Hexo的布局（layout）"><a href="#Hexo的布局（layout）" class="headerlink" title="Hexo的布局（layout）"></a>Hexo的布局（layout）</h2><h3 id="默认布局（样式）-post"><a href="#默认布局（样式）-post" class="headerlink" title="默认布局（样式）-post"></a>默认布局（样式）-post</h3><p>layout（布局）概念类似一种页面类型，（默认情况下，但是如何新建一个type？新的渲染格式？）Hexo有三种不同的layout，不同layout保存的路径并不一样。</p>
+<h2 id="设置404页面"><a href="#设置404页面" class="headerlink" title="设置404页面"></a>设置404页面</h2><p>我们希望404并非纯粹的<code>Cannot GET &lt;％path&gt;</code>或者其它一成不变的错误信息。<br><a href="http://of2r0f294.bkt.clouddn.com/hexo_default_404" target="_blank" rel="external">hexo 默认404</a><br>我们希望有效地利用这部分流量，甚至做一些有意义的事情。<br>就像：</p>
+<h3 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h3><p>新建page和新建post是不一样的，新建page利用<code>hexo new page %pagename</code>，创建后会有%pagename文件夹，文件夹有index.md，md内容为该页面调用内容。</p>
+<p>新建博客利用<code>hexo new %postname</code>创建后有%blogname.md为名的post文件，存放于source/_post</p>
+<p>/2016/12/06/photoe-test/%2F2016%2F11%2F24%2FHexo-Blog-Setup%E4%BB%A5%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%2F 404</p>
+<p>这种页面的404还是显示不正常</p>
+<h2 id="设置about"><a href="#设置about" class="headerlink" title="设置about"></a>设置about</h2><p>同理</p>
+<h1 id="设置rss"><a href="#设置rss" class="headerlink" title="设置rss"></a>设置rss</h1><p>感觉rss是一个模版粒度的设置，换了模版就有必要重新设置（如果有需要）<br><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E6%98%BE%E7%A4%BA-feed-%E9%93%BE%E6%8E%A5" target="_blank" rel="external">显示feed链接</a></p>
+<h1 id="设置分享插件（duoshuo）"><a href="#设置分享插件（duoshuo）" class="headerlink" title="设置分享插件（duoshuo）"></a>设置分享插件（duoshuo）</h1><h1 id="设置站内搜索"><a href="#设置站内搜索" class="headerlink" title="设置站内搜索"></a>设置站内搜索</h1><p>利用Next主题的local search插件的时候，会出现一个特别的情况：<br>当你在yoursite.com/page1做search的时候，点击搜索结果会出现异常：<br>会navigate到yoursite.com/page1/%search_result_relativePath<br>出现这个问题的主要原因是站点配置/path_your_blog/source/_cofig.yml的url值配置问题，改为absolutePath可以杜绝这个情况。<br>即，<br><code>yoursite.com</code><br><code>http://yoursite.com/</code><br>其中最后的斜杠<code>/</code>不能遗漏，会导致转义出现问题</p>
+<p>新问题：<br>修改generator-search-db<br>search.ejs</p>
+<pre><code>&lt;!--modified by Nora
+ &lt;url&gt;&lt;%- encodeURIComponent(config.root + post.path) %&gt;&lt;/url&gt;
+ --&gt;
+ &lt;url&gt;&lt;%- config.url + config.root + encodeURIComponent( post.path) %&gt;&lt;/url&gt;
+</code></pre><p>增加绝对路径<br>生成search.xml</p>
+<p>再更新：<br>确认了html 属性href作相对引用的逻辑后，修改为：<br>因为href=’/path’<br>会直接访问当前主域名＋path（取决于浏览器）</p>
+<pre><code>&lt;url&gt;&lt;%-  config.root + encodeURIComponent( post.path) %&gt;&lt;/url&gt;
+</code></pre><p>因为使用相对路径404页面也更新为：<br> <script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8" homepageurl="/ " homepagename="回到我的主页"></p>
+<p>其它md的相对路径也按照该逻辑处理。减少绝对路径使用，因为有多个发布地点。<br>为了减少所有的绝对饮用，url设置为url:  check_hexo_config_url 观察是否有问题。</p>
+<h2 id="github的包含关系。"><a href="#github的包含关系。" class="headerlink" title="github的包含关系。"></a>github的包含关系。</h2><p>例如_post已经在一个仓库了，希望建一个新的仓库包涵旧仓库</p>
+<h2 id="encode-amp-decode"><a href="#encode-amp-decode" class="headerlink" title="encode&amp; decode"></a>encode&amp; decode</h2><p>根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把<code>/</code>转为<code>%2F</code>进行页面访问。<br>检查yoursite.com/search.xml可以发现<code>npm install hexo-generator-searchdb --save</code>会根据文章简历索引，并编码后访问<br><a href="">#reference:</a><br><a href="http://www.w3school.com.cn/tags/html_ref_urlencode.html">#reference: HTML URL 编码</a></p>
+<h2 id="github做了子项目pages"><a href="#github做了子项目pages" class="headerlink" title="github做了子项目pages"></a>github做了子项目pages</h2><p>coding也需要做<br>noragithub/prd_deployment映射到nora_coding/prd_deployment，同时pages业务。<br>两个项目都已经忽略了主域名，不做映射回出问题（coding找不到该页面）<br>这里利用hook设置</p>
+<h2 id="hook需要自由服务器，结合docker的自动化常识，daoke-cluod"><a href="#hook需要自由服务器，结合docker的自动化常识，daoke-cluod" class="headerlink" title="hook需要自由服务器，结合docker的自动化常识，daoke.cluod"></a>hook需要自由服务器，结合docker的自动化常识，daoke.cluod</h2><p>名字是pages blog</p>
+<h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>update time</p>
+<h1 id="SEO优化设置"><a href="#SEO优化设置" class="headerlink" title="SEO优化设置"></a>SEO优化设置</h1><h2 id="keywords"><a href="#keywords" class="headerlink" title="keywords"></a>keywords</h2><p>页面级别配置</p>
+<h2 id="友链"><a href="#友链" class="headerlink" title="友链"></a>友链</h2><h2 id="sitetracking"><a href="#sitetracking" class="headerlink" title="sitetracking"></a>sitetracking</h2><h2 id="出现在搜索引擎"><a href="#出现在搜索引擎" class="headerlink" title="出现在搜索引擎"></a>出现在搜索引擎</h2><h1 id="Favicon"><a href="#Favicon" class="headerlink" title="Favicon"></a>Favicon</h1><p><a href="http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg">http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg</a></p>
+<h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><p> Github 访问速度太慢，有没有通过反向代理或者CDN加速的方式提高访问速度？特别是如果更新DNS的情况下</p>
+<p>经过调研，最简单快速的方法是利用coding.net（墙内版Github）的pages服务设置hook自动更新 </p>
+<p>//godaddy<br>设置www别名到pages.coding.me<br>绑定coding pages到www.busihacker.com</p>
+<h4 id="定期更新问题-amp-hook问题-amp-父子域名、（发布到coding-me／noragithub-io）"><a href="#定期更新问题-amp-hook问题-amp-父子域名、（发布到coding-me／noragithub-io）" class="headerlink" title="定期更新问题&amp;hook问题&amp;父子域名、（发布到coding.me／noragithub.io）"></a>定期更新问题&amp;hook问题&amp;父子域名、（发布到coding.me／noragithub.io）</h4><h1 id="可能有的问题"><a href="#可能有的问题" class="headerlink" title="可能有的问题"></a>可能有的问题</h1><p>https协议的支持<br>seo支持<br>自定义监测支持<br><a href="https://github.com/PaicHyperionDev/hexo-generator-search/issues/8">提示有编码错误</a></p>
+<h2 id="不支持所有页面进行local-search"><a href="#不支持所有页面进行local-search" class="headerlink" title="不支持所有页面进行local search"></a>不支持所有页面进行local search</h2><p>当对配置中 search- field从<code>post</code>修改为<code>all</code>，会提醒post is not defined </p>
+<p>updatetime function</p>
+<h1 id="定制化（进阶）"><a href="#定制化（进阶）" class="headerlink" title="定制化（进阶）"></a>定制化（进阶）</h1><h2 id="Hexo的布局（layout）"><a href="#Hexo的布局（layout）" class="headerlink" title="Hexo的布局（layout）"></a>Hexo的布局（layout）</h2><h3 id="默认布局（样式）-post"><a href="#默认布局（样式）-post" class="headerlink" title="默认布局（样式）-post"></a>默认布局（样式）-post</h3><p>layout（布局）概念类似一种页面类型，（默认情况下，但是如何新建一个type？新的渲染格式？）Hexo有三种不同的layout，不同layout保存的路径并不一样。</p>
 <table>
 <thead>
 <tr>
@@ -106,7 +137,7 @@
 <ol>
 <li>不同layout的唯一区别是保存到不同的路径（to some extent）</li>
 <li>layout支持自定义，存放目录和post一样，当scaffold无自定义类型时，调用默认layout</li>
-<li>hexo publish 可用于发表草稿（draft–&gt;post，参考1）（仅用于发表草稿，不代表支持转移目录）</li>
+<li>hexo publish 可用于发表草稿（draft–&gt;post，参考1）（仅用于发表草稿，不代表支持转移目录，是否代表支持修改scaffold里的layout变量？）</li>
 <li>hexo new page</li>
 </ol>
 <p>可以利用layout组织template</p>
@@ -156,45 +187,16 @@
 </tr>
 </tbody>
 </table>
-<p>Fallback位于类似于scaffolds，只是定义了变量，<br>不同template的渲染文件位于./themes/next/layout/*下，利用swig组成，swig是一个js模版引擎</p>
-<p>/source/_其它（page？）<br><a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="external">reference-写作</a></p>
-<p>hexo new draft ..<br>其中..d的layout是post，并非draft，有点坑啊。。。<br>在scaffolds中国年增加变量layout: draft解决该问题，然而历史的的md都会被认为是默认的layout：post，需手动添加layout: draft补充<br>在post.swig和post-collapse的 </p><h1>标签增加<p></p>
+<p>Fallback位于类似于scaffolds，只是定义了变量，<br>不同template的渲染文件位于 <code>./themes/next/layout/\*</code> 下，利用swig组成，<a href="http://www.cnblogs.com/elementstorm/p/3142644.html">swig是一个js模版引擎</a><br><a href="http://imweb.io/topic/565b2e23bb6a753a136242b5">http://imweb.io/topic/565b2e23bb6a753a136242b5</a></p>
+<p>/source/_其它（page？）<br><a href="https://hexo.io/zh-cn/docs/writing.html">reference-写作</a></p>
+<p>hexo new draft ..<br>其中..d的layout是post，并非draft，有点坑啊。。。<br>在scaffolds中国年增加变量layout: draft解决该问题，然而历史的的md都会被认为是默认的layout：post，需手动添加layout: draft补充<br>在post.swig和post-collapse的 <h1>标签增加</p>
 <pre><code>{% if post.layout === "draft" %}
-        <font color="#FF4500" size="1"> 撰写中</font>
+        <font color=#FF4500 size=1> 撰写中</font>
         {% endif %}
 </code></pre><p>用于提醒。</p>
 <h2 id="scaffold自定义模版（样式）"><a href="#scaffold自定义模版（样式）" class="headerlink" title="scaffold自定义模版（样式）"></a>scaffold自定义模版（样式）</h2><p>scaffolds/%layout<br>scaffolds决定不同layout的变量，在initial一个article时出现的变量，不同的layout变量使用不同的template和不同的path<br>template上述内容的展现方式<br>切换布局</p>
 <p><em>如果要显示草稿，页面级别设置是没用的，只能全站级别</em><br><strong>希望修改为页面级别，而且修改样式提醒为草稿以及首页显示后提醒草稿样式</strong></p>
-<h2 id="设置404页面"><a href="#设置404页面" class="headerlink" title="设置404页面"></a>设置404页面</h2><p>我们希望404</p>
-<h2 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h2><p>新建page和新建post是不一样的，新建page利用<code>hexo new page %pagename</code>，创建后会有%pagename文件夹，文件夹有index.md，md内容为该页面调用内容。</p>
-<p>新建博客利用<code>hexo new %postname</code>创建后有%blogname.md为名的post文件，存放于source/_post</p>
-<p>/2016/12/06/photoe-test/%2F2016%2F11%2F24%2FHexo-Blog-Setup%E4%BB%A5%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%2F 404</p>
-<p>这种页面的404还是显示不正常</p>
-<h2 id="设置about"><a href="#设置about" class="headerlink" title="设置about"></a>设置about</h2><p>同理</p>
-<h1 id="设置rss"><a href="#设置rss" class="headerlink" title="设置rss"></a>设置rss</h1><p>感觉rss是一个模版粒度的设置，换了模版就有必要重新设置（如果有需要）<br><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E6%98%BE%E7%A4%BA-feed-%E9%93%BE%E6%8E%A5" target="_blank" rel="external">显示feed链接</a></p>
-<h1 id="设置分享插件（duoshuo）"><a href="#设置分享插件（duoshuo）" class="headerlink" title="设置分享插件（duoshuo）"></a>设置分享插件（duoshuo）</h1><h1 id="设置站内搜索"><a href="#设置站内搜索" class="headerlink" title="设置站内搜索"></a>设置站内搜索</h1><p>利用Next主题的local search插件的时候，会出现一个特别的情况：<br>当你在yoursite.com/page1做search的时候，点击搜索结果会出现异常：<br>会navigate到yoursite.com/page1/%search_result_relativePath<br>出现这个问题的主要原因是站点配置/path_your_blog/source/_cofig.yml的url值配置问题，改为absolutePath可以杜绝这个情况。<br>即，<br><code>yoursite.com</code><br><code>http://yoursite.com/</code><br>其中最后的斜杠<code>/</code>不能遗漏，会导致转义出现问题</p>
-<p>新问题：<br>修改generator-search-db<br>search.ejs</p>
-<pre><code>&lt;!--modified by Nora
- &lt;url&gt;&lt;%- encodeURIComponent(config.root + post.path) %&gt;&lt;/url&gt;
- --&gt;
- &lt;url&gt;&lt;%- config.url + config.root + encodeURIComponent( post.path) %&gt;&lt;/url&gt;
-</code></pre><p>增加绝对路径<br>生成search.xml</p>
-<p>再更新：<br>确认了html 属性href作相对引用的逻辑后，修改为：<br>因为href=’/path’<br>会直接访问当前主域名＋path（取决于浏览器）</p>
-<pre><code>&lt;url&gt;&lt;%-  config.root + encodeURIComponent( post.path) %&gt;&lt;/url&gt;
-</code></pre><p>因为使用相对路径404页面也更新为：<br> <script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8" homepageurl="/ " homepagename="回到我的主页"></p>
-<p>其它md的相对路径也按照该逻辑处理。减少绝对路径使用，因为有多个发布地点。<br>为了减少所有的绝对饮用，url设置为url:  check_hexo_config_url 观察是否有问题。</p>
-<h2 id="github的包含关系。"><a href="#github的包含关系。" class="headerlink" title="github的包含关系。"></a>github的包含关系。</h2><p>例如_post已经在一个仓库了，希望建一个新的仓库包涵旧仓库</p>
-<h2 id="encode-amp-decode"><a href="#encode-amp-decode" class="headerlink" title="encode&amp; decode"></a>encode&amp; decode</h2><p>根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把<code>/</code>转为<code>%2F</code>进行页面访问。<br>检查yoursite.com/search.xml可以发现<code>npm install hexo-generator-searchdb --save</code>会根据文章简历索引，并编码后访问<br><a href="">#reference:</a><br><a href="http://www.w3school.com.cn/tags/html_ref_urlencode.html">#reference: HTML URL 编码</a></p>
-<h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>update time</p>
-<h1 id="SEO优化设置"><a href="#SEO优化设置" class="headerlink" title="SEO优化设置"></a>SEO优化设置</h1><h2 id="keywords"><a href="#keywords" class="headerlink" title="keywords"></a>keywords</h2><p>页面级别配置</p>
-<h2 id="友链"><a href="#友链" class="headerlink" title="友链"></a>友链</h2><h2 id="sitetracking"><a href="#sitetracking" class="headerlink" title="sitetracking"></a>sitetracking</h2><h2 id="出现在搜索引擎"><a href="#出现在搜索引擎" class="headerlink" title="出现在搜索引擎"></a>出现在搜索引擎</h2><h1 id="Favicon"><a href="#Favicon" class="headerlink" title="Favicon"></a>Favicon</h1><p><a href="http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg">http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg</a></p>
-<h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><p> Github 访问速度太慢，有没有通过反向代理或者CDN加速的方式提高访问速度？特别是如果更新DNS的情况下</p>
-<p>经过调研，最简单快速的方法是利用coding.net（墙内版Github）的pages服务设置hook自动更新 </p>
-<p>//godaddy<br>设置www别名到pages.coding.me<br>绑定coding pages到www.busihacker.com</p>
-<h4 id="定期更新问题-amp-hook问题-amp-父子域名、（发布到coding-me／noragithub-io）"><a href="#定期更新问题-amp-hook问题-amp-父子域名、（发布到coding-me／noragithub-io）" class="headerlink" title="定期更新问题&amp;hook问题&amp;父子域名、（发布到coding.me／noragithub.io）"></a>定期更新问题&amp;hook问题&amp;父子域名、（发布到coding.me／noragithub.io）</h4><h1 id="可能有的问题"><a href="#可能有的问题" class="headerlink" title="可能有的问题"></a>可能有的问题</h1><p>https协议的支持<br>seo支持<br>自定义监测支持<br><a href="https://github.com/PaicHyperionDev/hexo-generator-search/issues/8">提示有编码错误</a></p>
-<h2 id="不支持所有页面进行local-search"><a href="#不支持所有页面进行local-search" class="headerlink" title="不支持所有页面进行local search"></a>不支持所有页面进行local search</h2><p>当对配置中 search- field从<code>post</code>修改为<code>all</code>，会提醒post is not defined </p>
-<p>updatetime function</p>
-<h1 id="定制化（进阶）"><a href="#定制化（进阶）" class="headerlink" title="定制化（进阶）"></a>定制化（进阶）</h1><p><a href="https://hexo.io/zh-cn/docs/templates.html">结构</a></p>
+<p><a href="https://hexo.io/zh-cn/docs/templates.html">结构</a></p>
 <p>为了进行个性化定制，先定义一些主要的数据类型：<br>页面（类型），如首页，归档页，标签页等：page<br>页面：默认（default）post</p>
 <p>我们页了解下Hexo框架下，页面（html）的生成逻辑。<br>另外也应该了解同一个选项，hexo的<br>配置的优先级：page&gt;theme&gt;hexo<br>从html角度进行个性化定制</p>
 <p>我们来看看hexo 的名录以及各目录下配置或文件的作用<br><code>tree -L 3  -I node_modules\|public</code></p>
@@ -213,7 +215,7 @@
 <p>决定按照insecure方式处理<br>修改回这些文件<br>/Users/NoraChan/Desktop/Blog/node_modules/.bin/esvalidate:<br>/Users/NoraChan/Desktop/Blog/node_modules/esprima/bin/esvalidate.js:<br>/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.coffee:<br>/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.js:</p>
 <p><a href="http://www.luohanjie.com/2016-03-22/hexo-support-flowchart.html#fnref2">hexo-diagram 渲染问题</a></p>
 <p>流程图支持的markdown语法</p>
-</script></p></h1>]]></content>
+</script></p>]]></content>
     
     <summary type="html">
     
@@ -827,9 +829,13 @@
     <link href="check_hexo_config_url/2016/10/09/%E5%8C%BA%E5%9D%97%E9%93%BE%EF%BC%88block%20chain%EF%BC%89%E8%B0%83%E7%A0%94/"/>
     <id>check_hexo_config_url/2016/10/09/区块链（block chain）调研/</id>
     <published>2016-10-09T06:11:00.000Z</published>
-    <updated>2016-12-08T02:39:30.000Z</updated>
+    <updated>2016-12-10T14:03:59.000Z</updated>
     
-    <content type="html"><![CDATA[<p>区块链和大数据结合貌似可以有作为，开个头。<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>区块链和大数据、云计算结合貌似可以有作为，开个头。</p>
+<a id="more"></a>
+<blockquote>
+<p>%人工智能、大数据和云计算分别指的是什么</p>
+</blockquote>
 <p><a href="https://elendirx.github.io/web2web/" target="_blank" rel="external">Web2Web Bootstrap</a></p>
 <blockquote>
 <p>笑来兄在微信公号发布的，torren不依附于任何服务器，很难将其关闭，或许这就是未来信息存储和传播的主要方式，永久保存不消失，创造永恒的信息世界</p>
@@ -839,7 +845,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;区块链和大数据结合貌似可以有作为，开个头。&lt;br&gt;
+      &lt;p&gt;区块链和大数据、云计算结合貌似可以有作为，开个头。&lt;/p&gt;
     
     </summary>
     
