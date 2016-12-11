@@ -27,10 +27,6 @@
 
 
 
-  
-  
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -93,7 +89,7 @@
 <meta property="og:site_name" content="Busihacker">
 <meta property="og:description" content="使用Hexo进行了Blog的Setup后，我们希望选择一个心仪的theme（即不同页面类型保持一致的风格），配置需要的功能选项/属性，甚至进行一些个性化的定制。">
 <meta property="og:image" content="http://of2r0f294.bkt.clouddn.com/hexo_default_404">
-<meta property="og:updated_time" content="2016-12-11T08:53:06.000Z">
+<meta property="og:updated_time" content="2016-12-11T12:58:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Blog Setup以及常见配置">
 <meta name="twitter:description" content="使用Hexo进行了Blog的Setup后，我们希望选择一个心仪的theme（即不同页面类型保持一致的风格），配置需要的功能选项/属性，甚至进行一些个性化的定制。">
@@ -106,7 +102,7 @@
   var CONFIG = {
     scheme: 'Pisces',
     sidebar: {"position":"left","display":"always"},
-    fancybox: true,
+    fancybox: false,
     motion: true,
     duoshuo: {
       userId: 8461498,
@@ -336,7 +332,7 @@
           <br />
             <!--更新时间-->
             <span class="post-meta-item-text">最近更新于</span>
-            <time itemprop="dateUpdated" datetime="2016-12-11T16:53:06+08:00" content="2016-12-11">
+            <time itemprop="dateUpdated" datetime="2016-12-11T20:58:17+08:00" content="2016-12-11">
               2016-12-11
             </time>
           </span>
@@ -502,6 +498,7 @@
 <p>决定按照insecure方式处理<br>修改回这些文件<br>/Users/NoraChan/Desktop/Blog/node_modules/.bin/esvalidate:<br>/Users/NoraChan/Desktop/Blog/node_modules/esprima/bin/esvalidate.js:<br>/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.coffee:<br>/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.js:</p>
 <p><a href="http://www.luohanjie.com/2016-03-22/hexo-support-flowchart.html#fnref2" target="_blank" rel="external">hexo-diagram 渲染问题</a></p>
 <p>流程图支持的markdown语法</p>
+<p>###fancy box 效果问题&amp;增加post级别fancy设置</p>
 </h1>
       
     </div>
@@ -763,6 +760,7 @@ npm install phantomjs  –save–save和-g的区别是？（phantomjs-prebuilt�
 决定按照insecure方式处理修改回这些文件/Users/NoraChan/Desktop/Blog/node_modules/.bin/esvalidate:/Users/NoraChan/Desktop/Blog/node_modules/esprima/bin/esvalidate.js:/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.coffee:/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.js:
 hexo-diagram 渲染问题
 流程图支持的markdown语法
+###fancy box 效果问题&增加post级别fancy设置
 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#scaffold自定义模版（样式）"><span class="nav-number">12.1.</span> <span class="nav-text">scaffold自定义模版（样式）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在about增加update时间"><span class="nav-number">12.2.</span> <span class="nav-text">在about增加update时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在about自我简介＋resume链接"><span class="nav-number">12.3.</span> <span class="nav-text">在about自我简介＋resume链接</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自己创建-amp-管理主题"><span class="nav-number">13.</span> <span class="nav-text">自己创建&管理主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#regenerate"><span class="nav-number">14.</span> <span class="nav-text">regenerate</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#支持流程图"><span class="nav-number">15.</span> <span class="nav-text">支持流程图</span></a></li></ol></div>
             
           </div>
@@ -843,8 +841,6 @@ hexo-diagram 渲染问题
 
 
 
-  
-
 
 
   
@@ -861,9 +857,6 @@ hexo-diagram 渲染问题
 
   
   <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   

@@ -62,7 +62,7 @@
     <link href="check_hexo_config_url/2016/11/24/Hexo-Blog-Setup%E4%BB%A5%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE/"/>
     <id>check_hexo_config_url/2016/11/24/Hexo-Blog-Setup以及常见配置/</id>
     <published>2016-11-24T01:08:34.000Z</published>
-    <updated>2016-12-11T08:53:06.000Z</updated>
+    <updated>2016-12-11T12:58:17.000Z</updated>
     
     <content type="html"><![CDATA[<p>使用Hexo进行了Blog的Setup后，我们希望选择一个心仪的theme（即不同页面类型保持一致的风格），配置需要的功能选项/属性，甚至进行一些个性化的定制。<br><a id="more"></a><br>如何预览和使用心仪的theme，Google后有足够的信息，这里就不详细介绍了。Hexo默认theme是landscape。网络上也有不少对默认主题的自定义配置方案，例如，<a href="http://blog.sunnyxx.com/2014/03/07/hexo_customize/" target="_blank" rel="external">hexo的私人订制</a><br>Simple is the best，毕竟不是搞设计和前端开发的。个人选择了Next作为theme，一方面偏好它的极简主义，另一方面，整体设计的留白和交互都很不错。</p>
 <p>theme本身很优秀，但我们还是有一些个性化的需求，需要了解Hexo的更详细配置（对应next下的主题级别的<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">配置</a>），或，简单地修改脚本。例如：</p>
@@ -211,6 +211,7 @@
 <p>决定按照insecure方式处理<br>修改回这些文件<br>/Users/NoraChan/Desktop/Blog/node_modules/.bin/esvalidate:<br>/Users/NoraChan/Desktop/Blog/node_modules/esprima/bin/esvalidate.js:<br>/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.coffee:<br>/Users/NoraChan/Desktop/Blog/node_modules/phantom/phantom.js:</p>
 <p><a href="http://www.luohanjie.com/2016-03-22/hexo-support-flowchart.html#fnref2" target="_blank" rel="external">hexo-diagram 渲染问题</a></p>
 <p>流程图支持的markdown语法</p>
+<p>###fancy box 效果问题&amp;增加post级别fancy设置</p>
 </h1>]]></content>
     
     <summary type="html">
