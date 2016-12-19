@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="数据科学, 数据分析, 产品需求分析, 云计算, 项目管理, slash" />
+  <meta name="keywords" content="Jupyter Notebook,Ipython Notebook,Jupyter,Ipython," />
 
 
 
@@ -113,7 +113,7 @@ Brief of 解决方案
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-cf639bfbabfce7ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-e3161f7f19f080e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/544981-d82d9ca02a61676b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-12-08T01:23:39.000Z">
+<meta property="og:updated_time" content="2016-12-19T00:24:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="部署Jupyter/IPython Notebook Memo">
 <meta name="twitter:description" content="需求：
@@ -362,8 +362,8 @@ Brief of 解决方案
           <br />
             <!--更新时间-->
             <span class="post-meta-item-text">最近更新于</span>
-            <time itemprop="dateUpdated" datetime="2016-12-08T09:23:39+08:00" content="2016-12-08">
-              2016-12-08
+            <time itemprop="dateUpdated" datetime="2016-12-19T08:24:18+08:00" content="2016-12-19">
+              2016-12-19
             </time>
           </span>
         </div>
@@ -425,7 +425,8 @@ Brief of 解决方案
 <blockquote>
 <p>\$  scp -P &lt;%服务端SSH端口&gt; path/to/save/local/canopy/&lt;canopy-to-insall&gt;.sh &lt;%服务端user-name&gt;@&lt;%服务器IP&gt;:path/to/save/server/canopy </p>
 </blockquote>
-<p><a href="http://www.cnblogs.com/jiangyao/archive/2011/01/26/1945570.html" target="_blank" rel="external">#reference-利用ssh传输文件</a></p>
+<p>‘’’<br>PS：scp命令，如果服务端地址有空格，如<code>~/server_doc_to_save/python\ for\ data/ml-1m</code>这个地址下的<code>python for data</code>文件夹，需要加单引号（起码我是的），如<code>&#39;~/server_doc_to_save/python\ for\ data/ml-1m&#39;</code>否则会引起歧义问题<code>scp: ambiguous target</code>。这个歧义问题（可能）是服务器以为你要上传文件到多个文件夹，其中，多个文件夹以空格<code> </code>区隔。<br>‘’’</p>
+<p><a href="http://www.cnblogs.com/jiangyao/archive/2011/01/26/1945570.html" target="_blank" rel="external">#reference-利用ssh传输文件</a><br><a href="http://superuser.com/questions/1022976/scp-copy-to-external-hard-drive-ambiguous-target" target="_blank" rel="external">#reference-scp copy to external hard drive ambiguous target</a><br><a href="http://mikestechblog.com/ubuntu-antenna/scp-ambiguous-target-error-solved/" target="_blank" rel="external">#reference-scp: Ambiguous Target Error Solved</a></p>
 <h3 id="安装Canopy"><a href="#安装Canopy" class="headerlink" title="安装Canopy"></a>安装Canopy</h3><p><strong>建议安装前先执行<a href="#可能遇到的问题">可能遇到的问题</a>脚本,以防万一。</strong></p>
 <p>执行安装</p>
 <blockquote>
@@ -596,6 +597,18 @@ Brief of 解决方案
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Jupyter-Notebook/" rel="tag">#Jupyter Notebook</a>
+          
+            <a href="/tags/Ipython-Notebook/" rel="tag">#Ipython Notebook</a>
+          
+            <a href="/tags/Jupyter/" rel="tag">#Jupyter</a>
+          
+            <a href="/tags/Ipython/" rel="tag">#Ipython</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
@@ -712,7 +725,7 @@ Brief of 解决方案
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

@@ -88,7 +88,7 @@
 <meta property="og:url" content="check_hexo_config_url/2016/10/09/git的一些坑/index.html">
 <meta property="og:site_name" content="Busihacker">
 <meta property="og:description" content="weibo的git使用笔记。">
-<meta property="og:updated_time" content="2016-12-08T02:41:03.000Z">
+<meta property="og:updated_time" content="2016-12-19T01:46:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git的一些坑">
 <meta name="twitter:description" content="weibo的git使用笔记。">
@@ -330,8 +330,8 @@
           <br />
             <!--更新时间-->
             <span class="post-meta-item-text">最近更新于</span>
-            <time itemprop="dateUpdated" datetime="2016-12-08T10:41:03+08:00" content="2016-12-08">
-              2016-12-08
+            <time itemprop="dateUpdated" datetime="2016-12-19T09:46:18+08:00" content="2016-12-19">
+              2016-12-19
             </time>
           </span>
         </div>
@@ -358,6 +358,8 @@
 <p>#文件的命名不要带有<code>/</code><br><a href="https://www.google.com.hk/search?q=invalid+path+git+pull&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">windows下不接受这种命名</a><br>导致git pull 后git rm，永远无法和remote repository保持一致。<br>这个时候可能一定会遇到push force问题。（由于是没用的文件，我直接舍弃了该文件。）</p>
 <p>##git push –force 的使用场景<br>push错误后，<br><a href="https://segmentfault.com/q/1010000002898735" target="_blank" rel="external">git 怎样删除远程仓库的某次错误提交？</a><br><a href="https://www.google.com.hk/search?q=push%E5%90%8E%E6%92%A4%E9%94%80&amp;ie=utf-8&amp;oe=utf-8&amp;gws_rd=cr,ssl" target="_blank" rel="external">push后撤销</a></p>
 <p>## </p>
+<p><a href="https://help.github.com/articles/why-are-my-commits-linked-to-the-wrong-user/" target="_blank" rel="external">Why are my commits linked to the wrong user?</a></p>
+<p>##常规步骤<br><a href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE" target="_blank" rel="external">起步 - 初次运行 Git 前的配置</a><br><a href="https://help.github.com/articles/set-up-git/" target="_blank" rel="external">Set Up Git</a><br><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/" target="_blank" rel="external">Generating a new SSH key and adding it to the ssh-agent</a><br><a href="https://git-scm.com/docs/merge-strategies" target="_blank" rel="external">MERGE STRATEGIES</a><br>准备合并dev分支，请注意–no-ff参数，表示禁用Fast forward：<br>‘’’<br>$ git merge –no-ff -m “merge with no-ff” dev<br>Merge made by the ‘recursive’ strategy.<br> readme.txt |    1 +<br> 1 file changed, 1 insertion(+)<br>‘’’<br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758410364457b9e3d821f4244beb0fd69c61a185ae0000" target="_blank" rel="external">分支管理策略</a></p>
 
       
     </div>
@@ -519,7 +521,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
