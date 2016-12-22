@@ -105,7 +105,7 @@
 <meta property="og:image" content="http://of2r0f294.bkt.clouddn.com/hexo_default_404">
 <meta property="og:image" content="http://of2r0f294.bkt.clouddn.com/404搜索流量.png">
 <meta property="og:image" content="http://of2r0f294.bkt.clouddn.com/404宝贝回家.png">
-<meta property="og:updated_time" content="2016-12-14T03:27:38.000Z">
+<meta property="og:updated_time" content="2016-12-22T03:49:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Blog Setup以及常见配置">
 <meta name="twitter:description" content="img {
@@ -355,8 +355,8 @@
           <br />
             <!--更新时间-->
             <span class="post-meta-item-text">最近更新于</span>
-            <time itemprop="dateUpdated" datetime="2016-12-14T11:27:38+08:00" content="2016-12-14">
-              2016-12-14
+            <time itemprop="dateUpdated" datetime="2016-12-22T11:49:10+08:00" content="2016-12-22">
+              2016-12-22
             </time>
           </span>
         </div>
@@ -422,7 +422,7 @@ img {
 <h2 id="encode-amp-decode"><a href="#encode-amp-decode" class="headerlink" title="encode&amp; decode"></a>encode&amp; decode</h2><p>根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把<code>/</code>转为<code>%2F</code>进行页面访问。<br>检查yoursite.com/search.xml可以发现<code>npm install hexo-generator-searchdb --save</code>会根据文章简历索引，并编码后访问<br><a href="">#reference:</a><br><a href="http://www.w3school.com.cn/tags/html_ref_urlencode.html" target="_blank" rel="external">#reference: HTML URL 编码</a></p>
 <h2 id="github做了子项目pages"><a href="#github做了子项目pages" class="headerlink" title="github做了子项目pages"></a>github做了子项目pages</h2><p>coding也需要做<br>noragithub/prd_deployment映射到nora_coding/prd_deployment，同时pages业务。<br>两个项目都已经忽略了主域名，不做映射回出问题（coding找不到该页面）<br>这里利用hook设置</p>
 <h2 id="hook需要自由服务器，结合docker的自动化常识，daoke-cluod"><a href="#hook需要自由服务器，结合docker的自动化常识，daoke-cluod" class="headerlink" title="hook需要自由服务器，结合docker的自动化常识，daoke.cluod"></a>hook需要自由服务器，结合docker的自动化常识，daoke.cluod</h2><p>名字是pages blog</p>
-<h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>参考<a href="https://hexo.io/zh-cn/docs/variables.html" target="_blank" rel="external">hexo变量</a><br>增加updated: 1481686058000</p>
+<h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>参考<a href="https://hexo.io/zh-cn/docs/variables.html" target="_blank" rel="external">hexo变量</a><br>增加updated: 1482378550000</p>
 <h2 id="显示updated"><a href="#显示updated" class="headerlink" title="显示updated"></a>显示updated</h2><h1 id="SEO优化设置"><a href="#SEO优化设置" class="headerlink" title="SEO优化设置"></a>SEO优化设置</h1><h2 id="keywords"><a href="#keywords" class="headerlink" title="keywords"></a>keywords</h2><p>页面级别配置</p>
 <h2 id="友链"><a href="#友链" class="headerlink" title="友链"></a>友链</h2><h2 id="sitetracking"><a href="#sitetracking" class="headerlink" title="sitetracking"></a>sitetracking</h2><h2 id="出现在搜索引擎"><a href="#出现在搜索引擎" class="headerlink" title="出现在搜索引擎"></a>出现在搜索引擎</h2><h1 id="Favicon"><a href="#Favicon" class="headerlink" title="Favicon"></a>Favicon</h1><p><a href="http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg" target="_blank" rel="external">http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg</a></p>
 <h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><p> Github 访问速度太慢，有没有通过反向代理或者CDN加速的方式提高访问速度？特别是如果更新DNS的情况下</p>
@@ -521,6 +521,7 @@ img {
         <font color="#FF4500" size="1"> 撰写中</font>
         {% endif %}
 </code></pre><p>用于提醒。</p>
+<p>通过<code>hexo new darft &quot;test_draft_publish&quot;</code>然后<code>hexo publish &quot;test_draft_publish&quot;</code>，知识修改了文件的名称，从<code>test-draft-publish.md</code>修改为<code>test-draft-publish-1.md</code>，layout并未修改为post（期望是layout变量修改为post，并把md文件转移到_post文件夹），这个问题的主要原因是scaffold/draft.md增加了layout变量，需要想办法修改下。</p>
 <h2 id="scaffold自定义模版"><a href="#scaffold自定义模版" class="headerlink" title="scaffold自定义模版"></a>scaffold自定义模版</h2><p>scaffolds/%layout<br>scaffolds决定不同layout的变量，在initial一个article时出现的变量，不同的layout变量使用不同的template和不同的path<br>template上述内容的展现方式<br>切换布局</p>
 <p><em>如果要显示草稿，页面级别设置是没用的，只能全站级别</em><br><strong>希望修改为页面级别，而且修改样式提醒为草稿以及首页显示后提醒草稿样式</strong></p>
 <p><a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="external">建站</a><br><a href="https://hexo.io/zh-cn/docs/templates.html" target="_blank" rel="external">结构</a></p>
@@ -696,7 +697,7 @@ img {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -785,6 +786,7 @@ img {
          撰写中
         {% endif %}
 用于提醒。
+通过hexo new darft "test_draft_publish"然后hexo publish "test_draft_publish"，知识修改了文件的名称，从test-draft-publish.md修改为test-draft-publish-1.md，layout并未修改为post（期望是layout变量修改为post，并把md文件转移到_post文件夹），这个问题的主要原因是scaffold/draft.md增加了layout变量，需要想办法修改下。
 scaffold自定义模版scaffolds/%layoutscaffolds决定不同layout的变量，在initial一个article时出现的变量，不同的layout变量使用不同的template和不同的pathtemplate上述内容的展现方式切换布局
 如果要显示草稿，页面级别设置是没用的，只能全站级别希望修改为页面级别，而且修改样式提醒为草稿以及首页显示后提醒草稿样式
 建站结构

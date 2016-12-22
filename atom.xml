@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="check_hexo_config_url/"/>
-  <updated>2016-12-22T03:11:15.000Z</updated>
+  <updated>2016-12-22T03:38:55.000Z</updated>
   <id>check_hexo_config_url/</id>
   
   <author>
@@ -16,11 +16,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>test_draft_publish_without_layout_variable</title>
+    <link href="check_hexo_config_url/2016/12/22/test-draft-publish-without-layout-variable/"/>
+    <id>check_hexo_config_url/2016/12/22/test-draft-publish-without-layout-variable/</id>
+    <published>2016-12-22T03:38:42.000Z</published>
+    <updated>2016-12-22T03:38:55.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>test_draft_publish</title>
+    <link href="check_hexo_config_url/2016/12/22/test-draft-publish-1/"/>
+    <id>check_hexo_config_url/2016/12/22/test-draft-publish-1/</id>
+    <published>2016-12-22T03:21:36.000Z</published>
+    <updated>2016-12-22T03:26:19.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>在python里通过myql访问远程服务器数据库配置memo</title>
-    <link href="check_hexo_config_url/2016/12/21/%E5%9C%A8python%E9%87%8C%E9%80%9A%E8%BF%87myql%E8%AE%BF%E9%97%AE%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AEmemo-1/"/>
-    <id>check_hexo_config_url/2016/12/21/在python里通过myql访问远程服务器数据库配置memo-1/</id>
+    <link href="check_hexo_config_url/2016/12/21/%E5%9C%A8python%E9%87%8C%E9%80%9A%E8%BF%87myql%E8%AE%BF%E9%97%AE%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AEmemo/"/>
+    <id>check_hexo_config_url/2016/12/21/在python里通过myql访问远程服务器数据库配置memo/</id>
     <published>2016-12-21T13:35:51.000Z</published>
-    <updated>2016-12-22T03:11:15.000Z</updated>
+    <updated>2016-12-22T03:50:52.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="mac安装mysql"><a href="#mac安装mysql" class="headerlink" title="mac安装mysql"></a>mac安装mysql</h1><p>mac:<code>brew install mysql</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">==&gt; Caveats</div><div class="line">We&apos;ve installed your MySQL database without a root password. To secure it run:</div><div class="line">    mysql_secure_installation</div><div class="line"></div><div class="line">To connect run:</div><div class="line">    mysql -uroot</div><div class="line"></div><div class="line">To have launchd start mysql now and restart at login:</div><div class="line">  brew services start mysql</div><div class="line">Or, if you don&apos;t want/need a background service you can just run:</div><div class="line">  mysql.server start</div><div class="line">==&gt; Summary</div><div class="line">🍺  /usr/local/Cellar/mysql/5.7.13: 13,344 files, 445.0M</div></pre></td></tr></table></figure>
@@ -155,7 +183,7 @@
     <link href="check_hexo_config_url/2016/11/24/Hexo-Blog-Setup%E4%BB%A5%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE/"/>
     <id>check_hexo_config_url/2016/11/24/Hexo-Blog-Setup以及常见配置/</id>
     <published>2016-11-24T01:08:34.000Z</published>
-    <updated>2016-12-14T03:27:38.000Z</updated>
+    <updated>2016-12-22T03:49:10.000Z</updated>
     
     <content type="html"><![CDATA[<style type="text/css">
 img {
@@ -205,7 +233,7 @@ img {
 <h2 id="encode-amp-decode"><a href="#encode-amp-decode" class="headerlink" title="encode&amp; decode"></a>encode&amp; decode</h2><p>根据http协议，URL中的部分字符会进行转义（encode），例如中文字符，会遇见的一个问题是把<code>/</code>转为<code>%2F</code>进行页面访问。<br>检查yoursite.com/search.xml可以发现<code>npm install hexo-generator-searchdb --save</code>会根据文章简历索引，并编码后访问<br><a href="">#reference:</a><br><a href="http://www.w3school.com.cn/tags/html_ref_urlencode.html" target="_blank" rel="external">#reference: HTML URL 编码</a></p>
 <h2 id="github做了子项目pages"><a href="#github做了子项目pages" class="headerlink" title="github做了子项目pages"></a>github做了子项目pages</h2><p>coding也需要做<br>noragithub/prd_deployment映射到nora_coding/prd_deployment，同时pages业务。<br>两个项目都已经忽略了主域名，不做映射回出问题（coding找不到该页面）<br>这里利用hook设置</p>
 <h2 id="hook需要自由服务器，结合docker的自动化常识，daoke-cluod"><a href="#hook需要自由服务器，结合docker的自动化常识，daoke-cluod" class="headerlink" title="hook需要自由服务器，结合docker的自动化常识，daoke.cluod"></a>hook需要自由服务器，结合docker的自动化常识，daoke.cluod</h2><p>名字是pages blog</p>
-<h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>参考<a href="https://hexo.io/zh-cn/docs/variables.html" target="_blank" rel="external">hexo变量</a><br>增加updated: 1481686058000</p>
+<h1 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h1><p>参考<a href="https://hexo.io/zh-cn/docs/variables.html" target="_blank" rel="external">hexo变量</a><br>增加updated: 1482378550000</p>
 <h2 id="显示updated"><a href="#显示updated" class="headerlink" title="显示updated"></a>显示updated</h2><h1 id="SEO优化设置"><a href="#SEO优化设置" class="headerlink" title="SEO优化设置"></a>SEO优化设置</h1><h2 id="keywords"><a href="#keywords" class="headerlink" title="keywords"></a>keywords</h2><p>页面级别配置</p>
 <h2 id="友链"><a href="#友链" class="headerlink" title="友链"></a>友链</h2><h2 id="sitetracking"><a href="#sitetracking" class="headerlink" title="sitetracking"></a>sitetracking</h2><h2 id="出现在搜索引擎"><a href="#出现在搜索引擎" class="headerlink" title="出现在搜索引擎"></a>出现在搜索引擎</h2><h1 id="Favicon"><a href="#Favicon" class="headerlink" title="Favicon"></a>Favicon</h1><p><a href="http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg" target="_blank" rel="external">http://ww2.sinaimg.cn/mw690/6fa34428jw8e6sgfwn3suj20c80afmxk.jpg</a></p>
 <h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><p> Github 访问速度太慢，有没有通过反向代理或者CDN加速的方式提高访问速度？特别是如果更新DNS的情况下</p>
@@ -304,6 +332,7 @@ img {
         <font color="#FF4500" size="1"> 撰写中</font>
         {% endif %}
 </code></pre><p>用于提醒。</p>
+<p>通过<code>hexo new darft &quot;test_draft_publish&quot;</code>然后<code>hexo publish &quot;test_draft_publish&quot;</code>，知识修改了文件的名称，从<code>test-draft-publish.md</code>修改为<code>test-draft-publish-1.md</code>，layout并未修改为post（期望是layout变量修改为post，并把md文件转移到_post文件夹），这个问题的主要原因是scaffold/draft.md增加了layout变量，需要想办法修改下。</p>
 <h2 id="scaffold自定义模版"><a href="#scaffold自定义模版" class="headerlink" title="scaffold自定义模版"></a>scaffold自定义模版</h2><p>scaffolds/%layout<br>scaffolds决定不同layout的变量，在initial一个article时出现的变量，不同的layout变量使用不同的template和不同的path<br>template上述内容的展现方式<br>切换布局</p>
 <p><em>如果要显示草稿，页面级别设置是没用的，只能全站级别</em><br><strong>希望修改为页面级别，而且修改样式提醒为草稿以及首页显示后提醒草稿样式</strong></p>
 <p><a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="external">建站</a><br><a href="https://hexo.io/zh-cn/docs/templates.html" target="_blank" rel="external">结构</a></p>
@@ -1452,116 +1481,6 @@ img {
       <category term="Hexo" scheme="check_hexo_config_url/tags/Hexo/"/>
     
       <category term="同步" scheme="check_hexo_config_url/tags/%E5%90%8C%E6%AD%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何利用计算机网络协议知识访问Google</title>
-    <link href="check_hexo_config_url/2016/09/29/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E7%9F%A5%E8%AF%86%E8%AE%BF%E9%97%AEGoogle/"/>
-    <id>check_hexo_config_url/2016/09/29/如何利用计算机网络协议知识访问Google/</id>
-    <published>2016-09-29T07:47:08.000Z</published>
-    <updated>2016-12-08T01:23:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>留坑，关于路由翻墙。</p>
-<a id="more"></a>
-<h1 id="网络访问的简单模型"><a href="#网络访问的简单模型" class="headerlink" title="网络访问的简单模型"></a>网络访问的简单模型</h1><p><a href="https://segmentfault.com/a/1190000006879700" target="_blank" rel="external">#reference-前端经典面试题: 从输入URL到页面加载发生了什么？</a></p>
-<p>当我们在浏览网页的时候，计算机做了什么？</p>
-<ol>
-<li>在计算机眼里，没有域名概念，只有IP概念。当我们输入域名的时候，其实计算机做了一次 DNS查询，把域名和IP的映射（一个域名对应多个IP）获取并访问。<br><img src="http://upload-images.jianshu.io/upload_images/544981-909ab11f316bcc9c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="域名查询"></li>
-<li>和服务器（指定IP机器）进行“三次握手”后展示网页内容。<br><img src="http://upload-images.jianshu.io/upload_images/544981-a13bc6b207f8d84d.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="“三次握手”建立连接"><br>（略）TCP“四次挥手”结束访问<br>（略）SSL/TLS“四次握手”<br>（略）<img src="..." alt="“四次握手”建立连接"></li>
-</ol>
-<h2 id="提炼问题"><a href="#提炼问题" class="headerlink" title="提炼问题"></a>提炼问题</h2><p>所以如果我们需要浏览Google，要做好两点。</p>
-<ol>
-<li>如何获取正确的IP地址（防止DNS污染）</li>
-<li>保护好网页内容。（可以检查ip包内数据然后评比访问）</li>
-</ol>
-<p>好的。<a href="https://github.com/softwaredownload/openwrt-fanqiang" target="_blank" rel="external">OpenWrt智能、自动、透明翻墙路由器教程 </a>应该是参考<a href="https://cokebar.info/archives/962" target="_blank" rel="external">Shadowsocks + GfwList 实现 OpenWRT 路由器自动翻墙</a>的DNS方案二进行实现。</p>
-<ol>
-<li>如何防治DNS污染？<br> a.  维护一个域名白名单list，白名单外域名请求自己vps，白名单请求114DNS<br> b.  维护一个域名黑名单list，黑名单域名请求自己vps，黑名单外114DNS<br> c.  借助ChinaDNS作为上游服务器，判断dns</li>
-<li>如何保护网页内容？<br> 针对ip决定tcp请求的访问通道。</li>
-</ol>
-<h1 id="计算机网络模型"><a href="#计算机网络模型" class="headerlink" title="计算机网络模型"></a>计算机网络模型</h1><h2 id="TCP-IP-网络模型（五层）"><a href="#TCP-IP-网络模型（五层）" class="headerlink" title="TCP/IP 网络模型（五层）"></a>TCP/IP 网络模型（五层）</h2><h2 id="OSI-网络模型（七层）"><a href="#OSI-网络模型（七层）" class="headerlink" title="OSI 网络模型（七层）"></a>OSI 网络模型（七层）</h2><h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><p>DNS,IP,HTTP</p>
-<h3 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h3><p>TCP UDP</p>
-<h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><p>###Advanced</p>
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ul>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>openwrt本质是什么呢？是翻墙的路由器fanqiang解决方案，一套基于路由器硬件的Linux OS。它整合了一系列基于计算机网络的小工具。比如shadowsocks，dnsmasq，iptable(防火墙进行转发功能）</p>
-<p>dnamasq：dns<br>iptable：防火墙（ip包过滤规则）<br>chinadns<br>chnrouter:区分国内外ip段<br>Shadowsocks是一个轻量级socks5代理，以python写成；</p>
-<p>码农对于shadowsocks应该不陌生，而一般普通网民可能知之甚少。shadowsocks实质上也是一种socks5代理服务，类似于ssh代理。与vpn的全局代理不同，shadowsocks仅针对浏览器代理，不能代理应用软件，比如youtube、twitter客户端软件。如果把vpn比喻为一把屠龙刀，那么shadowsocks就是一把瑞士军刀，轻巧方便，功能却非常强大。</p>
-<p>这里发布的shadowsocks分为两个版本，说明如下：</p>
-<p>###shadowsocks-libev<br>官方原版包含 ss-{local,redir,tunnel} 三个可执行文件。默认启动 ss-local 建立本地SOCKS代理</p>
-<p>###shadowsocks-libev-spec<br>针对OpenWrt 路由器的优化版本包含 ss-{redir,rules,tunnel} 三个可执行文件。</p>
-<p>###ss-tunnel###<br>做 DNS 查询转发，ss-tunnel 默认转发127.0.0.1:5353 至 8.8.4.4:53 通过 ShadowSocks 服务器查询 DNS 用于线路优化。ss-rules 可设置 ignore.list 中的 IP 流量不走代理。</p>
-<p>###ss-redir###<br>建立透明代理, 做tcp转发。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/544981-1629851c9094a57f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="配置文件目录树"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/544981-69a62d3c96c71642.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="配置文件目录树"></p>
-<h1 id="Advanced"><a href="#Advanced" class="headerlink" title="Advanced"></a>Advanced</h1><p>1、apn是什么？<br>2、as、bgp概念<br>3、什么是骨干路由<br>4、openwrt（嵌入式框架，固件）（主流路由器固件有 dd-wrt,tomato,openwrt三类）。固件是嵌入在硬件设备中的软件，类似操作系统？<br>5、opkg（包管理工具，适用于嵌入式。类似apt/dpkg）</p>
-<h2 id="BGP"><a href="#BGP" class="headerlink" title="BGP"></a>BGP</h2><p>国外：Client–dnsmasq–ChinaDNS–shadowsocks–代理服务器–GoogleDNS<br>国内：Client–dnsmasq–ChinaDNS–114DNS</p>
-<p>域名和空间没有必然联系，域名的作用就是作为一个字符串映射到一个IP地址上，因为（1）IP地址太难记了（2）IP地址数目有限（同一个IP上可以放N个域名）所以才需要域名这么个东西。这就意味着，你有换空间的<strong>自由</strong>。哪天对空间服务商不高兴了，可以直接把他踹了，把域名解析到别家去，用另一家空间。哎哎，等会儿，啥叫<strong>域名解析</strong>？</p>
-<p>域名服务器？<br>name.server<br>a记录mx纪录cname纪录</p>
-<p>shadowsocks-libev:shadowsocks-libev 是一个 shadowsocks 协议的轻量级实现，是 shadowsocks-android, shadowsocks-ios 以及 shadowsocks-openwrt 的上游项目。其具有以下特点：<br>openssl<br>polarssl:嵌入式设备的精简ssl</p>
-<h2 id="DNS-抢答机制"><a href="#DNS-抢答机制" class="headerlink" title="DNS 抢答机制"></a>DNS 抢答机制</h2><p>PAC代理本质其实就是传统的HTTP代理?</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/544981-4ebf6537ab4976d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="端口关联的理解"></p>
-<p>Reference:<br><a href="http://drops.wooyun.org/papers/10177" target="_blank" rel="external">翻墙路由器的原理与实现</a><br><a href="http://www.cnblogs.com/ggjucheng/archive/2012/08/19/2646466.html" target="_blank" rel="external">linux平台下防火墙iptables原理(转)</a><br><a href="http://blog.mimvp.com/2015/03/anonymous-transparent-the-difference-between-http-ssl-socks-proxy/" target="_blank" rel="external">匿名、透明、HTTP、SSL、SOCKS代理的区别</a></p>
-<p>·SSH是标准的网络协议，可用于大多数UNIX操作系统，能够实现字符界面的远程登录管理，它默认使用22号端口，采用密文的形式在网络中传输数据，相对于通过明文传输的Telnet，具有更高的安全性。</p>
-<h2 id="路由选择算法"><a href="#路由选择算法" class="headerlink" title="路由选择算法"></a>路由选择算法</h2><h3 id="Dijkstra-Algorithm"><a href="#Dijkstra-Algorithm" class="headerlink" title="Dijkstra Algorithm"></a>Dijkstra Algorithm</h3><h3 id="dv"><a href="#dv" class="headerlink" title="dv"></a>dv</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;留坑，关于路由翻墙。&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>【译】安装Canopy</title>
-    <link href="check_hexo_config_url/2016/09/29/%E3%80%90%E8%AF%91%E3%80%91%E5%AE%89%E8%A3%85Canopy/"/>
-    <id>check_hexo_config_url/2016/09/29/【译】安装Canopy/</id>
-    <published>2016-09-29T07:44:31.000Z</published>
-    <updated>2016-12-08T01:23:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文主要翻译了Canopy相关的几篇文档，主要用于理解Canopy环境和快速安装/启动Canopy。</p>
-<a id="more"></a>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>首先从下载一个Canopy安装包。32位还是64位？标准还是完整？<br>在32位系统，你必须使用32位的安装包，64位系统</p>
-<h2 id="环境设置"><a href="#环境设置" class="headerlink" title="环境设置"></a>环境设置</h2><p>一旦完成安装，最后一步就是完成你Python环境的设置。GUI将贯穿整个设置过程。</p>
-<p>这一节剩余部分将描述标准GUI设置过程。但请注意，有两种主要方式设置你的Python环境：</p>
-<ul>
-<li>对于用户从来不用Canopy GUI的<em>管理员</em>，请看这里<a href="＃创建一个EPD-like的环境">创建一个EPD-like的环境</a>，例如，这些用户像在EPD环境一样，只用基础命令行。</li>
-<li>对于那些对在一个多用户的机器或者网络设置Canopy感兴趣的系统管理员也许会对<a href="#创建一个共享的Canopy环境">创建一个共享的Canopy环境</a>感兴趣。</li>
-</ul>
-<h3 id="标准GUI设置："><a href="#标准GUI设置：" class="headerlink" title="标准GUI设置："></a>标准GUI设置：</h3><p>Canopy可以在安装目录直接启动，如果Canopy安装在<code>~/Canopy</code>，使用脚本：</p>
-<blockquote>
-<p>\$ ~/Canopy/canopy</p>
-</blockquote>
-<p>Canopy第一次启动的时候，它会自动配置你的Python环境，要么在默认地址，要么用户自定义定制。这一步允许每一个用户在一个多用户的机器上</p>
-<h1 id="Canopy命令行接口"><a href="#Canopy命令行接口" class="headerlink" title="Canopy命令行接口"></a>Canopy命令行接口</h1><h2 id="创建一个EPD-like的环境"><a href="#创建一个EPD-like的环境" class="headerlink" title="创建一个EPD-like的环境"></a>创建一个EPD-like的环境</h2><p>一个EPD-like的环境意味这个场景里，用户只使用命令行。</p>
-<p>On Windows:</p>
-<blockquote>
-<p>Canopy\App\Canopy_cli.exe –no-gui-setup setup C:\Python27</p>
-</blockquote>
-<p>On Mac:</p>
-<blockquote>
-<p>/Applications/Canopy.app/Contents/MacOS/Canopy_cli –no-gui-setup setup ~/canopy</p>
-</blockquote>
-<p>On Linux:</p>
-<blockquote>
-<p>~/Canopy/canopy_cli –no-gui-setup setup ~/canopy</p>
-</blockquote>
-<h2 id="创建一个共享的Canopy环境"><a href="#创建一个共享的Canopy环境" class="headerlink" title="创建一个共享的Canopy环境"></a>创建一个共享的Canopy环境</h2><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="http://docs.enthought.com/canopy/quick-start/install_linux.html" target="_blank" rel="external">Linux Installation</a><br><a href="http://docs.enthought.com/canopy/configure/faq.html#venv-where-are-packages" target="_blank" rel="external">Where are all of the Python packages in my User Python Environment?</a><br><a href="http://docs.enthought.com/canopy/configure/canopy-cli.html#create-epd-dist" target="_blank" rel="external">Canopy Command Line Interface (CLI)</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文主要翻译了Canopy相关的几篇文档，主要用于理解Canopy环境和快速安装/启动Canopy。&lt;/p&gt;
-    
-    </summary>
-    
     
   </entry>
   
