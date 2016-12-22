@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="数据科学, 数据分析, 产品需求分析, 云计算, 项目管理, slash" />
+  <meta name="keywords" content="访问远程服务器数据库, mysqlclient, mysqlserver, python, mac, ubuntu " />
 
 
 
@@ -82,20 +82,19 @@
 
 
 
-<meta name="description" content="不成熟思想家。偏好数据技术栈。希望充当一个能做产品需求分析、设计和项目管理的 Program Manager／Data Science 。">
+<meta name="description" content="mac安装mysqlmac:brew install mysql
+12345678910111213==&amp;gt; CaveatsWe&amp;apos;ve installed your MySQL database without a root password. To secure it run:    mysql_secure_installationTo connect run:    mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="photoe_test">
-<meta property="og:url" content="check_hexo_config_url/2016/12/06/photoe-test/index.html">
+<meta property="og:title" content="在python里通过myql访问远程服务器数据库配置memo">
+<meta property="og:url" content="check_hexo_config_url/2016/12/21/在python里通过myql访问远程服务器数据库配置memo-1/index.html">
 <meta property="og:site_name" content="Busihacker">
-<meta property="og:description" content="不成熟思想家。偏好数据技术栈。希望充当一个能做产品需求分析、设计和项目管理的 Program Manager／Data Science 。">
-<meta property="og:image" content="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150&fm=jpg">
-<meta property="og:image" content="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150&fm=jpg">
-<meta property="og:image" content="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150&fm=jpg">
-<meta property="og:updated_time" content="2016-12-08T01:23:39.000Z">
+<meta property="og:description" content="mac安装mysqlmac:brew install mysql
+12345678910111213==&amp;gt; CaveatsWe&amp;apos;ve installed your MySQL database without a root password. To secure it run:    mysql_secure_installationTo connect run:    mysql">
+<meta property="og:updated_time" content="2016-12-22T03:11:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="photoe_test">
-<meta name="twitter:description" content="不成熟思想家。偏好数据技术栈。希望充当一个能做产品需求分析、设计和项目管理的 Program Manager／Data Science 。">
-<meta name="twitter:image" content="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150&fm=jpg">
+<meta name="twitter:title" content="在python里通过myql访问远程服务器数据库配置memo">
+<meta name="twitter:description" content="mac安装mysqlmac:brew install mysql
+12345678910111213==&amp;gt; CaveatsWe&amp;apos;ve installed your MySQL database without a root password. To secure it run:    mysql_secure_installationTo connect run:    mysql">
 
 
 
@@ -113,7 +112,7 @@
   };
 </script>
 
-  <title> photoe_test | Busihacker </title> 
+  <title> 在python里通过myql访问远程服务器数据库配置memo | Busihacker </title> 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -283,11 +282,13 @@
           <h1 class="post-title" itemprop="name headline">
             
             
+            <font color=#FF4500 size=1> 撰写中</font>
+            
 
             
             
               
-                photoe_test
+                在python里通过myql访问远程服务器数据库配置memo
               
             
           </h1>
@@ -299,8 +300,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-06T11:22:45+08:00" content="2016-12-06">
-              2016-12-06
+            <time itemprop="dateCreated" datetime="2016-12-21T21:35:51+08:00" content="2016-12-21">
+              2016-12-21
             </time>
           </span>
 
@@ -310,8 +311,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/06/photoe-test/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/06/photoe-test/" itemprop="commentsCount"></span>
+                <a href="/2016/12/21/在python里通过myql访问远程服务器数据库配置memo-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/21/在python里通过myql访问远程服务器数据库配置memo-1/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -332,8 +333,8 @@
           <br />
             <!--更新时间-->
             <span class="post-meta-item-text">最近更新于</span>
-            <time itemprop="dateUpdated" datetime="2016-12-08T09:23:39+08:00" content="2016-12-08">
-              2016-12-08
+            <time itemprop="dateUpdated" datetime="2016-12-22T11:11:15+08:00" content="2016-12-22">
+              2016-12-22
             </time>
           </span>
         </div>
@@ -349,41 +350,32 @@
 
       
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150&fm=jpg" rel="gallery_ciwzst1ht000fb6opy7rn6vaa"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150&fm=jpg" itemprop="contentUrl"/>
-              </a>
-            
-          
-            
-              <a class="post-gallery-img fancybox"
-                 href="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150&fm=jpg" rel="gallery_ciwzst1ht000fb6opy7rn6vaa"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150&fm=jpg" itemprop="contentUrl"/>
-              </a>
-            
-          
-            
-              <a class="post-gallery-img fancybox"
-                 href="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150&fm=jpg" rel="gallery_ciwzst1ht000fb6opy7rn6vaa"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150&fm=jpg" itemprop="contentUrl"/>
-              </a>
-            </div>
-          
-
-          
-          
-        </div>
-      
 
       
-        
+        <h1 id="mac安装mysql"><a href="#mac安装mysql" class="headerlink" title="mac安装mysql"></a>mac安装mysql</h1><p>mac:<code>brew install mysql</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">==&gt; Caveats</div><div class="line">We&apos;ve installed your MySQL database without a root password. To secure it run:</div><div class="line">    mysql_secure_installation</div><div class="line"></div><div class="line">To connect run:</div><div class="line">    mysql -uroot</div><div class="line"></div><div class="line">To have launchd start mysql now and restart at login:</div><div class="line">  brew services start mysql</div><div class="line">Or, if you don&apos;t want/need a background service you can just run:</div><div class="line">  mysql.server start</div><div class="line">==&gt; Summary</div><div class="line">🍺  /usr/local/Cellar/mysql/5.7.13: 13,344 files, 445.0M</div></pre></td></tr></table></figure>
+<p>ubuntu:sudo apt-get-install mysql-server mysql-client<br>sudo apt-get-install libmysqlclient-dev#  为了支持python，有依赖</p>
+<p><a href="http://stackoverflow.com/questions/1857861/libmysqlclient15-dev-on-macs" target="_blank" rel="external">#reference-How to get the MySQL C API libraries on OS X</a><br><a href="http://bbs.csdn.net/topics/310117511" target="_blank" rel="external">mysql-server与mysql-client有什么区别？</a></p>
+<p><a href="http://blog.neten.de/posts/2014/01/27/install-mysql-using-homebrew/" target="_blank" rel="external">在 Mac 下用 Homebrew 安装 MySQL</a></p>
+<h1 id="python支持"><a href="#python支持" class="headerlink" title="python支持"></a>python支持</h1><p>mac:<code>pip install mysqlclient</code>/<code>easy_install mysql-python</code><br>ubuntu:<code>pip install mysqlclient</code></p>
+<p><a href="http://blog.csdn.net/a657941877/article/details/8944683" target="_blank" rel="external">#reference-MySQL database connector for Python</a><br><a href="https://www.zhihu.com/question/19869186/answer/98805967" target="_blank" rel="external">#reference-有哪些比较好的在 Python 中访问 MySQL 的类库？</a></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>import mysqldb</p>
+<h1 id="可能遇见的问题"><a href="#可能遇见的问题" class="headerlink" title="可能遇见的问题"></a>可能遇见的问题</h1><h2 id="连接远程服务器返回ERROR-2003-HY000-Can-39-t-connect-to-MySQL-server"><a href="#连接远程服务器返回ERROR-2003-HY000-Can-39-t-connect-to-MySQL-server" class="headerlink" title="连接远程服务器返回ERROR 2003 (HY000): Can&#39;t connect to MySQL server"></a>连接远程服务器返回<code>ERROR 2003 (HY000): Can&#39;t connect to MySQL server</code></h2><p>原因就是Mysql数据库的默认配置文件my.cnf（linux下）中的bind-address默认为127.0.0.1，即只允许本机访问，需要取消该限制。</p>
+<p>ubuntu下使用<code>locate my.cnf</code>获取文件地址，如果返回<code>locate: can not stat ()</code>/var/lib/mlocate/mlocate.db’:<code>，执行</code>updatedb<code>解决。
+[locate: can not stat ()</code>/var/lib/mlocate/mlocate.db’: No such file or directory](<a href="http://blog.csdn.net/w13770269691/article/details/6987384" target="_blank" rel="external">http://blog.csdn.net/w13770269691/article/details/6987384</a>)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">root@localhost:~# locate my.cnf</div><div class="line">/etc/alternatives/my.cnf</div><div class="line">/etc/mysql/my.cnf</div><div class="line">/etc/mysql/my.cnf.fallback</div><div class="line">/var/lib/dpkg/alternatives/my.cnf</div></pre></td></tr></table></figure></p>
+<p>my.cnf一般在/etc/mysql下面，网络绝大部分资源都显示直接修改该文件。<br>root@localhost:~# cat /etc/alternatives/my.cnf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">#</div><div class="line"># The MySQL database server configuration file.</div><div class="line">#</div><div class="line"># You can copy this to one of:</div><div class="line"># - &quot;/etc/mysql/my.cnf&quot; to set global options,</div><div class="line"># - &quot;~/.my.cnf&quot; to set user-specific options.</div><div class="line"># </div><div class="line"># One can use all long options that the program supports.</div><div class="line"># Run program with --help to get a list of available options and with</div><div class="line"># --print-defaults to see which it would actually understand and use.</div><div class="line">#</div><div class="line"># For explanations see</div><div class="line"># http://dev.mysql.com/doc/mysql/en/server-system-variables.html</div><div class="line"></div><div class="line">#</div><div class="line"># * IMPORTANT: Additional settings that can override those from this file!</div><div class="line">#   The files must end with &apos;.cnf&apos;, otherwise they&apos;ll be ignored.</div><div class="line">#</div><div class="line"></div><div class="line">!includedir /etc/mysql/conf.d/</div><div class="line">!includedir /etc/mysql/mysql.conf.d/</div></pre></td></tr></table></figure></p>
+<p>根据<a href="http://askubuntu.com/questions/699903/why-etc-mysql-my-cnf-is-empty" target="_blank" rel="external">Why /etc/mysql/my.cnf is EMPTY</a>，配置文件（.cnf文件，一般是mysqld.cnf）locate在<br><code>/etc/mysql/conf.d/</code>和<code>/etc/mysql/mysql.conf.d/</code>中，我的mysqld.cnf地址是：<code>/etc/mysql/mysql.conf.d/mysqld.cnf</code></p>
+<p>这才开始修改我的配置（mysqld.cnf）<br>修改前的配置文件为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#  </div><div class="line"># Instead of skip-networking the default is now to listen only on  </div><div class="line"># localhost which is more compatible and is not less secure.  </div><div class="line">bind-address           = 127.0.0.1</div></pre></td></tr></table></figure></p>
+<p>修改后：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#  </div><div class="line"># Instead of skip-networking the default is now to listen only on  </div><div class="line"># localhost which is more compatible and is not less secure.  </div><div class="line"># bind-address           = 127.0.0.1</div></pre></td></tr></table></figure></p>
+<p>修改后并未立即生效，需要重启生效（可以找办法restart该服务，我是直接reboot）</p>
+<p><a href="http://tk-zhang.iteye.com/blog/735467" target="_blank" rel="external">#reference-远程连接Mysql数据库问题(ERROR 2003 (HY000)</a><br><a href="http://www.jianshu.com/p/d501af0f127c" target="_blank" rel="external">#reference-MySQL数据库无法远程连接的解决办法</a><br><a href="http://www.2cto.com/database/201204/127400.html" target="_blank" rel="external">MySQL远程连接ERROR 2003 (HY000):Can’t connect to MySQL server on’XXXXX’的问题</a><br><a href="https://ihower.tw/rails/advanced-installation.html" target="_blank" rel="external">mac/ubuntu环境安装</a></p>
+<h2 id="连接远程服务器返回ERROR-1130-HY000-is-not-allowed-to-connect-to-this-MySQL-server"><a href="#连接远程服务器返回ERROR-1130-HY000-is-not-allowed-to-connect-to-this-MySQL-server" class="headerlink" title="连接远程服务器返回ERROR 1130 (HY000): is not allowed to connect to this MySQL server"></a>连接远程服务器返回<code>ERROR 1130 (HY000): is not allowed to connect to this MySQL server</code></h2><p>服务器连接上mysql后， 授权myuser使用mypassword从任何主机连接到mysql服务器<br><code>GRANT ALL PRIVILEGES ON *.* TO &#39;myuser&#39;@&#39;192.168.1.3&#39; IDENTIFIED BY &#39;mypassword&#39; WITH GRANT OPTION;</code></p>
+<p><a href="http://www.cnblogs.com/chutianyao/archive/2011/12/28/2304332.html" target="_blank" rel="external">mysql远程连接解决办法</a><br><a href="http://blog.csdn.net/rongjch/article/details/607124" target="_blank" rel="external">无法远程登入MySQL Server解决</a></p>
+<h2 id="ERROR-1045-28000-Access-denied-for-user"><a href="#ERROR-1045-28000-Access-denied-for-user" class="headerlink" title="ERROR 1045 (28000): Access denied for user"></a>ERROR 1045 (28000): Access denied for user</h2><p>尝试从本地连接服务器：<br><code>!mysql -h&#39;104.128.92.224&#39; -u&lt;%username&gt; -p&lt;%password&gt;</code><br>反馈<code>mysql: [Warning] Using a password on the command line interface can be insecure.</code><br>所以执行<code>mysql -h&#39;104.128.92.224&#39; -uroot</code><br>但返回<code>ERROR 1045 (28000): Access denied for user</code>，属于粗心，正确的执行方式为：<code>`mysql -h&#39;104.128.92.224&#39; -u&lt;%username&gt; -p</code>再输入密码即可。</p>
+<p><a href="http://blog.csdn.net/zzq900503/article/details/14163769" target="_blank" rel="external">遇到问题—mysql账户密码以及权限的问题</a><br><a href="http://blog.csdn.net/nel0511/article/details/13091163" target="_blank" rel="external">完整过程解决 ERROR 1045 (28000)</a><br><a href="https://segmentfault.com/a/1190000002514402" target="_blank" rel="external">Ubuntu服务器常用配置－mysql数据库的安装</a></p>
+<h2 id="log问题"><a href="#log问题" class="headerlink" title="log问题"></a>log问题</h2><p><a href="http://www.cnblogs.com/jackluo/archive/2013/03/04/2942500.html" target="_blank" rel="external">mysql错误日志分析</a><br><a href="http://blog.csdn.net/lxpbs8851/article/details/7892256" target="_blank" rel="external">IP address could not be resolved: Temporary failure in name resolution</a></p>
+<h2 id="mysql连接到远程服务器的思考"><a href="#mysql连接到远程服务器的思考" class="headerlink" title="mysql连接到远程服务器的思考"></a>mysql连接到远程服务器的思考</h2><p>mysql-client连接到mysql-server，通过什么协议发起请求？是否安全？看起来不是https 的<br><a href="http://stackoverflow.com/questions/21386005/python-and-connecting-to-mysql-over-ssh" target="_blank" rel="external">Python and Connecting to MySQL over SSH</a><br><a href="http://stackoverflow.com/questions/12972867/connect-on-remote-mysql-database-through-python" target="_blank" rel="external">Connect on remote MySQL database through Python</a><br><a href="http://python.jobbole.com/87088/" target="_blank" rel="external">python模块paramiko与ssh</a></p>
+
       
     </div>
 
@@ -428,22 +420,30 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/mysql/" rel="tag">#mysql</a>
+          
+            <a href="/tags/python/" rel="tag">#python</a>
+          
+            <a href="/tags/ubuntu/" rel="tag">#ubuntu</a>
+          
+            <a href="/tags/mac/" rel="tag">#mac</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/05/draft-test/" rel="next" title="draft_test">
-                <i class="fa fa-chevron-left"></i> draft_test
+              <a href="/2016/12/19/数据科学笔记/" rel="next" title="数据科学笔记">
+                <i class="fa fa-chevron-left"></i> 数据科学笔记
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/07/test-draft-layout/" rel="prev" title="test_draft_layout">
-                test_draft_layout <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -458,10 +458,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/12/06/photoe-test/"
-     data-title="photoe_test"
+        <div class="ds-share flat" data-thread-key="2016/12/21/在python里通过myql访问远程服务器数据库配置memo-1/"
+     data-title="在python里通过myql访问远程服务器数据库配置memo"
      data-content=""
-     data-url="check_hexo_config_url/2016/12/06/photoe-test/">
+     data-url="check_hexo_config_url/2016/12/21/在python里通过myql访问远程服务器数据库配置memo-1/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -488,8 +488,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/06/photoe-test/"
-           data-title="photoe_test" data-url="check_hexo_config_url/2016/12/06/photoe-test/">
+      <div class="ds-thread" data-thread-key="2016/12/21/在python里通过myql访问远程服务器数据库配置memo-1/"
+           data-title="在python里通过myql访问远程服务器数据库配置memo" data-url="check_hexo_config_url/2016/12/21/在python里通过myql访问远程服务器数据库配置memo-1/">
       </div>
     
   </div>
@@ -618,7 +618,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#mac安装mysql"><span class="nav-number">1.</span> <span class="nav-text">mac安装mysql</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#python支持"><span class="nav-number">2.</span> <span class="nav-text">python支持</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">2.1.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可能遇见的问题"><span class="nav-number">3.</span> <span class="nav-text">可能遇见的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接远程服务器返回ERROR-2003-HY000-Can-39-t-connect-to-MySQL-server"><span class="nav-number">3.1.</span> <span class="nav-text">连接远程服务器返回ERROR 2003 (HY000): Can't connect to MySQL server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接远程服务器返回ERROR-1130-HY000-is-not-allowed-to-connect-to-this-MySQL-server"><span class="nav-number">3.2.</span> <span class="nav-text">连接远程服务器返回ERROR 1130 (HY000): is not allowed to connect to this MySQL server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ERROR-1045-28000-Access-denied-for-user"><span class="nav-number">3.3.</span> <span class="nav-text">ERROR 1045 (28000): Access denied for user</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#log问题"><span class="nav-number">3.4.</span> <span class="nav-text">log问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql连接到远程服务器的思考"><span class="nav-number">3.5.</span> <span class="nav-text">mysql连接到远程服务器的思考</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

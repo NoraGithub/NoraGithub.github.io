@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="check_hexo_config_url/"/>
-  <updated>2016-12-18T13:32:20.000Z</updated>
+  <updated>2016-12-22T03:11:15.000Z</updated>
   <id>check_hexo_config_url/</id>
   
   <author>
@@ -14,6 +14,75 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在python里通过myql访问远程服务器数据库配置memo</title>
+    <link href="check_hexo_config_url/2016/12/21/%E5%9C%A8python%E9%87%8C%E9%80%9A%E8%BF%87myql%E8%AE%BF%E9%97%AE%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AEmemo-1/"/>
+    <id>check_hexo_config_url/2016/12/21/在python里通过myql访问远程服务器数据库配置memo-1/</id>
+    <published>2016-12-21T13:35:51.000Z</published>
+    <updated>2016-12-22T03:11:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="mac安装mysql"><a href="#mac安装mysql" class="headerlink" title="mac安装mysql"></a>mac安装mysql</h1><p>mac:<code>brew install mysql</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">==&gt; Caveats</div><div class="line">We&apos;ve installed your MySQL database without a root password. To secure it run:</div><div class="line">    mysql_secure_installation</div><div class="line"></div><div class="line">To connect run:</div><div class="line">    mysql -uroot</div><div class="line"></div><div class="line">To have launchd start mysql now and restart at login:</div><div class="line">  brew services start mysql</div><div class="line">Or, if you don&apos;t want/need a background service you can just run:</div><div class="line">  mysql.server start</div><div class="line">==&gt; Summary</div><div class="line">🍺  /usr/local/Cellar/mysql/5.7.13: 13,344 files, 445.0M</div></pre></td></tr></table></figure>
+<p>ubuntu:sudo apt-get-install mysql-server mysql-client<br>sudo apt-get-install libmysqlclient-dev#  为了支持python，有依赖</p>
+<p><a href="http://stackoverflow.com/questions/1857861/libmysqlclient15-dev-on-macs" target="_blank" rel="external">#reference-How to get the MySQL C API libraries on OS X</a><br><a href="http://bbs.csdn.net/topics/310117511" target="_blank" rel="external">mysql-server与mysql-client有什么区别？</a></p>
+<p><a href="http://blog.neten.de/posts/2014/01/27/install-mysql-using-homebrew/" target="_blank" rel="external">在 Mac 下用 Homebrew 安装 MySQL</a></p>
+<h1 id="python支持"><a href="#python支持" class="headerlink" title="python支持"></a>python支持</h1><p>mac:<code>pip install mysqlclient</code>/<code>easy_install mysql-python</code><br>ubuntu:<code>pip install mysqlclient</code></p>
+<p><a href="http://blog.csdn.net/a657941877/article/details/8944683" target="_blank" rel="external">#reference-MySQL database connector for Python</a><br><a href="https://www.zhihu.com/question/19869186/answer/98805967" target="_blank" rel="external">#reference-有哪些比较好的在 Python 中访问 MySQL 的类库？</a></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>import mysqldb</p>
+<h1 id="可能遇见的问题"><a href="#可能遇见的问题" class="headerlink" title="可能遇见的问题"></a>可能遇见的问题</h1><h2 id="连接远程服务器返回ERROR-2003-HY000-Can-39-t-connect-to-MySQL-server"><a href="#连接远程服务器返回ERROR-2003-HY000-Can-39-t-connect-to-MySQL-server" class="headerlink" title="连接远程服务器返回ERROR 2003 (HY000): Can&#39;t connect to MySQL server"></a>连接远程服务器返回<code>ERROR 2003 (HY000): Can&#39;t connect to MySQL server</code></h2><p>原因就是Mysql数据库的默认配置文件my.cnf（linux下）中的bind-address默认为127.0.0.1，即只允许本机访问，需要取消该限制。</p>
+<p>ubuntu下使用<code>locate my.cnf</code>获取文件地址，如果返回<code>locate: can not stat ()</code>/var/lib/mlocate/mlocate.db’:<code>，执行</code>updatedb<code>解决。
+[locate: can not stat ()</code>/var/lib/mlocate/mlocate.db’: No such file or directory](<a href="http://blog.csdn.net/w13770269691/article/details/6987384" target="_blank" rel="external">http://blog.csdn.net/w13770269691/article/details/6987384</a>)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">root@localhost:~# locate my.cnf</div><div class="line">/etc/alternatives/my.cnf</div><div class="line">/etc/mysql/my.cnf</div><div class="line">/etc/mysql/my.cnf.fallback</div><div class="line">/var/lib/dpkg/alternatives/my.cnf</div></pre></td></tr></table></figure></p>
+<p>my.cnf一般在/etc/mysql下面，网络绝大部分资源都显示直接修改该文件。<br>root@localhost:~# cat /etc/alternatives/my.cnf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">#</div><div class="line"># The MySQL database server configuration file.</div><div class="line">#</div><div class="line"># You can copy this to one of:</div><div class="line"># - &quot;/etc/mysql/my.cnf&quot; to set global options,</div><div class="line"># - &quot;~/.my.cnf&quot; to set user-specific options.</div><div class="line"># </div><div class="line"># One can use all long options that the program supports.</div><div class="line"># Run program with --help to get a list of available options and with</div><div class="line"># --print-defaults to see which it would actually understand and use.</div><div class="line">#</div><div class="line"># For explanations see</div><div class="line"># http://dev.mysql.com/doc/mysql/en/server-system-variables.html</div><div class="line"></div><div class="line">#</div><div class="line"># * IMPORTANT: Additional settings that can override those from this file!</div><div class="line">#   The files must end with &apos;.cnf&apos;, otherwise they&apos;ll be ignored.</div><div class="line">#</div><div class="line"></div><div class="line">!includedir /etc/mysql/conf.d/</div><div class="line">!includedir /etc/mysql/mysql.conf.d/</div></pre></td></tr></table></figure></p>
+<p>根据<a href="http://askubuntu.com/questions/699903/why-etc-mysql-my-cnf-is-empty" target="_blank" rel="external">Why /etc/mysql/my.cnf is EMPTY</a>，配置文件（.cnf文件，一般是mysqld.cnf）locate在<br><code>/etc/mysql/conf.d/</code>和<code>/etc/mysql/mysql.conf.d/</code>中，我的mysqld.cnf地址是：<code>/etc/mysql/mysql.conf.d/mysqld.cnf</code></p>
+<p>这才开始修改我的配置（mysqld.cnf）<br>修改前的配置文件为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#  </div><div class="line"># Instead of skip-networking the default is now to listen only on  </div><div class="line"># localhost which is more compatible and is not less secure.  </div><div class="line">bind-address           = 127.0.0.1</div></pre></td></tr></table></figure></p>
+<p>修改后：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#  </div><div class="line"># Instead of skip-networking the default is now to listen only on  </div><div class="line"># localhost which is more compatible and is not less secure.  </div><div class="line"># bind-address           = 127.0.0.1</div></pre></td></tr></table></figure></p>
+<p>修改后并未立即生效，需要重启生效（可以找办法restart该服务，我是直接reboot）</p>
+<p><a href="http://tk-zhang.iteye.com/blog/735467" target="_blank" rel="external">#reference-远程连接Mysql数据库问题(ERROR 2003 (HY000)</a><br><a href="http://www.jianshu.com/p/d501af0f127c" target="_blank" rel="external">#reference-MySQL数据库无法远程连接的解决办法</a><br><a href="http://www.2cto.com/database/201204/127400.html" target="_blank" rel="external">MySQL远程连接ERROR 2003 (HY000):Can’t connect to MySQL server on’XXXXX’的问题</a><br><a href="https://ihower.tw/rails/advanced-installation.html" target="_blank" rel="external">mac/ubuntu环境安装</a></p>
+<h2 id="连接远程服务器返回ERROR-1130-HY000-is-not-allowed-to-connect-to-this-MySQL-server"><a href="#连接远程服务器返回ERROR-1130-HY000-is-not-allowed-to-connect-to-this-MySQL-server" class="headerlink" title="连接远程服务器返回ERROR 1130 (HY000): is not allowed to connect to this MySQL server"></a>连接远程服务器返回<code>ERROR 1130 (HY000): is not allowed to connect to this MySQL server</code></h2><p>服务器连接上mysql后， 授权myuser使用mypassword从任何主机连接到mysql服务器<br><code>GRANT ALL PRIVILEGES ON *.* TO &#39;myuser&#39;@&#39;192.168.1.3&#39; IDENTIFIED BY &#39;mypassword&#39; WITH GRANT OPTION;</code></p>
+<p><a href="http://www.cnblogs.com/chutianyao/archive/2011/12/28/2304332.html" target="_blank" rel="external">mysql远程连接解决办法</a><br><a href="http://blog.csdn.net/rongjch/article/details/607124" target="_blank" rel="external">无法远程登入MySQL Server解决</a></p>
+<h2 id="ERROR-1045-28000-Access-denied-for-user"><a href="#ERROR-1045-28000-Access-denied-for-user" class="headerlink" title="ERROR 1045 (28000): Access denied for user"></a>ERROR 1045 (28000): Access denied for user</h2><p>尝试从本地连接服务器：<br><code>!mysql -h&#39;104.128.92.224&#39; -u&lt;%username&gt; -p&lt;%password&gt;</code><br>反馈<code>mysql: [Warning] Using a password on the command line interface can be insecure.</code><br>所以执行<code>mysql -h&#39;104.128.92.224&#39; -uroot</code><br>但返回<code>ERROR 1045 (28000): Access denied for user</code>，属于粗心，正确的执行方式为：<code>`mysql -h&#39;104.128.92.224&#39; -u&lt;%username&gt; -p</code>再输入密码即可。</p>
+<p><a href="http://blog.csdn.net/zzq900503/article/details/14163769" target="_blank" rel="external">遇到问题—mysql账户密码以及权限的问题</a><br><a href="http://blog.csdn.net/nel0511/article/details/13091163" target="_blank" rel="external">完整过程解决 ERROR 1045 (28000)</a><br><a href="https://segmentfault.com/a/1190000002514402" target="_blank" rel="external">Ubuntu服务器常用配置－mysql数据库的安装</a></p>
+<h2 id="log问题"><a href="#log问题" class="headerlink" title="log问题"></a>log问题</h2><p><a href="http://www.cnblogs.com/jackluo/archive/2013/03/04/2942500.html" target="_blank" rel="external">mysql错误日志分析</a><br><a href="http://blog.csdn.net/lxpbs8851/article/details/7892256" target="_blank" rel="external">IP address could not be resolved: Temporary failure in name resolution</a></p>
+<h2 id="mysql连接到远程服务器的思考"><a href="#mysql连接到远程服务器的思考" class="headerlink" title="mysql连接到远程服务器的思考"></a>mysql连接到远程服务器的思考</h2><p>mysql-client连接到mysql-server，通过什么协议发起请求？是否安全？看起来不是https 的<br><a href="http://stackoverflow.com/questions/21386005/python-and-connecting-to-mysql-over-ssh" target="_blank" rel="external">Python and Connecting to MySQL over SSH</a><br><a href="http://stackoverflow.com/questions/12972867/connect-on-remote-mysql-database-through-python" target="_blank" rel="external">Connect on remote MySQL database through Python</a><br><a href="http://python.jobbole.com/87088/" target="_blank" rel="external">python模块paramiko与ssh</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;mac安装mysql&quot;&gt;&lt;a href=&quot;#mac安装mysql&quot; class=&quot;headerlink&quot; title=&quot;mac安装mysql&quot;&gt;&lt;/a&gt;mac安装mysql&lt;/h1&gt;&lt;p&gt;mac:&lt;code&gt;brew install mysql&lt;/code&gt;&lt;/p
+    
+    </summary>
+    
+    
+      <category term="mysql" scheme="check_hexo_config_url/tags/mysql/"/>
+    
+      <category term="python" scheme="check_hexo_config_url/tags/python/"/>
+    
+      <category term="ubuntu" scheme="check_hexo_config_url/tags/ubuntu/"/>
+    
+      <category term="mac" scheme="check_hexo_config_url/tags/mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据科学笔记</title>
+    <link href="check_hexo_config_url/2016/12/19/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>check_hexo_config_url/2016/12/19/数据科学笔记/</id>
+    <published>2016-12-19T12:59:46.000Z</published>
+    <updated>2016-12-20T03:38:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://pandas.pydata.org/pandas-docs/stable/10min.html" target="_blank" rel="external">10 Minutes to pandas</a><br><a href="https://docs.scipy.org/doc/numpy-dev/user/quickstart.html" target="_blank" rel="external">Quickstart tutorial</a><br><strong>STANDARD</strong><br><a href="https://docs.python.org/2/library/array.html" target="_blank" rel="external">array — Efficient arrays of numeric values¶</a><br><a href="https://www.douban.com/group/topic/92144802/" target="_blank" rel="external">Python 中常用的数据类型</a></p>
+<p>#了解scikit-learn<br><a href="http://scikit-learn.org/stable/auto_examples/index.html" target="_blank" rel="external">General examples</a><br><a href="http://scikit-learn.org/stable/tutorial/basic/tutorial.html" target="_blank" rel="external">An introduction to machine learning with scikit-learn</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://pandas.pydata.org/pandas-docs/stable/10min.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;10 Minutes to pandas&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>docker初探</title>
@@ -1490,54 +1559,6 @@ img {
     <summary type="html">
     
       &lt;p&gt;本文主要翻译了Canopy相关的几篇文档，主要用于理解Canopy环境和快速安装/启动Canopy。&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown Web 编辑器产品调研</title>
-    <link href="check_hexo_config_url/2016/09/29/Markdown-Web-%E7%BC%96%E8%BE%91%E5%99%A8%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94/"/>
-    <id>check_hexo_config_url/2016/09/29/Markdown-Web-编辑器产品调研/</id>
-    <published>2016-09-29T07:34:00.000Z</published>
-    <updated>2016-12-08T03:32:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>
-<h1 id="Markdown-Web-编辑器产品调研"><a href="#Markdown-Web-编辑器产品调研" class="headerlink" title="Markdown Web 编辑器产品调研"></a>Markdown Web 编辑器产品调研</h1><p><a href="http://blog.aforget.net/markdown-xie-zuo-gong-ju-lian-zong-jie/" target="_blank" rel="external">Markdown 写作工具链总结 [ 免费篇 ]</a><br><a href="https://zhuanlan.zhihu.com/p/20723176?refer=wonderful" target="_blank" rel="external">我有我的young【markdown+stylish】</a><br><a href="http://jeffyon.blogspot.jp/2015/05/markdownmd.html" target="_blank" rel="external">Markdown寫作部落格</a><br><a href="http://blog.unicsolution.com/2013/08/logdown.html" target="_blank" rel="external">Logdown 的啓發 - StackEdit</a>—&gt;<a href="https://segmentfault.com/a/1190000000732617" target="_blank" rel="external">有趣的HTML5：离线存储</a><br>(一直认为stackedit的文件在本地会对应一份文件，今儿打算同步这份文件，然而使用的cache local技术，所以这个方案并不可行）</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;Markdown-Web-编辑器产品调研&quot;&gt;&lt;a href=&quot;#Markdown-Web-编辑器产品调研&quot; class=&quot;headerlink&quot; title=&quot;Markdown Web 编辑器产品调研&quot;&gt;&lt;/a&gt;Markdown
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="check_hexo_config_url/2016/09/29/hello-world/"/>
-    <id>check_hexo_config_url/2016/09/29/hello-world/</id>
-    <published>2016-09-29T01:52:43.000Z</published>
-    <updated>2016-09-29T01:52:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
     
     </summary>
     
